@@ -1,0 +1,28 @@
+# Standalone packaging for the Portfolio MCP server, so another freelancer can run it with
+#   uvx gigbid-portfolio-mcp            (once published)
+#   uvx --from ./mcp_servers/portfolio gigbid-portfolio-mcp   (from a checkout)
+# The directory itself is mapped to the importable package ``gigbid_portfolio_mcp``; every import
+# inside it is relative, so the same code also runs in-repo as ``mcp_servers.portfolio``.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gigbid-portfolio-mcp"
+version = "0.1.0"
+description = "Read-only MCP server that exposes a freelancer's portfolio (case studies, code, reviews, past proposals) as evidence for proposals."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["mcp", "model-context-protocol", "portfolio", "freelance", "rag"]
+dependencies = ["mcp>=1.9", "pydantic>=2", "uvicorn>=0.30"]
+
+[project.optional-dependencies]
+rag = []  # install the GigBid `rag` package alongside to use its retriever variants
+
+[project.scripts]
+gigbid-portfolio-mcp = "gigbid_portfolio_mcp.server:main"
+
+[tool.setuptools]
+packages = ["gigbid_portfolio_mcp"]
+package-dir = { "gigbid_portfolio_mcp" = "." }

@@ -25,6 +25,7 @@ OPTIONAL_SERVERS = ("github", "upwork")
 # Tools with external side effects. Real (non dry-run) calls need human approval upstream; in
 # ToolGateway(approval_mode="strict") the caller must additionally pass approved=True.
 WRITE_TOOLS = MARKETPLACE_WRITE | {"create_interview_hold", "create_email_draft"}
+APPROVAL_REQUIRED_TOOLS = WRITE_TOOLS
 
 _NONE: dict[str, frozenset[str]] = {}
 

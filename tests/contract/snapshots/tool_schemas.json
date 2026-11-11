@@ -1,0 +1,2647 @@
+{
+  "marketplace": {
+    "prompts": {},
+    "resource_templates": [],
+    "tools": {
+      "create_proposal_draft": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": false
+        },
+        "description": "Create a proposal DRAFT for a job (it is not sent to the client and spends nothing).\nWith dry_run=true returns exactly the payload and the Connects it would cost, creating\nnothing. Call only after the user approved the text and price.",
+        "inputSchema": {
+          "properties": {
+            "bid_amount": {
+              "description": "Bid in USD.",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000,
+              "title": "Bid Amount",
+              "type": "number"
+            },
+            "cover_letter": {
+              "description": "The cover letter text.",
+              "maxLength": 5000,
+              "minLength": 20,
+              "title": "Cover Letter",
+              "type": "string"
+            },
+            "dry_run": {
+              "default": false,
+              "description": "If true nothing is created, sent or spent: returns exactly the payload that would be sent and what it would cost.",
+              "title": "Dry Run",
+              "type": "boolean"
+            },
+            "idempotency_key": {
+              "description": "REQUIRED. Unique id for this logical write, e.g. a UUID or '<run_id>:<job_id>:submit'. Re-sending the same key never repeats the write or spends Connects twice; it returns the first result.",
+              "maxLength": 200,
+              "minLength": 8,
+              "pattern": "^[!-~]+$",
+              "title": "Idempotency Key",
+              "type": "string"
+            },
+            "job_id": {
+              "description": "Marketplace job id, e.g. from search_jobs.",
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:\\-]+$",
+              "title": "Job Id",
+              "type": "string"
+            },
+            "screening_answers": {
+              "anyOf": [
+                {
+                  "items": {
+                    "maxLength": 2000,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 10,
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "One answer per screening question, in order.",
+              "title": "Screening Answers"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "required": [
+            "job_id",
+            "cover_letter",
+            "bid_amount",
+            "idempotency_key"
+          ],
+          "title": "create_proposal_draftArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "balance": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Balance after the action (alias of balance_after).",
+              "title": "Balance"
+            },
+            "balance_after": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Balance After"
+            },
+            "connects_cost": {
+              "description": "Connects this action costs (or would cost).",
+              "title": "Connects Cost",
+              "type": "integer"
+            },
+            "connects_spent": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Connects actually spent (submitted proposals only).",
+              "title": "Connects Spent"
+            },
+            "dry_run": {
+              "title": "Dry Run",
+              "type": "boolean"
+            },
+            "idempotent_replay": {
+              "default": false,
+              "description": "True when this is the stored result of an earlier identical call.",
+              "title": "Idempotent Replay",
+              "type": "boolean"
+            },
+            "note": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Note"
+            },
+            "payload": {
+              "additionalProperties": true,
+              "description": "Exactly what was (or would be) sent.",
+              "title": "Payload",
+              "type": "object"
+            },
+            "proposal_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Null for dry runs (nothing was created).",
+              "title": "Proposal Id"
+            },
+            "requires_user_confirmation": {
+              "default": false,
+              "description": "Live marketplace: the user must still confirm on the platform.",
+              "title": "Requires User Confirmation",
+              "type": "boolean"
+            },
+            "status": {
+              "enum": [
+                "preview",
+                "draft",
+                "submitted"
+              ],
+              "title": "Status",
+              "type": "string"
+            }
+          },
+          "required": [
+            "proposal_id",
+            "status",
+            "connects_cost",
+            "payload",
+            "dry_run"
+          ],
+          "title": "ProposalWriteResult",
+          "type": "object"
+        }
+      },
+      "get_client_history": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Public track record of a client: payment verified, total spent, hire rate, rating and\npast jobs with outcome. Use to judge client quality and scam risk.",
+        "inputSchema": {
+          "properties": {
+            "client_id": {
+              "description": "Client id from a job (client_id).",
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:\\-]+$",
+              "title": "Client Id",
+              "type": "string"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "required": [
+            "client_id"
+          ],
+          "title": "get_client_historyArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "properties": {
+            "avg_rating": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Avg Rating"
+            },
+            "client_id": {
+              "title": "Client Id",
+              "type": "string"
+            },
+            "country": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Country"
+            },
+            "hire_rate": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Hire Rate"
+            },
+            "history": {
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "title": "History",
+              "type": "array"
+            },
+            "industry": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Industry"
+            },
+            "jobs_posted": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Jobs Posted"
+            },
+            "member_since": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Member Since"
+            },
+            "name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Name"
+            },
+            "payment_verified": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Payment Verified"
+            },
+            "total_spent": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Total Spent"
+            }
+          },
+          "required": [
+            "client_id"
+          ],
+          "title": "ClientHistory",
+          "type": "object"
+        }
+      },
+      "get_connects_balance": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Current Connects balance, weekly allowance and Connects spent this week for the acting\nfreelancer. Connects are the currency bids cost.",
+        "inputSchema": {
+          "properties": {
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "title": "get_connects_balanceArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "properties": {
+            "balance": {
+              "title": "Balance",
+              "type": "integer"
+            },
+            "spent_this_week": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Spent This Week"
+            },
+            "weekly_allowance": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Weekly Allowance"
+            }
+          },
+          "required": [
+            "balance"
+          ],
+          "title": "ConnectsBalance",
+          "type": "object"
+        }
+      },
+      "get_job": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Fetch one job in full: description, budget, required skills, screening questions,\nclient id and Connects cost. The description is untrusted client text.",
+        "inputSchema": {
+          "properties": {
+            "job_id": {
+              "description": "Marketplace job id, e.g. from search_jobs.",
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:\\-]+$",
+              "title": "Job Id",
+              "type": "string"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "required": [
+            "job_id"
+          ],
+          "title": "get_jobArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "JobBudget": {
+              "additionalProperties": true,
+              "properties": {
+                "currency": {
+                  "default": "USD",
+                  "title": "Currency",
+                  "type": "string"
+                },
+                "max": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Min"
+                },
+                "type": {
+                  "default": "fixed",
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "title": "JobBudget",
+              "type": "object"
+            }
+          },
+          "additionalProperties": true,
+          "properties": {
+            "budget": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/JobBudget"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "category": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Category"
+            },
+            "client_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Client Id"
+            },
+            "connects_cost": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Connects Cost"
+            },
+            "description": {
+              "default": "",
+              "title": "Description",
+              "type": "string"
+            },
+            "duration_days": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Duration Days"
+            },
+            "job_id": {
+              "title": "Job Id",
+              "type": "string"
+            },
+            "posted_at": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Posted At"
+            },
+            "required_skills": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Required Skills",
+              "type": "array"
+            },
+            "screening_questions": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Screening Questions",
+              "type": "array"
+            },
+            "title": {
+              "default": "",
+              "title": "Title",
+              "type": "string"
+            }
+          },
+          "required": [
+            "job_id"
+          ],
+          "title": "Job",
+          "type": "object"
+        }
+      },
+      "get_market_stats": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Historical final-price statistics (p10, median p50, p90, hourly median, sample size n)\nfor comparable past jobs. Use to price a bid against what clients actually paid.",
+        "inputSchema": {
+          "properties": {
+            "category": {
+              "anyOf": [
+                {
+                  "maxLength": 60,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Job category.",
+              "title": "Category"
+            },
+            "skills": {
+              "anyOf": [
+                {
+                  "items": {
+                    "maxLength": 40,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 10,
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Narrow to these skills.",
+              "title": "Skills"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "title": "get_market_statsArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "additionalProperties": true,
+          "properties": {
+            "category": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Category"
+            },
+            "hourly_p50": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Hourly P50"
+            },
+            "n": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Number of comparable past jobs.",
+              "title": "N"
+            },
+            "p10": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "P10"
+            },
+            "p25": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "P25"
+            },
+            "p50": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Median final price (USD).",
+              "title": "P50"
+            },
+            "p75": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "P75"
+            },
+            "p90": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "P90"
+            },
+            "skills": {
+              "anyOf": [
+                {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Per-skill breakdown (skill, n, percentiles) when available.",
+              "title": "Skills"
+            }
+          },
+          "title": "MarketStats",
+          "type": "object"
+        }
+      },
+      "get_platform_policy": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "The marketplace's current rules as data: version, Connects per proposal, rate limit and\na list of rules (id, type, pattern or value, description). Use to check a proposal or\nmessage for violations (off-platform contact, fee claims, etc.).",
+        "inputSchema": {
+          "properties": {
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "title": "get_platform_policyArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "PolicyRule": {
+              "additionalProperties": true,
+              "properties": {
+                "description": {
+                  "default": "",
+                  "title": "Description",
+                  "type": "string"
+                },
+                "id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Id"
+                },
+                "pattern": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Pattern"
+                },
+                "type": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Type"
+                },
+                "value": {
+                  "default": null,
+                  "title": "Value"
+                }
+              },
+              "title": "PolicyRule",
+              "type": "object"
+            }
+          },
+          "additionalProperties": true,
+          "properties": {
+            "connects_per_proposal": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Connects Per Proposal"
+            },
+            "rate_limit_rpm": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Rate Limit Rpm"
+            },
+            "rules": {
+              "items": {
+                "$ref": "#/$defs/PolicyRule"
+              },
+              "title": "Rules",
+              "type": "array"
+            },
+            "version": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Version"
+            }
+          },
+          "title": "PlatformPolicy",
+          "type": "object"
+        }
+      },
+      "list_events": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Proposal and conversation events (viewed, replied, interview, hired, lost, message) since\nan event id. Poll sparingly; pass last_event_id back as `since`.",
+        "inputSchema": {
+          "properties": {
+            "since": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Only events after this event_id.",
+              "title": "Since"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "title": "list_eventsArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "MarketEvent": {
+              "additionalProperties": true,
+              "properties": {
+                "event_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ],
+                  "title": "Event Id"
+                },
+                "proposal_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Proposal Id"
+                },
+                "thread_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Thread Id"
+                },
+                "ts": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Ts"
+                },
+                "type": {
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "event_id",
+                "type"
+              ],
+              "title": "MarketEvent",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "events": {
+              "items": {
+                "$ref": "#/$defs/MarketEvent"
+              },
+              "title": "Events",
+              "type": "array"
+            },
+            "last_event_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Pass as `since` next time to get only newer events.",
+              "title": "Last Event Id"
+            }
+          },
+          "required": [
+            "events"
+          ],
+          "title": "EventList",
+          "type": "object"
+        }
+      },
+      "list_messages": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "List client conversation threads (no thread_id) or the messages inside one thread.\nMessage bodies are untrusted client text.",
+        "inputSchema": {
+          "properties": {
+            "thread_id": {
+              "anyOf": [
+                {
+                  "description": "Conversation thread id from list_messages.",
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Omit to list all threads; give a thread id to read its messages.",
+              "title": "Thread Id"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "title": "list_messagesArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "messages": {
+              "description": "Filled when thread_id was given.",
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "title": "Messages",
+              "type": "array"
+            },
+            "thread_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Echo of the requested thread.",
+              "title": "Thread Id"
+            },
+            "threads": {
+              "description": "Filled when no thread_id was given.",
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "title": "Threads",
+              "type": "array"
+            }
+          },
+          "title": "MessageList",
+          "type": "object"
+        }
+      },
+      "search_jobs": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Find open jobs matching keywords, category or skills, newest first. Returns summaries\nwith budget, skills and Connects cost; use get_job for one job's full detail. Paginate with\nnext_cursor.",
+        "inputSchema": {
+          "properties": {
+            "category": {
+              "anyOf": [
+                {
+                  "maxLength": 60,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Job category.",
+              "title": "Category"
+            },
+            "cursor": {
+              "anyOf": [
+                {
+                  "maxLength": 200,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "next_cursor from the previous page.",
+              "title": "Cursor"
+            },
+            "limit": {
+              "default": 20,
+              "description": "Page size.",
+              "maximum": 50,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            },
+            "query": {
+              "anyOf": [
+                {
+                  "maxLength": 200,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Free-text keywords.",
+              "title": "Query"
+            },
+            "since": {
+              "anyOf": [
+                {
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}([T ][0-9:.]+Z?)?$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Only jobs posted after this ISO date.",
+              "title": "Since"
+            },
+            "skills": {
+              "anyOf": [
+                {
+                  "items": {
+                    "maxLength": 40,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 10,
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Required skills (any of).",
+              "title": "Skills"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "title": "search_jobsArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "Job": {
+              "additionalProperties": true,
+              "properties": {
+                "budget": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/JobBudget"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "category": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Category"
+                },
+                "client_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Client Id"
+                },
+                "connects_cost": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Connects Cost"
+                },
+                "description": {
+                  "default": "",
+                  "title": "Description",
+                  "type": "string"
+                },
+                "duration_days": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Duration Days"
+                },
+                "job_id": {
+                  "title": "Job Id",
+                  "type": "string"
+                },
+                "posted_at": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Posted At"
+                },
+                "required_skills": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "title": "Required Skills",
+                  "type": "array"
+                },
+                "screening_questions": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "title": "Screening Questions",
+                  "type": "array"
+                },
+                "title": {
+                  "default": "",
+                  "title": "Title",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "job_id"
+              ],
+              "title": "Job",
+              "type": "object"
+            },
+            "JobBudget": {
+              "additionalProperties": true,
+              "properties": {
+                "currency": {
+                  "default": "USD",
+                  "title": "Currency",
+                  "type": "string"
+                },
+                "max": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Max"
+                },
+                "min": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Min"
+                },
+                "type": {
+                  "default": "fixed",
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "title": "JobBudget",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "jobs": {
+              "items": {
+                "$ref": "#/$defs/Job"
+              },
+              "title": "Jobs",
+              "type": "array"
+            },
+            "next_cursor": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Next Cursor"
+            }
+          },
+          "required": [
+            "jobs"
+          ],
+          "title": "JobSearchResult",
+          "type": "object"
+        }
+      },
+      "send_message": {
+        "annotations": {
+          "destructiveHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": false
+        },
+        "description": "Send a message to a client in an existing thread. IRREVERSIBLE: the client sees it. Only\ncall after explicit human approval; dry_run=true returns the exact payload without sending.\nOn a live marketplace this only saves a draft for the user to confirm.",
+        "inputSchema": {
+          "properties": {
+            "body": {
+              "description": "Message text.",
+              "maxLength": 4000,
+              "minLength": 1,
+              "title": "Body",
+              "type": "string"
+            },
+            "dry_run": {
+              "default": false,
+              "description": "If true nothing is created, sent or spent: returns exactly the payload that would be sent and what it would cost.",
+              "title": "Dry Run",
+              "type": "boolean"
+            },
+            "idempotency_key": {
+              "description": "REQUIRED. Unique id for this logical write, e.g. a UUID or '<run_id>:<job_id>:submit'. Re-sending the same key never repeats the write or spends Connects twice; it returns the first result.",
+              "maxLength": 200,
+              "minLength": 8,
+              "pattern": "^[!-~]+$",
+              "title": "Idempotency Key",
+              "type": "string"
+            },
+            "thread_id": {
+              "description": "Conversation thread id from list_messages.",
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:\\-]+$",
+              "title": "Thread Id",
+              "type": "string"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "required": [
+            "thread_id",
+            "body",
+            "idempotency_key"
+          ],
+          "title": "send_messageArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "dry_run": {
+              "title": "Dry Run",
+              "type": "boolean"
+            },
+            "idempotent_replay": {
+              "default": false,
+              "title": "Idempotent Replay",
+              "type": "boolean"
+            },
+            "message_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Message Id"
+            },
+            "note": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Note"
+            },
+            "payload": {
+              "additionalProperties": true,
+              "title": "Payload",
+              "type": "object"
+            },
+            "requires_user_confirmation": {
+              "default": false,
+              "title": "Requires User Confirmation",
+              "type": "boolean"
+            },
+            "status": {
+              "enum": [
+                "preview",
+                "draft",
+                "sent"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "thread_id": {
+              "title": "Thread Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "thread_id",
+            "status",
+            "payload",
+            "dry_run"
+          ],
+          "title": "MessageWriteResult",
+          "type": "object"
+        }
+      },
+      "submit_proposal": {
+        "annotations": {
+          "destructiveHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true,
+          "readOnlyHint": false
+        },
+        "description": "Submit a proposal draft to the client, spending Connects. IRREVERSIBLE. Only call after\nexplicit human approval; use dry_run=true first to see the payload and Connects cost.\nOn a live marketplace this only prepares the draft and the user confirms on the platform.",
+        "inputSchema": {
+          "properties": {
+            "dry_run": {
+              "default": false,
+              "description": "If true nothing is created, sent or spent: returns exactly the payload that would be sent and what it would cost.",
+              "title": "Dry Run",
+              "type": "boolean"
+            },
+            "idempotency_key": {
+              "description": "REQUIRED. Unique id for this logical write, e.g. a UUID or '<run_id>:<job_id>:submit'. Re-sending the same key never repeats the write or spends Connects twice; it returns the first result.",
+              "maxLength": 200,
+              "minLength": 8,
+              "pattern": "^[!-~]+$",
+              "title": "Idempotency Key",
+              "type": "string"
+            },
+            "proposal_id": {
+              "description": "Id of a proposal draft created by create_proposal_draft.",
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:\\-]+$",
+              "title": "Proposal Id",
+              "type": "string"
+            },
+            "trace_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "pattern": "^[A-Za-z0-9_.:\\-]+$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional trace id, copied to the audit log.",
+              "title": "Trace Id"
+            }
+          },
+          "required": [
+            "proposal_id",
+            "idempotency_key"
+          ],
+          "title": "submit_proposalArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "balance": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Balance after the action (alias of balance_after).",
+              "title": "Balance"
+            },
+            "balance_after": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Balance After"
+            },
+            "connects_cost": {
+              "description": "Connects this action costs (or would cost).",
+              "title": "Connects Cost",
+              "type": "integer"
+            },
+            "connects_spent": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Connects actually spent (submitted proposals only).",
+              "title": "Connects Spent"
+            },
+            "dry_run": {
+              "title": "Dry Run",
+              "type": "boolean"
+            },
+            "idempotent_replay": {
+              "default": false,
+              "description": "True when this is the stored result of an earlier identical call.",
+              "title": "Idempotent Replay",
+              "type": "boolean"
+            },
+            "note": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Note"
+            },
+            "payload": {
+              "additionalProperties": true,
+              "description": "Exactly what was (or would be) sent.",
+              "title": "Payload",
+              "type": "object"
+            },
+            "proposal_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Null for dry runs (nothing was created).",
+              "title": "Proposal Id"
+            },
+            "requires_user_confirmation": {
+              "default": false,
+              "description": "Live marketplace: the user must still confirm on the platform.",
+              "title": "Requires User Confirmation",
+              "type": "boolean"
+            },
+            "status": {
+              "enum": [
+                "preview",
+                "draft",
+                "submitted"
+              ],
+              "title": "Status",
+              "type": "string"
+            }
+          },
+          "required": [
+            "proposal_id",
+            "status",
+            "connects_cost",
+            "payload",
+            "dry_run"
+          ],
+          "title": "ProposalWriteResult",
+          "type": "object"
+        }
+      }
+    }
+  },
+  "portfolio": {
+    "prompts": {
+      "cover_letter_from_evidence": [
+        [
+          "job_description",
+          true
+        ],
+        [
+          "job_title",
+          true
+        ],
+        [
+          "max_words",
+          false
+        ],
+        [
+          "tone",
+          false
+        ]
+      ],
+      "portfolio_gap_check": [
+        [
+          "job_description",
+          true
+        ]
+      ],
+      "screening_answer": [
+        [
+          "job_title",
+          false
+        ],
+        [
+          "max_words",
+          false
+        ],
+        [
+          "question",
+          true
+        ]
+      ]
+    },
+    "resource_templates": [
+      "portfolio://case/{id}",
+      "portfolio://proposal/{id}"
+    ],
+    "tools": {
+      "get_case_study": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false,
+          "readOnlyHint": true
+        },
+        "description": "Load the full case study for one project: markdown text, skills, industry, outcome,\nclient reviews and the ids of past proposals that cited it. Use after search_evidence\nwhen a short passage is not enough to write a specific, true claim.",
+        "inputSchema": {
+          "properties": {
+            "id": {
+              "description": "Project id, as found in search_evidence results (project_id).",
+              "maxLength": 80,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_\\-]+$",
+              "title": "Id",
+              "type": "string"
+            },
+            "portfolio_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9_\\-]{1,40}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Which portfolio to search. Omit to use the server's default portfolio.",
+              "title": "Portfolio Id"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "get_case_studyArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "date": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Date"
+            },
+            "id": {
+              "title": "Id",
+              "type": "string"
+            },
+            "industry": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Industry"
+            },
+            "markdown": {
+              "description": "Full case study text.",
+              "title": "Markdown",
+              "type": "string"
+            },
+            "outcome_summary": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Outcome Summary"
+            },
+            "project_id": {
+              "title": "Project Id",
+              "type": "string"
+            },
+            "related_proposal_ids": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Related Proposal Ids",
+              "type": "array"
+            },
+            "reviews": {
+              "description": "Client reviews for it.",
+              "items": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "title": "Reviews",
+              "type": "array"
+            },
+            "skills": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Skills",
+              "type": "array"
+            },
+            "title": {
+              "title": "Title",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "project_id",
+            "title",
+            "markdown"
+          ],
+          "title": "CaseStudy",
+          "type": "object"
+        }
+      },
+      "list_skills": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false,
+          "readOnlyHint": true
+        },
+        "description": "List every skill the portfolio demonstrates with the number of projects behind it,\nmost-evidenced first. Use to check whether a required skill is covered at all before\nsearching for evidence.",
+        "inputSchema": {
+          "properties": {
+            "portfolio_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9_\\-]{1,40}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Which portfolio to search. Omit to use the server's default portfolio.",
+              "title": "Portfolio Id"
+            }
+          },
+          "title": "list_skillsArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "SkillCount": {
+              "properties": {
+                "count": {
+                  "description": "Number of projects that demonstrate the skill.",
+                  "title": "Count",
+                  "type": "integer"
+                },
+                "name": {
+                  "title": "Name",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "count"
+              ],
+              "title": "SkillCount",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "portfolio_id": {
+              "title": "Portfolio Id",
+              "type": "string"
+            },
+            "skills": {
+              "items": {
+                "$ref": "#/$defs/SkillCount"
+              },
+              "title": "Skills",
+              "type": "array"
+            }
+          },
+          "required": [
+            "skills",
+            "portfolio_id"
+          ],
+          "title": "SkillList",
+          "type": "object"
+        }
+      },
+      "search_evidence": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false,
+          "readOnlyHint": true
+        },
+        "description": "Find the freelancer's own past work that proves one requirement.\n\nReturns ranked evidence items (case study, README, code, review, CV, or a past proposal\nwith its won/replied/ignored outcome), each with id, source, date and the passage text.\nUse the returned ids as citations. Returns an empty list when nothing supports the\nrequirement; never invents evidence. For the full text of one project use get_case_study.\n",
+        "inputSchema": {
+          "$defs": {
+            "EvidenceFilters": {
+              "additionalProperties": false,
+              "description": "Optional narrowing of a search. All fields optional; unknown keys are rejected.",
+              "properties": {
+                "outcome": {
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "won",
+                        "replied",
+                        "ignored"
+                      ],
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "For past proposals only: won, replied or ignored.",
+                  "title": "Outcome"
+                },
+                "project_id": {
+                  "anyOf": [
+                    {
+                      "maxLength": 80,
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "Only this project.",
+                  "title": "Project Id"
+                },
+                "since": {
+                  "anyOf": [
+                    {
+                      "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "Only evidence dated on/after YYYY-MM[-DD].",
+                  "title": "Since"
+                },
+                "skills": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "maxItems": 10,
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "Evidence must mention at least one of these skills.",
+                  "title": "Skills"
+                },
+                "types": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "enum": [
+                          "cv",
+                          "case_study",
+                          "readme",
+                          "code",
+                          "review",
+                          "proposal"
+                        ],
+                        "type": "string"
+                      },
+                      "maxItems": 6,
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "Only these evidence types, e.g. ['case_study'].",
+                  "title": "Types"
+                }
+              },
+              "title": "EvidenceFilters",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "filters": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/EvidenceFilters"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Optional narrowing by type, project, skills, outcome or date."
+            },
+            "k": {
+              "default": 5,
+              "description": "How many evidence items to return.",
+              "maximum": 20,
+              "minimum": 1,
+              "title": "K",
+              "type": "integer"
+            },
+            "portfolio_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9_\\-]{1,40}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Which portfolio to search. Omit to use the server's default portfolio.",
+              "title": "Portfolio Id"
+            },
+            "requirement": {
+              "description": "One atomic job requirement or question, e.g. 'built a RAG pipeline over PDFs'. Search once per requirement, not once per job.",
+              "maxLength": 500,
+              "minLength": 3,
+              "title": "Requirement",
+              "type": "string"
+            }
+          },
+          "required": [
+            "requirement"
+          ],
+          "title": "search_evidenceArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "EvidenceItem": {
+              "properties": {
+                "date": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Date"
+                },
+                "id": {
+                  "description": "Stable evidence id. Cite this in claims.",
+                  "title": "Id",
+                  "type": "string"
+                },
+                "outcome": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "won | replied | ignored (past proposals)",
+                  "title": "Outcome"
+                },
+                "project_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "title": "Project Id"
+                },
+                "score": {
+                  "default": 0.0,
+                  "title": "Score",
+                  "type": "number"
+                },
+                "skills": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "title": "Skills",
+                  "type": "array"
+                },
+                "source": {
+                  "default": "",
+                  "description": "File or origin the text came from.",
+                  "title": "Source",
+                  "type": "string"
+                },
+                "text": {
+                  "default": "",
+                  "description": "The evidence passage itself.",
+                  "title": "Text",
+                  "type": "string"
+                },
+                "title": {
+                  "default": "",
+                  "title": "Title",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "cv | case_study | readme | code | review | proposal",
+                  "title": "Type",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ],
+              "title": "EvidenceItem",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "items": {
+              "items": {
+                "$ref": "#/$defs/EvidenceItem"
+              },
+              "title": "Items",
+              "type": "array"
+            },
+            "portfolio_id": {
+              "title": "Portfolio Id",
+              "type": "string"
+            },
+            "retriever": {
+              "description": "Which retrieval backend answered (rag variant or local).",
+              "title": "Retriever",
+              "type": "string"
+            }
+          },
+          "required": [
+            "items",
+            "portfolio_id",
+            "retriever"
+          ],
+          "title": "SearchEvidenceResult",
+          "type": "object"
+        }
+      }
+    }
+  },
+  "workspace": {
+    "prompts": {},
+    "resource_templates": [],
+    "tools": {
+      "create_email_draft": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false,
+          "readOnlyHint": false
+        },
+        "description": "Save an email as a DRAFT for the human to review and send. This server cannot send\nemail. Saving the identical draft twice returns the same draft id.",
+        "inputSchema": {
+          "properties": {
+            "body": {
+              "maxLength": 10000,
+              "minLength": 1,
+              "title": "Body",
+              "type": "string"
+            },
+            "subject": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Subject",
+              "type": "string"
+            },
+            "to": {
+              "description": "Recipient address.",
+              "maxLength": 254,
+              "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+              "title": "To",
+              "type": "string"
+            }
+          },
+          "required": [
+            "to",
+            "subject",
+            "body"
+          ],
+          "title": "create_email_draftArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "already_existed": {
+              "default": false,
+              "title": "Already Existed",
+              "type": "boolean"
+            },
+            "draft_id": {
+              "title": "Draft Id",
+              "type": "string"
+            },
+            "status": {
+              "description": "always 'draft': nothing is ever sent",
+              "title": "Status",
+              "type": "string"
+            },
+            "subject": {
+              "title": "Subject",
+              "type": "string"
+            },
+            "to": {
+              "title": "To",
+              "type": "string"
+            }
+          },
+          "required": [
+            "draft_id",
+            "status",
+            "to",
+            "subject"
+          ],
+          "title": "EmailDraft",
+          "type": "object"
+        }
+      },
+      "create_interview_hold": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false,
+          "readOnlyHint": false
+        },
+        "description": "Block a slot on the calendar as TENTATIVE for an interview with a client. Fails if the\nslot is outside working hours or already busy. Repeating the identical request returns the\nexisting hold, never a duplicate. The client is not notified.",
+        "inputSchema": {
+          "$defs": {
+            "Slot": {
+              "properties": {
+                "end": {
+                  "anyOf": [
+                    {
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z?$",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "ISO end time; omit to use duration_minutes.",
+                  "title": "End"
+                },
+                "start": {
+                  "description": "ISO start time (UTC), e.g. 2026-03-02T14:00",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z?$",
+                  "title": "Start",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "start"
+              ],
+              "title": "Slot",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "client": {
+              "description": "Client name.",
+              "maxLength": 100,
+              "minLength": 1,
+              "title": "Client",
+              "type": "string"
+            },
+            "duration_minutes": {
+              "default": 30,
+              "description": "Used only when slot.end is omitted.",
+              "maximum": 240,
+              "minimum": 15,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "job_id": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Related job id.",
+              "title": "Job Id"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot"
+            }
+          },
+          "required": [
+            "slot",
+            "client"
+          ],
+          "title": "create_interview_holdArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "Slot": {
+              "properties": {
+                "end": {
+                  "anyOf": [
+                    {
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z?$",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "ISO end time; omit to use duration_minutes.",
+                  "title": "End"
+                },
+                "start": {
+                  "description": "ISO start time (UTC), e.g. 2026-03-02T14:00",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z?$",
+                  "title": "Start",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "start"
+              ],
+              "title": "Slot",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "already_existed": {
+              "default": false,
+              "description": "True when this exact hold existed.",
+              "title": "Already Existed",
+              "type": "boolean"
+            },
+            "client": {
+              "title": "Client",
+              "type": "string"
+            },
+            "hold_id": {
+              "title": "Hold Id",
+              "type": "string"
+            },
+            "job_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Job Id"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot"
+            },
+            "status": {
+              "description": "always 'tentative': the client has not been told",
+              "title": "Status",
+              "type": "string"
+            }
+          },
+          "required": [
+            "hold_id",
+            "status",
+            "slot",
+            "client"
+          ],
+          "title": "InterviewHold",
+          "type": "object"
+        }
+      },
+      "get_free_slots": {
+        "annotations": {
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false,
+          "readOnlyHint": true
+        },
+        "description": "Free interview slots in the freelancer's working hours (Mon-Fri 09:00-17:00 UTC,\nlunch blocked, existing meetings and tentative holds excluded), earliest first.",
+        "inputSchema": {
+          "properties": {
+            "days": {
+              "default": 5,
+              "description": "How many calendar days ahead to scan.",
+              "maximum": 14,
+              "minimum": 1,
+              "title": "Days",
+              "type": "integer"
+            },
+            "duration_minutes": {
+              "default": 30,
+              "description": "Meeting length.",
+              "maximum": 240,
+              "minimum": 15,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "from_date": {
+              "anyOf": [
+                {
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "First day to scan; default tomorrow.",
+              "title": "From Date"
+            },
+            "limit": {
+              "default": 20,
+              "description": "Maximum slots returned.",
+              "maximum": 50,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          },
+          "title": "get_free_slotsArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "Slot": {
+              "properties": {
+                "end": {
+                  "anyOf": [
+                    {
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z?$",
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null,
+                  "description": "ISO end time; omit to use duration_minutes.",
+                  "title": "End"
+                },
+                "start": {
+                  "description": "ISO start time (UTC), e.g. 2026-03-02T14:00",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2})?Z?$",
+                  "title": "Start",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "start"
+              ],
+              "title": "Slot",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "slots": {
+              "items": {
+                "$ref": "#/$defs/Slot"
+              },
+              "title": "Slots",
+              "type": "array"
+            },
+            "timezone": {
+              "default": "UTC",
+              "title": "Timezone",
+              "type": "string"
+            },
+            "working_hours": {
+              "default": "Mon-Fri 09:00-17:00, lunch 12:00-13:00 blocked",
+              "title": "Working Hours",
+              "type": "string"
+            }
+          },
+          "required": [
+            "slots"
+          ],
+          "title": "FreeSlots",
+          "type": "object"
+        }
+      }
+    }
+  }
+}

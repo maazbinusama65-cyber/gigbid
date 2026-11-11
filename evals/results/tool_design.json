@@ -1,0 +1,1342 @@
+{
+  "meta": {
+    "selector": "offline-baseline",
+    "selector_name": "keyword-overlap + regex args (no model)",
+    "model": null,
+    "n_tasks": 40,
+    "tokens_per_task": "tokens of the rendered tool schemas (name, description, input_schema) + the task text; tiktoken cl100k_base",
+    "arg_scoring": "gold args must be present and equal (free text >= 3 words: >= 60% token containment); extra optional args are not penalised; idempotency_key/trace_id ignored",
+    "generated_at": "2026-11-11T20:29:32Z",
+    "WARNING": "These numbers come from a deterministic keyword/regex baseline, NOT an LLM. They measure lexical separability of the tool sets only and must not be reported as LLM behaviour."
+  },
+  "sets": {
+    "fine": {
+      "description": "35 one-endpoint tools, terse descriptions",
+      "n_tools": 35,
+      "schema_tokens": 1427,
+      "n_tasks": 40,
+      "tool_selection_accuracy": 0.725,
+      "argument_accuracy": 0.725,
+      "argument_accuracy_given_correct_tool": 1.0,
+      "tokens_per_task": 1441.6,
+      "per_task": [
+        {
+          "id": "t01",
+          "gold_tool": "search_jobs_by_keyword",
+          "pred_tool": "get_job_details",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1435
+        },
+        {
+          "id": "t02",
+          "gold_tool": "search_jobs_by_category",
+          "pred_tool": "search_jobs_by_category",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1441
+        },
+        {
+          "id": "t03",
+          "gold_tool": "search_jobs_by_skills",
+          "pred_tool": "list_skills",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1437
+        },
+        {
+          "id": "t04",
+          "gold_tool": "search_jobs_by_keyword",
+          "pred_tool": "list_events",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1445
+        },
+        {
+          "id": "t05",
+          "gold_tool": "get_job_details",
+          "pred_tool": "get_job_details",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1439
+        },
+        {
+          "id": "t06",
+          "gold_tool": "get_job_screening_questions",
+          "pred_tool": "get_job_screening_questions",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1438
+        },
+        {
+          "id": "t07",
+          "gold_tool": "get_job_budget",
+          "pred_tool": "get_job_budget",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1438
+        },
+        {
+          "id": "t08",
+          "gold_tool": "get_client_payment_status",
+          "pred_tool": "get_client_payment_status",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1435
+        },
+        {
+          "id": "t09",
+          "gold_tool": "get_client_past_jobs",
+          "pred_tool": "get_client_past_jobs",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1439
+        },
+        {
+          "id": "t10",
+          "gold_tool": "get_client_profile",
+          "pred_tool": "get_client_past_jobs",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1441
+        },
+        {
+          "id": "t11",
+          "gold_tool": "get_connects_balance",
+          "pred_tool": "get_connects_balance",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1436
+        },
+        {
+          "id": "t12",
+          "gold_tool": "get_connects_weekly_allowance",
+          "pred_tool": "get_connects_weekly_allowance",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1435
+        },
+        {
+          "id": "t13",
+          "gold_tool": "get_market_price_stats",
+          "pred_tool": "get_market_price_stats",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1441
+        },
+        {
+          "id": "t14",
+          "gold_tool": "get_market_price_stats",
+          "pred_tool": "get_market_price_stats",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1441
+        },
+        {
+          "id": "t15",
+          "gold_tool": "get_market_hourly_stats",
+          "pred_tool": "get_market_hourly_stats",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1438
+        },
+        {
+          "id": "t16",
+          "gold_tool": "get_platform_rules",
+          "pred_tool": "get_platform_rules",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1442
+        },
+        {
+          "id": "t17",
+          "gold_tool": "get_connects_cost_per_proposal",
+          "pred_tool": "get_connects_cost_per_proposal",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1441
+        },
+        {
+          "id": "t18",
+          "gold_tool": "list_threads",
+          "pred_tool": "list_thread_messages",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1434
+        },
+        {
+          "id": "t19",
+          "gold_tool": "list_thread_messages",
+          "pred_tool": "list_thread_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1436
+        },
+        {
+          "id": "t20",
+          "gold_tool": "list_thread_messages",
+          "pred_tool": "list_thread_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1438
+        },
+        {
+          "id": "t21",
+          "gold_tool": "list_events",
+          "pred_tool": "list_events",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1438
+        },
+        {
+          "id": "t22",
+          "gold_tool": "list_events",
+          "pred_tool": "list_events",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1438
+        },
+        {
+          "id": "t23",
+          "gold_tool": "preview_proposal_draft",
+          "pred_tool": "preview_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1464
+        },
+        {
+          "id": "t24",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "preview_proposal_draft",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1461
+        },
+        {
+          "id": "t25",
+          "gold_tool": "preview_proposal_draft",
+          "pred_tool": "preview_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1458
+        },
+        {
+          "id": "t26",
+          "gold_tool": "submit_proposal",
+          "pred_tool": "submit_proposal",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1439
+        },
+        {
+          "id": "t27",
+          "gold_tool": "preview_submit_proposal",
+          "pred_tool": "get_connects_cost_per_proposal",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1441
+        },
+        {
+          "id": "t28",
+          "gold_tool": "send_message",
+          "pred_tool": "list_thread_messages",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1441
+        },
+        {
+          "id": "t29",
+          "gold_tool": "preview_message",
+          "pred_tool": "preview_message",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1448
+        },
+        {
+          "id": "t30",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_jobs_by_keyword",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1444
+        },
+        {
+          "id": "t31",
+          "gold_tool": "search_evidence_by_outcome",
+          "pred_tool": "get_client_past_jobs",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1437
+        },
+        {
+          "id": "t32",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_evidence",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1441
+        },
+        {
+          "id": "t33",
+          "gold_tool": "search_evidence_case_studies",
+          "pred_tool": "search_evidence_case_studies",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1436
+        },
+        {
+          "id": "t34",
+          "gold_tool": "get_case_study",
+          "pred_tool": "get_case_study",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1439
+        },
+        {
+          "id": "t35",
+          "gold_tool": "get_case_study_reviews",
+          "pred_tool": "get_case_study_reviews",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1440
+        },
+        {
+          "id": "t36",
+          "gold_tool": "list_skills",
+          "pred_tool": "search_jobs_by_skills",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 1441
+        },
+        {
+          "id": "t37",
+          "gold_tool": "get_free_slots",
+          "pred_tool": "get_free_slots",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1444
+        },
+        {
+          "id": "t38",
+          "gold_tool": "get_free_slots",
+          "pred_tool": "get_free_slots",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1441
+        },
+        {
+          "id": "t39",
+          "gold_tool": "create_interview_hold",
+          "pred_tool": "create_interview_hold",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1455
+        },
+        {
+          "id": "t40",
+          "gold_tool": "create_email_draft",
+          "pred_tool": "create_email_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 1448
+        }
+      ]
+    },
+    "coarse": {
+      "description": "4 action/resource-dispatch tools, generic descriptions",
+      "n_tools": 4,
+      "schema_tokens": 443,
+      "n_tasks": 40,
+      "tool_selection_accuracy": 0.825,
+      "argument_accuracy": 0.5,
+      "argument_accuracy_given_correct_tool": 0.6061,
+      "tokens_per_task": 457.6,
+      "per_task": [
+        {
+          "id": "t01",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 451
+        },
+        {
+          "id": "t02",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 457
+        },
+        {
+          "id": "t03",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 453
+        },
+        {
+          "id": "t04",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 461
+        },
+        {
+          "id": "t05",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 455
+        },
+        {
+          "id": "t06",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 454
+        },
+        {
+          "id": "t07",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 454
+        },
+        {
+          "id": "t08",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 451
+        },
+        {
+          "id": "t09",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 455
+        },
+        {
+          "id": "t10",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 457
+        },
+        {
+          "id": "t11",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 452
+        },
+        {
+          "id": "t12",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 451
+        },
+        {
+          "id": "t13",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 457
+        },
+        {
+          "id": "t14",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 457
+        },
+        {
+          "id": "t15",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 454
+        },
+        {
+          "id": "t16",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_write",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 458
+        },
+        {
+          "id": "t17",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_write",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 457
+        },
+        {
+          "id": "t18",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 450
+        },
+        {
+          "id": "t19",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 452
+        },
+        {
+          "id": "t20",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_read",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 454
+        },
+        {
+          "id": "t21",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_write",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 454
+        },
+        {
+          "id": "t22",
+          "gold_tool": "marketplace_read",
+          "pred_tool": "marketplace_write",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 454
+        },
+        {
+          "id": "t23",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_write",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 480
+        },
+        {
+          "id": "t24",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_write",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 477
+        },
+        {
+          "id": "t25",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_write",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 474
+        },
+        {
+          "id": "t26",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_write",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 455
+        },
+        {
+          "id": "t27",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_write",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 457
+        },
+        {
+          "id": "t28",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_read",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 457
+        },
+        {
+          "id": "t29",
+          "gold_tool": "marketplace_write",
+          "pred_tool": "marketplace_read",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 464
+        },
+        {
+          "id": "t30",
+          "gold_tool": "portfolio",
+          "pred_tool": "portfolio",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 460
+        },
+        {
+          "id": "t31",
+          "gold_tool": "portfolio",
+          "pred_tool": "marketplace_write",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 453
+        },
+        {
+          "id": "t32",
+          "gold_tool": "portfolio",
+          "pred_tool": "portfolio",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 457
+        },
+        {
+          "id": "t33",
+          "gold_tool": "portfolio",
+          "pred_tool": "portfolio",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 452
+        },
+        {
+          "id": "t34",
+          "gold_tool": "portfolio",
+          "pred_tool": "portfolio",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 455
+        },
+        {
+          "id": "t35",
+          "gold_tool": "portfolio",
+          "pred_tool": "portfolio",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 456
+        },
+        {
+          "id": "t36",
+          "gold_tool": "portfolio",
+          "pred_tool": "portfolio",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 457
+        },
+        {
+          "id": "t37",
+          "gold_tool": "workspace",
+          "pred_tool": "workspace",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 460
+        },
+        {
+          "id": "t38",
+          "gold_tool": "workspace",
+          "pred_tool": "workspace",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 457
+        },
+        {
+          "id": "t39",
+          "gold_tool": "workspace",
+          "pred_tool": "workspace",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 471
+        },
+        {
+          "id": "t40",
+          "gold_tool": "workspace",
+          "pred_tool": "workspace",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 464
+        }
+      ]
+    },
+    "best": {
+      "description": "deployed MCP surface, rewritten descriptions",
+      "n_tools": 17,
+      "schema_tokens": 4181,
+      "n_tasks": 40,
+      "tool_selection_accuracy": 0.85,
+      "argument_accuracy": 0.775,
+      "argument_accuracy_given_correct_tool": 0.9118,
+      "tokens_per_task": 4195.6,
+      "per_task": [
+        {
+          "id": "t01",
+          "gold_tool": "search_jobs",
+          "pred_tool": "search_jobs",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4189
+        },
+        {
+          "id": "t02",
+          "gold_tool": "search_jobs",
+          "pred_tool": "search_jobs",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t03",
+          "gold_tool": "search_jobs",
+          "pred_tool": "list_skills",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 4191
+        },
+        {
+          "id": "t04",
+          "gold_tool": "search_jobs",
+          "pred_tool": "search_jobs",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4199
+        },
+        {
+          "id": "t05",
+          "gold_tool": "get_job",
+          "pred_tool": "get_job",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4193
+        },
+        {
+          "id": "t06",
+          "gold_tool": "get_job",
+          "pred_tool": "get_job",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4192
+        },
+        {
+          "id": "t07",
+          "gold_tool": "get_job",
+          "pred_tool": "search_jobs",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 4192
+        },
+        {
+          "id": "t08",
+          "gold_tool": "get_client_history",
+          "pred_tool": "get_client_history",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4189
+        },
+        {
+          "id": "t09",
+          "gold_tool": "get_client_history",
+          "pred_tool": "get_client_history",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4193
+        },
+        {
+          "id": "t10",
+          "gold_tool": "get_client_history",
+          "pred_tool": "get_job",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 4195
+        },
+        {
+          "id": "t11",
+          "gold_tool": "get_connects_balance",
+          "pred_tool": "get_connects_balance",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4190
+        },
+        {
+          "id": "t12",
+          "gold_tool": "get_connects_balance",
+          "pred_tool": "get_connects_balance",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4189
+        },
+        {
+          "id": "t13",
+          "gold_tool": "get_market_stats",
+          "pred_tool": "get_market_stats",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t14",
+          "gold_tool": "get_market_stats",
+          "pred_tool": "get_market_stats",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t15",
+          "gold_tool": "get_market_stats",
+          "pred_tool": "get_market_stats",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4192
+        },
+        {
+          "id": "t16",
+          "gold_tool": "get_platform_policy",
+          "pred_tool": "get_platform_policy",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4196
+        },
+        {
+          "id": "t17",
+          "gold_tool": "get_platform_policy",
+          "pred_tool": "get_platform_policy",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t18",
+          "gold_tool": "list_messages",
+          "pred_tool": "list_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4188
+        },
+        {
+          "id": "t19",
+          "gold_tool": "list_messages",
+          "pred_tool": "list_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4190
+        },
+        {
+          "id": "t20",
+          "gold_tool": "list_messages",
+          "pred_tool": "list_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4192
+        },
+        {
+          "id": "t21",
+          "gold_tool": "list_events",
+          "pred_tool": "list_events",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4192
+        },
+        {
+          "id": "t22",
+          "gold_tool": "list_events",
+          "pred_tool": "list_events",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4192
+        },
+        {
+          "id": "t23",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4218
+        },
+        {
+          "id": "t24",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4215
+        },
+        {
+          "id": "t25",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4212
+        },
+        {
+          "id": "t26",
+          "gold_tool": "submit_proposal",
+          "pred_tool": "submit_proposal",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4193
+        },
+        {
+          "id": "t27",
+          "gold_tool": "submit_proposal",
+          "pred_tool": "send_message",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 4195
+        },
+        {
+          "id": "t28",
+          "gold_tool": "send_message",
+          "pred_tool": "list_messages",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 4195
+        },
+        {
+          "id": "t29",
+          "gold_tool": "send_message",
+          "pred_tool": "send_message",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4202
+        },
+        {
+          "id": "t30",
+          "gold_tool": "search_evidence",
+          "pred_tool": "list_skills",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 4198
+        },
+        {
+          "id": "t31",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_evidence",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 4191
+        },
+        {
+          "id": "t32",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_evidence",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t33",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_evidence",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 4190
+        },
+        {
+          "id": "t34",
+          "gold_tool": "get_case_study",
+          "pred_tool": "get_case_study",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4193
+        },
+        {
+          "id": "t35",
+          "gold_tool": "get_case_study",
+          "pred_tool": "get_case_study",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4194
+        },
+        {
+          "id": "t36",
+          "gold_tool": "list_skills",
+          "pred_tool": "list_skills",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t37",
+          "gold_tool": "get_free_slots",
+          "pred_tool": "get_free_slots",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4198
+        },
+        {
+          "id": "t38",
+          "gold_tool": "get_free_slots",
+          "pred_tool": "get_free_slots",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4195
+        },
+        {
+          "id": "t39",
+          "gold_tool": "create_interview_hold",
+          "pred_tool": "create_interview_hold",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 4209
+        },
+        {
+          "id": "t40",
+          "gold_tool": "create_email_draft",
+          "pred_tool": "create_email_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 4202
+        }
+      ]
+    },
+    "best_terse_descriptions": {
+      "description": "ablation: deployed surface with one-line descriptions",
+      "n_tools": 17,
+      "schema_tokens": 3474,
+      "n_tasks": 40,
+      "tool_selection_accuracy": 0.725,
+      "argument_accuracy": 0.7,
+      "argument_accuracy_given_correct_tool": 0.9655,
+      "tokens_per_task": 3488.6,
+      "per_task": [
+        {
+          "id": "t01",
+          "gold_tool": "search_jobs",
+          "pred_tool": "get_job",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3482
+        },
+        {
+          "id": "t02",
+          "gold_tool": "search_jobs",
+          "pred_tool": "search_jobs",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t03",
+          "gold_tool": "search_jobs",
+          "pred_tool": "list_skills",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3484
+        },
+        {
+          "id": "t04",
+          "gold_tool": "search_jobs",
+          "pred_tool": "search_jobs",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3492
+        },
+        {
+          "id": "t05",
+          "gold_tool": "get_job",
+          "pred_tool": "get_job",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3486
+        },
+        {
+          "id": "t06",
+          "gold_tool": "get_job",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3485
+        },
+        {
+          "id": "t07",
+          "gold_tool": "get_job",
+          "pred_tool": "get_job",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3485
+        },
+        {
+          "id": "t08",
+          "gold_tool": "get_client_history",
+          "pred_tool": "get_client_history",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3482
+        },
+        {
+          "id": "t09",
+          "gold_tool": "get_client_history",
+          "pred_tool": "get_client_history",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3486
+        },
+        {
+          "id": "t10",
+          "gold_tool": "get_client_history",
+          "pred_tool": "get_client_history",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t11",
+          "gold_tool": "get_connects_balance",
+          "pred_tool": "get_connects_balance",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3483
+        },
+        {
+          "id": "t12",
+          "gold_tool": "get_connects_balance",
+          "pred_tool": "get_connects_balance",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3482
+        },
+        {
+          "id": "t13",
+          "gold_tool": "get_market_stats",
+          "pred_tool": "get_job",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3488
+        },
+        {
+          "id": "t14",
+          "gold_tool": "get_market_stats",
+          "pred_tool": "search_jobs",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3488
+        },
+        {
+          "id": "t15",
+          "gold_tool": "get_market_stats",
+          "pred_tool": "search_jobs",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3485
+        },
+        {
+          "id": "t16",
+          "gold_tool": "get_platform_policy",
+          "pred_tool": "get_platform_policy",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3489
+        },
+        {
+          "id": "t17",
+          "gold_tool": "get_platform_policy",
+          "pred_tool": "get_platform_policy",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t18",
+          "gold_tool": "list_messages",
+          "pred_tool": "list_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3481
+        },
+        {
+          "id": "t19",
+          "gold_tool": "list_messages",
+          "pred_tool": "list_messages",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3483
+        },
+        {
+          "id": "t20",
+          "gold_tool": "list_messages",
+          "pred_tool": "get_client_history",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3485
+        },
+        {
+          "id": "t21",
+          "gold_tool": "list_events",
+          "pred_tool": "list_events",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3485
+        },
+        {
+          "id": "t22",
+          "gold_tool": "list_events",
+          "pred_tool": "list_events",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3485
+        },
+        {
+          "id": "t23",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3511
+        },
+        {
+          "id": "t24",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3508
+        },
+        {
+          "id": "t25",
+          "gold_tool": "create_proposal_draft",
+          "pred_tool": "create_proposal_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3505
+        },
+        {
+          "id": "t26",
+          "gold_tool": "submit_proposal",
+          "pred_tool": "submit_proposal",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3486
+        },
+        {
+          "id": "t27",
+          "gold_tool": "submit_proposal",
+          "pred_tool": "submit_proposal",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t28",
+          "gold_tool": "send_message",
+          "pred_tool": "list_messages",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3488
+        },
+        {
+          "id": "t29",
+          "gold_tool": "send_message",
+          "pred_tool": "list_messages",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3495
+        },
+        {
+          "id": "t30",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_evidence",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3491
+        },
+        {
+          "id": "t31",
+          "gold_tool": "search_evidence",
+          "pred_tool": "submit_proposal",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3484
+        },
+        {
+          "id": "t32",
+          "gold_tool": "search_evidence",
+          "pred_tool": "search_evidence",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t33",
+          "gold_tool": "search_evidence",
+          "pred_tool": "get_case_study",
+          "tool_ok": false,
+          "args_ok": false,
+          "tokens": 3483
+        },
+        {
+          "id": "t34",
+          "gold_tool": "get_case_study",
+          "pred_tool": "get_case_study",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3486
+        },
+        {
+          "id": "t35",
+          "gold_tool": "get_case_study",
+          "pred_tool": "get_case_study",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3487
+        },
+        {
+          "id": "t36",
+          "gold_tool": "list_skills",
+          "pred_tool": "list_skills",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t37",
+          "gold_tool": "get_free_slots",
+          "pred_tool": "get_free_slots",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3491
+        },
+        {
+          "id": "t38",
+          "gold_tool": "get_free_slots",
+          "pred_tool": "get_free_slots",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3488
+        },
+        {
+          "id": "t39",
+          "gold_tool": "create_interview_hold",
+          "pred_tool": "create_interview_hold",
+          "tool_ok": true,
+          "args_ok": false,
+          "tokens": 3502
+        },
+        {
+          "id": "t40",
+          "gold_tool": "create_email_draft",
+          "pred_tool": "create_email_draft",
+          "tool_ok": true,
+          "args_ok": true,
+          "tokens": 3495
+        }
+      ]
+    }
+  }
+}

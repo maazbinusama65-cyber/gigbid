@@ -51,12 +51,16 @@ def _compose(state: dict, evidence: list[dict], style: dict, feedback: list[str]
     top_req = next((m["requirement"] for m in matrix if m.get("evidence_ids")), (spec.get("required_skills") or ["this"])[0])
     if not style["drop_opening"]:
         parts.append(f"The core of \"{job.get('title','your project')}\" is {top_req}, so that is where I would start.")
-    per_req = 2 if style["shorter"] else 3
+    variant = (state.get("settings") or {}).get("style_variant", "evidence_dense")
+    per_req = {"concise_question": 0}.get(variant, 1 if style["shorter"] else 2)   # evidence sentences - 1
     for m in matrix:
         for i in m.get("evidence_ids", [])[:2]:
             if i in ev_by_id and i not in used and len(used) < per_req + 1:
                 parts.append(f"On {m['requirement']}: {_claim_sentence(ev_by_id[i])} [{i}]")
                 used.append(i)
+    if variant == "concise_question":
+        parts.append("My approach: start with the simplest version that answers your question, then iterate on "
+                     "what the first results show.")
     missing = [m["requirement"] for m in matrix if m.get("strength", 0) < 0.4 and len(m["requirement"]) <= 40][:2]
     if missing:
         parts.append(f"I have not shipped {' or '.join(missing)} in a client project, so I would flag it early and "
@@ -100,6 +104,7 @@ async def writer(state: dict, ctx: Ctx) -> dict:
                 f"\n\nREQUIREMENTS: {state.get('job_spec', {}).get('requirements')}\n"
                 f"SCREENING QUESTIONS: {job.get('screening_questions')}\n\nEVIDENCE:\n{ev_txt}\n\n"
                 f"STYLE RULES: {style_rules or 'none'}\nOUTCOME HINTS: {hints or 'none'}\n"
+                f"STRATEGY: {(state.get('settings') or {}).get('style_variant', 'evidence_dense')}\n"
                 f"FIX THESE ISSUES FROM THE CRITIC: {feedback or 'none'}")
         res = await ctx.llm.chat("writer", system, user, schema=WriterOut, max_tokens=900, temperature=0.4)
         out = res.parsed

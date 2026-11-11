@@ -1,23 +1,56 @@
 [project]
-name = "gigbid-student-project"
+name = "gigbid"
 version = "0.1.0"
-description = "Student scaffold for the AI-4016 GigBid assignment"
+description = "GigBid: a multi-agent freelancer copilot (LangGraph + MCP + advanced RAG)"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "fastapi",
-  "uvicorn[standard]",
-  "pydantic",
-  "pyyaml",
-  "langgraph",
-  "langchain",
-  "langchain-mcp-adapters",
-  "mcp",
-  "httpx",
-  "python-dotenv",
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8",
+  "pydantic-settings>=2.4",
+  "pyyaml>=6",
+  "python-dotenv>=1",
+  "httpx>=0.27",
+  "langgraph>=1.0",
+  "langgraph-checkpoint-sqlite>=3",
+  "langgraph-checkpoint-postgres>=3",
+  "langgraph-supervisor>=0.0.31",
+  "langchain-core>=1.0",
+  "langchain-mcp-adapters>=0.2",
+  "mcp>=1.20",
+  "sqlalchemy>=2",
+  "psycopg[binary]>=3.2",
+  "aiosqlite>=0.20",
+  "cryptography>=43",
+  "sse-starlette>=2",
+  "python-multipart>=0.0.9",
+  "email-validator>=2",
+  "arq>=0.26",
+  "redis>=5",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "sentence-transformers>=3",
+  "pypdf>=5",
+  "reportlab>=4",
+  "networkx>=3",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pytest-asyncio", "ruff", "mypy"]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.6", "mypy>=1.11", "fakeredis>=2.23"]
+
+[tool.setuptools.packages.find]
+include = ["agent*", "rag*", "mcp_servers*", "gigsim*", "apps*", "worker*", "evals*"]
 
 [tool.ruff]
 line-length = 100
+target-version = "py311"
+extend-exclude = ["apps/web", "data", "gigsim/datagen_assets"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008", "UP042"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

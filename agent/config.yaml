@@ -81,6 +81,10 @@ nodes:
   retries: 1
   timeout_seconds: 90
 
+experiments:            # X2 proposal A/B strategies (writer `style_variant`)
+  strategies: [evidence_dense, concise_question]
+  seed: 2026
+
 autonomy:
   auto_skip_low_fit: false
   auto_send: false        # hard-coded False in graph as well: never auto-send

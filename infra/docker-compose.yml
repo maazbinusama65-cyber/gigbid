@@ -1,3 +1,75 @@
-# TODO: Define web, API, worker, MCP servers, GigSim, Postgres, Redis,
-# vector store and local model service as appropriate.
-services: {}
+# docker compose -f infra/docker-compose.yml up --build
+# Secrets come only from environment variables (.env, never committed). See .env.example.
+name: gigbid
+
+x-py: &py
+  env_file: [{path: ../.env, required: false}]
+  environment: &pyenv
+    DATABASE_URL: postgresql+psycopg://gigbid:gigbid@postgres:5432/gigbid
+    REDIS_URL: redis://redis:6379/0
+    MARKETPLACE_MODE: ${MARKETPLACE_MODE:-gigsim}
+    GIGSIM_BASE_URL: http://gigsim:8081
+    MODEL_PROFILE: ${MODEL_PROFILE:-open}
+    GIGBID_TOOL_TRANSPORT: http
+    GIGBID_SERVICES: real
+  depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_started}}
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: gigbid, POSTGRES_PASSWORD: gigbid, POSTGRES_DB: gigbid}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U gigbid"], interval: 5s, retries: 10}
+  redis:
+    image: redis:7-alpine
+  ollama:                       # open profile, local models (CPU ok for 4B; pull: docker compose exec ollama ollama pull qwen3:4b)
+    image: ollama/ollama:latest
+    volumes: [ollama:/root/.ollama]
+    ports: ["11434:11434"]
+  gigsim:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/gigsim.Dockerfile}
+    image: gigbid-gigsim:latest
+    depends_on: {}
+    environment: {GIGSIM_API_TOKEN: "${GIGSIM_API_TOKEN:-dev-gigsim-token}", GIGSIM_STATE_PATH: /state/gigsim.json}
+    volumes: [gigsimstate:/state]
+    ports: ["8081:8081"]
+  mcp-marketplace:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/mcp.Dockerfile, args: {SERVER: marketplace}}
+    image: gigbid-mcp-marketplace:latest
+    environment: {<<: *pyenv, PORT: "9102", MARKETPLACE_MCP_TOKEN: "${MARKETPLACE_MCP_TOKEN:-dev-mcp-token}", GIGSIM_API_TOKEN: "${GIGSIM_API_TOKEN:-dev-gigsim-token}"}
+    depends_on: [gigsim]
+    volumes: [auditlog:/app/data/processed]
+  mcp-portfolio:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/mcp.Dockerfile, args: {SERVER: portfolio}}
+    image: gigbid-mcp-portfolio:latest
+    environment: {<<: *pyenv, PORT: "9101"}
+    volumes: [indexes:/app/data/processed, ../data/personas:/app/data/personas:ro]
+  mcp-workspace:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/mcp.Dockerfile, args: {SERVER: workspace}}
+    image: gigbid-mcp-workspace:latest
+    environment: {<<: *pyenv, PORT: "9103"}
+  api:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/api.Dockerfile}
+    image: gigbid-api:latest
+    environment: {<<: *pyenv, APP_SECRET_KEY: "${APP_SECRET_KEY:?set APP_SECRET_KEY in .env}",
+                  REVIEWER_EMAIL: "${REVIEWER_EMAIL:-reviewer@gigbid.dev}", REVIEWER_PASSWORD: "${REVIEWER_PASSWORD:?set REVIEWER_PASSWORD}"}
+    depends_on: [mcp-marketplace, mcp-portfolio, mcp-workspace]
+    volumes: [indexes:/app/data/processed]
+    ports: ["8000:8000"]
+  worker:
+    <<: *py
+    build: {context: .., dockerfile: infra/docker/worker.Dockerfile}
+    image: gigbid-worker:latest
+    environment: {<<: *pyenv, APP_SECRET_KEY: "${APP_SECRET_KEY:?set APP_SECRET_KEY in .env}"}
+    depends_on: [api]
+  web:
+    build: {context: .., dockerfile: infra/docker/web.Dockerfile}
+    ports: ["3000:80"]
+    depends_on: [api]
+
+volumes: {pgdata: {}, ollama: {}, gigsimstate: {}, auditlog: {}, indexes: {}}

@@ -1,0 +1,25 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_messages(load_messages)
+	classify(classify)
+	draft_reply(draft_reply)
+	approve_reply(approve_reply)
+	send_reply(send_reply)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_messages;
+	approve_reply -.-> __end__;
+	approve_reply -.-> send_reply;
+	classify --> draft_reply;
+	draft_reply -.-> __end__;
+	draft_reply -.-> approve_reply;
+	load_messages -.-> __end__;
+	load_messages -.-> classify;
+	send_reply --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

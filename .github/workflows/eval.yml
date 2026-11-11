@@ -1,0 +1,16 @@
+name: eval
+on: [pull_request, workflow_dispatch]
+jobs:
+  smoke-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu torch && pip install -e ".[dev]"
+      - run: python -m gigsim.datagen --seed 1337
+      - name: 30-job smoke eval (stub LLM) + failure thresholds
+        run: make eval-smoke
+        env: {MODEL_PROFILE: stub}
+      - uses: actions/upload-artifact@v4
+        with: {name: eval-results, path: evals/results}

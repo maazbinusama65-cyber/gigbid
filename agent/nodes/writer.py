@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 
 from agent.guardrails import strip_injection, wrap_untrusted
 from agent.handoffs import ProposalDraft
-from agent.nodes.common import Ctx, first_sentences
+from agent.nodes.common import Ctx, best_sentence, first_sentences
 from agent.prompts import load_prompt
 
 
@@ -37,8 +37,8 @@ def _style_flags(rules: list[str]) -> dict:
             "avoid": [m for m in re.findall(r"phrase '([^']+)'", j)]}
 
 
-def _claim_sentence(ev: dict, max_chars: int = 220) -> str:
-    base = first_sentences(ev.get("text", ""), 1, max_chars) or ev.get("title", "")
+def _claim_sentence(ev: dict, requirement: str = "", max_chars: int = 220) -> str:
+    base = best_sentence(ev.get("text", ""), requirement, max_chars) or first_sentences(ev.get("text", ""), 1, max_chars)         or ev.get("title", "")
     return base.rstrip(".") + "."
 
 
@@ -48,7 +48,8 @@ def _compose(state: dict, evidence: list[dict], style: dict, feedback: list[str]
     ev_by_id = {e["id"]: e for e in evidence}
     parts: list[str] = []
     used: list[str] = []
-    top_req = next((m["requirement"] for m in matrix if m.get("evidence_ids")), (spec.get("required_skills") or ["this"])[0])
+    ranked = sorted((m for m in matrix if m.get("evidence_ids")), key=lambda m: -m.get("strength", 0))
+    top_req = ranked[0]["requirement"] if ranked else (spec.get("required_skills") or ["this"])[0]
     if not style["drop_opening"]:
         parts.append(f"The core of \"{job.get('title','your project')}\" is {top_req}, so that is where I would start.")
     variant = (state.get("settings") or {}).get("style_variant", "evidence_dense")
@@ -56,7 +57,7 @@ def _compose(state: dict, evidence: list[dict], style: dict, feedback: list[str]
     for m in matrix:
         for i in m.get("evidence_ids", [])[:2]:
             if i in ev_by_id and i not in used and len(used) < per_req + 1:
-                parts.append(f"On {m['requirement']}: {_claim_sentence(ev_by_id[i])} [{i}]")
+                parts.append(f"On {m['requirement']}: {_claim_sentence(ev_by_id[i], m['requirement'])} [{i}]")
                 used.append(i)
     if variant == "concise_question":
         parts.append("My approach: start with the simplest version that answers your question, then iterate on "
@@ -75,7 +76,7 @@ def _compose(state: dict, evidence: list[dict], style: dict, feedback: list[str]
         qt = set(re.findall(r"[a-z0-9]+", q.lower()))
         best = max(evidence, key=lambda e: len(qt & set(re.findall(r"[a-z0-9]+", (e.get('text','') + ' ' + e.get('title','')).lower()))), default=None)
         if best and len(qt & set(re.findall(r"[a-z0-9]+", best.get("text", "").lower()))) >= 2:
-            answers.append(f"{_claim_sentence(best, 240)} [{best['id']}]")
+            answers.append(f"{_claim_sentence(best, q, 240)} [{best['id']}]")
             used.append(best["id"])
         else:
             answers.append("I would start by clarifying the success metric and data available, then propose a small "

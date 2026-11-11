@@ -35,6 +35,7 @@ class DedupStore:
         self._db = sqlite3.connect(":memory:" if mem else str(p), check_same_thread=False)
         self._db.execute("create table if not exists seen (user text, fp text, job_id text, primary key(user, fp))")
         self._lock = threading.Lock()
+        self._sets: dict[str, dict[str, frozenset]] = {}
 
     def claim(self, user: str, fp: str, job_id: str) -> str:
         """Return the job_id that owns this fingerprint (== job_id if first time)."""
@@ -45,6 +46,31 @@ class DedupStore:
             self._db.execute("insert into seen values (?,?,?)", (user, fp, job_id))
             self._db.commit()
             return job_id
+
+    def claim_job(self, user: str, job: dict, threshold: float = 0.66) -> str:
+        """Near-duplicate aware claim: exact fingerprint first, then word-set Jaccard against this
+        user's earlier jobs. The first-seen job owns the group (feeds arrive in posting order)."""
+        job_id = job["job_id"]
+        fp = fingerprint(job)
+        toks = frozenset(_tokens(job))
+        with self._lock:
+            row = self._db.execute("select job_id from seen where user=? and fp=?", (user, fp)).fetchone()
+            if row:
+                return row[0]
+            cache = self._sets.setdefault(user, {})
+            if job_id in cache:
+                return job_id
+            for other_id, other in cache.items():
+                if len(toks & other) / max(1, len(toks | other)) >= threshold:
+                    return other_id
+            cache[job_id] = toks
+            self._db.execute("insert or ignore into seen values (?,?,?)", (user, fp, job_id))
+            self._db.commit()
+            return job_id
+
+
+def _tokens(job: dict) -> set[str]:
+    return set(re.findall(r"[a-z0-9+#]{3,}", f"{job.get('title', '')} {job.get('description', '')}".lower()))
 
 
 _dedup: DedupStore | None = None
@@ -67,7 +93,7 @@ async def scout(state: dict, ctx: Ctx) -> dict:
     job = state.get("job")
     if not job:
         job = unwrap(await ctx.call("scout", "get_job", {"job_id": job_id}), "job")
-    owner = get_dedup().claim(state.get("user_id", "anon"), fingerprint(job), job_id)
+    owner = get_dedup().claim_job(state.get("user_id", "anon"), job, float(ctx.cfg.get_path("dedup.jaccard_threshold", 0.66)))
     if owner != job_id and not state.get("settings", {}).get("force_bid"):
         return {"job": job, "status": "skipped", "status_reason": f"duplicate of {owner}",
                 "decision": {"decision": "skip", "reasons": [f"duplicate of {owner}"], "auto_skipped": True}}
@@ -86,6 +112,6 @@ async def scan_saved_searches(ctx: Ctx, user_id: str, searches: list[dict], limi
             if j["job_id"] in seen_ids:
                 continue
             seen_ids.add(j["job_id"])
-            if get_dedup().claim(user_id, fingerprint(j), j["job_id"]) == j["job_id"]:
+            if get_dedup().claim_job(user_id, j, float(ctx.cfg.get_path("dedup.jaccard_threshold", 0.66))) == j["job_id"]:
                 new.append(j["job_id"])
     return new

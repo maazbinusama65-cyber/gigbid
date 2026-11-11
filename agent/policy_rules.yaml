@@ -68,9 +68,14 @@ scam_signals:   # applied by the Risk Assessor to JOB POSTS and client messages 
     - '\b(gift ?cards?|western union|money ?gram|crypto(currency)? (wallet|payment)|bitcoin)\b'
     - '\b(buy|purchase) (your own )?(equipment|laptop|software|license)s? (first|and (we|i) will (reimburse|refund))\b'
     - '\bcheque|check (overpayment|deposit)\b'
+    - '\b(must|need to|required to|have to|should)( first)? pay\b.{0,50}\b(fee|deposit|charge)\b'
+    - '\b(onboarding|registration|verification|security|training|processing|activation|access) (and \w+ )?fee\b'
+    - '\brefundable\b.{0,40}\b(fee|deposit)\b'
   guarantee_demand:
-    - '\b(guarantee[sd]?|100% (success|guaranteed|results)|must (guarantee|promise))\b'
+    - '\b(?<!not )(must|need to|have to|should|required to|expected to) (guarantee|promise)\b'
+    - '\b100% (success|guaranteed|results|accuracy)\b'
     - '\bonly (apply|bid) if you can guarantee\b'
+    - '\bguarantee[sd]? (results|success|delivery|a (win|hire|return|profit|ranking))\b'
   credential_phishing:
     - '\b(send|share|give) (me |us )?(your )?(password|login|credentials|otp|one[- ]time code|2fa|ssn|passport|bank (details|account))\b'
     - '\b(verify|confirm) your (identity|account) (by|with) (sending|sharing)\b'

@@ -136,6 +136,42 @@ def words(text: str) -> list[str]:
     return _WORD.findall(text or "")
 
 
+def best_sentence(text: str, requirement: str = "", limit: int = 240) -> str:
+    """Pick the most useful sentence of an evidence chunk for a requirement (verbatim, so it stays grounded).
+
+    Drops the 'Title > Section' header, bullets, code fences and one-word lines; prefers sentences that
+    mention the requirement and sentences that state a result.
+    """
+    body = re.sub(r"```.*?```", " ", text or "", flags=re.S)
+    lines = [ln.strip() for ln in body.splitlines()]
+    if lines and ">" in lines[0] and len(lines[0]) < 120:
+        lines = lines[1:]
+    cands: list[str] = []
+    for ln in lines:
+        if not ln or ln.startswith(("-", "*", "#", ">", "|", "import ", "from ", "def ")):
+            continue
+        for s in re.split(r"(?<=[.!?])\s+", ln):
+            s = re.sub(r"[`*_]+", "", s).strip()
+            if 30 <= len(s) <= 400 and not s.endswith(":"):
+                cands.append(s)
+    if not cands:
+        return first_sentences(text, 1, limit)
+    toks = {t for t in re.findall(r"[a-z0-9+#]{3,}", requirement.lower())}
+
+    def score(s: str) -> float:
+        low = s.lower()
+        sc = sum(t in low for t in toks)
+        if re.search(r"\b(result|went from|reduced|cut|increased|saved|improved|\d+\s?%)", low):
+            sc += 1.5
+        if re.match(r"(i|we) ", low):
+            sc += 0.5
+        return sc
+
+    best = max(cands, key=score)
+    best = re.sub(r"^Result:\s*", "The result: ", best)
+    return best[:limit].rstrip()
+
+
 def first_sentences(text: str, n: int = 2, limit: int = 260) -> str:
     text = re.sub(r"^#+\s.*$", "", text or "", flags=re.M)          # drop markdown headings
     text = re.sub(r"[`*_>\[\]]+", "", text)

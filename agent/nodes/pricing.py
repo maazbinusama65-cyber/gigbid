@@ -21,11 +21,28 @@ async def pricing(state: dict, ctx: Ctx) -> dict:
         p50 = float(stats.get("hourly_p50") or p50 or 30)
         p75 = p75 or p50 * 1.25
     p25, p75 = p25 or p50 * 0.8, p75 or p50 * 1.25
-    floor = float(st.get("hourly_rate_usd", 0)) if hourly else float(st.get("min_project_budget_usd", 0))
+    rate = float(st.get("hourly_rate_usd", 0))
+    floor = rate if hourly else float(st.get("min_project_budget_usd", 0))
     fit = float(state.get("fit_report", {}).get("score", 0.5))
-    # stronger fit and strong evidence => price toward the upper-middle of the band
-    target = p25 + (p75 - p25) * (0.35 + 0.4 * fit)
+    pc = ctx.cfg.get("pricing", {})
     ceiling = float(b.get("max") or 0)
+    if hourly:
+        # an hourly bid is the user's own rate, kept inside what the client says they will pay
+        target = rate or p50
+        if b.get("min") and target < float(b["min"]):
+            target = float(b["min"])
+    else:
+        days = float(spec.get("timeline_days") or job.get("duration_days") or 0)
+        cost_basis = rate * days * float(pc.get("billable_hours_per_day", 4)) if rate and days else 0.0
+        budget_mid = (float(b.get("min") or 0) + ceiling) / 2 if ceiling else 0.0
+        w = float(pc.get("cost_basis_weight", 0.6))
+        parts = [(w, cost_basis), (1 - w, budget_mid)]
+        have = [(wt, v) for wt, v in parts if v > 0]
+        if have:
+            target = sum(wt * v for wt, v in have) / sum(wt for wt, _ in have)
+        else:
+            target = p25 + (p75 - p25) * (0.35 + 0.4 * fit)   # no cost basis and no budget: use the market
+        target = min(max(target, p25 * 0.5), max(p75, target))  # keep it near the observed market range
     amount = max(target, floor)
     if ceiling and amount > ceiling:
         amount = ceiling

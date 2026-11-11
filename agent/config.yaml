@@ -81,6 +81,13 @@ nodes:
   retries: 1
   timeout_seconds: 90
 
+dedup:
+  jaccard_threshold: 0.66       # near-duplicate job posts (word-set Jaccard), chosen on the dev set
+
+pricing:
+  billable_hours_per_day: 4     # effort hours per calendar day of the stated timeline (cost basis = rate x days x this)
+  cost_basis_weight: 0.6        # blend: cost basis vs the client's own budget midpoint
+
 experiments:            # X2 proposal A/B strategies (writer `style_variant`)
   strategies: [evidence_dense, concise_question]
   seed: 2026

@@ -1,0 +1,5276 @@
+{
+  "components": {
+    "schemas": {
+      "AnalyticsSummary": {
+        "properties": {
+          "by_category": {
+            "items": {
+              "$ref": "#/components/schemas/CategoryStat"
+            },
+            "title": "By Category",
+            "type": "array"
+          },
+          "connects_vs_outcomes": {
+            "items": {
+              "$ref": "#/components/schemas/ConnectsPoint"
+            },
+            "title": "Connects Vs Outcomes",
+            "type": "array"
+          },
+          "cost_latency": {
+            "$ref": "#/components/schemas/CostLatency"
+          },
+          "is_sample": {
+            "title": "Is Sample",
+            "type": "boolean"
+          },
+          "period_label": {
+            "default": "",
+            "title": "Period Label",
+            "type": "string"
+          },
+          "sample_note": {
+            "default": "",
+            "title": "Sample Note",
+            "type": "string"
+          },
+          "top_rejection_reasons": {
+            "items": {
+              "$ref": "#/components/schemas/RejectionReason"
+            },
+            "title": "Top Rejection Reasons",
+            "type": "array"
+          },
+          "totals": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "title": "Totals",
+            "type": "object"
+          }
+        },
+        "required": [
+          "is_sample",
+          "sample_note",
+          "period_label",
+          "totals",
+          "by_category",
+          "connects_vs_outcomes",
+          "cost_latency",
+          "top_rejection_reasons"
+        ],
+        "title": "AnalyticsSummary",
+        "type": "object"
+      },
+      "AnalyzeResponse": {
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "run_id": {
+            "title": "Run Id",
+            "type": "string"
+          },
+          "status": {
+            "default": "queued",
+            "enum": [
+              "queued",
+              "running"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "run_id",
+          "job_id",
+          "status"
+        ],
+        "title": "AnalyzeResponse",
+        "type": "object"
+      },
+      "ApprovalDecision": {
+        "description": "Resume value for interrupt().",
+        "properties": {
+          "action": {
+            "enum": [
+              "approve",
+              "edit",
+              "reject"
+            ],
+            "title": "Action",
+            "type": "string"
+          },
+          "edited_answers": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edited Answers"
+          },
+          "edited_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edited Text"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "title": "ApprovalDecision",
+        "type": "object"
+      },
+      "ApprovalItem": {
+        "properties": {
+          "approval_id": {
+            "title": "Approval Id",
+            "type": "string"
+          },
+          "created_at": {
+            "title": "Created At",
+            "type": "string"
+          },
+          "decided_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Decided At"
+          },
+          "decision": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ApprovalDecision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request": {
+            "$ref": "#/components/schemas/ApprovalRequest"
+          },
+          "run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Run Id"
+          },
+          "status": {
+            "default": "pending",
+            "enum": [
+              "pending",
+              "approved",
+              "edited",
+              "rejected"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "title": {
+            "default": "",
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "approval_id",
+          "status",
+          "created_at",
+          "decided_at",
+          "run_id",
+          "title",
+          "request",
+          "decision"
+        ],
+        "title": "ApprovalItem",
+        "type": "object"
+      },
+      "ApprovalList": {
+        "properties": {
+          "approvals": {
+            "items": {
+              "$ref": "#/components/schemas/ApprovalItem"
+            },
+            "title": "Approvals",
+            "type": "array"
+          },
+          "pending_count": {
+            "default": 0,
+            "title": "Pending Count",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "approvals",
+          "pending_count"
+        ],
+        "title": "ApprovalList",
+        "type": "object"
+      },
+      "ApprovalRequest": {
+        "description": "Payload attached to every LangGraph interrupt() (C5).",
+        "properties": {
+          "compliance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ComplianceVerdict"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "critic": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Critique"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "draft": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProposalDraft"
+              },
+              {
+                "additionalProperties": true,
+                "type": "object"
+              }
+            ],
+            "title": "Draft"
+          },
+          "dry_run": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DryRunPreview"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceRef"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "job_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Job Id"
+          },
+          "kind": {
+            "enum": [
+              "proposal",
+              "message",
+              "connects"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "price": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PriceQuote"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "risk": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RiskReport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "thread_id": {
+            "title": "Thread Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "thread_id",
+          "job_id",
+          "draft",
+          "evidence",
+          "risk",
+          "price",
+          "dry_run",
+          "critic",
+          "compliance"
+        ],
+        "title": "ApprovalRequest",
+        "type": "object"
+      },
+      "BidDecision": {
+        "properties": {
+          "auto_skipped": {
+            "default": false,
+            "title": "Auto Skipped",
+            "type": "boolean"
+          },
+          "decision": {
+            "enum": [
+              "skip",
+              "watch",
+              "bid"
+            ],
+            "title": "Decision",
+            "type": "string"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Reasons",
+            "type": "array"
+          }
+        },
+        "required": [
+          "decision",
+          "reasons",
+          "auto_skipped"
+        ],
+        "title": "BidDecision",
+        "type": "object"
+      },
+      "Body_upload_portfolio": {
+        "properties": {
+          "file": {
+            "contentMediaType": "application/octet-stream",
+            "title": "File",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_portfolio",
+        "type": "object"
+      },
+      "Budget": {
+        "properties": {
+          "currency": {
+            "default": "USD",
+            "title": "Currency",
+            "type": "string"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "type": {
+            "default": "fixed",
+            "enum": [
+              "fixed",
+              "hourly"
+            ],
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "min",
+          "max",
+          "currency"
+        ],
+        "title": "Budget",
+        "type": "object"
+      },
+      "CategoryStat": {
+        "properties": {
+          "category": {
+            "title": "Category",
+            "type": "string"
+          },
+          "hire_rate": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Hire Rate",
+            "type": "number"
+          },
+          "hires": {
+            "title": "Hires",
+            "type": "integer"
+          },
+          "proposals_sent": {
+            "title": "Proposals Sent",
+            "type": "integer"
+          },
+          "replies": {
+            "title": "Replies",
+            "type": "integer"
+          },
+          "reply_rate": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Reply Rate",
+            "type": "number"
+          }
+        },
+        "required": [
+          "category",
+          "proposals_sent",
+          "replies",
+          "hires",
+          "reply_rate",
+          "hire_rate"
+        ],
+        "title": "CategoryStat",
+        "type": "object"
+      },
+      "ChatMessage": {
+        "properties": {
+          "body": {
+            "title": "Body",
+            "type": "string"
+          },
+          "flagged": {
+            "default": false,
+            "description": "contains a planted instruction or scam signal",
+            "title": "Flagged",
+            "type": "boolean"
+          },
+          "message_id": {
+            "title": "Message Id",
+            "type": "string"
+          },
+          "sender": {
+            "enum": [
+              "client",
+              "freelancer"
+            ],
+            "title": "Sender",
+            "type": "string"
+          },
+          "ts": {
+            "title": "Ts",
+            "type": "string"
+          }
+        },
+        "required": [
+          "message_id",
+          "sender",
+          "body",
+          "ts",
+          "flagged"
+        ],
+        "title": "ChatMessage",
+        "type": "object"
+      },
+      "Claim": {
+        "properties": {
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "label": {
+            "default": "unsupported",
+            "enum": [
+              "supported",
+              "partly_supported",
+              "unsupported"
+            ],
+            "title": "Label",
+            "type": "string"
+          },
+          "removed": {
+            "default": false,
+            "title": "Removed",
+            "type": "boolean"
+          },
+          "rewritten": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rewritten"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "label",
+          "evidence_ids",
+          "rewritten",
+          "removed"
+        ],
+        "title": "Claim",
+        "type": "object"
+      },
+      "ClientSummary": {
+        "properties": {
+          "avg_rating": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Rating"
+          },
+          "client_id": {
+            "title": "Client Id",
+            "type": "string"
+          },
+          "country": {
+            "default": "",
+            "title": "Country",
+            "type": "string"
+          },
+          "hire_rate": {
+            "default": 0,
+            "title": "Hire Rate",
+            "type": "number"
+          },
+          "industry": {
+            "default": "",
+            "title": "Industry",
+            "type": "string"
+          },
+          "jobs_posted": {
+            "default": 0,
+            "title": "Jobs Posted",
+            "type": "integer"
+          },
+          "member_since": {
+            "default": "",
+            "title": "Member Since",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "payment_verified": {
+            "default": false,
+            "title": "Payment Verified",
+            "type": "boolean"
+          },
+          "total_spent": {
+            "default": 0,
+            "title": "Total Spent",
+            "type": "number"
+          }
+        },
+        "required": [
+          "client_id",
+          "name",
+          "industry",
+          "payment_verified",
+          "total_spent",
+          "hire_rate",
+          "avg_rating",
+          "jobs_posted",
+          "country",
+          "member_since"
+        ],
+        "title": "ClientSummary",
+        "type": "object"
+      },
+      "ComplianceVerdict": {
+        "properties": {
+          "blocked": {
+            "default": false,
+            "title": "Blocked",
+            "type": "boolean"
+          },
+          "cleaned_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cleaned Text"
+          },
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          },
+          "redactions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Redactions",
+            "type": "array"
+          },
+          "violations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Violations",
+            "type": "array"
+          }
+        },
+        "required": [
+          "ok",
+          "blocked",
+          "violations",
+          "redactions",
+          "cleaned_text"
+        ],
+        "title": "ComplianceVerdict",
+        "type": "object"
+      },
+      "ConnectRequest": {
+        "description": "Result of the OAuth dance. For GigSim this is the dev token; stored encrypted, never echoed.",
+        "properties": {
+          "access_token": {
+            "maxLength": 4000,
+            "minLength": 4,
+            "title": "Access Token",
+            "type": "string"
+          },
+          "refresh_token": {
+            "anyOf": [
+              {
+                "maxLength": 4000,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Refresh Token"
+          },
+          "scopes": {
+            "default": "",
+            "maxLength": 300,
+            "title": "Scopes",
+            "type": "string"
+          }
+        },
+        "required": [
+          "access_token"
+        ],
+        "title": "ConnectRequest",
+        "type": "object"
+      },
+      "Connection": {
+        "properties": {
+          "connected": {
+            "title": "Connected",
+            "type": "boolean"
+          },
+          "connected_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Connected At"
+          },
+          "provider": {
+            "enum": [
+              "gigsim",
+              "upwork"
+            ],
+            "title": "Provider",
+            "type": "string"
+          },
+          "scopes": {
+            "default": "",
+            "title": "Scopes",
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider",
+          "connected",
+          "connected_at",
+          "scopes"
+        ],
+        "title": "Connection",
+        "type": "object"
+      },
+      "ConnectionList": {
+        "properties": {
+          "connections": {
+            "items": {
+              "$ref": "#/components/schemas/Connection"
+            },
+            "title": "Connections",
+            "type": "array"
+          }
+        },
+        "required": [
+          "connections"
+        ],
+        "title": "ConnectionList",
+        "type": "object"
+      },
+      "ConnectsPoint": {
+        "properties": {
+          "connects_spent": {
+            "title": "Connects Spent",
+            "type": "integer"
+          },
+          "hires": {
+            "title": "Hires",
+            "type": "integer"
+          },
+          "period": {
+            "title": "Period",
+            "type": "string"
+          },
+          "replies": {
+            "title": "Replies",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "period",
+          "connects_spent",
+          "replies",
+          "hires"
+        ],
+        "title": "ConnectsPoint",
+        "type": "object"
+      },
+      "CostLatency": {
+        "properties": {
+          "avg_cost_usd_per_job_analysed": {
+            "title": "Avg Cost Usd Per Job Analysed",
+            "type": "number"
+          },
+          "avg_cost_usd_per_proposal": {
+            "title": "Avg Cost Usd Per Proposal",
+            "type": "number"
+          },
+          "p50_latency_s": {
+            "title": "P50 Latency S",
+            "type": "number"
+          },
+          "p95_latency_s": {
+            "title": "P95 Latency S",
+            "type": "number"
+          },
+          "p95_latency_s_per_job_analysed": {
+            "title": "P95 Latency S Per Job Analysed",
+            "type": "number"
+          },
+          "proposals_measured": {
+            "title": "Proposals Measured",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "proposals_measured",
+          "avg_cost_usd_per_proposal",
+          "p50_latency_s",
+          "p95_latency_s",
+          "avg_cost_usd_per_job_analysed",
+          "p95_latency_s_per_job_analysed"
+        ],
+        "title": "CostLatency",
+        "type": "object"
+      },
+      "Critique": {
+        "properties": {
+          "issues": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Issues",
+            "type": "array"
+          },
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          },
+          "score": {
+            "default": 0.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "type": "number"
+          },
+          "send_back": {
+            "default": false,
+            "title": "Send Back",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok",
+          "score",
+          "issues",
+          "send_back"
+        ],
+        "title": "Critique",
+        "type": "object"
+      },
+      "DecisionResult": {
+        "properties": {
+          "approval_id": {
+            "title": "Approval Id",
+            "type": "string"
+          },
+          "connects_spent": {
+            "default": 0,
+            "title": "Connects Spent",
+            "type": "integer"
+          },
+          "message": {
+            "default": "",
+            "title": "Message",
+            "type": "string"
+          },
+          "proposal_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proposal Id"
+          },
+          "queued": {
+            "default": false,
+            "description": "true when the marketplace was unavailable and the send is retried",
+            "title": "Queued",
+            "type": "boolean"
+          },
+          "run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Run Id"
+          },
+          "status": {
+            "enum": [
+              "pending",
+              "approved",
+              "edited",
+              "rejected"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "submitted": {
+            "default": false,
+            "title": "Submitted",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "approval_id",
+          "status",
+          "run_id",
+          "submitted",
+          "queued",
+          "proposal_id",
+          "connects_spent",
+          "message"
+        ],
+        "title": "DecisionResult",
+        "type": "object"
+      },
+      "DryRunPreview": {
+        "properties": {
+          "balance_after": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Balance After"
+          },
+          "connects_cost": {
+            "default": 0,
+            "title": "Connects Cost",
+            "type": "integer"
+          },
+          "payload": {
+            "additionalProperties": true,
+            "title": "Payload",
+            "type": "object"
+          }
+        },
+        "required": [
+          "payload",
+          "connects_cost",
+          "balance_after"
+        ],
+        "title": "DryRunPreview",
+        "type": "object"
+      },
+      "EvidenceRef": {
+        "description": "One piece of portfolio evidence (shape returned by the Portfolio MCP server).",
+        "properties": {
+          "date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "outcome": {
+            "anyOf": [
+              {
+                "enum": [
+                  "won",
+                  "replied",
+                  "ignored"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Outcome"
+          },
+          "project_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Project Id"
+          },
+          "score": {
+            "default": 0.0,
+            "title": "Score",
+            "type": "number"
+          },
+          "skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Skills",
+            "type": "array"
+          },
+          "source": {
+            "default": "",
+            "title": "Source",
+            "type": "string"
+          },
+          "text": {
+            "default": "",
+            "title": "Text",
+            "type": "string"
+          },
+          "title": {
+            "default": "",
+            "title": "Title",
+            "type": "string"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "project_id",
+          "type",
+          "source",
+          "title",
+          "text",
+          "date",
+          "outcome",
+          "skills",
+          "score"
+        ],
+        "title": "EvidenceRef",
+        "type": "object"
+      },
+      "FitReport": {
+        "description": "Fit Matcher output: requirement -> evidence matrix and an overall score.",
+        "properties": {
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "matched_skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Matched Skills",
+            "type": "array"
+          },
+          "matrix": {
+            "items": {
+              "$ref": "#/components/schemas/RequirementMatch"
+            },
+            "title": "Matrix",
+            "type": "array"
+          },
+          "missing_skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Missing Skills",
+            "type": "array"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Reasons",
+            "type": "array"
+          },
+          "score": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "type": "number"
+          }
+        },
+        "required": [
+          "score",
+          "matched_skills",
+          "missing_skills",
+          "matrix",
+          "evidence_ids",
+          "reasons"
+        ],
+        "title": "FitReport",
+        "type": "object"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "title": "Detail",
+            "type": "array"
+          }
+        },
+        "required": [
+          "detail"
+        ],
+        "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "HealthResponse": {
+        "properties": {
+          "marketplace": {
+            "$ref": "#/components/schemas/MarketplaceStatus"
+          },
+          "service": {
+            "default": "gigbid-api",
+            "title": "Service",
+            "type": "string"
+          },
+          "services_mode": {
+            "description": "mock | real",
+            "title": "Services Mode",
+            "type": "string"
+          },
+          "status": {
+            "default": "ok",
+            "title": "Status",
+            "type": "string"
+          },
+          "version": {
+            "default": "0.1.0",
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "service",
+          "version",
+          "services_mode",
+          "marketplace"
+        ],
+        "title": "HealthResponse",
+        "type": "object"
+      },
+      "InterviewSlot": {
+        "properties": {
+          "end": {
+            "title": "End",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "slot_id": {
+            "title": "Slot Id",
+            "type": "string"
+          },
+          "start": {
+            "title": "Start",
+            "type": "string"
+          }
+        },
+        "required": [
+          "slot_id",
+          "start",
+          "end",
+          "label"
+        ],
+        "title": "InterviewSlot",
+        "type": "object"
+      },
+      "JobBudget": {
+        "properties": {
+          "currency": {
+            "default": "USD",
+            "title": "Currency",
+            "type": "string"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "type": {
+            "default": "fixed",
+            "enum": [
+              "fixed",
+              "hourly"
+            ],
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "min",
+          "max",
+          "currency"
+        ],
+        "title": "JobBudget",
+        "type": "object"
+      },
+      "JobDetail": {
+        "properties": {
+          "approval_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approval Id"
+          },
+          "client": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ClientSummary"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "decision": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BidDecision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceRef"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "fit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FitReport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "job": {
+            "$ref": "#/components/schemas/JobPosting"
+          },
+          "latest_run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Run Id"
+          },
+          "price": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PriceQuote"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "risk": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RiskReport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sanitized_notes": {
+            "description": "Untrusted-content handling notes, e.g. an instruction embedded in the post was ignored.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Sanitized Notes",
+            "type": "array"
+          },
+          "spec": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/JobSpec"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "default": "new",
+            "enum": [
+              "new",
+              "analyzing",
+              "analyzed",
+              "drafted",
+              "skipped"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job",
+          "client",
+          "spec",
+          "risk",
+          "fit",
+          "evidence",
+          "price",
+          "decision",
+          "status",
+          "sanitized_notes",
+          "latest_run_id",
+          "approval_id"
+        ],
+        "title": "JobDetail",
+        "type": "object"
+      },
+      "JobListResponse": {
+        "properties": {
+          "categories": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Categories",
+            "type": "array"
+          },
+          "jobs": {
+            "items": {
+              "$ref": "#/components/schemas/JobSummary"
+            },
+            "title": "Jobs",
+            "type": "array"
+          },
+          "marketplace_degraded": {
+            "default": false,
+            "title": "Marketplace Degraded",
+            "type": "boolean"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "jobs",
+          "total",
+          "marketplace_degraded",
+          "categories"
+        ],
+        "title": "JobListResponse",
+        "type": "object"
+      },
+      "JobPosting": {
+        "description": "The raw (untrusted) job post as served by the marketplace.",
+        "properties": {
+          "budget": {
+            "$ref": "#/components/schemas/JobBudget"
+          },
+          "category": {
+            "title": "Category",
+            "type": "string"
+          },
+          "client_id": {
+            "title": "Client Id",
+            "type": "string"
+          },
+          "connects_cost": {
+            "default": 0,
+            "title": "Connects Cost",
+            "type": "integer"
+          },
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "duration_days": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duration Days"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "posted_at": {
+            "title": "Posted At",
+            "type": "string"
+          },
+          "required_skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Required Skills",
+            "type": "array"
+          },
+          "screening_questions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Screening Questions",
+            "type": "array"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "client_id",
+          "title",
+          "description",
+          "category",
+          "required_skills",
+          "budget",
+          "duration_days",
+          "screening_questions",
+          "posted_at",
+          "connects_cost"
+        ],
+        "title": "JobPosting",
+        "type": "object"
+      },
+      "JobSpec": {
+        "description": "Job Analyst output: what the client actually wants.",
+        "properties": {
+          "budget": {
+            "$ref": "#/components/schemas/Budget"
+          },
+          "budget_max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Budget Max"
+          },
+          "budget_min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Budget Min"
+          },
+          "category": {
+            "default": "general",
+            "title": "Category",
+            "type": "string"
+          },
+          "deliverables": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Deliverables",
+            "type": "array"
+          },
+          "hidden_needs": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Hidden Needs",
+            "type": "array"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "required_skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Required Skills",
+            "type": "array"
+          },
+          "requirements": {
+            "description": "atomic requirements, one retrieval each",
+            "items": {
+              "type": "string"
+            },
+            "title": "Requirements",
+            "type": "array"
+          },
+          "screening_questions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Screening Questions",
+            "type": "array"
+          },
+          "timeline_days": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timeline Days"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "title",
+          "deliverables",
+          "required_skills",
+          "requirements",
+          "budget",
+          "budget_min",
+          "budget_max",
+          "timeline_days",
+          "screening_questions",
+          "hidden_needs",
+          "category"
+        ],
+        "title": "JobSpec",
+        "type": "object"
+      },
+      "JobSummary": {
+        "description": "One inbox row.",
+        "properties": {
+          "budget": {
+            "$ref": "#/components/schemas/JobBudget"
+          },
+          "category": {
+            "title": "Category",
+            "type": "string"
+          },
+          "client_name": {
+            "default": "",
+            "title": "Client Name",
+            "type": "string"
+          },
+          "connects_cost": {
+            "default": 0,
+            "title": "Connects Cost",
+            "type": "integer"
+          },
+          "fit_score": {
+            "anyOf": [
+              {
+                "maximum": 1.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fit Score"
+          },
+          "injection_detected": {
+            "default": false,
+            "title": "Injection Detected",
+            "type": "boolean"
+          },
+          "is_scam": {
+            "default": false,
+            "title": "Is Scam",
+            "type": "boolean"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "posted_at": {
+            "title": "Posted At",
+            "type": "string"
+          },
+          "recommendation": {
+            "anyOf": [
+              {
+                "enum": [
+                  "bid",
+                  "watch",
+                  "skip"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recommendation"
+          },
+          "risk_flags": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Risk Flags",
+            "type": "array"
+          },
+          "risk_score": {
+            "anyOf": [
+              {
+                "maximum": 1.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Risk Score"
+          },
+          "run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Run Id"
+          },
+          "status": {
+            "default": "new",
+            "enum": [
+              "new",
+              "analyzing",
+              "analyzed",
+              "drafted",
+              "skipped"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "suggested_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Suggested Price"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "top_skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Top Skills",
+            "type": "array"
+          }
+        },
+        "required": [
+          "job_id",
+          "title",
+          "category",
+          "client_name",
+          "budget",
+          "posted_at",
+          "fit_score",
+          "risk_score",
+          "risk_flags",
+          "is_scam",
+          "injection_detected",
+          "recommendation",
+          "suggested_price",
+          "connects_cost",
+          "status",
+          "top_skills",
+          "run_id"
+        ],
+        "title": "JobSummary",
+        "type": "object"
+      },
+      "LoginRequest": {
+        "properties": {
+          "email": {
+            "maxLength": 320,
+            "title": "Email",
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 200,
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "LoginRequest",
+        "type": "object"
+      },
+      "MarketplaceEvent": {
+        "properties": {
+          "event_id": {
+            "title": "Event Id",
+            "type": "string"
+          },
+          "proposal_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Proposal Id"
+          },
+          "summary": {
+            "default": "",
+            "title": "Summary",
+            "type": "string"
+          },
+          "thread_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Thread Id"
+          },
+          "ts": {
+            "title": "Ts",
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "viewed",
+              "replied",
+              "interview",
+              "hired",
+              "lost",
+              "message"
+            ],
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "event_id",
+          "ts",
+          "type",
+          "proposal_id",
+          "thread_id",
+          "summary"
+        ],
+        "title": "MarketplaceEvent",
+        "type": "object"
+      },
+      "MarketplaceStatus": {
+        "properties": {
+          "checked_at": {
+            "title": "Checked At",
+            "type": "string"
+          },
+          "detail": {
+            "default": "",
+            "title": "Detail",
+            "type": "string"
+          },
+          "mode": {
+            "description": "gigsim | upwork_live | mock",
+            "title": "Mode",
+            "type": "string"
+          },
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok",
+          "mode",
+          "detail",
+          "checked_at"
+        ],
+        "title": "MarketplaceStatus",
+        "type": "object"
+      },
+      "MemoryItem": {
+        "properties": {
+          "confidence": {
+            "default": 0.8,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "type": "number"
+          },
+          "created_at": {
+            "title": "Created At",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "preference",
+              "style",
+              "fact",
+              "outcome"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "memory_id": {
+            "title": "Memory Id",
+            "type": "string"
+          },
+          "promoted": {
+            "default": true,
+            "description": "false = candidate waiting on the promotion rule",
+            "title": "Promoted",
+            "type": "boolean"
+          },
+          "source": {
+            "description": "what produced it, e.g. 'edit on proposal p_204' or 'hire outcome'",
+            "title": "Source",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "memory_id",
+          "kind",
+          "text",
+          "source",
+          "created_at",
+          "promoted",
+          "confidence"
+        ],
+        "title": "MemoryItem",
+        "type": "object"
+      },
+      "MemoryList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/MemoryItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "MemoryList",
+        "type": "object"
+      },
+      "MessageDecisionRequest": {
+        "properties": {
+          "action": {
+            "enum": [
+              "approve",
+              "edit",
+              "reject"
+            ],
+            "title": "Action",
+            "type": "string"
+          },
+          "edited_text": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Edited Text"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "maxLength": 500,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "slot_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Slot Id"
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "title": "MessageDecisionRequest",
+        "type": "object"
+      },
+      "MessageDecisionResult": {
+        "properties": {
+          "interview_hold": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/InterviewSlot"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "message": {
+            "default": "",
+            "title": "Message",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "sent",
+              "queued",
+              "rejected"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "thread_id": {
+            "title": "Thread Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "thread_id",
+          "status",
+          "interview_hold",
+          "message"
+        ],
+        "title": "MessageDecisionResult",
+        "type": "object"
+      },
+      "OkResponse": {
+        "properties": {
+          "detail": {
+            "default": "",
+            "title": "Detail",
+            "type": "string"
+          },
+          "ok": {
+            "default": true,
+            "title": "Ok",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok",
+          "detail"
+        ],
+        "title": "OkResponse",
+        "type": "object"
+      },
+      "OnboardingRequest": {
+        "properties": {
+          "hourly_rate_usd": {
+            "default": 65,
+            "maximum": 1000.0,
+            "minimum": 0.0,
+            "title": "Hourly Rate Usd",
+            "type": "integer"
+          },
+          "marketplace": {
+            "default": "gigsim",
+            "enum": [
+              "gigsim",
+              "upwork"
+            ],
+            "title": "Marketplace",
+            "type": "string"
+          },
+          "min_budget_usd": {
+            "default": 300,
+            "minimum": 0.0,
+            "title": "Min Budget Usd",
+            "type": "integer"
+          },
+          "own_profile": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OwnProfile"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "used instead of a persona"
+          },
+          "persona_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "one of the sample personas",
+            "title": "Persona Id"
+          },
+          "weekly_connects_budget": {
+            "default": 60,
+            "maximum": 1000.0,
+            "minimum": 0.0,
+            "title": "Weekly Connects Budget",
+            "type": "integer"
+          }
+        },
+        "title": "OnboardingRequest",
+        "type": "object"
+      },
+      "OnboardingState": {
+        "properties": {
+          "completed": {
+            "title": "Completed",
+            "type": "boolean"
+          },
+          "hourly_rate_usd": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hourly Rate Usd"
+          },
+          "marketplace": {
+            "default": "gigsim",
+            "enum": [
+              "gigsim",
+              "upwork"
+            ],
+            "title": "Marketplace",
+            "type": "string"
+          },
+          "min_budget_usd": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min Budget Usd"
+          },
+          "persona_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Persona Id"
+          },
+          "personas": {
+            "items": {
+              "$ref": "#/components/schemas/PersonaOption"
+            },
+            "title": "Personas",
+            "type": "array"
+          },
+          "portfolio_files": {
+            "items": {
+              "$ref": "#/components/schemas/PortfolioFile"
+            },
+            "title": "Portfolio Files",
+            "type": "array"
+          },
+          "weekly_connects_budget": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weekly Connects Budget"
+          }
+        },
+        "required": [
+          "completed",
+          "persona_id",
+          "marketplace",
+          "hourly_rate_usd",
+          "min_budget_usd",
+          "weekly_connects_budget",
+          "personas",
+          "portfolio_files"
+        ],
+        "title": "OnboardingState",
+        "type": "object"
+      },
+      "OwnProfile": {
+        "properties": {
+          "display_name": {
+            "maxLength": 120,
+            "title": "Display Name",
+            "type": "string"
+          },
+          "headline": {
+            "default": "",
+            "maxLength": 200,
+            "title": "Headline",
+            "type": "string"
+          },
+          "skills": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 40,
+            "title": "Skills",
+            "type": "array"
+          }
+        },
+        "required": [
+          "display_name"
+        ],
+        "title": "OwnProfile",
+        "type": "object"
+      },
+      "PersonaOption": {
+        "properties": {
+          "display_name": {
+            "title": "Display Name",
+            "type": "string"
+          },
+          "headline": {
+            "title": "Headline",
+            "type": "string"
+          },
+          "hourly_rate_usd": {
+            "default": 0,
+            "title": "Hourly Rate Usd",
+            "type": "integer"
+          },
+          "persona_id": {
+            "title": "Persona Id",
+            "type": "string"
+          },
+          "skills": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Skills",
+            "type": "array"
+          }
+        },
+        "required": [
+          "persona_id",
+          "display_name",
+          "headline",
+          "skills",
+          "hourly_rate_usd"
+        ],
+        "title": "PersonaOption",
+        "type": "object"
+      },
+      "PipelineBoard": {
+        "properties": {
+          "columns": {
+            "items": {
+              "$ref": "#/components/schemas/PipelineColumn"
+            },
+            "title": "Columns",
+            "type": "array"
+          },
+          "marketplace_degraded": {
+            "default": false,
+            "title": "Marketplace Degraded",
+            "type": "boolean"
+          },
+          "recent_events": {
+            "items": {
+              "$ref": "#/components/schemas/MarketplaceEvent"
+            },
+            "title": "Recent Events",
+            "type": "array"
+          },
+          "updated_at": {
+            "title": "Updated At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "columns",
+          "recent_events",
+          "marketplace_degraded",
+          "updated_at"
+        ],
+        "title": "PipelineBoard",
+        "type": "object"
+      },
+      "PipelineCard": {
+        "properties": {
+          "bid_amount": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bid Amount"
+          },
+          "client_name": {
+            "default": "",
+            "title": "Client Name",
+            "type": "string"
+          },
+          "connects_spent": {
+            "default": 0,
+            "title": "Connects Spent",
+            "type": "integer"
+          },
+          "currency": {
+            "default": "USD",
+            "title": "Currency",
+            "type": "string"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "last_event": {
+            "default": "",
+            "title": "Last Event",
+            "type": "string"
+          },
+          "proposal_id": {
+            "title": "Proposal Id",
+            "type": "string"
+          },
+          "stage": {
+            "enum": [
+              "drafted",
+              "submitted",
+              "viewed",
+              "replied",
+              "interview",
+              "hired",
+              "lost"
+            ],
+            "title": "Stage",
+            "type": "string"
+          },
+          "thread_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Thread Id"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "updated_at": {
+            "title": "Updated At",
+            "type": "string"
+          }
+        },
+        "required": [
+          "proposal_id",
+          "job_id",
+          "title",
+          "client_name",
+          "stage",
+          "bid_amount",
+          "currency",
+          "connects_spent",
+          "updated_at",
+          "last_event",
+          "thread_id"
+        ],
+        "title": "PipelineCard",
+        "type": "object"
+      },
+      "PipelineColumn": {
+        "properties": {
+          "cards": {
+            "items": {
+              "$ref": "#/components/schemas/PipelineCard"
+            },
+            "title": "Cards",
+            "type": "array"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "stage": {
+            "enum": [
+              "drafted",
+              "submitted",
+              "viewed",
+              "replied",
+              "interview",
+              "hired",
+              "lost"
+            ],
+            "title": "Stage",
+            "type": "string"
+          }
+        },
+        "required": [
+          "stage",
+          "label",
+          "cards"
+        ],
+        "title": "PipelineColumn",
+        "type": "object"
+      },
+      "PortfolioFile": {
+        "properties": {
+          "created_at": {
+            "title": "Created At",
+            "type": "string"
+          },
+          "file_id": {
+            "title": "File Id",
+            "type": "string"
+          },
+          "filename": {
+            "title": "Filename",
+            "type": "string"
+          },
+          "size_bytes": {
+            "title": "Size Bytes",
+            "type": "integer"
+          },
+          "status": {
+            "default": "queued",
+            "enum": [
+              "queued",
+              "indexed",
+              "failed"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_id",
+          "filename",
+          "size_bytes",
+          "status",
+          "created_at"
+        ],
+        "title": "PortfolioFile",
+        "type": "object"
+      },
+      "PriceQuote": {
+        "properties": {
+          "amount": {
+            "title": "Amount",
+            "type": "number"
+          },
+          "band_high": {
+            "title": "Band High",
+            "type": "number"
+          },
+          "band_low": {
+            "title": "Band Low",
+            "type": "number"
+          },
+          "connects_cost": {
+            "default": 0,
+            "title": "Connects Cost",
+            "type": "integer"
+          },
+          "currency": {
+            "default": "USD",
+            "title": "Currency",
+            "type": "string"
+          },
+          "rationale": {
+            "default": "",
+            "title": "Rationale",
+            "type": "string"
+          },
+          "worth_connects": {
+            "default": true,
+            "title": "Worth Connects",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "amount",
+          "currency",
+          "band_low",
+          "band_high",
+          "connects_cost",
+          "worth_connects",
+          "rationale"
+        ],
+        "title": "PriceQuote",
+        "type": "object"
+      },
+      "ProposalDraft": {
+        "properties": {
+          "claims": {
+            "items": {
+              "$ref": "#/components/schemas/Claim"
+            },
+            "title": "Claims",
+            "type": "array"
+          },
+          "cover_letter": {
+            "title": "Cover Letter",
+            "type": "string"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "revision": {
+            "default": 0,
+            "title": "Revision",
+            "type": "integer"
+          },
+          "screening_answers": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Screening Answers",
+            "type": "array"
+          },
+          "status": {
+            "default": "pending_review",
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "cover_letter",
+          "screening_answers",
+          "evidence_ids",
+          "claims",
+          "revision",
+          "status"
+        ],
+        "title": "ProposalDraft",
+        "type": "object"
+      },
+      "ProposalStudio": {
+        "properties": {
+          "approval_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "pending approval for this draft, if any",
+            "title": "Approval Id"
+          },
+          "approval_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approval Status"
+          },
+          "compliance": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ComplianceVerdict"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "critic": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Critique"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "draft": {
+            "$ref": "#/components/schemas/ProposalDraft"
+          },
+          "dry_run": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DryRunPreview"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceRef"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "job_title": {
+            "title": "Job Title",
+            "type": "string"
+          },
+          "marketplace_degraded": {
+            "default": false,
+            "title": "Marketplace Degraded",
+            "type": "boolean"
+          },
+          "paragraphs": {
+            "description": "cover_letter split on blank lines",
+            "items": {
+              "type": "string"
+            },
+            "title": "Paragraphs",
+            "type": "array"
+          },
+          "price": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PriceQuote"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "risk": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RiskReport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "screening_questions": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Screening Questions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "job_id",
+          "job_title",
+          "draft",
+          "paragraphs",
+          "screening_questions",
+          "evidence",
+          "critic",
+          "compliance",
+          "risk",
+          "price",
+          "dry_run",
+          "approval_id",
+          "approval_status",
+          "marketplace_degraded"
+        ],
+        "title": "ProposalStudio",
+        "type": "object"
+      },
+      "RegenerateRequest": {
+        "properties": {
+          "instruction": {
+            "default": "",
+            "maxLength": 500,
+            "title": "Instruction",
+            "type": "string"
+          },
+          "paragraph_index": {
+            "minimum": 0.0,
+            "title": "Paragraph Index",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "paragraph_index"
+        ],
+        "title": "RegenerateRequest",
+        "type": "object"
+      },
+      "RegisterRequest": {
+        "properties": {
+          "display_name": {
+            "default": "",
+            "maxLength": 120,
+            "title": "Display Name",
+            "type": "string"
+          },
+          "email": {
+            "maxLength": 320,
+            "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+            "title": "Email",
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 200,
+            "minLength": 8,
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "RegisterRequest",
+        "type": "object"
+      },
+      "RejectionReason": {
+        "properties": {
+          "count": {
+            "title": "Count",
+            "type": "integer"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "count"
+        ],
+        "title": "RejectionReason",
+        "type": "object"
+      },
+      "RequirementMatch": {
+        "properties": {
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "requirement": {
+            "title": "Requirement",
+            "type": "string"
+          },
+          "strength": {
+            "default": 0.0,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Strength",
+            "type": "number"
+          }
+        },
+        "required": [
+          "requirement",
+          "evidence_ids",
+          "strength"
+        ],
+        "title": "RequirementMatch",
+        "type": "object"
+      },
+      "RiskReport": {
+        "description": "Risk Assessor output: client quality and scam / policy signals.",
+        "properties": {
+          "client_quality": {
+            "default": 0.5,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Client Quality",
+            "type": "number"
+          },
+          "explanation": {
+            "default": "",
+            "title": "Explanation",
+            "type": "string"
+          },
+          "flags": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Flags",
+            "type": "array"
+          },
+          "injection_detected": {
+            "default": false,
+            "title": "Injection Detected",
+            "type": "boolean"
+          },
+          "is_scam": {
+            "default": false,
+            "title": "Is Scam",
+            "type": "boolean"
+          },
+          "score": {
+            "description": "0 = safe, 1 = very risky",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "type": "number"
+          }
+        },
+        "required": [
+          "score",
+          "client_quality",
+          "flags",
+          "is_scam",
+          "injection_detected",
+          "explanation"
+        ],
+        "title": "RiskReport",
+        "type": "object"
+      },
+      "RunDetail": {
+        "properties": {
+          "approval_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approval Id"
+          },
+          "notes": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Notes",
+            "type": "array"
+          },
+          "steps": {
+            "items": {
+              "$ref": "#/components/schemas/RunStep"
+            },
+            "title": "Steps",
+            "type": "array"
+          },
+          "summary": {
+            "$ref": "#/components/schemas/RunSummary"
+          },
+          "trace_url": {
+            "default": "",
+            "title": "Trace Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "summary",
+          "steps",
+          "trace_url",
+          "approval_id",
+          "notes"
+        ],
+        "title": "RunDetail",
+        "type": "object"
+      },
+      "RunEvent": {
+        "description": "One SSE payload on /api/runs/{id}/stream.",
+        "properties": {
+          "data": {
+            "additionalProperties": true,
+            "title": "Data",
+            "type": "object"
+          },
+          "node": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Node"
+          },
+          "ts": {
+            "title": "Ts",
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "node_start",
+              "node_end",
+              "interrupt",
+              "token",
+              "done",
+              "error",
+              "degraded"
+            ],
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "node",
+          "ts",
+          "data"
+        ],
+        "title": "RunEvent",
+        "type": "object"
+      },
+      "RunList": {
+        "properties": {
+          "runs": {
+            "items": {
+              "$ref": "#/components/schemas/RunSummary"
+            },
+            "title": "Runs",
+            "type": "array"
+          }
+        },
+        "required": [
+          "runs"
+        ],
+        "title": "RunList",
+        "type": "object"
+      },
+      "RunStep": {
+        "properties": {
+          "cost_usd": {
+            "default": 0.0,
+            "title": "Cost Usd",
+            "type": "number"
+          },
+          "duration_ms": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duration Ms"
+          },
+          "label": {
+            "default": "",
+            "title": "Label",
+            "type": "string"
+          },
+          "model": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model"
+          },
+          "node": {
+            "title": "Node",
+            "type": "string"
+          },
+          "started_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started At"
+          },
+          "status": {
+            "default": "pending",
+            "enum": [
+              "pending",
+              "running",
+              "done",
+              "interrupted",
+              "failed",
+              "skipped"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "summary": {
+            "default": "",
+            "title": "Summary",
+            "type": "string"
+          },
+          "tokens_in": {
+            "default": 0,
+            "title": "Tokens In",
+            "type": "integer"
+          },
+          "tokens_out": {
+            "default": 0,
+            "title": "Tokens Out",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "node",
+          "label",
+          "status",
+          "started_at",
+          "duration_ms",
+          "tokens_in",
+          "tokens_out",
+          "cost_usd",
+          "summary",
+          "model"
+        ],
+        "title": "RunStep",
+        "type": "object"
+      },
+      "RunSummary": {
+        "properties": {
+          "cost_usd": {
+            "default": 0.0,
+            "title": "Cost Usd",
+            "type": "number"
+          },
+          "finished_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finished At"
+          },
+          "job_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Job Id"
+          },
+          "kind": {
+            "default": "bid",
+            "enum": [
+              "bid",
+              "conversation",
+              "scout"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "latency_ms": {
+            "default": 0,
+            "title": "Latency Ms",
+            "type": "integer"
+          },
+          "run_id": {
+            "title": "Run Id",
+            "type": "string"
+          },
+          "started_at": {
+            "title": "Started At",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "running",
+              "awaiting_approval",
+              "submitted",
+              "skipped",
+              "rejected",
+              "blocked",
+              "needs_attention",
+              "dead_letter"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "title": {
+            "default": "",
+            "title": "Title",
+            "type": "string"
+          },
+          "total_tokens": {
+            "default": 0,
+            "title": "Total Tokens",
+            "type": "integer"
+          },
+          "trace_id": {
+            "default": "",
+            "title": "Trace Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "run_id",
+          "kind",
+          "job_id",
+          "title",
+          "status",
+          "started_at",
+          "finished_at",
+          "total_tokens",
+          "cost_usd",
+          "latency_ms",
+          "trace_id"
+        ],
+        "title": "RunSummary",
+        "type": "object"
+      },
+      "SavedSearch": {
+        "properties": {
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category"
+          },
+          "enabled": {
+            "default": true,
+            "title": "Enabled",
+            "type": "boolean"
+          },
+          "interval_minutes": {
+            "default": 60,
+            "maximum": 1440.0,
+            "minimum": 15.0,
+            "title": "Interval Minutes",
+            "type": "integer"
+          },
+          "name": {
+            "maxLength": 120,
+            "title": "Name",
+            "type": "string"
+          },
+          "query": {
+            "maxLength": 300,
+            "title": "Query",
+            "type": "string"
+          },
+          "search_id": {
+            "title": "Search Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "search_id",
+          "name",
+          "query"
+        ],
+        "title": "SavedSearch",
+        "type": "object"
+      },
+      "SkipRequest": {
+        "properties": {
+          "reason": {
+            "default": "",
+            "maxLength": 500,
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "title": "SkipRequest",
+        "type": "object"
+      },
+      "SkipResponse": {
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "status": {
+            "default": "skipped",
+            "enum": [
+              "new",
+              "analyzing",
+              "analyzed",
+              "drafted",
+              "skipped"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "status"
+        ],
+        "title": "SkipResponse",
+        "type": "object"
+      },
+      "SuggestedReply": {
+        "properties": {
+          "approval_id": {
+            "title": "Approval Id",
+            "type": "string"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence Ids",
+            "type": "array"
+          },
+          "intent": {
+            "default": "other",
+            "enum": [
+              "question",
+              "negotiation",
+              "interview_request",
+              "scam_signal",
+              "other"
+            ],
+            "title": "Intent",
+            "type": "string"
+          },
+          "rationale": {
+            "default": "",
+            "title": "Rationale",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "approval_id",
+          "text",
+          "intent",
+          "rationale",
+          "evidence_ids"
+        ],
+        "title": "SuggestedReply",
+        "type": "object"
+      },
+      "ThreadDetail": {
+        "properties": {
+          "job_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Job Id"
+          },
+          "messages": {
+            "items": {
+              "$ref": "#/components/schemas/ChatMessage"
+            },
+            "title": "Messages",
+            "type": "array"
+          },
+          "safety_note": {
+            "default": "",
+            "title": "Safety Note",
+            "type": "string"
+          },
+          "slots": {
+            "items": {
+              "$ref": "#/components/schemas/InterviewSlot"
+            },
+            "title": "Slots",
+            "type": "array"
+          },
+          "suggested_reply": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SuggestedReply"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "thread": {
+            "$ref": "#/components/schemas/ThreadSummary"
+          }
+        },
+        "required": [
+          "thread",
+          "messages",
+          "suggested_reply",
+          "slots",
+          "job_id",
+          "safety_note"
+        ],
+        "title": "ThreadDetail",
+        "type": "object"
+      },
+      "ThreadList": {
+        "properties": {
+          "marketplace_degraded": {
+            "default": false,
+            "title": "Marketplace Degraded",
+            "type": "boolean"
+          },
+          "threads": {
+            "items": {
+              "$ref": "#/components/schemas/ThreadSummary"
+            },
+            "title": "Threads",
+            "type": "array"
+          }
+        },
+        "required": [
+          "threads",
+          "marketplace_degraded"
+        ],
+        "title": "ThreadList",
+        "type": "object"
+      },
+      "ThreadSummary": {
+        "properties": {
+          "client_name": {
+            "title": "Client Name",
+            "type": "string"
+          },
+          "has_suggested_reply": {
+            "default": false,
+            "title": "Has Suggested Reply",
+            "type": "boolean"
+          },
+          "injection_detected": {
+            "default": false,
+            "title": "Injection Detected",
+            "type": "boolean"
+          },
+          "intent": {
+            "default": "other",
+            "enum": [
+              "question",
+              "negotiation",
+              "interview_request",
+              "scam_signal",
+              "other"
+            ],
+            "title": "Intent",
+            "type": "string"
+          },
+          "job_title": {
+            "title": "Job Title",
+            "type": "string"
+          },
+          "last_message": {
+            "title": "Last Message",
+            "type": "string"
+          },
+          "last_message_at": {
+            "title": "Last Message At",
+            "type": "string"
+          },
+          "status": {
+            "default": "needs_reply",
+            "enum": [
+              "needs_reply",
+              "awaiting_client",
+              "interview_scheduled",
+              "closed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "thread_id": {
+            "title": "Thread Id",
+            "type": "string"
+          },
+          "unread": {
+            "default": false,
+            "title": "Unread",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "thread_id",
+          "client_name",
+          "job_title",
+          "last_message",
+          "last_message_at",
+          "unread",
+          "intent",
+          "status",
+          "has_suggested_reply",
+          "injection_detected"
+        ],
+        "title": "ThreadSummary",
+        "type": "object"
+      },
+      "TokenResponse": {
+        "properties": {
+          "access_token": {
+            "title": "Access Token",
+            "type": "string"
+          },
+          "expires_at": {
+            "title": "Expires At",
+            "type": "string"
+          },
+          "token_type": {
+            "default": "bearer",
+            "title": "Token Type",
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserOut"
+          }
+        },
+        "required": [
+          "access_token",
+          "token_type",
+          "expires_at",
+          "user"
+        ],
+        "title": "TokenResponse",
+        "type": "object"
+      },
+      "TraceResponse": {
+        "properties": {
+          "run_id": {
+            "title": "Run Id",
+            "type": "string"
+          },
+          "spans": {
+            "items": {
+              "$ref": "#/components/schemas/TraceSpan"
+            },
+            "title": "Spans",
+            "type": "array"
+          },
+          "total_cost_usd": {
+            "default": 0.0,
+            "title": "Total Cost Usd",
+            "type": "number"
+          },
+          "total_ms": {
+            "default": 0,
+            "title": "Total Ms",
+            "type": "integer"
+          },
+          "trace_id": {
+            "title": "Trace Id",
+            "type": "string"
+          },
+          "url": {
+            "default": "",
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "trace_id",
+          "run_id",
+          "url",
+          "spans",
+          "total_cost_usd",
+          "total_ms"
+        ],
+        "title": "TraceResponse",
+        "type": "object"
+      },
+      "TraceSpan": {
+        "properties": {
+          "attributes": {
+            "additionalProperties": true,
+            "title": "Attributes",
+            "type": "object"
+          },
+          "cost_usd": {
+            "default": 0.0,
+            "title": "Cost Usd",
+            "type": "number"
+          },
+          "duration_ms": {
+            "default": 0,
+            "title": "Duration Ms",
+            "type": "integer"
+          },
+          "kind": {
+            "default": "node",
+            "enum": [
+              "graph",
+              "node",
+              "llm",
+              "tool",
+              "mcp"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "parent_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Id"
+          },
+          "span_id": {
+            "title": "Span Id",
+            "type": "string"
+          },
+          "start_ms": {
+            "default": 0,
+            "title": "Start Ms",
+            "type": "integer"
+          },
+          "tokens_in": {
+            "default": 0,
+            "title": "Tokens In",
+            "type": "integer"
+          },
+          "tokens_out": {
+            "default": 0,
+            "title": "Tokens Out",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "span_id",
+          "parent_id",
+          "name",
+          "kind",
+          "start_ms",
+          "duration_ms",
+          "tokens_in",
+          "tokens_out",
+          "cost_usd",
+          "attributes"
+        ],
+        "title": "TraceSpan",
+        "type": "object"
+      },
+      "UserOut": {
+        "properties": {
+          "display_name": {
+            "title": "Display Name",
+            "type": "string"
+          },
+          "email": {
+            "title": "Email",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "onboarded": {
+            "default": false,
+            "title": "Onboarded",
+            "type": "boolean"
+          },
+          "persona_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Persona Id"
+          }
+        },
+        "required": [
+          "id",
+          "email",
+          "display_name",
+          "persona_id",
+          "onboarded"
+        ],
+        "title": "UserOut",
+        "type": "object"
+      },
+      "UserSettings": {
+        "properties": {
+          "autonomy_level": {
+            "default": "assist",
+            "enum": [
+              "manual",
+              "assist",
+              "scout"
+            ],
+            "title": "Autonomy Level",
+            "type": "string"
+          },
+          "hourly_rate_usd": {
+            "default": 65,
+            "minimum": 0.0,
+            "title": "Hourly Rate Usd",
+            "type": "integer"
+          },
+          "max_connects_per_proposal": {
+            "default": 16,
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Max Connects Per Proposal",
+            "type": "integer"
+          },
+          "min_budget_usd": {
+            "default": 300,
+            "minimum": 0.0,
+            "title": "Min Budget Usd",
+            "type": "integer"
+          },
+          "min_fit_score": {
+            "default": 0.55,
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Min Fit Score",
+            "type": "number"
+          },
+          "saved_searches": {
+            "items": {
+              "$ref": "#/components/schemas/SavedSearch"
+            },
+            "title": "Saved Searches",
+            "type": "array"
+          },
+          "weekly_connects_budget": {
+            "default": 60,
+            "maximum": 1000.0,
+            "minimum": 0.0,
+            "title": "Weekly Connects Budget",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "autonomy_level",
+          "weekly_connects_budget",
+          "max_connects_per_proposal",
+          "min_fit_score",
+          "min_budget_usd",
+          "hourly_rate_usd",
+          "saved_searches"
+        ],
+        "title": "UserSettings",
+        "type": "object"
+      },
+      "UserSettingsUpdate": {
+        "properties": {
+          "autonomy_level": {
+            "anyOf": [
+              {
+                "enum": [
+                  "manual",
+                  "assist",
+                  "scout"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Autonomy Level"
+          },
+          "hourly_rate_usd": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hourly Rate Usd"
+          },
+          "max_connects_per_proposal": {
+            "anyOf": [
+              {
+                "maximum": 100.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Connects Per Proposal"
+          },
+          "min_budget_usd": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min Budget Usd"
+          },
+          "min_fit_score": {
+            "anyOf": [
+              {
+                "maximum": 1.0,
+                "minimum": 0.0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min Fit Score"
+          },
+          "saved_searches": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/SavedSearch"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Saved Searches"
+          },
+          "weekly_connects_budget": {
+            "anyOf": [
+              {
+                "maximum": 1000.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weekly Connects Budget"
+          }
+        },
+        "title": "UserSettingsUpdate",
+        "type": "object"
+      },
+      "ValidationError": {
+        "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "title": "Location",
+            "type": "array"
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "loc",
+          "msg",
+          "type",
+          "input",
+          "ctx"
+        ],
+        "title": "ValidationError",
+        "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "description": "Opaque session token from /api/auth/login",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "description": "Typed contract for the GigBid web client. Every response carries X-Trace-Id.",
+    "title": "GigBid API",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/analytics": {
+      "get": {
+        "operationId": "analytics_summary",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyticsSummary"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Analytics Summary",
+        "tags": [
+          "analytics"
+        ]
+      }
+    },
+    "/api/approvals": {
+      "get": {
+        "operationId": "list_approvals",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "status",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "pending",
+                    "approved",
+                    "edited",
+                    "rejected"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApprovalList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Approvals",
+        "tags": [
+          "approvals"
+        ]
+      }
+    },
+    "/api/approvals/{approval_id}/decision": {
+      "post": {
+        "operationId": "decide_approval",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "approval_id",
+            "required": true,
+            "schema": {
+              "title": "Approval Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApprovalDecision"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DecisionResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Decide Approval",
+        "tags": [
+          "approvals"
+        ]
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Login",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "operationId": "logout",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OkResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Logout",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "operationId": "get_me",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Me",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "operationId": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Register",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/api/health": {
+      "get": {
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Health",
+        "tags": [
+          "health"
+        ]
+      }
+    },
+    "/api/jobs": {
+      "get": {
+        "operationId": "list_jobs",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 200,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "in": "query",
+            "name": "category",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maxLength": 80,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Category"
+            }
+          },
+          {
+            "in": "query",
+            "name": "min_fit",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Min Fit"
+            }
+          },
+          {
+            "in": "query",
+            "name": "include_skipped",
+            "required": false,
+            "schema": {
+              "default": false,
+              "title": "Include Skipped",
+              "type": "boolean"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "required": false,
+            "schema": {
+              "default": "fit",
+              "enum": [
+                "fit",
+                "posted",
+                "budget"
+              ],
+              "title": "Sort",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobListResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Jobs",
+        "tags": [
+          "jobs"
+        ]
+      }
+    },
+    "/api/jobs/{job_id}": {
+      "get": {
+        "operationId": "get_job_detail",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobDetail"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Job Detail",
+        "tags": [
+          "jobs"
+        ]
+      }
+    },
+    "/api/jobs/{job_id}/analyze": {
+      "post": {
+        "operationId": "analyze_job",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyzeResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Analyze Job",
+        "tags": [
+          "jobs"
+        ]
+      }
+    },
+    "/api/jobs/{job_id}/skip": {
+      "post": {
+        "operationId": "skip_job",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/SkipRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SkipResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Skip Job",
+        "tags": [
+          "jobs"
+        ]
+      }
+    },
+    "/api/memory": {
+      "get": {
+        "operationId": "list_memory",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Memory",
+        "tags": [
+          "settings"
+        ]
+      }
+    },
+    "/api/memory/{memory_id}": {
+      "delete": {
+        "operationId": "delete_memory",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memory_id",
+            "required": true,
+            "schema": {
+              "title": "Memory Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OkResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Delete Memory",
+        "tags": [
+          "settings"
+        ]
+      }
+    },
+    "/api/messages": {
+      "get": {
+        "operationId": "list_threads",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Threads",
+        "tags": [
+          "messages"
+        ]
+      }
+    },
+    "/api/messages/{thread_id}": {
+      "get": {
+        "operationId": "get_thread",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "thread_id",
+            "required": true,
+            "schema": {
+              "title": "Thread Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadDetail"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Thread",
+        "tags": [
+          "messages"
+        ]
+      }
+    },
+    "/api/messages/{thread_id}/decision": {
+      "post": {
+        "operationId": "decide_message",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "thread_id",
+            "required": true,
+            "schema": {
+              "title": "Thread Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageDecisionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageDecisionResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Decide Message",
+        "tags": [
+          "messages"
+        ]
+      }
+    },
+    "/api/onboarding": {
+      "get": {
+        "operationId": "get_onboarding",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnboardingState"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Onboarding",
+        "tags": [
+          "onboarding"
+        ]
+      },
+      "put": {
+        "operationId": "complete_onboarding",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnboardingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OnboardingState"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Complete Onboarding",
+        "tags": [
+          "onboarding"
+        ]
+      }
+    },
+    "/api/onboarding/portfolio": {
+      "get": {
+        "operationId": "list_portfolio",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/PortfolioFile"
+                  },
+                  "title": "Response List Portfolio",
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Portfolio",
+        "tags": [
+          "onboarding"
+        ]
+      },
+      "post": {
+        "operationId": "upload_portfolio",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_portfolio"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PortfolioFile"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Upload Portfolio",
+        "tags": [
+          "onboarding"
+        ]
+      }
+    },
+    "/api/pipeline": {
+      "get": {
+        "operationId": "pipeline_board",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PipelineBoard"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Pipeline Board",
+        "tags": [
+          "pipeline"
+        ]
+      }
+    },
+    "/api/proposals/{job_id}": {
+      "get": {
+        "operationId": "get_proposal_studio",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalStudio"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Proposal Studio",
+        "tags": [
+          "proposals"
+        ]
+      }
+    },
+    "/api/proposals/{job_id}/regenerate": {
+      "post": {
+        "operationId": "regenerate_paragraph",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "job_id",
+            "required": true,
+            "schema": {
+              "title": "Job Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegenerateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalStudio"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Regenerate Paragraph",
+        "tags": [
+          "proposals"
+        ]
+      }
+    },
+    "/api/runs": {
+      "get": {
+        "operationId": "list_runs",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Runs",
+        "tags": [
+          "runs"
+        ]
+      }
+    },
+    "/api/runs/{run_id}": {
+      "get": {
+        "operationId": "get_run",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "run_id",
+            "required": true,
+            "schema": {
+              "title": "Run Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunDetail"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Run",
+        "tags": [
+          "runs"
+        ]
+      }
+    },
+    "/api/runs/{run_id}/stream": {
+      "get": {
+        "operationId": "stream_run",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "run_id",
+            "required": true,
+            "schema": {
+              "title": "Run Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "text/event-stream": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunEvent"
+                }
+              }
+            },
+            "description": "text/event-stream of RunEvent JSON objects"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Server-Sent Events: live node-by-node progress",
+        "tags": [
+          "runs"
+        ]
+      }
+    },
+    "/api/runs/{run_id}/trace": {
+      "get": {
+        "operationId": "get_trace",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "run_id",
+            "required": true,
+            "schema": {
+              "title": "Run Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TraceResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Trace",
+        "tags": [
+          "runs"
+        ]
+      }
+    },
+    "/api/settings": {
+      "get": {
+        "operationId": "get_settings",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettings"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Get Settings",
+        "tags": [
+          "settings"
+        ]
+      },
+      "put": {
+        "operationId": "update_settings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserSettingsUpdate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSettings"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Update Settings",
+        "tags": [
+          "settings"
+        ]
+      }
+    },
+    "/api/settings/connections": {
+      "get": {
+        "operationId": "list_connections",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectionList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "List Connections",
+        "tags": [
+          "settings"
+        ]
+      }
+    },
+    "/api/settings/connections/{provider}": {
+      "delete": {
+        "operationId": "disconnect_account",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "provider",
+            "required": true,
+            "schema": {
+              "title": "Provider",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectionList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Disconnect Account",
+        "tags": [
+          "settings"
+        ]
+      },
+      "put": {
+        "operationId": "connect_account",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "provider",
+            "required": true,
+            "schema": {
+              "title": "Provider",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConnectionList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Connect Account",
+        "tags": [
+          "settings"
+        ]
+      }
+    }
+  }
+}

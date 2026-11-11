@@ -1,0 +1,274 @@
+[
+  {
+    "review_id": "rev-fullstack-001",
+    "project_id": "saas-billing-portal",
+    "client_industry": "SaaS",
+    "rating": 4,
+    "text": "Exactly the help we needed. I am not technical, but I could always tell where things stood. Overall: support tickets about billing dropped 64% and upgrades rose 12%.",
+    "date": "2023-03-15"
+  },
+  {
+    "review_id": "rev-fullstack-002",
+    "project_id": "saas-billing-portal",
+    "client_industry": "SaaS",
+    "rating": 5,
+    "text": "Calm, clear and quick. We came in wanting customer invoicing dashboard; the end result changed how the team works. Overall: support tickets about billing dropped 64% and upgrades rose 12%.",
+    "date": "2023-03-19"
+  },
+  {
+    "review_id": "rev-fullstack-003",
+    "project_id": "realtime-support-chat",
+    "client_industry": "SaaS",
+    "rating": 5,
+    "text": "Calm, clear and quick. We came in wanting in-app agent inbox; the end result changed how the team works. Overall: median first response of 90 seconds; 1,800 concurrent chats on one small instance.",
+    "date": "2022-12-12"
+  },
+  {
+    "review_id": "rev-fullstack-004",
+    "project_id": "service-marketplace-backend",
+    "client_industry": "Online marketplace",
+    "rating": 5,
+    "text": "Delivered what we hoped for. We came in wanting provider matching site; the end result changed how the team works. Overall: launched in 9 weeks and handled 4,000 bookings in the first month.",
+    "date": "2022-07-02"
+  },
+  {
+    "review_id": "rev-fullstack-005",
+    "project_id": "headless-storefront",
+    "client_industry": "E-commerce",
+    "rating": 4,
+    "text": "Calm, clear and quick. Delivered catalogue and checkout rebuild ahead of the date we agreed. Overall: mobile conversion up 19% and.",
+    "date": "2023-09-08"
+  },
+  {
+    "review_id": "rev-fullstack-006",
+    "project_id": "headless-storefront",
+    "client_industry": "E-commerce",
+    "rating": 3,
+    "text": "Great to work with. I am not technical, but I could always tell where things stood. Overall: mobile conversion up 19% and.",
+    "date": "2023-10-19"
+  },
+  {
+    "review_id": "rev-fullstack-007",
+    "project_id": "clinic-appointment-booking",
+    "client_industry": "Healthcare",
+    "rating": 5,
+    "text": "Calm, clear and quick. We came in wanting patient scheduling web app; the end result changed how the team works. Overall: no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.",
+    "date": "2023-06-25"
+  },
+  {
+    "review_id": "rev-fullstack-008",
+    "project_id": "clinic-appointment-booking",
+    "client_industry": "Healthcare",
+    "rating": 3,
+    "text": "Calm, clear and quick. I am not technical, but I could always tell where things stood. Overall: no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.",
+    "date": "2023-06-08"
+  },
+  {
+    "review_id": "rev-fullstack-009",
+    "project_id": "operations-admin-dashboard",
+    "client_industry": "Logistics",
+    "rating": 5,
+    "text": "Would hire again. We came in wanting internal back-office tool; the end result changed how the team works. Overall: order handling time cut by a third; 40 critical-path browser tests in CI.",
+    "date": "2022-12-15"
+  },
+  {
+    "review_id": "rev-fullstack-010",
+    "project_id": "operations-admin-dashboard",
+    "client_industry": "Logistics",
+    "rating": 3,
+    "text": "Delivered what we hoped for. Our problem was simple to state: dispatchers juggled four spreadsheets. Afterwards: Overall: order handling time cut by a third; 40 critical-path browser tests in CI.",
+    "date": "2022-12-17"
+  },
+  {
+    "review_id": "rev-fullstack-011",
+    "project_id": "secure-document-intake",
+    "client_industry": "Legal",
+    "rating": 5,
+    "text": "Calm, clear and quick. Our problem was simple to state: clients emailed sensitive files as attachments. Afterwards: Overall: files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute.",
+    "date": "2024-04-14"
+  },
+  {
+    "review_id": "rev-fullstack-012",
+    "project_id": "secure-document-intake",
+    "client_industry": "Legal",
+    "rating": 5,
+    "text": "Calm, clear and quick. Our problem was simple to state: clients emailed sensitive files as attachments. Afterwards: Overall: files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute.",
+    "date": "2024-04-09"
+  },
+  {
+    "review_id": "rev-fullstack-013",
+    "project_id": "staff-portal-sso",
+    "client_industry": "Education",
+    "rating": 5,
+    "text": "Great to work with. We came in wanting Google and Microsoft sign-in integration; the end result changed how the team works. Overall: password-reset tickets fell 80%; 1,200 accounts migrated with no downtime.",
+    "date": "2023-12-24"
+  },
+  {
+    "review_id": "rev-fullstack-014",
+    "project_id": "staff-portal-sso",
+    "client_industry": "Education",
+    "rating": 4,
+    "text": "Great to work with. I am not technical, but I could always tell where things stood. Overall: password-reset tickets fell 80%; 1,200 accounts migrated with no downtime.",
+    "date": "2023-12-06"
+  },
+  {
+    "review_id": "rev-fullstack-015",
+    "project_id": "graphql-api-gateway",
+    "client_industry": "Media",
+    "rating": 4,
+    "text": "Delivered what we hoped for. We came in wanting API consolidation layer; the end result changed how the team works. Overall: payload size down 55%; new screens needed no back-end changes.",
+    "date": "2024-06-17"
+  },
+  {
+    "review_id": "rev-fullstack-016",
+    "project_id": "graphql-api-gateway",
+    "client_industry": "Media",
+    "rating": 5,
+    "text": "Exactly the help we needed. Delivered one endpoint for mobile and web ahead of the date we agreed. Overall: payload size down 55%; new screens needed no back-end changes.",
+    "date": "2024-07-13"
+  },
+  {
+    "review_id": "rev-fullstack-017",
+    "project_id": "deployment-pipeline-revamp",
+    "client_industry": "Start-up",
+    "rating": 4,
+    "text": "Calm, clear and quick. Our problem was simple to state: releases were manual, took half a day, and failed often. Afterwards: Overall: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.",
+    "date": "2023-12-17"
+  },
+  {
+    "review_id": "rev-fullstack-018",
+    "project_id": "deployment-pipeline-revamp",
+    "client_industry": "Start-up",
+    "rating": 5,
+    "text": "Calm, clear and quick. Our problem was simple to state: releases were manual, took half a day, and failed often. Afterwards: Overall: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.",
+    "date": "2023-12-11"
+  },
+  {
+    "review_id": "rev-fullstack-019",
+    "project_id": "catalogue-search-facets",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Solid communication throughout. We came in wanting fast filterable catalogue; the end result changed how the team works. Overall: search ; zero-result queries cut by 45%.",
+    "date": "2022-06-22"
+  },
+  {
+    "review_id": "rev-fullstack-020",
+    "project_id": "catalogue-search-facets",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Would hire again. Delivered typo-tolerant search box ahead of the date we agreed. Overall: search ; zero-result queries cut by 45%.",
+    "date": "2022-06-20"
+  },
+  {
+    "review_id": "rev-fullstack-021",
+    "project_id": "magazine-publishing-platform",
+    "client_industry": "Media",
+    "rating": 5,
+    "text": "Great to work with. Our problem was simple to state: editors waited on developers to publish. Afterwards: Overall: editors publish without developers; 150 articles migrated.",
+    "date": "2024-08-24"
+  },
+  {
+    "review_id": "rev-fullstack-022",
+    "project_id": "event-ingestion-api",
+    "client_industry": "Ad tech",
+    "rating": 5,
+    "text": "Delivered what we hoped for. We came in wanting usage tracking backend; the end result changed how the team works. Overall: sustained 4k events/s on two small containers.",
+    "date": "2022-10-07"
+  },
+  {
+    "review_id": "rev-fullstack-023",
+    "project_id": "event-ingestion-api",
+    "client_industry": "Ad tech",
+    "rating": 5,
+    "text": "Would hire again. I am not technical, but I could always tell where things stood. Overall: sustained 4k events/s on two small containers.",
+    "date": "2022-09-04"
+  },
+  {
+    "review_id": "rev-fullstack-024",
+    "project_id": "marketplace-payouts",
+    "client_industry": "Online marketplace",
+    "rating": 5,
+    "text": "Solid communication throughout. Our problem was simple to state: sellers were paid manually every Friday. Afterwards: Overall: automatic payouts with reconciliation; finance saved a day a week.",
+    "date": "2023-05-05"
+  },
+  {
+    "review_id": "rev-fullstack-025",
+    "project_id": "inventory-rest-api",
+    "client_industry": "Logistics",
+    "rating": 5,
+    "text": "Calm, clear and quick. Delivered warehouse stock service ahead of the date we agreed. Overall: single source of truth for 22k SKUs with audit history.",
+    "date": "2022-04-03"
+  },
+  {
+    "review_id": "rev-fullstack-026",
+    "project_id": "inventory-rest-api",
+    "client_industry": "Logistics",
+    "rating": 4,
+    "text": "Calm, clear and quick. Our problem was simple to state: stock counts lived in several disagreeing spreadsheets. Afterwards: Overall: single source of truth for 22k SKUs with audit history.",
+    "date": "2022-03-23"
+  },
+  {
+    "review_id": "rev-fullstack-027",
+    "project_id": "model-demo-web-app",
+    "client_industry": "Start-up",
+    "rating": 5,
+    "text": "Solid communication throughout. Our problem was simple to state: a data science team had a notebook but no way to show clients. Afterwards: Overall: client demos moved from notebooks to a shareable page; 3 pilot customers signed.",
+    "date": "2023-11-10"
+  },
+  {
+    "review_id": "rev-fullstack-028",
+    "project_id": "model-demo-web-app",
+    "client_industry": "Start-up",
+    "rating": 5,
+    "text": "Solid communication throughout. Delivered front end for a data science model ahead of the date we agreed. Overall: client demos moved from notebooks to a shareable page; 3 pilot customers signed.",
+    "date": "2023-10-24"
+  },
+  {
+    "review_id": "rev-fullstack-029",
+    "project_id": "browser-test-automation",
+    "client_industry": "Fintech",
+    "rating": 5,
+    "text": "Exactly the help we needed. Delivered release safety net ahead of the date we agreed. Overall: 180 unit and 35 browser tests; escaped bugs down 70%.",
+    "date": "2024-03-11"
+  },
+  {
+    "review_id": "rev-fullstack-030",
+    "project_id": "browser-test-automation",
+    "client_industry": "Fintech",
+    "rating": 5,
+    "text": "Would hire again. Delivered browser regression checks ahead of the date we agreed. Overall: 180 unit and 35 browser tests; escaped bugs down 70%.",
+    "date": "2024-03-18"
+  },
+  {
+    "review_id": "rev-fullstack-031",
+    "project_id": "core-web-vitals-overhaul",
+    "client_industry": "Digital agency",
+    "rating": 5,
+    "text": "Solid communication throughout. Our problem was simple to state: marketing pages failed Core Web Vitals and lost ad quality score. Afterwards: Overall: ; organic sessions +17% in two months.",
+    "date": "2024-05-20"
+  },
+  {
+    "review_id": "rev-fullstack-032",
+    "project_id": "core-web-vitals-overhaul",
+    "client_industry": "Digital agency",
+    "rating": 3,
+    "text": "Would hire again. Our problem was simple to state: marketing pages failed Core Web Vitals and lost ad quality score. Afterwards: Overall: ; organic sessions +17% in two months.",
+    "date": "2024-06-25"
+  },
+  {
+    "review_id": "rev-fullstack-033",
+    "project_id": "wordpress-brochure",
+    "client_industry": "Local services",
+    "rating": 5,
+    "text": "Would hire again. We came in wanting small business site on a blogging CMS; the end result changed how the team works. Overall: launched in a week from a purchased theme.",
+    "date": "2021-09-18"
+  },
+  {
+    "review_id": "rev-fullstack-034",
+    "project_id": "jquery-slider",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Great to work with. We came in wanting legacy page slider script; the end result changed how the team works. Overall: a 30-line plugin; no framework.",
+    "date": "2021-11-13"
+  }
+]

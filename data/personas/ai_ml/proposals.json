@@ -1,0 +1,1668 @@
+[
+  {
+    "proposal_id": "pp-ai_ml-001",
+    "job_title": "Redis help for our consulting business",
+    "text": "An in-memory cache with expiry in front of the database is the part of your post I would worry about first, and I have done it before for a consulting team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4270.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2024-09-02",
+    "project_ids": [],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-002",
+    "job_title": "Looking for data scientist to deliver customer voice tracker",
+    "text": "A pretrained language model fine-tuned from a public model hub is the part of your post I would worry about first, and I have done it before for a consumer apps team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2700.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-05-07",
+    "project_ids": [],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-003",
+    "job_title": "Need help building weekly sales predictor",
+    "text": "Your point about seasonal weekly predictions with holiday effects is close to something I shipped for a retail client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3690.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-10-05",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-004",
+    "job_title": "Hiring Data scientist - scikit-learn",
+    "text": "Your point about a tabular baseline with preprocessing and grid search is close to something I shipped for a subscription media client.\n\nOn Subscription Churn Prediction (what the client called a retention risk scoring) the retention team contacted customers at random. I built it with scikit-learn and XGBoost, plus controlled experiments with a pre-registered success metric. Result: top-decile precision of 44% and 9% lower monthly churn in a holdout test.\n\nMy fixed price for this is $4730.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2022-07-15",
+    "project_ids": [
+      "churn-risk-scoring"
+    ],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-005",
+    "job_title": "SageMaker expert needed for online marketplace project",
+    "text": "A cloud-managed model endpoint behind autoscaling is the part of your post I would worry about first, and I have done it before for a online marketplace team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $4510.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-05-29",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-006",
+    "job_title": "Need help building knowledge base assistant",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Internal Docs Chatbot (what the client called a employee FAQ bot) staff pinged the same three people for policy answers. I built it with RAG and LangChain, plus an in-memory cache with expiry in front of the database. Result: deflected 58% of internal questions; median answer time under 6 seconds.\n\nA second relevant piece of work: Semantic Job Search, where recruiters shortlisted 2.3x faster and found 18% more qualified matches.\n\nMy fixed price for this is $5690.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-11-28",
+    "project_ids": [
+      "internal-docs-chatbot",
+      "semantic-job-search"
+    ],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-007",
+    "job_title": "Transaction risk service for our fintech team",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Payment Fraud Scoring API (what the client called a transaction risk service) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nA second relevant piece of work: Support Ticket Triage Classifier, where first-response time fell 38% and mis-routed tickets dropped from 21% to 6%.\n\nMy fixed price for this is $4250.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2023-01-20",
+    "project_ids": [
+      "payment-fraud-scoring",
+      "support-ticket-triage"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-008",
+    "job_title": "machine learning engineer wanted: transaction risk service",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $7380.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-12-08",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-009",
+    "job_title": "Reporting analyst for ongoing subscription media work (pandas)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4270.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-11-18",
+    "project_ids": [],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-010",
+    "job_title": "Build visual QA for machined parts (fixed price)",
+    "text": "Your point about a neural network trained end to end with custom data loaders is close to something I shipped for a manufacturing client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3940.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-07-19",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-011",
+    "job_title": "Looking for etl developer to deliver inference microservice",
+    "text": "An in-memory cache with expiry in front of the database is the part of your post I would worry about first, and I have done it before for a ad tech team.\n\nOn Low-latency Model Serving (what the client called a prediction endpoint hardening) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nMy fixed price for this is $6680.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2022-08-21",
+    "project_ids": [
+      "low-latency-model-serving"
+    ],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-012",
+    "job_title": "Looking for data scientist to deliver regression tests for prompts",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3240.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-20",
+    "project_ids": [],
+    "client_industry": "AI start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-013",
+    "job_title": "Looking for data scientist to deliver fine-tuned small model for discharge notes",
+    "text": "A scorecard that shows where the model fails, not just one number is the part of your post I would worry about first, and I have done it before for a healthcare team.\n\nOn Domain Fine-tuned Clinical Notes Summariser (what the client called a fine-tuned small model for discharge notes) discharge summaries took clinicians 15 minutes each. I built it with LoRA fine-tuning and PyTorch, plus held-out metrics, error slices and calibration checks. Result: ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $5360.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2022-03-16",
+    "project_ids": [
+      "clinical-notes-summariser"
+    ],
+    "client_industry": "Healthcare",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-014",
+    "job_title": "Looking for data analyst to deliver weekly sales predictor",
+    "text": "Scripted reshaping of large spreadsheets into tidy tables is the part of your post I would worry about first, and I have done it before for a real estate team.\n\nOn Retail Demand Forecasting (what the client called a weekly sales predictor) buyers over-ordered slow lines and ran out of fast ones. I built it with time-series forecasting and Python, plus a relational store with proper indexes and migrations. Result: forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nMy fixed price for this is $6190.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2023-07-09",
+    "project_ids": [
+      "retail-demand-forecast"
+    ],
+    "client_industry": "Real estate",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-015",
+    "job_title": "machine learning engineer wanted: regression tests for prompts",
+    "text": "Your point about experiment tracking with comparable runs and a model registry is close to something I shipped for a ai start-up client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $5960.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-08-25",
+    "project_ids": [],
+    "client_industry": "AI start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-016",
+    "job_title": "Build stock planning forecasts (fixed price)",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4430.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-18",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-017",
+    "job_title": "Need help building meaning-based candidate matching",
+    "text": "Your point about text understanding for messy free-form customer messages is close to something I shipped for a hr tech client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $5050.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-07",
+    "project_ids": [],
+    "client_industry": "HR tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-018",
+    "job_title": "Chargeback early-warning for our fintech team",
+    "text": "A boosted-tree scorer that beat the logistic baseline is the part of your post I would worry about first, and I have done it before for a fintech team.\n\nOn Payment Fraud Scoring API (what the client called a chargeback early-warning) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nMy fixed price for this is $7410.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-05-31",
+    "project_ids": [
+      "payment-fraud-scoring"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-019",
+    "job_title": "Python expert needed for retail project",
+    "text": "A set of small automation tools is the part of your post I would worry about first, and I have done it before for a retail team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $6600.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-09-02",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-020",
+    "job_title": "Machine learning engineer with Hugging Face Transformers experience",
+    "text": "I read your brief twice: a pretrained language model fine-tuned from a public model hub. I solved that for a healthcare company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4310.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-08-03",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-021",
+    "job_title": "Looking for nlp engineer to deliver clause finder for the deal team",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Contract Q&A over 40k PDFs (what the client called a legal document assistant) lawyers searched contracts with keyword search and missed clauses phrased differently. I built it with RAG and embeddings, plus a typed async HTTP service with auto-generated docs. Result: answers cited the right clause 91% of the time on a 300-question audit set.\n\nMy fixed price for this is $5820.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-02-27",
+    "project_ids": [
+      "contract-qa-rag"
+    ],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-022",
+    "job_title": "nlp engineer wanted: regression tests for prompts",
+    "text": "Your point about held-out metrics, error slices and calibration checks is close to something I shipped for a ai start-up client.\n\nOn LLM Evaluation Harness (what the client called a regression tests for prompts) prompt changes shipped without anyone knowing if answers got worse. I built it with model evaluation and prompt engineering, plus experiment tracking with comparable runs and a model registry. Result: 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $5360.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2022-07-11",
+    "project_ids": [
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "AI start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-023",
+    "job_title": "Need help building prediction endpoint hardening",
+    "text": "Managed cloud training jobs and hosted endpoints is the part of your post I would worry about first, and I have done it before for a ad tech team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $5050.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-01-14",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-024",
+    "job_title": "model evaluation help for our fintech business",
+    "text": "Your point about a scorecard that shows where the model fails, not just one number is close to something I shipped for a telecom client.\n\nOn Payment Fraud Scoring API (what the client called a chargeback early-warning) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nA second relevant piece of work: LLM Evaluation Harness, where 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $7980.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-12-31",
+    "project_ids": [
+      "payment-fraud-scoring",
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "Telecom",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-025",
+    "job_title": "Stock planning forecasts for our retail team",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5700.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-04-11",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-026",
+    "job_title": "Personalised shelf ranking for our e-commerce team",
+    "text": "I read your brief twice: dense vector representations of text for nearest-neighbour lookup. I solved that for a e-commerce company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4440.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-05-29",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-027",
+    "job_title": "Regression tests for prompts - ai start-up company",
+    "text": "I read your brief twice: hosted large-language-model calls with retries and cost caps. I solved that for a logistics company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4240.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-05-02",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-028",
+    "job_title": "Prediction endpoint hardening for our ad tech team",
+    "text": "I read your brief twice: a small Python web API with request validation. I solved that for a fintech company last year.\n\nOn Low-latency Model Serving (what the client called a prediction endpoint hardening) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nMy fixed price for this is $5270.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2024-10-10",
+    "project_ids": [
+      "low-latency-model-serving"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-029",
+    "job_title": "Need help building scheduled retraining workflow",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $4700.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-09-07",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-030",
+    "job_title": "SQL help for our travel business",
+    "text": "Your point about hand-written analytical queries with window functions is close to something I shipped for a logistics client.\n\nOn Dynamic Pricing Experiments (what the client called a price test engine) discounts were set by gut feel. I built it with A/B testing and scikit-learn, plus hand-written analytical queries with window functions. Result: found a 7% price band with +4.1% revenue and no conversion loss.\n\nMy fixed price for this is $3760.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-08-09",
+    "project_ids": [
+      "dynamic-pricing-experiments"
+    ],
+    "client_industry": "Logistics",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-031",
+    "job_title": "Machine learning engineer for ongoing b2b sales work (FastAPI)",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn LLM Email Drafting Assistant (what the client called a reply suggestion tool) reps wrote near-identical follow-ups and answered slowly. I built it with OpenAI API and prompt engineering, plus an in-memory cache with expiry in front of the database. Result: reply time halved and 71% of drafts were sent with light edits.\n\nA second relevant piece of work: Domain Fine-tuned Clinical Notes Summariser, where ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $4680.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-21",
+    "project_ids": [
+      "sales-email-copilot",
+      "clinical-notes-summariser"
+    ],
+    "client_industry": "B2B sales",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-032",
+    "job_title": "Model refresh automation - online marketplace company",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Nightly Training Pipeline (what the client called a scheduled retraining workflow) models were retrained by hand every few months and drifted. I built it with Airflow and MLflow, plus scripts and services in a typed, tested codebase. Result: weekly automated retrains with a rollback gate; drift incidents fell from monthly to none in a year.\n\nMy fixed price for this is $6380.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2024-01-09",
+    "project_ids": [
+      "nightly-training-pipeline"
+    ],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-033",
+    "job_title": "scikit-learn help for our travel business",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $6800.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-04-16",
+    "project_ids": [],
+    "client_industry": "Travel",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-034",
+    "job_title": "Need help building inbox routing assistant",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5990.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-09",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-035",
+    "job_title": "Build employee FAQ bot (fixed price)",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Internal Docs Chatbot (what the client called a knowledge base assistant) staff pinged the same three people for policy answers. I built it with RAG and LangChain, plus an in-memory cache with expiry in front of the database. Result: deflected 58% of internal questions; median answer time under 6 seconds.\n\nA second relevant piece of work: Domain Fine-tuned Clinical Notes Summariser, where ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $7080.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-01-29",
+    "project_ids": [
+      "internal-docs-chatbot",
+      "clinical-notes-summariser"
+    ],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-036",
+    "job_title": "Inbox routing assistant - saas company",
+    "text": "A small Python web API with request validation is the part of your post I would worry about first, and I have done it before for a online marketplace team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4450.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-03-22",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-037",
+    "job_title": "BI developer for ongoing travel work (A/B testing)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4530.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-12-20",
+    "project_ids": [],
+    "client_industry": "Travel",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-038",
+    "job_title": "AI developer with embeddings experience",
+    "text": "Your point about meaning-based similarity instead of keyword matching is close to something I shipped for a hr tech client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4100.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-02-08",
+    "project_ids": [],
+    "client_industry": "HR tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-039",
+    "job_title": "RAG expert needed for consulting project",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3960.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-09-10",
+    "project_ids": [],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-040",
+    "job_title": "data scientist wanted: employee FAQ bot",
+    "text": "I read your brief twice: answers grounded in retrieved passages with source citations. I solved that for a online marketplace company last year.\n\nOn Internal Docs Chatbot (what the client called a knowledge base assistant) staff pinged the same three people for policy answers. I built it with RAG and LangChain, plus an in-memory cache with expiry in front of the database. Result: deflected 58% of internal questions; median answer time under 6 seconds.\n\nMy fixed price for this is $3950.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-04-02",
+    "project_ids": [
+      "internal-docs-chatbot"
+    ],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-041",
+    "job_title": "Inference microservice for our ad tech team",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Low-latency Model Serving (what the client called a inference microservice) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nA second relevant piece of work: Contract Q&A over 40k PDFs, where answers cited the right clause 91% of the time on a 300-question audit set.\n\nMy fixed price for this is $3170.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-04-24",
+    "project_ids": [
+      "low-latency-model-serving",
+      "contract-qa-rag"
+    ],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-042",
+    "job_title": "ai developer wanted: sales outreach copilot",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $4030.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-02-12",
+    "project_ids": [],
+    "client_industry": "B2B sales",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-043",
+    "job_title": "App store opinion digest - consumer apps company",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Review Sentiment Monitor (what the client called a customer voice tracker) product managers read reviews by hand once a quarter. I built it with NLP and Hugging Face Transformers, plus scripts and services in a typed, tested codebase. Result: a weekly digest of themes; an issue was caught 9 days earlier than before.\n\nMy fixed price for this is $5120.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-06-23",
+    "project_ids": [
+      "review-sentiment-monitor"
+    ],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-044",
+    "job_title": "Knowledge base assistant - consulting company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Internal Docs Chatbot (what the client called a employee FAQ bot) staff pinged the same three people for policy answers. I built it with RAG and LangChain, plus an in-memory cache with expiry in front of the database. Result: deflected 58% of internal questions; median answer time under 6 seconds.\n\nA second relevant piece of work: Support Ticket Triage Classifier, where first-response time fell 38% and mis-routed tickets dropped from 21% to 6%.\n\nMy fixed price for this is $4930.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-05-27",
+    "project_ids": [
+      "internal-docs-chatbot",
+      "support-ticket-triage"
+    ],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-045",
+    "job_title": "Looking for analytics engineer to deliver reply suggestion tool",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn LLM Email Drafting Assistant (what the client called a reply suggestion tool) reps wrote near-identical follow-ups and answered slowly. I built it with OpenAI API and prompt engineering, plus an in-memory cache with expiry in front of the database. Result: reply time halved and 71% of drafts were sent with light edits.\n\nMy fixed price for this is $3680.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-12-20",
+    "project_ids": [
+      "sales-email-copilot"
+    ],
+    "client_industry": "B2B sales",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-046",
+    "job_title": "Looking for cloud engineer to deliver prediction endpoint hardening",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Low-latency Model Serving (what the client called a prediction endpoint hardening) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nMy fixed price for this is $3700.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-01-18",
+    "project_ids": [
+      "low-latency-model-serving"
+    ],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-047",
+    "job_title": "Retention risk scoring - subscription media company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3000.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-06-10",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-048",
+    "job_title": "LangChain help for our b2b sales business",
+    "text": "Chained prompts, tools and memory wired into one assistant is the part of your post I would worry about first, and I have done it before for a b2b sales team.\n\nOn LLM Email Drafting Assistant (what the client called a sales outreach copilot) reps wrote near-identical follow-ups and answered slowly. I built it with OpenAI API and prompt engineering, plus an in-memory cache with expiry in front of the database. Result: reply time halved and 71% of drafts were sent with light edits.\n\nMy fixed price for this is $3470.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2024-10-18",
+    "project_ids": [
+      "sales-email-copilot"
+    ],
+    "client_industry": "B2B sales",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-049",
+    "job_title": "Accounts-payable document reader - finance company",
+    "text": "I read your brief twice: background workers consuming a Redis-backed task queue. I solved that for a finance company last year.\n\nOn Invoice Field Extraction (what the client called a paper bill digitiser) clerks retyped supplier invoices into the ERP. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: processed 12k invoices per day with 96% field-level accuracy.\n\nMy fixed price for this is $5890.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-06-14",
+    "project_ids": [
+      "invoice-field-extraction"
+    ],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-050",
+    "job_title": "NLP engineer for ongoing hr tech work (embeddings)",
+    "text": "Meaning-based similarity instead of keyword matching is the part of your post I would worry about first, and I have done it before for a hr tech team.\n\nOn Semantic Job Search (what the client called a meaning-based candidate matching) keyword search hid strong candidates who used different words. I built it with embeddings and Pinecone, plus a typed async HTTP service with auto-generated docs. Result: recruiters shortlisted 2.3x faster and found 18% more qualified matches.\n\nMy fixed price for this is $2960.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-04-08",
+    "project_ids": [
+      "semantic-job-search"
+    ],
+    "client_industry": "HR tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-051",
+    "job_title": "AI developer for ongoing finance work (PyTorch)",
+    "text": "I read your brief twice: a hand-written training loop on GPU with mixed precision. I solved that for a finance company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4460.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-06-15",
+    "project_ids": [],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-052",
+    "job_title": "AI developer for ongoing legal tech work (Pinecone)",
+    "text": "Your point about a hosted similarity-search store with metadata filters is close to something I shipped for a media client.\n\nOn Contract Q&A over 40k PDFs (what the client called a legal document assistant) lawyers searched contracts with keyword search and missed clauses phrased differently. I built it with RAG and embeddings, plus a typed async HTTP service with auto-generated docs. Result: answers cited the right clause 91% of the time on a 300-question audit set.\n\nA second relevant piece of work: LLM Evaluation Harness, where 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $6490.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-04-18",
+    "project_ids": [
+      "contract-qa-rag",
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "Media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-053",
+    "job_title": "NLP engineer with time-series forecasting experience",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Retail Demand Forecasting (what the client called a weekly sales predictor) buyers over-ordered slow lines and ran out of fast ones. I built it with time-series forecasting and Python, plus a relational store with proper indexes and migrations. Result: forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nMy fixed price for this is $3670.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-07-31",
+    "project_ids": [
+      "retail-demand-forecast"
+    ],
+    "client_industry": "Start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-054",
+    "job_title": "Airflow help for our retail business",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Retail Demand Forecasting (what the client called a weekly sales predictor) buyers over-ordered slow lines and ran out of fast ones. I built it with time-series forecasting and Python, plus a relational store with proper indexes and migrations. Result: forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nMy fixed price for this is $2740.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2022-03-06",
+    "project_ids": [
+      "retail-demand-forecast"
+    ],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-055",
+    "job_title": "data scientist wanted: accounts-payable document reader",
+    "text": "A neural network trained end to end with custom data loaders is the part of your post I would worry about first, and I have done it before for a legal tech team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $5680.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-01-13",
+    "project_ids": [],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-056",
+    "job_title": "Machine learning engineer for ongoing consumer apps work (NLP)",
+    "text": "I read your brief twice: text understanding for messy free-form customer messages. I solved that for a consumer apps company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $5090.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-03-09",
+    "project_ids": [],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-057",
+    "job_title": "Need help building paper bill digitiser",
+    "text": "Pictures of paper or parts analysed automatically is the part of your post I would worry about first, and I have done it before for a finance team.\n\nOn Invoice Field Extraction (what the client called a paper bill digitiser) clerks retyped supplier invoices into the ERP. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: processed 12k invoices per day with 96% field-level accuracy.\n\nMy fixed price for this is $3960.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2022-11-17",
+    "project_ids": [
+      "invoice-field-extraction"
+    ],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-058",
+    "job_title": "Data scientist with prompt engineering experience",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5550.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-06-16",
+    "project_ids": [],
+    "client_industry": "B2B sales",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-059",
+    "job_title": "Need help building prediction endpoint hardening",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Low-latency Model Serving (what the client called a prediction endpoint hardening) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nA second relevant piece of work: Internal Docs Chatbot, where deflected 58% of internal questions; median answer time under 6 seconds.\n\nMy fixed price for this is $4070.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-12-23",
+    "project_ids": [
+      "low-latency-model-serving",
+      "internal-docs-chatbot"
+    ],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-060",
+    "job_title": "Machine learning engineer for ongoing saas work (Hugging Face Transformers)",
+    "text": "Your point about transformer checkpoints loaded through a model hub is close to something I shipped for a saas client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $8540.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-02-06",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-061",
+    "job_title": "Sales outreach copilot - b2b sales company",
+    "text": "I read your brief twice: a small Python web API with request validation. I solved that for a fintech company last year.\n\nOn LLM Email Drafting Assistant (what the client called a reply suggestion tool) reps wrote near-identical follow-ups and answered slowly. I built it with OpenAI API and prompt engineering, plus an in-memory cache with expiry in front of the database. Result: reply time halved and 71% of drafts were sent with light edits.\n\nMy fixed price for this is $6100.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2024-06-03",
+    "project_ids": [
+      "sales-email-copilot"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-062",
+    "job_title": "Need help building price test engine",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Dynamic Pricing Experiments (what the client called a discount elasticity study) discounts were set by gut feel. I built it with A/B testing and scikit-learn, plus hand-written analytical queries with window functions. Result: found a 7% price band with +4.1% revenue and no conversion loss.\n\nMy fixed price for this is $6820.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-14",
+    "project_ids": [
+      "dynamic-pricing-experiments"
+    ],
+    "client_industry": "Human resources",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-063",
+    "job_title": "Data engineer for ongoing online marketplace work (Airflow)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4290.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-07-22",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-064",
+    "job_title": "NLP engineer with Pinecone experience",
+    "text": "Your point about a hosted similarity-search store with metadata filters is close to something I shipped for a hr tech client.\n\nOn Semantic Job Search (what the client called a meaning-based candidate matching) keyword search hid strong candidates who used different words. I built it with embeddings and Pinecone, plus a typed async HTTP service with auto-generated docs. Result: recruiters shortlisted 2.3x faster and found 18% more qualified matches.\n\nA second relevant piece of work: LLM Evaluation Harness, where 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $5170.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2024-08-27",
+    "project_ids": [
+      "semantic-job-search",
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "HR tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-065",
+    "job_title": "Chargeback early-warning - fintech company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Payment Fraud Scoring API (what the client called a transaction risk service) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nA second relevant piece of work: Dynamic Pricing Experiments, where found a 7% price band with +4.1% revenue and no conversion loss.\n\nMy fixed price for this is $5980.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-06-24",
+    "project_ids": [
+      "payment-fraud-scoring",
+      "dynamic-pricing-experiments"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-066",
+    "job_title": "Need help building helpdesk auto-labeller",
+    "text": "Transformer checkpoints loaded through a model hub is the part of your post I would worry about first, and I have done it before for a saas team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $7990.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-02-06",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-067",
+    "job_title": "Prediction endpoint hardening for our ad tech team",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4170.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-11-12",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-068",
+    "job_title": "Weekly sales predictor for our retail team",
+    "text": "I read your brief twice: forward-looking numbers built from past daily history. I solved that for a retail company last year.\n\nOn Retail Demand Forecasting (what the client called a weekly sales predictor) buyers over-ordered slow lines and ran out of fast ones. I built it with time-series forecasting and Python, plus a relational store with proper indexes and migrations. Result: forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nMy fixed price for this is $3280.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2022-09-29",
+    "project_ids": [
+      "retail-demand-forecast"
+    ],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-069",
+    "job_title": "Looking for data engineer to deliver prediction endpoint hardening",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Low-latency Model Serving (what the client called a prediction endpoint hardening) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nA second relevant piece of work: Factory Defect Detection, where recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nMy fixed price for this is $5020.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-09-15",
+    "project_ids": [
+      "low-latency-model-serving",
+      "factory-defect-detection"
+    ],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-070",
+    "job_title": "Hiring Site reliability engineer - Docker",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Low-latency Model Serving (what the client called a prediction endpoint hardening) the scoring endpoint timed out under peak traffic. I built it with ONNX Runtime and FastAPI, plus managed cloud training jobs and hosted endpoints. Result: p95 latency from 410 ms to 45 ms at 3x the traffic.\n\nA second relevant piece of work: Payment Fraud Scoring API, where caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nMy fixed price for this is $4710.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-01-11",
+    "project_ids": [
+      "low-latency-model-serving",
+      "payment-fraud-scoring"
+    ],
+    "client_industry": "SaaS",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-071",
+    "job_title": "Looking for analytics consultant to deliver weekly sales predictor",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3060.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-07-02",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-072",
+    "job_title": "machine learning engineer wanted: who-will-cancel model",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3820.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-07-08",
+    "project_ids": [],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-073",
+    "job_title": "Celery help for our telecom business",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $6300.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-05-17",
+    "project_ids": [],
+    "client_industry": "Telecom",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-074",
+    "job_title": "Hiring Data scientist - NLP",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Call Centre Speech Analytics (what the client called a agent coaching transcripts) supervisors could review under 1% of recorded calls. I built it with Whisper and NLP, plus hosted large-language-model calls with retries and cost caps. Result: every call transcribed and summarised overnight; QA coverage went from 1% to 100%.\n\nMy fixed price for this is $7580.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2024-11-20",
+    "project_ids": [
+      "call-centre-speech-analytics"
+    ],
+    "client_industry": "Human resources",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-075",
+    "job_title": "Need help building 'customers also liked' widget",
+    "text": "A small Python web API with request validation is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nOn Product Recommendation Engine (what the client called a personalised shelf ranking) the homepage showed the same bestsellers to everyone. I built it with recommender systems and embeddings, plus a typed async HTTP service with auto-generated docs. Result: click-through on the widget rose 27% and revenue per visit 6%.\n\nA second relevant piece of work: Retail Demand Forecasting, where forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nMy fixed price for this is $8760.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2025-01-23",
+    "project_ids": [
+      "product-recommendations",
+      "retail-demand-forecast"
+    ],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-076",
+    "job_title": "site reliability engineer wanted: visual QA for machined parts",
+    "text": "Containerised builds that run the same on every machine is the part of your post I would worry about first, and I have done it before for a manufacturing team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3250.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-10-30",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-077",
+    "job_title": "Need help building personalised shelf ranking",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3780.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-05-30",
+    "project_ids": [],
+    "client_industry": "Education",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-078",
+    "job_title": "Site reliability engineer with Docker experience",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Invoice Field Extraction (what the client called a accounts-payable document reader) clerks retyped supplier invoices into the ERP. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: processed 12k invoices per day with 96% field-level accuracy.\n\nMy fixed price for this is $3910.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-09-06",
+    "project_ids": [
+      "invoice-field-extraction"
+    ],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-079",
+    "job_title": "Retention risk scoring - subscription media company",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6990.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-07-29",
+    "project_ids": [],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-080",
+    "job_title": "nlp engineer wanted: fine-tuned small model for discharge notes",
+    "text": "Your point about a hand-written training loop on GPU with mixed precision is close to something I shipped for a e-commerce client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4230.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-08-27",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-081",
+    "job_title": "Hiring Machine learning engineer - time-series forecasting",
+    "text": "Your point about seasonal weekly predictions with holiday effects is close to something I shipped for a education client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3710.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-11-26",
+    "project_ids": [],
+    "client_industry": "Education",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-082",
+    "job_title": "Agent coaching transcripts - telecom company",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3320.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-03-09",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-083",
+    "job_title": "Accounts-payable document reader for our finance team",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6070.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-02-26",
+    "project_ids": [],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-084",
+    "job_title": "Legal document assistant - legal tech company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $7850.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-09-13",
+    "project_ids": [],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-085",
+    "job_title": "Data scientist for ongoing consumer apps work (Hugging Face Transformers)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Review Sentiment Monitor (what the client called a customer voice tracker) product managers read reviews by hand once a quarter. I built it with NLP and Hugging Face Transformers, plus scripts and services in a typed, tested codebase. Result: a weekly digest of themes; an issue was caught 9 days earlier than before.\n\nMy fixed price for this is $3890.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-06-16",
+    "project_ids": [
+      "review-sentiment-monitor"
+    ],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-086",
+    "job_title": "devops engineer wanted: paper bill digitiser",
+    "text": "Your point about a reproducible image with a one-command local start is close to something I shipped for a finance client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $6490.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-07-09",
+    "project_ids": [],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-087",
+    "job_title": "Need help building transaction risk service",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4490.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-06-29",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-088",
+    "job_title": "Personalised shelf ranking - e-commerce company",
+    "text": "'people who liked this also liked' suggestions is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $5810.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2024-03-14",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-089",
+    "job_title": "Build retention risk scoring (fixed price)",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4650.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-03-04",
+    "project_ids": [],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-090",
+    "job_title": "Hiring Machine learning engineer - Hugging Face Transformers",
+    "text": "Your point about a pretrained language model fine-tuned from a public model hub is close to something I shipped for a consumer apps client.\n\nOn Review Sentiment Monitor (what the client called a customer voice tracker) product managers read reviews by hand once a quarter. I built it with NLP and Hugging Face Transformers, plus scripts and services in a typed, tested codebase. Result: a weekly digest of themes; an issue was caught 9 days earlier than before.\n\nMy fixed price for this is $5970.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2022-03-31",
+    "project_ids": [
+      "review-sentiment-monitor"
+    ],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-091",
+    "job_title": "Build accounts-payable document reader (fixed price)",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Invoice Field Extraction (what the client called a paper bill digitiser) clerks retyped supplier invoices into the ERP. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: processed 12k invoices per day with 96% field-level accuracy.\n\nMy fixed price for this is $5730.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-07-31",
+    "project_ids": [
+      "invoice-field-extraction"
+    ],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-092",
+    "job_title": "Build inbox routing assistant (fixed price)",
+    "text": "Your point about containerised builds that run the same on every machine is close to something I shipped for a saas client.\n\nOn Support Ticket Triage Classifier (what the client called a helpdesk auto-labeller) support agents spent the first hour of each shift sorting tickets by hand. I built it with Python and Hugging Face Transformers, plus experiment tracking with comparable runs and a model registry. Result: first-response time fell 38% and mis-routed tickets dropped from 21% to 6%.\n\nMy fixed price for this is $3650.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2024-10-18",
+    "project_ids": [
+      "support-ticket-triage"
+    ],
+    "client_industry": "SaaS",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-093",
+    "job_title": "Hiring NLP engineer - embeddings",
+    "text": "Dense vector representations of text for nearest-neighbour lookup is the part of your post I would worry about first, and I have done it before for a hr tech team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4920.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-08-11",
+    "project_ids": [],
+    "client_industry": "HR tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-094",
+    "job_title": "Clause finder for the deal team for our legal tech team",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Contract Q&A over 40k PDFs (what the client called a legal document assistant) lawyers searched contracts with keyword search and missed clauses phrased differently. I built it with RAG and embeddings, plus a typed async HTTP service with auto-generated docs. Result: answers cited the right clause 91% of the time on a 300-question audit set.\n\nMy fixed price for this is $8960.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-06-07",
+    "project_ids": [
+      "contract-qa-rag"
+    ],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-095",
+    "job_title": "Looking for ai developer to deliver visual QA for machined parts",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2500.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-06-30",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-096",
+    "job_title": "NLP expert needed for saas project",
+    "text": "I read your brief twice: language processing over thousands of short documents. I solved that for a non-profit company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $5370.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-03-23",
+    "project_ids": [],
+    "client_industry": "Non-profit",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-097",
+    "job_title": "Inbox routing assistant - saas company",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4320.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-09-08",
+    "project_ids": [],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-098",
+    "job_title": "Stock planning forecasts for our retail team",
+    "text": "I read your brief twice: scripts and services in a typed, tested codebase. I solved that for a retail company last year.\n\nOn Retail Demand Forecasting (what the client called a stock planning forecasts) buyers over-ordered slow lines and ran out of fast ones. I built it with time-series forecasting and Python, plus a relational store with proper indexes and migrations. Result: forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nA second relevant piece of work: Call Centre Speech Analytics, where every call transcribed and summarised overnight; QA coverage went from 1% to 100%.\n\nMy fixed price for this is $4170.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-08-04",
+    "project_ids": [
+      "retail-demand-forecast",
+      "call-centre-speech-analytics"
+    ],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-099",
+    "job_title": "Machine learning engineer with FastAPI experience",
+    "text": "A typed async HTTP service with auto-generated docs is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4140.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-08-31",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-100",
+    "job_title": "Need help building employee FAQ bot",
+    "text": "A fast key-value layer for sessions and rate limits is the part of your post I would worry about first, and I have done it before for a consulting team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5450.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-02-25",
+    "project_ids": [],
+    "client_industry": "Consulting",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-101",
+    "job_title": "Build 'customers also liked' widget (fixed price)",
+    "text": "I read your brief twice: 'people who liked this also liked' suggestions. I solved that for a e-commerce company last year.\n\nOn Product Recommendation Engine (what the client called a 'customers also liked' widget) the homepage showed the same bestsellers to everyone. I built it with recommender systems and embeddings, plus a typed async HTTP service with auto-generated docs. Result: click-through on the widget rose 27% and revenue per visit 6%.\n\nA second relevant piece of work: Domain Fine-tuned Clinical Notes Summariser, where ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $3880.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2024-06-20",
+    "project_ids": [
+      "product-recommendations",
+      "clinical-notes-summariser"
+    ],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-102",
+    "job_title": "NLP engineer for ongoing manufacturing work (ONNX Runtime)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $1980.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-01",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-103",
+    "job_title": "Hiring Machine learning engineer - model evaluation",
+    "text": "I read your brief twice: a scorecard that shows where the model fails, not just one number. I solved that for a healthcare company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2730.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-02-06",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-104",
+    "job_title": "machine learning engineer wanted: who-will-cancel model",
+    "text": "Your point about every training run logged with its parameters and metrics is close to something I shipped for a media client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4550.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-04-06",
+    "project_ids": [],
+    "client_industry": "Media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-105",
+    "job_title": "Looking for ai developer to deliver chargeback early-warning",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Payment Fraud Scoring API (what the client called a transaction risk service) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nMy fixed price for this is $5320.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-10-04",
+    "project_ids": [
+      "payment-fraud-scoring"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-106",
+    "job_title": "Looking for machine learning engineer to deliver employee FAQ bot",
+    "text": "Your point about answers grounded in retrieved passages with source citations is close to something I shipped for a start-up client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $6860.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-04-04",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-107",
+    "job_title": "Data scientist for ongoing subscription media work (MLflow)",
+    "text": "I read your brief twice: every training run logged with its parameters and metrics. I solved that for a start-up company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4010.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-12",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-108",
+    "job_title": "Data engineer with Airflow experience",
+    "text": "Your point about scheduled multi-step workflows with retries and backfills is close to something I shipped for a online marketplace client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3050.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-10-03",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-109",
+    "job_title": "Need help building paper bill digitiser",
+    "text": "A neural network trained end to end with custom data loaders is the part of your post I would worry about first, and I have done it before for a finance team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3720.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-12-09",
+    "project_ids": [],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-110",
+    "job_title": "Clause finder for the deal team for our legal tech team",
+    "text": "A small Python web API with request validation is the part of your post I would worry about first, and I have done it before for a legal tech team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $7180.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-05-12",
+    "project_ids": [],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-111",
+    "job_title": "Need help building customer voice tracker",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3680.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-08-07",
+    "project_ids": [],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-112",
+    "job_title": "Looking for data analyst to deliver customer voice tracker",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Review Sentiment Monitor (what the client called a customer voice tracker) product managers read reviews by hand once a quarter. I built it with NLP and Hugging Face Transformers, plus scripts and services in a typed, tested codebase. Result: a weekly digest of themes; an issue was caught 9 days earlier than before.\n\nA second relevant piece of work: Subscription Churn Prediction, where top-decile precision of 44% and 9% lower monthly churn in a holdout test.\n\nMy fixed price for this is $5110.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-03-11",
+    "project_ids": [
+      "review-sentiment-monitor",
+      "churn-risk-scoring"
+    ],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-113",
+    "job_title": "Prediction endpoint hardening - ad tech company",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6320.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-03-27",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-114",
+    "job_title": "ai developer wanted: agent coaching transcripts",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3720.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-05-11",
+    "project_ids": [],
+    "client_industry": "Telecom",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-115",
+    "job_title": "model evaluation expert needed for ai start-up project",
+    "text": "I read your brief twice: a scorecard that shows where the model fails, not just one number. I solved that for a ai start-up company last year.\n\nOn LLM Evaluation Harness (what the client called a regression tests for prompts) prompt changes shipped without anyone knowing if answers got worse. I built it with model evaluation and prompt engineering, plus experiment tracking with comparable runs and a model registry. Result: 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $3350.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-10-12",
+    "project_ids": [
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "AI start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-116",
+    "job_title": "Data scientist with Celery experience",
+    "text": "I read your brief twice: background workers consuming a Redis-backed task queue. I solved that for a telecom company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6470.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-09-15",
+    "project_ids": [],
+    "client_industry": "Telecom",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-117",
+    "job_title": "Need help building transaction risk service",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Payment Fraud Scoring API (what the client called a chargeback early-warning) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nMy fixed price for this is $5820.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-15",
+    "project_ids": [
+      "payment-fraud-scoring"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-118",
+    "job_title": "Visual QA for machined parts for our manufacturing team",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Factory Defect Detection (what the client called a assembly-line camera inspector) inspectors missed hairline cracks at the end of long shifts. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nA second relevant piece of work: Invoice Field Extraction, where processed 12k invoices per day with 96% field-level accuracy.\n\nMy fixed price for this is $4130.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-01-19",
+    "project_ids": [
+      "factory-defect-detection",
+      "invoice-field-extraction"
+    ],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-119",
+    "job_title": "Need help building retention risk scoring",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3520.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-12",
+    "project_ids": [],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-120",
+    "job_title": "MLflow help for our online marketplace business",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Nightly Training Pipeline (what the client called a model refresh automation) models were retrained by hand every few months and drifted. I built it with Airflow and MLflow, plus scripts and services in a typed, tested codebase. Result: weekly automated retrains with a rollback gate; drift incidents fell from monthly to none in a year.\n\nMy fixed price for this is $3290.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-03-05",
+    "project_ids": [
+      "nightly-training-pipeline"
+    ],
+    "client_industry": "Start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-121",
+    "job_title": "pandas expert needed for subscription media project",
+    "text": "Scripted reshaping of large spreadsheets into tidy tables is the part of your post I would worry about first, and I have done it before for a subscription media team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3880.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-03-13",
+    "project_ids": [],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-122",
+    "job_title": "Hiring NLP engineer - computer vision",
+    "text": "Your point about pictures of paper or parts analysed automatically is close to something I shipped for a logistics client.\n\nOn Factory Defect Detection (what the client called a assembly-line camera inspector) inspectors missed hairline cracks at the end of long shifts. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nMy fixed price for this is $2910.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-05-13",
+    "project_ids": [
+      "factory-defect-detection"
+    ],
+    "client_industry": "Logistics",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-123",
+    "job_title": "Machine learning engineer for ongoing e-commerce work (scikit-learn)",
+    "text": "Your point about classical models with cross-validated pipelines is close to something I shipped for a e-commerce client.\n\nOn Product Recommendation Engine (what the client called a personalised shelf ranking) the homepage showed the same bestsellers to everyone. I built it with recommender systems and embeddings, plus a typed async HTTP service with auto-generated docs. Result: click-through on the widget rose 27% and revenue per visit 6%.\n\nMy fixed price for this is $4680.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-03-11",
+    "project_ids": [
+      "product-recommendations"
+    ],
+    "client_industry": "E-commerce",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-124",
+    "job_title": "Fine-tuned small model for discharge notes for our healthcare team",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Domain Fine-tuned Clinical Notes Summariser (what the client called a adapter-tuned summary model) discharge summaries took clinicians 15 minutes each. I built it with LoRA fine-tuning and PyTorch, plus held-out metrics, error slices and calibration checks. Result: ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $2340.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-01-20",
+    "project_ids": [
+      "clinical-notes-summariser"
+    ],
+    "client_industry": "Healthcare",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-125",
+    "job_title": "Hiring Reporting analyst - SQL",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Dynamic Pricing Experiments (what the client called a price test engine) discounts were set by gut feel. I built it with A/B testing and scikit-learn, plus hand-written analytical queries with window functions. Result: found a 7% price band with +4.1% revenue and no conversion loss.\n\nMy fixed price for this is $4330.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-08-21",
+    "project_ids": [
+      "dynamic-pricing-experiments"
+    ],
+    "client_industry": "Travel",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-126",
+    "job_title": "Need help building meaning-based candidate matching",
+    "text": "A typed async HTTP service with auto-generated docs is the part of your post I would worry about first, and I have done it before for a digital agency team.\n\nOn Semantic Job Search (what the client called a meaning-based candidate matching) keyword search hid strong candidates who used different words. I built it with embeddings and Pinecone, plus a typed async HTTP service with auto-generated docs. Result: recruiters shortlisted 2.3x faster and found 18% more qualified matches.\n\nA second relevant piece of work: Support Ticket Triage Classifier, where first-response time fell 38% and mis-routed tickets dropped from 21% to 6%.\n\nMy fixed price for this is $3860.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-01-13",
+    "project_ids": [
+      "semantic-job-search",
+      "support-ticket-triage"
+    ],
+    "client_industry": "Digital agency",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-127",
+    "job_title": "Data scientist for ongoing saas work (Hugging Face Transformers)",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Support Ticket Triage Classifier (what the client called a inbox routing assistant) support agents spent the first hour of each shift sorting tickets by hand. I built it with Python and Hugging Face Transformers, plus experiment tracking with comparable runs and a model registry. Result: first-response time fell 38% and mis-routed tickets dropped from 21% to 6%.\n\nMy fixed price for this is $8960.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-02-03",
+    "project_ids": [
+      "support-ticket-triage"
+    ],
+    "client_industry": "SaaS",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-128",
+    "job_title": "reporting analyst wanted: who-will-cancel model",
+    "text": "Split tests read out with confidence intervals is the part of your post I would worry about first, and I have done it before for a subscription media team.\n\nOn Subscription Churn Prediction (what the client called a retention risk scoring) the retention team contacted customers at random. I built it with scikit-learn and XGBoost, plus controlled experiments with a pre-registered success metric. Result: top-decile precision of 44% and 9% lower monthly churn in a holdout test.\n\nMy fixed price for this is $4030.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2024-01-14",
+    "project_ids": [
+      "churn-risk-scoring"
+    ],
+    "client_industry": "Subscription media",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-129",
+    "job_title": "Data scientist with model evaluation experience",
+    "text": "Your point about held-out metrics, error slices and calibration checks is close to something I shipped for a healthcare client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2730.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-12-22",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-130",
+    "job_title": "Regression tests for prompts - ai start-up company",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn LLM Evaluation Harness (what the client called a answer quality scorecards) prompt changes shipped without anyone knowing if answers got worse. I built it with model evaluation and prompt engineering, plus experiment tracking with comparable runs and a model registry. Result: 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $3420.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2023-12-30",
+    "project_ids": [
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "AI start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-131",
+    "job_title": "Pinecone help for our hr tech business",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Semantic Job Search (what the client called a resume-to-role finder) keyword search hid strong candidates who used different words. I built it with embeddings and Pinecone, plus a typed async HTTP service with auto-generated docs. Result: recruiters shortlisted 2.3x faster and found 18% more qualified matches.\n\nA second relevant piece of work: LLM Evaluation Harness, where 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $5230.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-02-01",
+    "project_ids": [
+      "semantic-job-search",
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "HR tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-132",
+    "job_title": "site reliability engineer wanted: assembly-line camera inspector",
+    "text": "Your point about a reproducible image with a one-command local start is close to something I shipped for a legal tech client.\n\nOn Factory Defect Detection (what the client called a assembly-line camera inspector) inspectors missed hairline cracks at the end of long shifts. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nMy fixed price for this is $2830.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-07-03",
+    "project_ids": [
+      "factory-defect-detection"
+    ],
+    "client_industry": "Legal tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-133",
+    "job_title": "Answer quality scorecards - ai start-up company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn LLM Evaluation Harness (what the client called a answer quality scorecards) prompt changes shipped without anyone knowing if answers got worse. I built it with model evaluation and prompt engineering, plus experiment tracking with comparable runs and a model registry. Result: 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $3500.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-03-04",
+    "project_ids": [
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "AI start-up",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-134",
+    "job_title": "Visual QA for machined parts for our manufacturing team",
+    "text": "I read your brief twice: pictures of paper or parts analysed automatically. I solved that for a manufacturing company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4540.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-04-09",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-135",
+    "job_title": "Build paper bill digitiser (fixed price)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3200.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-04-14",
+    "project_ids": [],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-136",
+    "job_title": "Need help building chargeback early-warning",
+    "text": "I read your brief twice: gradient-boosted trees tuned for imbalanced outcomes. I solved that for a fintech company last year.\n\nOn Payment Fraud Scoring API (what the client called a transaction risk service) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nMy fixed price for this is $4310.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2022-11-28",
+    "project_ids": [
+      "payment-fraud-scoring"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-137",
+    "job_title": "Analytics consultant with SQL experience",
+    "text": "Reporting queries over millions of rows is the part of your post I would worry about first, and I have done it before for a travel team.\n\nOn Dynamic Pricing Experiments (what the client called a price test engine) discounts were set by gut feel. I built it with A/B testing and scikit-learn, plus hand-written analytical queries with window functions. Result: found a 7% price band with +4.1% revenue and no conversion loss.\n\nMy fixed price for this is $4700.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2023-08-04",
+    "project_ids": [
+      "dynamic-pricing-experiments"
+    ],
+    "client_industry": "Travel",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-138",
+    "job_title": "NLP engineer for ongoing fintech work (XGBoost)",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Payment Fraud Scoring API (what the client called a transaction risk service) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nA second relevant piece of work: Internal Docs Chatbot, where deflected 58% of internal questions; median answer time under 6 seconds.\n\nMy fixed price for this is $4440.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-17",
+    "project_ids": [
+      "payment-fraud-scoring",
+      "internal-docs-chatbot"
+    ],
+    "client_industry": "Fintech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-139",
+    "job_title": "Chargeback early-warning for our fintech team",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Payment Fraud Scoring API (what the client called a chargeback early-warning) rules-based screening blocked good customers and still let fraud through. I built it with XGBoost and scikit-learn, plus held-out metrics, error slices and calibration checks. Result: caught 34% more fraud at the same false-positive rate; p99 latency 38 ms.\n\nA second relevant piece of work: LLM Evaluation Harness, where 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $9130.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-12-09",
+    "project_ids": [
+      "payment-fraud-scoring",
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "Digital agency",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-140",
+    "job_title": "Need help building accounts-payable document reader",
+    "text": "A neural network trained end to end with custom data loaders is the part of your post I would worry about first, and I have done it before for a finance team.\n\nOn Invoice Field Extraction (what the client called a accounts-payable document reader) clerks retyped supplier invoices into the ERP. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: processed 12k invoices per day with 96% field-level accuracy.\n\nA second relevant piece of work: Contract Q&A over 40k PDFs, where answers cited the right clause 91% of the time on a 300-question audit set.\n\nMy fixed price for this is $3470.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2022-02-20",
+    "project_ids": [
+      "invoice-field-extraction",
+      "contract-qa-rag"
+    ],
+    "client_industry": "Finance",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-141",
+    "job_title": "Hiring Data scientist - Python",
+    "text": "I read your brief twice: scripts and services in a typed, tested codebase. I solved that for a retail company last year.\n\nOn LLM Evaluation Harness (what the client called a answer quality scorecards) prompt changes shipped without anyone knowing if answers got worse. I built it with model evaluation and prompt engineering, plus experiment tracking with comparable runs and a model registry. Result: 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $2550.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2022-09-16",
+    "project_ids": [
+      "llm-evaluation-harness"
+    ],
+    "client_industry": "Retail",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-142",
+    "job_title": "Customer voice tracker for our consumer apps team",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3890.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-10-05",
+    "project_ids": [],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-143",
+    "job_title": "Hiring AI developer - scikit-learn",
+    "text": "Classical models with cross-validated pipelines is the part of your post I would worry about first, and I have done it before for a telecom team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $8990.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-02-06",
+    "project_ids": [],
+    "client_industry": "Telecom",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-144",
+    "job_title": "Looking for analytics engineer to deliver prediction endpoint hardening",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $5380.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-04-04",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-145",
+    "job_title": "Hiring Site reliability engineer - Docker",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Factory Defect Detection (what the client called a assembly-line camera inspector) inspectors missed hairline cracks at the end of long shifts. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nMy fixed price for this is $3520.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-08-14",
+    "project_ids": [
+      "factory-defect-detection"
+    ],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-146",
+    "job_title": "Looking for ai developer to deliver personalised shelf ranking",
+    "text": "Your point about classical models with cross-validated pipelines is close to something I shipped for a real estate client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4230.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-06-03",
+    "project_ids": [],
+    "client_industry": "Real estate",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-147",
+    "job_title": "Customer voice tracker - consumer apps company",
+    "text": "I read your brief twice: a set of small automation tools. I solved that for a consumer apps company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2930.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-02-11",
+    "project_ids": [],
+    "client_industry": "Consumer apps",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-148",
+    "job_title": "SageMaker expert needed for online marketplace project",
+    "text": "Your point about managed cloud training jobs and hosted endpoints is close to something I shipped for a online marketplace client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3250.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-03-28",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-149",
+    "job_title": "Build reply suggestion tool (fixed price)",
+    "text": "I read your brief twice: a small Python web API with request validation. I solved that for a b2b sales company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4130.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-12-20",
+    "project_ids": [],
+    "client_industry": "B2B sales",
+    "category": "AI & Machine Learning"
+  },
+  {
+    "proposal_id": "pp-ai_ml-150",
+    "job_title": "Build assembly-line camera inspector (fixed price)",
+    "text": "I read your brief twice: pictures of paper or parts analysed automatically. I solved that for a manufacturing company last year.\n\nOn Factory Defect Detection (what the client called a assembly-line camera inspector) inspectors missed hairline cracks at the end of long shifts. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nA second relevant piece of work: Retail Demand Forecasting, where forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%.\n\nMy fixed price for this is $4010.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-02-05",
+    "project_ids": [
+      "factory-defect-detection",
+      "retail-demand-forecast"
+    ],
+    "client_industry": "Manufacturing",
+    "category": "AI & Machine Learning"
+  }
+]

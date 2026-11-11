@@ -1,0 +1,373 @@
+[
+  {
+    "project_id": "regional-sales-kpi-dashboard",
+    "title": "Regional Sales KPI Dashboard",
+    "skills": [
+      "Tableau",
+      "SQL",
+      "KPI dashboards",
+      "Excel"
+    ],
+    "industry": "Retail",
+    "date": "2023-02-01",
+    "outcome_summary": "dashboard adopted by 45 managers; reporting prep time cut from 12 hours to 1",
+    "aliases": [
+      "weekly revenue scorecard",
+      "area manager performance view"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "subscriber-cohort-retention",
+    "title": "Subscriber Cohort Retention Analysis",
+    "skills": [
+      "cohort analysis",
+      "SQL",
+      "Python",
+      "pandas",
+      "statistics"
+    ],
+    "industry": "Digital media",
+    "date": "2022-10-01",
+    "outcome_summary": "found a 3x gap between acquisition channels, redirecting 15% of ad spend",
+    "aliases": [
+      "who sticks around study",
+      "month-by-month customer survival"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "marketing-attribution-model",
+    "title": "Marketing Attribution Model",
+    "skills": [
+      "SQL",
+      "BigQuery",
+      "Looker Studio",
+      "statistics",
+      "Python"
+    ],
+    "industry": "E-commerce",
+    "date": "2023-07-01",
+    "outcome_summary": "reallocated 20% of budget; blended CAC down 14%",
+    "aliases": [
+      "which campaign earned the sale",
+      "channel ROI breakdown"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "analytics-warehouse-dbt",
+    "title": "Analytics Warehouse with dbt",
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "SQL",
+      "dimensional modeling",
+      "Airflow"
+    ],
+    "industry": "SaaS",
+    "date": "2024-01-01",
+    "outcome_summary": "42 tested models; metric disputes in leadership meetings went away",
+    "aliases": [
+      "tidy reporting tables",
+      "single source of truth models"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "checkout-ab-test-readouts",
+    "title": "Checkout A/B Test Readouts",
+    "skills": [
+      "A/B testing",
+      "statistics",
+      "Python",
+      "SQL"
+    ],
+    "industry": "E-commerce",
+    "date": "2023-04-01",
+    "outcome_summary": "a pre-registration template and sequential checks; 3 false wins avoided in a quarter",
+    "aliases": [
+      "experiment result write-ups",
+      "conversion lift verdicts"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "customer-segmentation-crm",
+    "title": "Customer Segmentation",
+    "skills": [
+      "customer segmentation",
+      "Python",
+      "pandas",
+      "Power BI"
+    ],
+    "industry": "Retail",
+    "date": "2022-06-01",
+    "outcome_summary": "5 segments; targeted emails got 31% higher click rate",
+    "aliases": [
+      "spender groups for CRM",
+      "who-are-our-buyers clusters"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "finance-monthly-pack-powerbi",
+    "title": "Finance Monthly Pack in Power BI",
+    "skills": [
+      "Power BI",
+      "Excel",
+      "SQL"
+    ],
+    "industry": "Manufacturing",
+    "date": "2023-09-01",
+    "outcome_summary": "close-to-pack time from 5 days to 1",
+    "aliases": [
+      "board reporting pack",
+      "budget versus actual views"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "sheets-reporting-automation",
+    "title": "Google Sheets Reporting Automation",
+    "skills": [
+      "Google Sheets",
+      "Apps Script",
+      "Excel"
+    ],
+    "industry": "Agency",
+    "date": "2022-03-01",
+    "outcome_summary": "saved 6 hours a week per manager; zero copy-paste errors afterwards",
+    "aliases": [
+      "self-updating team spreadsheet",
+      "scripted weekly emails from sheets"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "competitor-price-scraper",
+    "title": "Competitor Price Scraper",
+    "skills": [
+      "web scraping",
+      "Python",
+      "pandas",
+      "PostgreSQL"
+    ],
+    "industry": "E-commerce",
+    "date": "2023-05-01",
+    "outcome_summary": "12k prices tracked daily; price-match response time down from days to hours",
+    "aliases": [
+      "market price monitor",
+      "daily shelf price tracker"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "customer-survey-nps",
+    "title": "Customer Survey and NPS Analysis",
+    "skills": [
+      "survey analysis",
+      "R",
+      "statistics",
+      "ggplot2"
+    ],
+    "industry": "Hospitality",
+    "date": "2022-11-01",
+    "outcome_summary": "five complaint themes quantified; one fix lifted NPS 8 points",
+    "aliases": [
+      "satisfaction study",
+      "feedback themes report"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "revenue-forecasting",
+    "title": "Revenue Forecasting",
+    "skills": [
+      "forecasting",
+      "Python",
+      "statistics",
+      "Excel"
+    ],
+    "industry": "SaaS",
+    "date": "2023-11-01",
+    "outcome_summary": "MAPE of 6% over four quarters versus 15% for the old method",
+    "aliases": [
+      "next-quarter projections",
+      "seasonal sales outlook"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "operations-etl-pipeline",
+    "title": "Operations ETL Pipeline",
+    "skills": [
+      "ETL",
+      "Python",
+      "Airflow",
+      "PostgreSQL",
+      "SQL"
+    ],
+    "industry": "Logistics",
+    "date": "2022-08-01",
+    "outcome_summary": "ten feeds loaded nightly with validation; manual re-keying eliminated",
+    "aliases": [
+      "nightly data loads",
+      "spreadsheets-to-database sync"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "employee-attrition-study",
+    "title": "Employee Attrition Study",
+    "skills": [
+      "regression analysis",
+      "R",
+      "statistics",
+      "Tableau"
+    ],
+    "industry": "Human resources",
+    "date": "2023-03-01",
+    "outcome_summary": "manager change and pay-band position explained most leavers; retention plan cut turnover to 19%",
+    "aliases": [
+      "why people leave analysis",
+      "HR turnover drivers"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "product-usage-bigquery",
+    "title": "Product Usage Analytics on BigQuery",
+    "skills": [
+      "BigQuery",
+      "SQL",
+      "Looker Studio",
+      "data cleaning"
+    ],
+    "industry": "SaaS",
+    "date": "2024-04-01",
+    "outcome_summary": "20 event tables modelled; feature adoption dashboards guided two roadmap cuts",
+    "aliases": [
+      "feature adoption tracking",
+      "event data reporting"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "crm-data-cleanup",
+    "title": "CRM Data Cleanup",
+    "skills": [
+      "data cleaning",
+      "Python",
+      "pandas",
+      "Excel"
+    ],
+    "industry": "B2B services",
+    "date": "2022-04-01",
+    "outcome_summary": "merged 41k duplicates; bounce rate on campaigns halved",
+    "aliases": [
+      "duplicate contacts merge",
+      "messy customer list rescue"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "ops-self-serve-metabase",
+    "title": "Self-serve Metabase for Ops",
+    "skills": [
+      "Metabase",
+      "SQL",
+      "PostgreSQL",
+      "KPI dashboards"
+    ],
+    "industry": "Logistics",
+    "date": "2023-06-01",
+    "outcome_summary": "analyst request backlog down 60%",
+    "aliases": [
+      "question builder for non-technical staff",
+      "internal BI portal"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "pricing-explorer-streamlit",
+    "title": "Streamlit Pricing Explorer",
+    "skills": [
+      "Streamlit",
+      "Python",
+      "pandas",
+      "forecasting"
+    ],
+    "industry": "Retail",
+    "date": "2024-06-01",
+    "outcome_summary": "category managers run their own scenarios; adopted by 8 teams",
+    "aliases": [
+      "interactive what-if pricing page",
+      "scenario modelling web tool"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "clinic-waiting-time-report",
+    "title": "Clinic Waiting Time Report",
+    "skills": [
+      "SQL",
+      "Tableau",
+      "statistics",
+      "data cleaning"
+    ],
+    "industry": "Healthcare",
+    "date": "2024-08-01",
+    "outcome_summary": "identified two peak-hour bottlenecks; average wait fell 22%",
+    "aliases": [
+      "patient flow reporting",
+      "queue length insights"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "excel-macro-invoice",
+    "title": "Excel Macro Invoice Tool",
+    "skills": [
+      "VBA macros"
+    ],
+    "industry": "Small business",
+    "date": "2021-08-01",
+    "outcome_summary": "a recorded macro with a small form",
+    "aliases": [
+      "spreadsheet invoice button",
+      "recorded macro"
+    ],
+    "kind": "distractor"
+  },
+  {
+    "project_id": "hand-drawn-infographic",
+    "title": "Hand-drawn Infographic Poster",
+    "skills": [
+      "infographics"
+    ],
+    "industry": "Non-profit",
+    "date": "2021-11-01",
+    "outcome_summary": "a one-page printed illustration",
+    "aliases": [
+      "statistics poster",
+      "illustrated facts sheet"
+    ],
+    "kind": "distractor"
+  },
+  {
+    "project_id": "survey-word-cloud",
+    "title": "Survey Word Cloud",
+    "skills": [
+      "word clouds"
+    ],
+    "industry": "Events",
+    "date": "2022-01-01",
+    "outcome_summary": "a single PNG for a slide",
+    "aliases": [
+      "decorative survey picture",
+      "word picture"
+    ],
+    "kind": "distractor"
+  }
+]

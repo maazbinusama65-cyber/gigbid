@@ -1,0 +1,46 @@
+{
+  "persona_id": "fullstack",
+  "display_name": "Sara Whitfield (synthetic)",
+  "headline": "Full-stack web developer - TypeScript, React, Node, Postgres",
+  "skills": [
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Docker",
+    "React",
+    "Tailwind CSS",
+    "Next.js",
+    "Express",
+    "JWT authentication",
+    "Playwright",
+    "REST API design",
+    "Stripe",
+    "AWS",
+    "Django",
+    "GitHub Actions",
+    "GraphQL",
+    "Python",
+    "Redis",
+    "BullMQ",
+    "Celery"
+  ],
+  "hourly_rate_usd": 45,
+  "min_project_budget_usd": 250,
+  "availability_hours_per_week": 30,
+  "weekly_connects_budget": 80,
+  "saved_searches": [
+    {
+      "name": "Next.js and React apps",
+      "query": "Next.js React web app",
+      "category": "Web Development"
+    },
+    {
+      "name": "SaaS backends",
+      "query": "Node API Stripe subscription backend"
+    },
+    {
+      "name": "Django projects",
+      "query": "Django REST Postgres"
+    }
+  ]
+}

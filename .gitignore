@@ -10,8 +10,6 @@ node_modules/
 dist/
 build/
 data/processed/
-evals/results/*
-!evals/results/.gitkeep
 
 # local datasets (not committed)
 data/external/
@@ -20,3 +18,8 @@ data/processed/
 *.sqlite
 node_modules/
 docs/ASSIGNMENT.txt
+data/gigsim_seed/kaggle_sample.jsonl
+apps/web/playwright-report/
+apps/web/test-results/
+evals/results/*trial*
+.gigbid_tmp/

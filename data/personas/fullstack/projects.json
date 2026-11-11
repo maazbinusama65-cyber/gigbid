@@ -1,0 +1,382 @@
+[
+  {
+    "project_id": "saas-billing-portal",
+    "title": "SaaS Subscription Billing Portal",
+    "skills": [
+      "Next.js",
+      "TypeScript",
+      "Stripe",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS"
+    ],
+    "industry": "SaaS",
+    "date": "2023-02-01",
+    "outcome_summary": "support tickets about billing dropped 64% and upgrades rose 12%",
+    "aliases": [
+      "self-serve plan upgrades",
+      "customer invoicing dashboard"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "realtime-support-chat",
+    "title": "Realtime Support Chat",
+    "skills": [
+      "React",
+      "Node.js",
+      "WebSockets",
+      "Redis",
+      "TypeScript"
+    ],
+    "industry": "SaaS",
+    "date": "2022-10-01",
+    "outcome_summary": "median first response of 90 seconds; 1,800 concurrent chats on one small instance",
+    "aliases": [
+      "live customer messaging widget",
+      "in-app agent inbox"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "service-marketplace-backend",
+    "title": "Two-sided Service Marketplace Backend",
+    "skills": [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "REST API design",
+      "JWT authentication",
+      "Docker"
+    ],
+    "industry": "Online marketplace",
+    "date": "2022-06-01",
+    "outcome_summary": "launched in 9 weeks and handled 4,000 bookings in the first month",
+    "aliases": [
+      "gig listing and booking platform",
+      "provider matching site"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "headless-storefront",
+    "title": "Headless Storefront",
+    "skills": [
+      "Next.js",
+      "GraphQL",
+      "Stripe",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "industry": "E-commerce",
+    "date": "2023-08-01",
+    "outcome_summary": "mobile conversion up 19% and LCP from 4.8 s to 1.6 s",
+    "aliases": [
+      "fast custom shop front-end",
+      "catalogue and checkout rebuild"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "clinic-appointment-booking",
+    "title": "Clinic Appointment Booking",
+    "skills": [
+      "React",
+      "Django",
+      "PostgreSQL",
+      "Celery",
+      "JWT authentication"
+    ],
+    "industry": "Healthcare",
+    "date": "2023-05-01",
+    "outcome_summary": "no-shows fell to 9% with SMS and email reminders; 70% of bookings made online",
+    "aliases": [
+      "patient scheduling web app",
+      "online slots and reminders"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "operations-admin-dashboard",
+    "title": "Operations Admin Dashboard",
+    "skills": [
+      "React",
+      "TypeScript",
+      "REST API design",
+      "Tailwind CSS",
+      "Playwright"
+    ],
+    "industry": "Logistics",
+    "date": "2022-12-01",
+    "outcome_summary": "order handling time cut by a third; 40 critical-path browser tests in CI",
+    "aliases": [
+      "internal back-office tool",
+      "order management console"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "secure-document-intake",
+    "title": "Secure Document Upload and Processing",
+    "skills": [
+      "S3 presigned uploads",
+      "Node.js",
+      "BullMQ",
+      "Docker"
+    ],
+    "industry": "Legal",
+    "date": "2024-03-01",
+    "outcome_summary": "files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute",
+    "aliases": [
+      "client document locker",
+      "secure file intake"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "staff-portal-sso",
+    "title": "Single Sign-on Rollout",
+    "skills": [
+      "OAuth 2.0 / SSO",
+      "JWT authentication",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "industry": "Education",
+    "date": "2023-10-01",
+    "outcome_summary": "password-reset tickets fell 80%; 1,200 accounts migrated with no downtime",
+    "aliases": [
+      "login overhaul for the staff portal",
+      "Google and Microsoft sign-in integration"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "graphql-api-gateway",
+    "title": "GraphQL API Gateway",
+    "skills": [
+      "GraphQL",
+      "Node.js",
+      "TypeScript",
+      "Redis"
+    ],
+    "industry": "Media",
+    "date": "2024-05-01",
+    "outcome_summary": "payload size down 55%; new screens needed no back-end changes",
+    "aliases": [
+      "one endpoint for mobile and web",
+      "API consolidation layer"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "deployment-pipeline-revamp",
+    "title": "Deployment Pipeline Revamp",
+    "skills": [
+      "GitHub Actions",
+      "Docker",
+      "AWS",
+      "Playwright"
+    ],
+    "industry": "Start-up",
+    "date": "2023-12-01",
+    "outcome_summary": "deploys in 7 minutes, ten a week instead of one, rollbacks in one click",
+    "aliases": [
+      "push-to-deploy automation",
+      "release process rescue"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "catalogue-search-facets",
+    "title": "Product Search with Facets",
+    "skills": [
+      "Elasticsearch",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "industry": "Retail",
+    "date": "2022-04-01",
+    "outcome_summary": "search p95 of 80 ms over 600k products; zero-result queries cut by 45%",
+    "aliases": [
+      "fast filterable catalogue",
+      "typo-tolerant search box"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "magazine-publishing-platform",
+    "title": "Content Platform on Supabase",
+    "skills": [
+      "Supabase",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "industry": "Media",
+    "date": "2024-07-01",
+    "outcome_summary": "editors publish without developers; 150 articles migrated",
+    "aliases": [
+      "editor-friendly publishing site",
+      "magazine back office"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "event-ingestion-api",
+    "title": "Event Ingestion API",
+    "skills": [
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "Docker",
+      "AWS"
+    ],
+    "industry": "Ad tech",
+    "date": "2022-08-01",
+    "outcome_summary": "sustained 4k events/s on two small containers",
+    "aliases": [
+      "usage tracking backend",
+      "clickstream collector"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "marketplace-payouts",
+    "title": "Marketplace Payouts",
+    "skills": [
+      "Stripe",
+      "Express",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "industry": "Online marketplace",
+    "date": "2023-03-01",
+    "outcome_summary": "automatic payouts with reconciliation; finance saved a day a week",
+    "aliases": [
+      "split payments for sellers",
+      "seller earnings transfers"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "inventory-rest-api",
+    "title": "Inventory REST API",
+    "skills": [
+      "Django",
+      "REST API design",
+      "PostgreSQL",
+      "Docker",
+      "Python"
+    ],
+    "industry": "Logistics",
+    "date": "2022-02-01",
+    "outcome_summary": "single source of truth for 22k SKUs with audit history",
+    "aliases": [
+      "warehouse stock service",
+      "SKU tracking backend"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "model-demo-web-app",
+    "title": "Model Demo Web App",
+    "skills": [
+      "FastAPI",
+      "React",
+      "Python",
+      "TypeScript",
+      "Docker"
+    ],
+    "industry": "Start-up",
+    "date": "2023-09-01",
+    "outcome_summary": "client demos moved from notebooks to a shareable page; 3 pilot customers signed",
+    "aliases": [
+      "interactive predictions page",
+      "front end for a data science model"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "browser-test-automation",
+    "title": "Test Automation Suite",
+    "skills": [
+      "Playwright",
+      "Jest",
+      "GitHub Actions",
+      "TypeScript"
+    ],
+    "industry": "Fintech",
+    "date": "2024-02-01",
+    "outcome_summary": "180 unit and 35 browser tests; escaped bugs down 70%",
+    "aliases": [
+      "browser regression checks",
+      "release safety net"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "core-web-vitals-overhaul",
+    "title": "Core Web Vitals Overhaul",
+    "skills": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "industry": "Digital agency",
+    "date": "2024-04-01",
+    "outcome_summary": "LCP 4.1 s to 1.4 s; organic sessions +17% in two months",
+    "aliases": [
+      "page speed rescue",
+      "slow landing pages fix"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "wordpress-brochure",
+    "title": "WordPress Brochure Site",
+    "skills": [
+      "WordPress theme"
+    ],
+    "industry": "Local services",
+    "date": "2021-07-01",
+    "outcome_summary": "launched in a week from a purchased theme",
+    "aliases": [
+      "small business site on a blogging CMS",
+      "template-based web page"
+    ],
+    "kind": "distractor"
+  },
+  {
+    "project_id": "jquery-slider",
+    "title": "jQuery Image Slider",
+    "skills": [
+      "jQuery plugin"
+    ],
+    "industry": "Retail",
+    "date": "2021-09-01",
+    "outcome_summary": "a 30-line plugin; no framework",
+    "aliases": [
+      "legacy page slider script",
+      "carousel widget"
+    ],
+    "kind": "distractor"
+  },
+  {
+    "project_id": "landing-page-html",
+    "title": "Hand-coded Landing Page",
+    "skills": [
+      "static HTML"
+    ],
+    "industry": "Events",
+    "date": "2021-05-01",
+    "outcome_summary": "a static page with a signup form posting to a third-party service",
+    "aliases": [
+      "one-page promo site",
+      "static promo page"
+    ],
+    "kind": "distractor"
+  }
+]

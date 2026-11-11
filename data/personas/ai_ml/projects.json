@@ -1,0 +1,387 @@
+[
+  {
+    "project_id": "support-ticket-triage",
+    "title": "Support Ticket Triage Classifier",
+    "skills": [
+      "Python",
+      "Hugging Face Transformers",
+      "NLP",
+      "FastAPI",
+      "Docker",
+      "MLflow"
+    ],
+    "industry": "SaaS",
+    "date": "2023-03-01",
+    "outcome_summary": "first-response time fell 38% and mis-routed tickets dropped from 21% to 6%",
+    "aliases": [
+      "inbox routing assistant",
+      "helpdesk auto-labeller"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "contract-qa-rag",
+    "title": "Contract Q&A over 40k PDFs",
+    "skills": [
+      "RAG",
+      "embeddings",
+      "Pinecone",
+      "LangChain",
+      "OpenAI API",
+      "FastAPI"
+    ],
+    "industry": "Legal tech",
+    "date": "2024-02-01",
+    "outcome_summary": "answers cited the right clause 91% of the time on a 300-question audit set",
+    "aliases": [
+      "legal document assistant",
+      "clause finder for the deal team"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "churn-risk-scoring",
+    "title": "Subscription Churn Prediction",
+    "skills": [
+      "scikit-learn",
+      "XGBoost",
+      "pandas",
+      "MLflow",
+      "A/B testing"
+    ],
+    "industry": "Subscription media",
+    "date": "2022-11-01",
+    "outcome_summary": "top-decile precision of 44% and 9% lower monthly churn in a holdout test",
+    "aliases": [
+      "retention risk scoring",
+      "who-will-cancel model"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "retail-demand-forecast",
+    "title": "Retail Demand Forecasting",
+    "skills": [
+      "time-series forecasting",
+      "Python",
+      "pandas",
+      "Airflow",
+      "PostgreSQL"
+    ],
+    "industry": "Retail",
+    "date": "2023-06-01",
+    "outcome_summary": "forecast error (WAPE) improved from 31% to 17% and stock-outs fell 22%",
+    "aliases": [
+      "stock planning forecasts",
+      "weekly sales predictor"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "invoice-field-extraction",
+    "title": "Invoice Field Extraction",
+    "skills": [
+      "computer vision",
+      "PyTorch",
+      "FastAPI",
+      "Celery",
+      "Docker"
+    ],
+    "industry": "Finance",
+    "date": "2023-09-01",
+    "outcome_summary": "processed 12k invoices per day with 96% field-level accuracy",
+    "aliases": [
+      "accounts-payable document reader",
+      "paper bill digitiser"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "product-recommendations",
+    "title": "Product Recommendation Engine",
+    "skills": [
+      "recommender systems",
+      "embeddings",
+      "Redis",
+      "scikit-learn",
+      "FastAPI"
+    ],
+    "industry": "E-commerce",
+    "date": "2022-08-01",
+    "outcome_summary": "click-through on the widget rose 27% and revenue per visit 6%",
+    "aliases": [
+      "'customers also liked' widget",
+      "personalised shelf ranking"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "call-centre-speech-analytics",
+    "title": "Call Centre Speech Analytics",
+    "skills": [
+      "Whisper",
+      "NLP",
+      "Celery",
+      "PostgreSQL",
+      "OpenAI API"
+    ],
+    "industry": "Telecom",
+    "date": "2024-04-01",
+    "outcome_summary": "every call transcribed and summarised overnight; QA coverage went from 1% to 100%",
+    "aliases": [
+      "voice call summariser",
+      "agent coaching transcripts"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "factory-defect-detection",
+    "title": "Factory Defect Detection",
+    "skills": [
+      "computer vision",
+      "PyTorch",
+      "ONNX Runtime",
+      "Docker"
+    ],
+    "industry": "Manufacturing",
+    "date": "2023-01-01",
+    "outcome_summary": "recall of 97% on cracks at 40 ms per part on a CPU-only edge box",
+    "aliases": [
+      "assembly-line camera inspector",
+      "visual QA for machined parts"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "sales-email-copilot",
+    "title": "LLM Email Drafting Assistant",
+    "skills": [
+      "OpenAI API",
+      "prompt engineering",
+      "LangChain",
+      "FastAPI",
+      "Redis"
+    ],
+    "industry": "B2B sales",
+    "date": "2024-06-01",
+    "outcome_summary": "reply time halved and 71% of drafts were sent with light edits",
+    "aliases": [
+      "sales outreach copilot",
+      "reply suggestion tool"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "clinical-notes-summariser",
+    "title": "Domain Fine-tuned Clinical Notes Summariser",
+    "skills": [
+      "LoRA fine-tuning",
+      "PyTorch",
+      "Hugging Face Transformers",
+      "model evaluation"
+    ],
+    "industry": "Healthcare",
+    "date": "2024-08-01",
+    "outcome_summary": "ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes",
+    "aliases": [
+      "fine-tuned small model for discharge notes",
+      "adapter-tuned summary model"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "payment-fraud-scoring",
+    "title": "Payment Fraud Scoring API",
+    "skills": [
+      "XGBoost",
+      "scikit-learn",
+      "FastAPI",
+      "Redis",
+      "A/B testing",
+      "model evaluation"
+    ],
+    "industry": "Fintech",
+    "date": "2023-04-01",
+    "outcome_summary": "caught 34% more fraud at the same false-positive rate; p99 latency 38 ms",
+    "aliases": [
+      "transaction risk service",
+      "chargeback early-warning"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "nightly-training-pipeline",
+    "title": "Nightly Training Pipeline",
+    "skills": [
+      "Airflow",
+      "MLflow",
+      "Docker",
+      "SageMaker",
+      "Python"
+    ],
+    "industry": "Online marketplace",
+    "date": "2023-11-01",
+    "outcome_summary": "weekly automated retrains with a rollback gate; drift incidents fell from monthly to none in a year",
+    "aliases": [
+      "scheduled retraining workflow",
+      "model refresh automation"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "semantic-job-search",
+    "title": "Semantic Job Search",
+    "skills": [
+      "embeddings",
+      "Pinecone",
+      "NLP",
+      "FastAPI"
+    ],
+    "industry": "HR tech",
+    "date": "2022-05-01",
+    "outcome_summary": "recruiters shortlisted 2.3x faster and found 18% more qualified matches",
+    "aliases": [
+      "meaning-based candidate matching",
+      "resume-to-role finder"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "review-sentiment-monitor",
+    "title": "Review Sentiment Monitor",
+    "skills": [
+      "NLP",
+      "Hugging Face Transformers",
+      "SQL",
+      "Python"
+    ],
+    "industry": "Consumer apps",
+    "date": "2022-02-01",
+    "outcome_summary": "a weekly digest of themes; an issue was caught 9 days earlier than before",
+    "aliases": [
+      "customer voice tracker",
+      "app store opinion digest"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "llm-evaluation-harness",
+    "title": "LLM Evaluation Harness",
+    "skills": [
+      "model evaluation",
+      "prompt engineering",
+      "OpenAI API",
+      "Python",
+      "MLflow"
+    ],
+    "industry": "AI start-up",
+    "date": "2024-09-01",
+    "outcome_summary": "300-case suite in CI; blocked 5 regressions before release",
+    "aliases": [
+      "regression tests for prompts",
+      "answer quality scorecards"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "dynamic-pricing-experiments",
+    "title": "Dynamic Pricing Experiments",
+    "skills": [
+      "A/B testing",
+      "scikit-learn",
+      "pandas",
+      "SQL"
+    ],
+    "industry": "Travel",
+    "date": "2022-09-01",
+    "outcome_summary": "found a 7% price band with +4.1% revenue and no conversion loss",
+    "aliases": [
+      "price test engine",
+      "discount elasticity study"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "internal-docs-chatbot",
+    "title": "Internal Docs Chatbot",
+    "skills": [
+      "RAG",
+      "LangChain",
+      "Pinecone",
+      "OpenAI API",
+      "Redis"
+    ],
+    "industry": "Consulting",
+    "date": "2024-01-01",
+    "outcome_summary": "deflected 58% of internal questions; median answer time under 6 seconds",
+    "aliases": [
+      "knowledge base assistant",
+      "employee FAQ bot"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "low-latency-model-serving",
+    "title": "Low-latency Model Serving",
+    "skills": [
+      "ONNX Runtime",
+      "FastAPI",
+      "Docker",
+      "Redis",
+      "SageMaker"
+    ],
+    "industry": "Ad tech",
+    "date": "2023-07-01",
+    "outcome_summary": "p95 latency from 410 ms to 45 ms at 3x the traffic",
+    "aliases": [
+      "inference microservice",
+      "prediction endpoint hardening"
+    ],
+    "kind": "core"
+  },
+  {
+    "project_id": "faq-keyword-bot",
+    "title": "FAQ Keyword Bot",
+    "skills": [
+      "rule-based chatbot"
+    ],
+    "industry": "Hospitality",
+    "date": "2021-10-01",
+    "outcome_summary": "answered 60% of enquiries using fixed keyword rules (no machine learning involved)",
+    "aliases": [
+      "opening-hours auto-reply",
+      "canned answer bot"
+    ],
+    "kind": "distractor"
+  },
+  {
+    "project_id": "excel-report-filler",
+    "title": "Excel Report Filler",
+    "skills": [
+      "openpyxl reports"
+    ],
+    "industry": "Accounting",
+    "date": "2021-12-01",
+    "outcome_summary": "a 40-line script replaced two hours of monthly copy-paste",
+    "aliases": [
+      "monthly spreadsheet filler",
+      "template report script"
+    ],
+    "kind": "distractor"
+  },
+  {
+    "project_id": "brochure-site",
+    "title": "Five-page Brochure Site",
+    "skills": [
+      "static HTML site"
+    ],
+    "industry": "Local services",
+    "date": "2021-06-01",
+    "outcome_summary": "five static pages, no back end",
+    "aliases": [
+      "small business web page",
+      "plain HTML site"
+    ],
+    "kind": "distractor"
+  }
+]

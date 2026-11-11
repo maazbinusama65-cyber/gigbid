@@ -1,0 +1,46 @@
+{
+  "persona_id": "data_analyst",
+  "display_name": "Omar Haddad (synthetic)",
+  "headline": "Data analyst - SQL, dashboards, experiments and reporting",
+  "skills": [
+    "SQL",
+    "Python",
+    "statistics",
+    "Excel",
+    "pandas",
+    "PostgreSQL",
+    "Tableau",
+    "data cleaning",
+    "Airflow",
+    "BigQuery",
+    "KPI dashboards",
+    "Looker Studio",
+    "Power BI",
+    "R",
+    "forecasting",
+    "A/B testing",
+    "Apps Script",
+    "ETL",
+    "Google Sheets",
+    "Metabase"
+  ],
+  "hourly_rate_usd": 35,
+  "min_project_budget_usd": 150,
+  "availability_hours_per_week": 20,
+  "weekly_connects_budget": 50,
+  "saved_searches": [
+    {
+      "name": "Dashboards",
+      "query": "Tableau Power BI dashboard KPI",
+      "category": "Data Analytics"
+    },
+    {
+      "name": "SQL and warehouse",
+      "query": "SQL dbt BigQuery Snowflake warehouse"
+    },
+    {
+      "name": "Analysis and experiments",
+      "query": "A/B test cohort analysis statistics"
+    }
+  ]
+}

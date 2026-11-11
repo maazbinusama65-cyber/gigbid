@@ -1,0 +1,1658 @@
+[
+  {
+    "proposal_id": "pp-fullstack-001",
+    "job_title": "Node.js expert needed for retail project",
+    "text": "A JavaScript server process handling concurrent requests is the part of your post I would worry about first, and I have done it before for a retail team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2910.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-04-25",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-002",
+    "job_title": "Seller earnings transfers - online marketplace company",
+    "text": "SQL tables with constraints, not loose files is the part of your post I would worry about first, and I have done it before for a online marketplace team.\n\nOn Marketplace Payouts (what the client called a split payments for sellers) sellers were paid manually every Friday. I built it with Stripe and Express, plus strictly typed JavaScript across client and server. Result: automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $5420.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-12-11",
+    "project_ids": [
+      "marketplace-payouts"
+    ],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-003",
+    "job_title": "Need help building in-app agent inbox",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Realtime Support Chat (what the client called a live customer messaging widget) email-only support left customers waiting hours. I built it with React and Node.js, plus strictly typed JavaScript across client and server. Result: median first response of 90 seconds; 1,800 concurrent chats on one small instance.\n\nA second relevant piece of work: Two-sided Service Marketplace Backend, where launched in 9 weeks and handled 4,000 bookings in the first month.\n\nMy fixed price for this is $5980.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-02-10",
+    "project_ids": [
+      "realtime-support-chat",
+      "service-marketplace-backend"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-004",
+    "job_title": "Playwright expert needed for logistics project",
+    "text": "Your point about scripted real-browser checks of the main user journeys is close to something I shipped for a logistics client.\n\nOn Operations Admin Dashboard (what the client called a order management console) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nA second relevant piece of work: Clinic Appointment Booking, where no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.\n\nMy fixed price for this is $4510.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2022-03-17",
+    "project_ids": [
+      "operations-admin-dashboard",
+      "clinic-appointment-booking"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-005",
+    "job_title": "Machine learning engineer for ongoing start-up work (Python)",
+    "text": "A set of small automation tools is the part of your post I would worry about first, and I have done it before for a fintech team.\n\nOn Model Demo Web App (what the client called a interactive predictions page) a data science team had a notebook but no way to show clients. I built it with FastAPI and React, plus containerised builds that run the same on every machine. Result: client demos moved from notebooks to a shareable page; 3 pilot customers signed.\n\nMy fixed price for this is $5220.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-10-12",
+    "project_ids": [
+      "model-demo-web-app"
+    ],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-006",
+    "job_title": "Build clickstream collector (fixed price)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2690.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-10-01",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-007",
+    "job_title": "React help for our digital agency business",
+    "text": "Your point about an interactive front end split into reusable components is close to something I shipped for a digital agency client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3640.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-09-11",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-008",
+    "job_title": "REST API design expert needed for logistics project",
+    "text": "I read your brief twice: a documented HTTP interface other teams could build against. I solved that for a logistics company last year.\n\nOn Inventory REST API (what the client called a warehouse stock service) stock counts lived in several disagreeing spreadsheets. I built it with Django and REST API design, plus scripts and services in a typed, tested codebase. Result: single source of truth for 22k SKUs with audit history.\n\nMy fixed price for this is $6830.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2024-11-22",
+    "project_ids": [
+      "inventory-rest-api"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-009",
+    "job_title": "Cloud engineer with Docker experience",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $6340.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-12-30",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-010",
+    "job_title": "Need help building Google and Microsoft sign-in integration",
+    "text": "I read your brief twice: a JavaScript server process handling concurrent requests. I solved that for a education company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2520.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-11-18",
+    "project_ids": [],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-011",
+    "job_title": "Editor-friendly publishing site for our media team",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Content Platform on Supabase (what the client called a editor-friendly publishing site) editors waited on developers to publish. I built it with Supabase and Next.js, plus utility-first styling with a shared design-token config. Result: editors publish without developers; 150 articles migrated.\n\nMy fixed price for this is $3890.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-02-18",
+    "project_ids": [
+      "magazine-publishing-platform"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-012",
+    "job_title": "Build internal back-office tool (fixed price)",
+    "text": "I read your brief twice: end-to-end regression runs across three browsers. I solved that for a legal tech company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3070.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-02-23",
+    "project_ids": [],
+    "client_industry": "Legal tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-013",
+    "job_title": "frontend developer wanted: API consolidation layer",
+    "text": "I read your brief twice: backend services written in server-side JavaScript. I solved that for a media company last year.\n\nOn GraphQL API Gateway (what the client called a one endpoint for mobile and web) mobile and web teams called a dozen inconsistent endpoints. I built it with GraphQL and Node.js, plus an in-memory cache with expiry in front of the database. Result: payload size down 55%; new screens needed no back-end changes.\n\nA second relevant piece of work: Two-sided Service Marketplace Backend, where launched in 9 weeks and handled 4,000 bookings in the first month.\n\nMy fixed price for this is $3670.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-10-31",
+    "project_ids": [
+      "graphql-api-gateway",
+      "service-marketplace-backend"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-014",
+    "job_title": "Cloud engineer for ongoing ad tech work (Docker)",
+    "text": "I read your brief twice: containerised builds that run the same on every machine. I solved that for a ad tech company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2770.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-06-16",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-015",
+    "job_title": "Need help building patient scheduling web app",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Clinic Appointment Booking (what the client called a online slots and reminders) receptionists booked by phone and no-shows were 18%. I built it with React and Django, plus stateless signed tokens with refresh rotation. Result: no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.\n\nMy fixed price for this is $5070.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-02-12",
+    "project_ids": [
+      "clinic-appointment-booking"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-016",
+    "job_title": "Looking for site reliability engineer to deliver release safety net",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Test Automation Suite (what the client called a release safety net) regressions reached production after every release. I built it with Playwright and Jest, plus strictly typed JavaScript across client and server. Result: 180 unit and 35 browser tests; escaped bugs down 70%.\n\nMy fixed price for this is $2090.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-07-11",
+    "project_ids": [
+      "browser-test-automation"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-017",
+    "job_title": "Elasticsearch expert needed for retail project",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2850.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-02-27",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-018",
+    "job_title": "Browser regression checks for our fintech team",
+    "text": "Your point about shared type definitions between front end and back end is close to something I shipped for a fintech client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3810.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-02-24",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-019",
+    "job_title": "Data engineer with PostgreSQL experience",
+    "text": "Your point about a relational store with proper indexes and migrations is close to something I shipped for a saas client.\n\nOn SaaS Subscription Billing Portal (what the client called a self-serve plan upgrades) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $4450.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2023-08-30",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-020",
+    "job_title": "Need help building fast custom shop front-end",
+    "text": "I read your brief twice: a hosted payments provider with signed event callbacks. I solved that for a e-commerce company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3540.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-03-27",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-021",
+    "job_title": "Looking for backend engineer to deliver typo-tolerant search box",
+    "text": "Backend services written in server-side JavaScript is the part of your post I would worry about first, and I have done it before for a hospitality team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2440.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-08-15",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-022",
+    "job_title": "Frontend developer for ongoing logistics work (Django)",
+    "text": "I read your brief twice: model-driven server-rendered pages and an ORM. I solved that for a logistics company last year.\n\nOn Inventory REST API (what the client called a SKU tracking backend) stock counts lived in several disagreeing spreadsheets. I built it with Django and REST API design, plus scripts and services in a typed, tested codebase. Result: single source of truth for 22k SKUs with audit history.\n\nMy fixed price for this is $4590.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2022-08-15",
+    "project_ids": [
+      "inventory-rest-api"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-023",
+    "job_title": "Hiring Site reliability engineer - AWS",
+    "text": "Your point about infrastructure on a major public cloud with least-privilege roles is close to something I shipped for a digital agency client.\n\nOn Deployment Pipeline Revamp (what the client called a release process rescue) releases were manual, took half a day, and failed often. I built it with GitHub Actions and Docker, plus scripted real-browser checks of the main user journeys. Result: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.\n\nMy fixed price for this is $4060.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-02-15",
+    "project_ids": [
+      "deployment-pipeline-revamp"
+    ],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-024",
+    "job_title": "Hiring Data scientist - FastAPI",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2890.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-07-04",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-025",
+    "job_title": "Self-serve plan upgrades for our saas team",
+    "text": "I read your brief twice: strictly typed JavaScript across client and server. I solved that for a retail company last year.\n\nOn SaaS Subscription Billing Portal (what the client called a customer invoicing dashboard) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $4250.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2022-09-09",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-026",
+    "job_title": "Build page speed rescue (fixed price)",
+    "text": "Your point about a component-based single-page interface with hooks is close to something I shipped for a logistics client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2010.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-02-14",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-027",
+    "job_title": "frontend developer wanted: online slots and reminders",
+    "text": "Stateless signed tokens with refresh rotation is the part of your post I would worry about first, and I have done it before for a healthcare team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3900.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-04-29",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-028",
+    "job_title": "Looking for cloud engineer to deliver client document locker",
+    "text": "Your point about a reproducible image with a one-command local start is close to something I shipped for a retail client.\n\nOn Secure Document Upload and Processing (what the client called a client document locker) clients emailed sensitive files as attachments. I built it with S3 presigned uploads and Node.js, plus containerised builds that run the same on every machine. Result: files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute.\n\nMy fixed price for this is $2930.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2022-03-18",
+    "project_ids": [
+      "secure-document-intake"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-029",
+    "job_title": "Hiring Full-stack developer - REST API design",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Operations Admin Dashboard (what the client called a order management console) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nMy fixed price for this is $3590.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2023-09-08",
+    "project_ids": [
+      "operations-admin-dashboard"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-030",
+    "job_title": "data engineer wanted: self-serve plan upgrades",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3530.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-16",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-031",
+    "job_title": "etl developer wanted: split payments for sellers",
+    "text": "Your point about a relational store with proper indexes and migrations is close to something I shipped for a legal tech client.\n\nOn Marketplace Payouts (what the client called a split payments for sellers) sellers were paid manually every Friday. I built it with Stripe and Express, plus strictly typed JavaScript across client and server. Result: automatic payouts with reconciliation; finance saved a day a week.\n\nA second relevant piece of work: Clinic Appointment Booking, where no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.\n\nMy fixed price for this is $3780.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-06-25",
+    "project_ids": [
+      "marketplace-payouts",
+      "clinic-appointment-booking"
+    ],
+    "client_industry": "Legal tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-032",
+    "job_title": "Analytics engineer with PostgreSQL experience",
+    "text": "Your point about a relational store with proper indexes and migrations is close to something I shipped for a saas client.\n\nOn SaaS Subscription Billing Portal (what the client called a customer invoicing dashboard) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $2380.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-02-15",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-033",
+    "job_title": "Build catalogue and checkout rebuild (fixed price)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2640.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-05-02",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-034",
+    "job_title": "Tailwind CSS help for our digital agency business",
+    "text": "Your point about a consistent look without hand-written stylesheets is close to something I shipped for a digital agency client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2980.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-09-11",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-035",
+    "job_title": "Release process rescue - start-up company",
+    "text": "I read your brief twice: a reproducible image with a one-command local start. I solved that for a start-up company last year.\n\nOn Deployment Pipeline Revamp (what the client called a release process rescue) releases were manual, took half a day, and failed often. I built it with GitHub Actions and Docker, plus scripted real-browser checks of the main user journeys. Result: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.\n\nMy fixed price for this is $4660.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-11-02",
+    "project_ids": [
+      "deployment-pipeline-revamp"
+    ],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-036",
+    "job_title": "Build warehouse stock service (fixed price)",
+    "text": "Your point about SQL tables with constraints, not loose files is close to something I shipped for a logistics client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5950.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-04-30",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-037",
+    "job_title": "Need help building interactive predictions page",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3480.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-08-04",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-038",
+    "job_title": "Tailwind CSS help for our media business",
+    "text": "Your point about a consistent look without hand-written stylesheets is close to something I shipped for a media client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4420.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-08-31",
+    "project_ids": [],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-039",
+    "job_title": "Fast filterable catalogue for our retail team",
+    "text": "I read your brief twice: a relational store with proper indexes and migrations. I solved that for a retail company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3070.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-12-18",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-040",
+    "job_title": "Hiring Full-stack developer - Playwright",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Operations Admin Dashboard (what the client called a order management console) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nMy fixed price for this is $4910.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-09",
+    "project_ids": [
+      "operations-admin-dashboard"
+    ],
+    "client_industry": "Consulting",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-041",
+    "job_title": "Need help building secure file intake",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Secure Document Upload and Processing (what the client called a client document locker) clients emailed sensitive files as attachments. I built it with S3 presigned uploads and Node.js, plus containerised builds that run the same on every machine. Result: files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute.\n\nMy fixed price for this is $3620.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-08-20",
+    "project_ids": [
+      "secure-document-intake"
+    ],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-042",
+    "job_title": "Interactive predictions page for our start-up team",
+    "text": "I read your brief twice: a small Python web API with request validation. I solved that for a start-up company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2640.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2023-08-27",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-043",
+    "job_title": "Docker expert needed for ad tech project",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Event Ingestion API (what the client called a clickstream collector) partners needed to send millions of events a day. I built it with MongoDB and Express, plus cloud hosting with managed queues, storage and load balancing. Result: sustained 4k events/s on two small containers.\n\nMy fixed price for this is $3140.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-09-27",
+    "project_ids": [
+      "event-ingestion-api"
+    ],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-044",
+    "job_title": "TypeScript expert needed for saas project",
+    "text": "Your point about strictly typed JavaScript across client and server is close to something I shipped for a saas client.\n\nOn SaaS Subscription Billing Portal (what the client called a customer invoicing dashboard) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nA second relevant piece of work: Event Ingestion API, where sustained 4k events/s on two small containers.\n\nMy fixed price for this is $4440.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-11-10",
+    "project_ids": [
+      "saas-billing-portal",
+      "event-ingestion-api"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-045",
+    "job_title": "TypeScript help for our media business",
+    "text": "I read your brief twice: shared type definitions between front end and back end. I solved that for a retail company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2860.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-10-20",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-046",
+    "job_title": "Release process rescue for our start-up team",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2970.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-09-10",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-047",
+    "job_title": "Redis expert needed for saas project",
+    "text": "I read your brief twice: an in-memory cache with expiry in front of the database. I solved that for a saas company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3950.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-09-03",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-048",
+    "job_title": "Hiring Full-stack developer - TypeScript",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2910.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-06-28",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-049",
+    "job_title": "Full-stack developer with Next.js experience",
+    "text": "I read your brief twice: a site with file-based routing and incremental regeneration. I solved that for a retail company last year.\n\nOn Headless Storefront (what the client called a fast custom shop front-end) the template store was slow and hard to customise. I built it with Next.js and GraphQL, plus strictly typed JavaScript across client and server. Result: mobile conversion up 19% and LCP from 4.8 s to 1.6 s.\n\nMy fixed price for this is $3860.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-11-10",
+    "project_ids": [
+      "headless-storefront"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-050",
+    "job_title": "Client document locker for our legal team",
+    "text": "I read your brief twice: browser-to-bucket file uploads that never pass through our server. I solved that for a legal company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3310.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-10-25",
+    "project_ids": [],
+    "client_industry": "Legal",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-051",
+    "job_title": "Node.js expert needed for legal project",
+    "text": "I read your brief twice: a JavaScript server process handling concurrent requests. I solved that for a digital agency company last year.\n\nOn Secure Document Upload and Processing (what the client called a secure file intake) clients emailed sensitive files as attachments. I built it with S3 presigned uploads and Node.js, plus containerised builds that run the same on every machine. Result: files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute.\n\nMy fixed price for this is $5030.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2023-11-30",
+    "project_ids": [
+      "secure-document-intake"
+    ],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-052",
+    "job_title": "Build internal back-office tool (fixed price)",
+    "text": "Your point about an interactive front end split into reusable components is close to something I shipped for a telecom client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $4030.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-04",
+    "project_ids": [],
+    "client_industry": "Telecom",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-053",
+    "job_title": "TypeScript expert needed for start-up project",
+    "text": "Your point about shared type definitions between front end and back end is close to something I shipped for a education client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3320.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2022-07-02",
+    "project_ids": [],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-054",
+    "job_title": "Need help building in-app agent inbox",
+    "text": "Your point about shared type definitions between front end and back end is close to something I shipped for a saas client.\n\nOn Realtime Support Chat (what the client called a live customer messaging widget) email-only support left customers waiting hours. I built it with React and Node.js, plus strictly typed JavaScript across client and server. Result: median first response of 90 seconds; 1,800 concurrent chats on one small instance.\n\nA second relevant piece of work: Core Web Vitals Overhaul, where LCP 4.1 s to 1.4 s; organic sessions +17% in two months.\n\nMy fixed price for this is $3370.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-03-21",
+    "project_ids": [
+      "realtime-support-chat",
+      "core-web-vitals-overhaul"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-055",
+    "job_title": "Provider matching site - online marketplace company",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $7560.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-07-11",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-056",
+    "job_title": "ETL developer with Redis experience",
+    "text": "I read your brief twice: a fast key-value layer for sessions and rate limits. I solved that for a online marketplace company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2480.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-10-25",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-057",
+    "job_title": "full-stack developer wanted: push-to-deploy automation",
+    "text": "Your point about scripted real-browser checks of the main user journeys is close to something I shipped for a start-up client.\n\nOn Deployment Pipeline Revamp (what the client called a release process rescue) releases were manual, took half a day, and failed often. I built it with GitHub Actions and Docker, plus scripted real-browser checks of the main user journeys. Result: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.\n\nMy fixed price for this is $2850.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2022-11-02",
+    "project_ids": [
+      "deployment-pipeline-revamp"
+    ],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-058",
+    "job_title": "Build one endpoint for mobile and web (fixed price)",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn GraphQL API Gateway (what the client called a API consolidation layer) mobile and web teams called a dozen inconsistent endpoints. I built it with GraphQL and Node.js, plus an in-memory cache with expiry in front of the database. Result: payload size down 55%; new screens needed no back-end changes.\n\nMy fixed price for this is $4950.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-07-23",
+    "project_ids": [
+      "graphql-api-gateway"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-059",
+    "job_title": "JWT authentication expert needed for education project",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2070.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-07-24",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-060",
+    "job_title": "Full-stack developer for ongoing fintech work (Jest)",
+    "text": "A test runner wired into the commit hook is the part of your post I would worry about first, and I have done it before for a fintech team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $4950.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-06-09",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-061",
+    "job_title": "Full-stack developer for ongoing media work (Tailwind CSS)",
+    "text": "Your point about a consistent look without hand-written stylesheets is close to something I shipped for a media client.\n\nOn Content Platform on Supabase (what the client called a magazine back office) editors waited on developers to publish. I built it with Supabase and Next.js, plus utility-first styling with a shared design-token config. Result: editors publish without developers; 150 articles migrated.\n\nMy fixed price for this is $2220.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-12-28",
+    "project_ids": [
+      "magazine-publishing-platform"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-062",
+    "job_title": "site reliability engineer wanted: usage tracking backend",
+    "text": "I read your brief twice: cloud hosting with managed queues, storage and load balancing. I solved that for a ad tech company last year.\n\nOn Event Ingestion API (what the client called a usage tracking backend) partners needed to send millions of events a day. I built it with MongoDB and Express, plus cloud hosting with managed queues, storage and load balancing. Result: sustained 4k events/s on two small containers.\n\nA second relevant piece of work: Product Search with Facets, where search p95 of 80 ms over 600k products; zero-result queries cut by 45%.\n\nMy fixed price for this is $6010.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-12-27",
+    "project_ids": [
+      "event-ingestion-api",
+      "catalogue-search-facets"
+    ],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-063",
+    "job_title": "Need help building catalogue and checkout rebuild",
+    "text": "Your point about a single query endpoint where clients pick the fields they need is close to something I shipped for a human resources client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2960.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-11-20",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-064",
+    "job_title": "Looking for data engineer to deliver in-app agent inbox",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $5440.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-08-09",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-065",
+    "job_title": "Data engineer for ongoing media work (Redis)",
+    "text": "Your point about an in-memory cache with expiry in front of the database is close to something I shipped for a media client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3090.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-10-20",
+    "project_ids": [],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-066",
+    "job_title": "Hiring Backend engineer - React",
+    "text": "An interactive front end split into reusable components is the part of your post I would worry about first, and I have done it before for a non-profit team.\n\nOn Core Web Vitals Overhaul (what the client called a slow landing pages fix) marketing pages failed Core Web Vitals and lost ad quality score. I built it with Next.js and React, plus utility-first styling with a shared design-token config. Result: LCP 4.1 s to 1.4 s; organic sessions +17% in two months.\n\nMy fixed price for this is $2890.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-02-13",
+    "project_ids": [
+      "core-web-vitals-overhaul"
+    ],
+    "client_industry": "Non-profit",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-067",
+    "job_title": "Backend engineer for ongoing online marketplace work (TypeScript)",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Marketplace Payouts (what the client called a split payments for sellers) sellers were paid manually every Friday. I built it with Stripe and Express, plus strictly typed JavaScript across client and server. Result: automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $4230.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-07-21",
+    "project_ids": [
+      "marketplace-payouts"
+    ],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-068",
+    "job_title": "Release safety net - fintech company",
+    "text": "Shared type definitions between front end and back end is the part of your post I would worry about first, and I have done it before for a fintech team.\n\nOn Test Automation Suite (what the client called a release safety net) regressions reached production after every release. I built it with Playwright and Jest, plus strictly typed JavaScript across client and server. Result: 180 unit and 35 browser tests; escaped bugs down 70%.\n\nMy fixed price for this is $3630.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2024-11-09",
+    "project_ids": [
+      "browser-test-automation"
+    ],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-069",
+    "job_title": "Hiring DevOps engineer - AWS",
+    "text": "Your point about infrastructure on a major public cloud with least-privilege roles is close to something I shipped for a ad tech client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3300.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-01-15",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-070",
+    "job_title": "Need help building typo-tolerant search box",
+    "text": "I read your brief twice: a JavaScript server process handling concurrent requests. I solved that for a retail company last year.\n\nOn Product Search with Facets (what the client called a typo-tolerant search box) SQL LIKE search returned irrelevant results slowly. I built it with Elasticsearch and React, plus a relational store with proper indexes and migrations. Result: search p95 of 80 ms over 600k products; zero-result queries cut by 45%.\n\nMy fixed price for this is $2640.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-01-29",
+    "project_ids": [
+      "catalogue-search-facets"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-071",
+    "job_title": "Elasticsearch help for our retail business",
+    "text": "Your point about typo-tolerant full-text search with facet counts is close to something I shipped for a retail client.\n\nOn Product Search with Facets (what the client called a typo-tolerant search box) SQL LIKE search returned irrelevant results slowly. I built it with Elasticsearch and React, plus a relational store with proper indexes and migrations. Result: search p95 of 80 ms over 600k products; zero-result queries cut by 45%.\n\nMy fixed price for this is $5020.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2024-01-15",
+    "project_ids": [
+      "catalogue-search-facets"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-072",
+    "job_title": "Browser regression checks - fintech company",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2470.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2023-07-07",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-073",
+    "job_title": "Catalogue and checkout rebuild - e-commerce company",
+    "text": "Your point about server-rendered React pages with route-level data fetching is close to something I shipped for a e-commerce client.\n\nOn Headless Storefront (what the client called a catalogue and checkout rebuild) the template store was slow and hard to customise. I built it with Next.js and GraphQL, plus strictly typed JavaScript across client and server. Result: mobile conversion up 19% and LCP from 4.8 s to 1.6 s.\n\nMy fixed price for this is $2770.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-02-06",
+    "project_ids": [
+      "headless-storefront"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-074",
+    "job_title": "Data engineer with PostgreSQL experience",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn SaaS Subscription Billing Portal (what the client called a customer invoicing dashboard) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $3840.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-02-14",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-075",
+    "job_title": "Looking for analytics engineer to deliver typo-tolerant search box",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5140.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-02-25",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-076",
+    "job_title": "Need help building secure file intake",
+    "text": "Your point about containerised builds that run the same on every machine is close to something I shipped for a legal client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2150.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-07-22",
+    "project_ids": [],
+    "client_industry": "Legal",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-077",
+    "job_title": "Build live customer messaging widget (fixed price)",
+    "text": "Strictly typed JavaScript across client and server is the part of your post I would worry about first, and I have done it before for a saas team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4830.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-03-19",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-078",
+    "job_title": "One endpoint for mobile and web - media company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn GraphQL API Gateway (what the client called a API consolidation layer) mobile and web teams called a dozen inconsistent endpoints. I built it with GraphQL and Node.js, plus an in-memory cache with expiry in front of the database. Result: payload size down 55%; new screens needed no back-end changes.\n\nMy fixed price for this is $4880.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-02-25",
+    "project_ids": [
+      "graphql-api-gateway"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-079",
+    "job_title": "Backend engineer for ongoing ad tech work (Express)",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4600.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-12-18",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-080",
+    "job_title": "Release process rescue - start-up company",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Deployment Pipeline Revamp (what the client called a release process rescue) releases were manual, took half a day, and failed often. I built it with GitHub Actions and Docker, plus scripted real-browser checks of the main user journeys. Result: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.\n\nA second relevant piece of work: Inventory REST API, where single source of truth for 22k SKUs with audit history.\n\nMy fixed price for this is $4720.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2022-08-24",
+    "project_ids": [
+      "deployment-pipeline-revamp",
+      "inventory-rest-api"
+    ],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-081",
+    "job_title": "Live customer messaging widget - saas company",
+    "text": "A JavaScript server process handling concurrent requests is the part of your post I would worry about first, and I have done it before for a travel team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2880.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-07-13",
+    "project_ids": [],
+    "client_industry": "Travel",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-082",
+    "job_title": "Build fast custom shop front-end (fixed price)",
+    "text": "I read your brief twice: a hosted payments provider with signed event callbacks. I solved that for a hospitality company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $5330.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-01-20",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-083",
+    "job_title": "Build customer invoicing dashboard (fixed price)",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4660.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-02-21",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-084",
+    "job_title": "Playwright help for our fintech business",
+    "text": "Your point about scripted real-browser checks of the main user journeys is close to something I shipped for a fintech client.\n\nOn Test Automation Suite (what the client called a browser regression checks) regressions reached production after every release. I built it with Playwright and Jest, plus strictly typed JavaScript across client and server. Result: 180 unit and 35 browser tests; escaped bugs down 70%.\n\nMy fixed price for this is $3090.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2023-10-02",
+    "project_ids": [
+      "browser-test-automation"
+    ],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-085",
+    "job_title": "Internal back-office tool - logistics company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Operations Admin Dashboard (what the client called a internal back-office tool) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nA second relevant piece of work: Realtime Support Chat, where median first response of 90 seconds; 1,800 concurrent chats on one small instance.\n\nMy fixed price for this is $5270.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-06-30",
+    "project_ids": [
+      "operations-admin-dashboard",
+      "realtime-support-chat"
+    ],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-086",
+    "job_title": "Need help building in-app agent inbox",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Realtime Support Chat (what the client called a in-app agent inbox) email-only support left customers waiting hours. I built it with React and Node.js, plus strictly typed JavaScript across client and server. Result: median first response of 90 seconds; 1,800 concurrent chats on one small instance.\n\nA second relevant piece of work: Secure Document Upload and Processing, where files up to 2 GB uploaded straight to storage; virus-scan queue cleared in under a minute.\n\nMy fixed price for this is $5260.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-13",
+    "project_ids": [
+      "realtime-support-chat",
+      "secure-document-intake"
+    ],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-087",
+    "job_title": "Need help building API consolidation layer",
+    "text": "Your point about backend services written in server-side JavaScript is close to something I shipped for a digital agency client.\n\nOn GraphQL API Gateway (what the client called a API consolidation layer) mobile and web teams called a dozen inconsistent endpoints. I built it with GraphQL and Node.js, plus an in-memory cache with expiry in front of the database. Result: payload size down 55%; new screens needed no back-end changes.\n\nMy fixed price for this is $2530.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2023-07-07",
+    "project_ids": [
+      "graphql-api-gateway"
+    ],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-088",
+    "job_title": "backend engineer wanted: release safety net",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4670.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-01-18",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-089",
+    "job_title": "Build login overhaul for the staff portal (fixed price)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3020.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-07-17",
+    "project_ids": [],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-090",
+    "job_title": "React expert needed for saas project",
+    "text": "A component-based single-page interface with hooks is the part of your post I would worry about first, and I have done it before for a saas team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3750.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-06-08",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-091",
+    "job_title": "Prisma help for our saas business",
+    "text": "A type-safe database layer generated from a schema file is the part of your post I would worry about first, and I have done it before for a saas team.\n\nOn SaaS Subscription Billing Portal (what the client called a customer invoicing dashboard) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $2960.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-10-26",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-092",
+    "job_title": "Live customer messaging widget for our saas team",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3310.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-10-08",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-093",
+    "job_title": "Hiring Web developer - TypeScript",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4690.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-07-07",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-094",
+    "job_title": "JWT authentication help for our healthcare business",
+    "text": "Your point about login sessions carried in short-lived signed tokens is close to something I shipped for a healthcare client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $7120.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-01-16",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-095",
+    "job_title": "Seller earnings transfers for our online marketplace team",
+    "text": "Your point about a relational store with proper indexes and migrations is close to something I shipped for a online marketplace client.\n\nOn Marketplace Payouts (what the client called a seller earnings transfers) sellers were paid manually every Friday. I built it with Stripe and Express, plus strictly typed JavaScript across client and server. Result: automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $3120.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-08-31",
+    "project_ids": [
+      "marketplace-payouts"
+    ],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-096",
+    "job_title": "Looking for backend engineer to deliver magazine back office",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2080.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-06",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-097",
+    "job_title": "Celery help for our healthcare business",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3150.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2025-02-11",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-098",
+    "job_title": "Looking for frontend developer to deliver clickstream collector",
+    "text": "Backend services written in server-side JavaScript is the part of your post I would worry about first, and I have done it before for a ad tech team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4100.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-09-10",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-099",
+    "job_title": "Need help building one endpoint for mobile and web",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2330.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-01-22",
+    "project_ids": [],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-100",
+    "job_title": "Hiring Web developer - Stripe",
+    "text": "Card payments, subscriptions and webhooks handled safely is the part of your post I would worry about first, and I have done it before for a saas team.\n\nOn SaaS Subscription Billing Portal (what the client called a self-serve plan upgrades) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $2920.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2024-03-04",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-101",
+    "job_title": "Backend engineer with Node.js experience",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $4430.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-11-20",
+    "project_ids": [],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-102",
+    "job_title": "Editor-friendly publishing site for our media team",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Content Platform on Supabase (what the client called a magazine back office) editors waited on developers to publish. I built it with Supabase and Next.js, plus utility-first styling with a shared design-token config. Result: editors publish without developers; 150 articles migrated.\n\nMy fixed price for this is $2490.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2022-06-21",
+    "project_ids": [
+      "magazine-publishing-platform"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-103",
+    "job_title": "Build page speed rescue (fixed price)",
+    "text": "Your point about a component-based single-page interface with hooks is close to something I shipped for a real estate client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3920.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-05-29",
+    "project_ids": [],
+    "client_industry": "Real estate",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-104",
+    "job_title": "Build self-serve plan upgrades (fixed price)",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn SaaS Subscription Billing Portal (what the client called a customer invoicing dashboard) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $4120.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-09-11",
+    "project_ids": [
+      "saas-billing-portal"
+    ],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-105",
+    "job_title": "Clickstream collector for our ad tech team",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Event Ingestion API (what the client called a usage tracking backend) partners needed to send millions of events a day. I built it with MongoDB and Express, plus cloud hosting with managed queues, storage and load balancing. Result: sustained 4k events/s on two small containers.\n\nA second relevant piece of work: Marketplace Payouts, where automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $3720.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2024-10-27",
+    "project_ids": [
+      "event-ingestion-api",
+      "marketplace-payouts"
+    ],
+    "client_industry": "Consulting",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-106",
+    "job_title": "GitHub Actions expert needed for fintech project",
+    "text": "I read your brief twice: push-triggered build, test and deploy workflows. I solved that for a fintech company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2640.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-06-15",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-107",
+    "job_title": "Hiring Full-stack developer - Node.js",
+    "text": "Backend services written in server-side JavaScript is the part of your post I would worry about first, and I have done it before for a retail team.\n\nOn Product Search with Facets (what the client called a fast filterable catalogue) SQL LIKE search returned irrelevant results slowly. I built it with Elasticsearch and React, plus a relational store with proper indexes and migrations. Result: search p95 of 80 ms over 600k products; zero-result queries cut by 45%.\n\nA second relevant piece of work: Single Sign-on Rollout, where password-reset tickets fell 80%; 1,200 accounts migrated with no downtime.\n\nMy fixed price for this is $2320.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-10-09",
+    "project_ids": [
+      "catalogue-search-facets",
+      "staff-portal-sso"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-108",
+    "job_title": "Hiring ETL developer - PostgreSQL",
+    "text": "A relational store with proper indexes and migrations is the part of your post I would worry about first, and I have done it before for a online marketplace team.\n\nOn Marketplace Payouts (what the client called a seller earnings transfers) sellers were paid manually every Friday. I built it with Stripe and Express, plus strictly typed JavaScript across client and server. Result: automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $2700.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2024-03-28",
+    "project_ids": [
+      "marketplace-payouts"
+    ],
+    "client_industry": "Online marketplace",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-109",
+    "job_title": "Frontend developer for ongoing media work (TypeScript)",
+    "text": "I read your brief twice: strictly typed JavaScript across client and server. I solved that for a media company last year.\n\nOn GraphQL API Gateway (what the client called a API consolidation layer) mobile and web teams called a dozen inconsistent endpoints. I built it with GraphQL and Node.js, plus an in-memory cache with expiry in front of the database. Result: payload size down 55%; new screens needed no back-end changes.\n\nMy fixed price for this is $2540.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2022-02-19",
+    "project_ids": [
+      "graphql-api-gateway"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-110",
+    "job_title": "Magazine back office - media company",
+    "text": "I read your brief twice: server-rendered React pages with route-level data fetching. I solved that for a media company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4860.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-01-08",
+    "project_ids": [],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-111",
+    "job_title": "Supabase help for our media business",
+    "text": "I read your brief twice: a backend-as-a-service for auth, storage and database. I solved that for a logistics company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2620.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-06-14",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-112",
+    "job_title": "React help for our logistics business",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $6060.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-08-29",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-113",
+    "job_title": "Backend engineer for ongoing ad tech work (Node.js)",
+    "text": "I read your brief twice: backend services written in server-side JavaScript. I solved that for a ad tech company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6640.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-06-16",
+    "project_ids": [],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-114",
+    "job_title": "Looking for full-stack developer to deliver catalogue and checkout rebuild",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Headless Storefront (what the client called a fast custom shop front-end) the template store was slow and hard to customise. I built it with Next.js and GraphQL, plus strictly typed JavaScript across client and server. Result: mobile conversion up 19% and LCP from 4.8 s to 1.6 s.\n\nMy fixed price for this is $3590.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-08-22",
+    "project_ids": [
+      "headless-storefront"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-115",
+    "job_title": "Looking for frontend developer to deliver page speed rescue",
+    "text": "Utility-first styling with a shared design-token config is the part of your post I would worry about first, and I have done it before for a digital agency team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2240.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-12-08",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-116",
+    "job_title": "Need help building release safety net",
+    "text": "I read your brief twice: automated checks on every pull request. I solved that for a fintech company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2190.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-01-19",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-117",
+    "job_title": "AI developer for ongoing start-up work (Python)",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2440.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-01-26",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-118",
+    "job_title": "web developer wanted: order management console",
+    "text": "I read your brief twice: a documented HTTP interface other teams could build against. I solved that for a logistics company last year.\n\nOn Operations Admin Dashboard (what the client called a order management console) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nMy fixed price for this is $4020.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2022-06-27",
+    "project_ids": [
+      "operations-admin-dashboard"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-119",
+    "job_title": "Customer invoicing dashboard for our saas team",
+    "text": "Your point about a type-safe database layer generated from a schema file is close to something I shipped for a healthcare client.\n\nOn SaaS Subscription Billing Portal (what the client called a self-serve plan upgrades) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nA second relevant piece of work: Marketplace Payouts, where automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $7120.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2023-01-09",
+    "project_ids": [
+      "saas-billing-portal",
+      "marketplace-payouts"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-120",
+    "job_title": "Backend engineer with React experience",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $1880.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-10-15",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-121",
+    "job_title": "web developer wanted: order management console",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Operations Admin Dashboard (what the client called a internal back-office tool) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nMy fixed price for this is $3780.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2024-07-10",
+    "project_ids": [
+      "operations-admin-dashboard"
+    ],
+    "client_industry": "Human resources",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-122",
+    "job_title": "Front end for a data science model - start-up company",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Model Demo Web App (what the client called a interactive predictions page) a data science team had a notebook but no way to show clients. I built it with FastAPI and React, plus containerised builds that run the same on every machine. Result: client demos moved from notebooks to a shareable page; 3 pilot customers signed.\n\nMy fixed price for this is $2090.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-01",
+    "project_ids": [
+      "model-demo-web-app"
+    ],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-123",
+    "job_title": "site reliability engineer wanted: SKU tracking backend",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2590.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-07-02",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-124",
+    "job_title": "Build push-to-deploy automation (fixed price)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Deployment Pipeline Revamp (what the client called a push-to-deploy automation) releases were manual, took half a day, and failed often. I built it with GitHub Actions and Docker, plus scripted real-browser checks of the main user journeys. Result: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.\n\nMy fixed price for this is $3430.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-01-20",
+    "project_ids": [
+      "deployment-pipeline-revamp"
+    ],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-125",
+    "job_title": "Node.js help for our ad tech business",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Event Ingestion API (what the client called a usage tracking backend) partners needed to send millions of events a day. I built it with MongoDB and Express, plus cloud hosting with managed queues, storage and load balancing. Result: sustained 4k events/s on two small containers.\n\nA second relevant piece of work: Product Search with Facets, where search p95 of 80 ms over 600k products; zero-result queries cut by 45%.\n\nMy fixed price for this is $3230.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2025-01-20",
+    "project_ids": [
+      "event-ingestion-api",
+      "catalogue-search-facets"
+    ],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-126",
+    "job_title": "Build online slots and reminders (fixed price)",
+    "text": "An interactive front end split into reusable components is the part of your post I would worry about first, and I have done it before for a healthcare team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3900.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-05-09",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-127",
+    "job_title": "Need help building secure file intake",
+    "text": "I read your brief twice: time-limited signed links for large file intake. I solved that for a legal company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2430.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-01-12",
+    "project_ids": [],
+    "client_industry": "Legal",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-128",
+    "job_title": "Need help building in-app agent inbox",
+    "text": "Your point about live messages delivered without polling is close to something I shipped for a saas client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2920.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2024-09-13",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-129",
+    "job_title": "Data engineer with PostgreSQL experience",
+    "text": "I read your brief twice: a relational store with proper indexes and migrations. I solved that for a saas company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $7550.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-11-30",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-130",
+    "job_title": "Order management console for our logistics team",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Operations Admin Dashboard (what the client called a internal back-office tool) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nMy fixed price for this is $5040.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-11-07",
+    "project_ids": [
+      "operations-admin-dashboard"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-131",
+    "job_title": "Patient scheduling web app - healthcare company",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Clinic Appointment Booking (what the client called a online slots and reminders) receptionists booked by phone and no-shows were 18%. I built it with React and Django, plus stateless signed tokens with refresh rotation. Result: no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.\n\nA second relevant piece of work: Realtime Support Chat, where median first response of 90 seconds; 1,800 concurrent chats on one small instance.\n\nMy fixed price for this is $3020.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2022-08-23",
+    "project_ids": [
+      "clinic-appointment-booking",
+      "realtime-support-chat"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-132",
+    "job_title": "Build catalogue and checkout rebuild (fixed price)",
+    "text": "Your point about a hosted payments provider with signed event callbacks is close to something I shipped for a e-commerce client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6410.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-03-15",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-133",
+    "job_title": "web developer wanted: warehouse stock service",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3170.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-11-26",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-134",
+    "job_title": "Build online slots and reminders (fixed price)",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Clinic Appointment Booking (what the client called a online slots and reminders) receptionists booked by phone and no-shows were 18%. I built it with React and Django, plus stateless signed tokens with refresh rotation. Result: no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.\n\nMy fixed price for this is $2750.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-09-26",
+    "project_ids": [
+      "clinic-appointment-booking"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-135",
+    "job_title": "data engineer wanted: fast filterable catalogue",
+    "text": "I read your brief twice: SQL tables with constraints, not loose files. I solved that for a retail company last year.\n\nOn Product Search with Facets (what the client called a fast filterable catalogue) SQL LIKE search returned irrelevant results slowly. I built it with Elasticsearch and React, plus a relational store with proper indexes and migrations. Result: search p95 of 80 ms over 600k products; zero-result queries cut by 45%.\n\nMy fixed price for this is $4140.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-08-27",
+    "project_ids": [
+      "catalogue-search-facets"
+    ],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-136",
+    "job_title": "WebSockets expert needed for saas project",
+    "text": "Your point about a persistent two-way connection pushing updates to the browser is close to something I shipped for a saas client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3660.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-08",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-137",
+    "job_title": "Hiring DevOps engineer - AWS",
+    "text": "I read your brief twice: cloud hosting with managed queues, storage and load balancing. I solved that for a start-up company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2940.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-09-16",
+    "project_ids": [],
+    "client_industry": "Start-up",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-138",
+    "job_title": "Typo-tolerant search box for our retail team",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2090.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-12-19",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-139",
+    "job_title": "Full-stack developer with GraphQL experience",
+    "text": "A typed schema stitched over several backends is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5210.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-05-24",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-140",
+    "job_title": "Build browser regression checks (fixed price)",
+    "text": "Shared type definitions between front end and back end is the part of your post I would worry about first, and I have done it before for a fintech team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2410.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-08-09",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-141",
+    "job_title": "Hiring DevOps engineer - Docker",
+    "text": "I read your brief twice: containerised builds that run the same on every machine. I solved that for a ad tech company last year.\n\nOn Event Ingestion API (what the client called a clickstream collector) partners needed to send millions of events a day. I built it with MongoDB and Express, plus cloud hosting with managed queues, storage and load balancing. Result: sustained 4k events/s on two small containers.\n\nMy fixed price for this is $3390.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-10-18",
+    "project_ids": [
+      "event-ingestion-api"
+    ],
+    "client_industry": "Ad tech",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-142",
+    "job_title": "Hiring Backend engineer - Tailwind CSS",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Core Web Vitals Overhaul (what the client called a page speed rescue) marketing pages failed Core Web Vitals and lost ad quality score. I built it with Next.js and React, plus utility-first styling with a shared design-token config. Result: LCP 4.1 s to 1.4 s; organic sessions +17% in two months.\n\nMy fixed price for this is $3820.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2023-11-23",
+    "project_ids": [
+      "core-web-vitals-overhaul"
+    ],
+    "client_industry": "Non-profit",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-143",
+    "job_title": "Django help for our logistics business",
+    "text": "Your point about a batteries-included Python web framework with an admin site is close to something I shipped for a logistics client.\n\nOn Inventory REST API (what the client called a warehouse stock service) stock counts lived in several disagreeing spreadsheets. I built it with Django and REST API design, plus scripts and services in a typed, tested codebase. Result: single source of truth for 22k SKUs with audit history.\n\nMy fixed price for this is $3040.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-06-10",
+    "project_ids": [
+      "inventory-rest-api"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-144",
+    "job_title": "Looking for frontend developer to deliver Google and Microsoft sign-in integration",
+    "text": "Your point about delegated login via an identity provider is close to something I shipped for a real estate client.\n\nOn Single Sign-on Rollout (what the client called a login overhaul for the staff portal) staff kept a separate password for every internal tool. I built it with OAuth 2.0 / SSO and JWT authentication, plus a relational store with proper indexes and migrations. Result: password-reset tickets fell 80%; 1,200 accounts migrated with no downtime.\n\nA second relevant piece of work: Inventory REST API, where single source of truth for 22k SKUs with audit history.\n\nMy fixed price for this is $2990.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2025-01-07",
+    "project_ids": [
+      "staff-portal-sso",
+      "inventory-rest-api"
+    ],
+    "client_industry": "Real estate",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-145",
+    "job_title": "Release safety net - fintech company",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2610.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-08-27",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-146",
+    "job_title": "Looking for backend engineer to deliver editor-friendly publishing site",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Content Platform on Supabase (what the client called a editor-friendly publishing site) editors waited on developers to publish. I built it with Supabase and Next.js, plus utility-first styling with a shared design-token config. Result: editors publish without developers; 150 articles migrated.\n\nA second relevant piece of work: Clinic Appointment Booking, where no-shows fell to 9% with SMS and email reminders; 70% of bookings made online.\n\nMy fixed price for this is $2900.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-01-10",
+    "project_ids": [
+      "magazine-publishing-platform",
+      "clinic-appointment-booking"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-147",
+    "job_title": "Hiring ETL developer - Redis",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn GraphQL API Gateway (what the client called a API consolidation layer) mobile and web teams called a dozen inconsistent endpoints. I built it with GraphQL and Node.js, plus an in-memory cache with expiry in front of the database. Result: payload size down 55%; new screens needed no back-end changes.\n\nA second relevant piece of work: Marketplace Payouts, where automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $3670.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-09-01",
+    "project_ids": [
+      "graphql-api-gateway",
+      "marketplace-payouts"
+    ],
+    "client_industry": "Media",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-148",
+    "job_title": "Looking for full-stack developer to deliver login overhaul for the staff portal",
+    "text": "Your point about stateless signed tokens with refresh rotation is close to something I shipped for a education client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2720.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-05-24",
+    "project_ids": [],
+    "client_industry": "Education",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-149",
+    "job_title": "Playwright help for our logistics business",
+    "text": "Your point about scripted real-browser checks of the main user journeys is close to something I shipped for a logistics client.\n\nOn Operations Admin Dashboard (what the client called a internal back-office tool) dispatchers juggled four spreadsheets. I built it with React and TypeScript, plus scripted real-browser checks of the main user journeys. Result: order handling time cut by a third; 40 critical-path browser tests in CI.\n\nMy fixed price for this is $2970.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-02-08",
+    "project_ids": [
+      "operations-admin-dashboard"
+    ],
+    "client_industry": "Logistics",
+    "category": "Web Development"
+  },
+  {
+    "proposal_id": "pp-fullstack-150",
+    "job_title": "Need help building secure file intake",
+    "text": "I read your brief twice: time-limited signed links for large file intake. I solved that for a legal company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4140.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-02-21",
+    "project_ids": [],
+    "client_industry": "Legal",
+    "category": "Web Development"
+  }
+]

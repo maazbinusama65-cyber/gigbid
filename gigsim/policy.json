@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "connects_per_proposal": 8,
+  "weekly_allowance": 80,
+  "initial_balance": 120,
+  "max_balance": 300,
+  "fee_pct": 10,
+  "rate_limit_rpm": 60,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "forbid_regex",
+      "pattern": "(?i)(whatsapp|telegram|skype|signal app|e-?mail me|contact me at|\\bdm me\\b|outside (of )?(the )?platform|off[- ]platform|paypal me|wire transfer|bank (login|transfer))",
+      "description": "No off-platform contact or payment requests.",
+      "enforcement": "reject",
+      "enabled": true
+    },
+    {
+      "id": "R2",
+      "type": "forbid_regex",
+      "pattern": "(?i)(\\bguarantee[sd]?\\b|100% (satisfaction|results|accuracy|success)|risk[- ]free|zero bugs)",
+      "description": "Do not guarantee results that cannot be guaranteed.",
+      "enforcement": "reject",
+      "enabled": true
+    },
+    {
+      "id": "R3",
+      "type": "max_words",
+      "value": 350,
+      "description": "Cover letters may be at most 350 words.",
+      "enforcement": "reject",
+      "enabled": true
+    },
+    {
+      "id": "R4",
+      "type": "connects_cost",
+      "value": 8,
+      "description": "Flat Connects cost per proposal (when enabled, overrides the per-job cost).",
+      "enforcement": "reject",
+      "enabled": false
+    },
+    {
+      "id": "R5",
+      "type": "require_phrase",
+      "value": "drafted with AI assistance and reviewed by me",
+      "description": "Disclose automation use in the cover letter (disabled in the baseline policy).",
+      "enforcement": "reject",
+      "enabled": false
+    }
+  ]
+}

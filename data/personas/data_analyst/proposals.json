@@ -1,0 +1,1659 @@
+[
+  {
+    "proposal_id": "pp-data_analyst-001",
+    "job_title": "Tableau expert needed for human resources project",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3230.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-10-20",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-002",
+    "job_title": "Need help building patient flow reporting",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2670.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-01-08",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-003",
+    "job_title": "Analytics engineer with BigQuery experience",
+    "text": "I read your brief twice: partitioned cloud tables keeping scan costs low. I solved that for a saas company last year.\n\nOn Product Usage Analytics on BigQuery (what the client called a feature adoption tracking) the product team had raw events but no adoption numbers. I built it with BigQuery and SQL, plus deduplicated, standardised records from messy exports. Result: 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.\n\nMy fixed price for this is $3190.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-08-29",
+    "project_ids": [
+      "product-usage-bigquery"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-004",
+    "job_title": "Build who sticks around study (fixed price)",
+    "text": "Your point about scripts and services in a typed, tested codebase is close to something I shipped for a manufacturing client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4090.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-01-04",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-005",
+    "job_title": "Reporting analyst with SQL experience",
+    "text": "Reporting queries over millions of rows is the part of your post I would worry about first, and I have done it before for a logistics team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3900.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-11-21",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-006",
+    "job_title": "Question builder for non-technical staff for our logistics team",
+    "text": "I read your brief twice: reporting queries over millions of rows. I solved that for a logistics company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3690.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-09-26",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-007",
+    "job_title": "Need help building patient flow reporting",
+    "text": "Your point about interactive drill-down dashboards for area managers is close to something I shipped for a healthcare client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2630.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-12-07",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-008",
+    "job_title": "Build satisfaction study (fixed price)",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Customer Survey and NPS Analysis (what the client called a satisfaction study) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nMy fixed price for this is $2350.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-05-21",
+    "project_ids": [
+      "customer-survey-nps"
+    ],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-009",
+    "job_title": "Event data reporting - saas company",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Product Usage Analytics on BigQuery (what the client called a event data reporting) the product team had raw events but no adoption numbers. I built it with BigQuery and SQL, plus deduplicated, standardised records from messy exports. Result: 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.\n\nMy fixed price for this is $2070.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2024-12-08",
+    "project_ids": [
+      "product-usage-bigquery"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-010",
+    "job_title": "Tidy reporting tables - saas company",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Analytics Warehouse with dbt (what the client called a tidy reporting tables) every team had its own definition of active customer. I built it with dbt and Snowflake, plus scheduled multi-step workflows with retries and backfills. Result: 42 tested models; metric disputes in leadership meetings went away.\n\nMy fixed price for this is $5280.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2022-12-25",
+    "project_ids": [
+      "analytics-warehouse-dbt"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-011",
+    "job_title": "Need help building duplicate contacts merge",
+    "text": "Your point about tabular wrangling in dataframes with merges and group-bys is close to something I shipped for a retail client.\n\nOn CRM Data Cleanup (what the client called a messy customer list rescue) the sales team's CRM had 30% duplicate accounts. I built it with data cleaning and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: merged 41k duplicates; bounce rate on campaigns halved.\n\nA second relevant piece of work: Subscriber Cohort Retention Analysis, where found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nMy fixed price for this is $4010.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-06-13",
+    "project_ids": [
+      "crm-data-cleanup",
+      "subscriber-cohort-retention"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-012",
+    "job_title": "Hiring BI developer - Tableau",
+    "text": "Your point about interactive drill-down dashboards for area managers is close to something I shipped for a human resources client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $5280.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-03-22",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-013",
+    "job_title": "Hiring Data analyst - regression analysis",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Employee Attrition Study (what the client called a HR turnover drivers) turnover was 24% and exit interviews offered no pattern. I built it with regression analysis and R, plus interactive drill-down dashboards for area managers. Result: manager change and pay-band position explained most leavers; retention plan cut turnover to 19%.\n\nMy fixed price for this is $2820.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-09-17",
+    "project_ids": [
+      "employee-attrition-study"
+    ],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-014",
+    "job_title": "Need help building interactive what-if pricing page",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1480.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-11-27",
+    "project_ids": [],
+    "client_industry": "Media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-015",
+    "job_title": "Satisfaction study for our hospitality team",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Customer Survey and NPS Analysis (what the client called a feedback themes report) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nA second relevant piece of work: Customer Segmentation, where 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $1900.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-07-01",
+    "project_ids": [
+      "customer-survey-nps",
+      "customer-segmentation-crm"
+    ],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-016",
+    "job_title": "Build interactive what-if pricing page (fixed price)",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Streamlit Pricing Explorer (what the client called a scenario modelling web tool) pricing scenarios lived in one person's laptop spreadsheet. I built it with Streamlit and Python, plus next-quarter numbers with seasonality and prediction ranges. Result: category managers run their own scenarios; adopted by 8 teams.\n\nA second relevant piece of work: Analytics Warehouse with dbt, where 42 tested models; metric disputes in leadership meetings went away.\n\nMy fixed price for this is $2890.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-03-13",
+    "project_ids": [
+      "pricing-explorer-streamlit",
+      "analytics-warehouse-dbt"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-017",
+    "job_title": "Hiring BI developer - Excel",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3090.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-02-02",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-018",
+    "job_title": "data analyst wanted: which campaign earned the sale",
+    "text": "Your point about free shareable web dashboards connected to live sheets and warehouse tables is close to something I shipped for a e-commerce client.\n\nOn Marketing Attribution Model (what the client called a which campaign earned the sale) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $4100.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-12-20",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-019",
+    "job_title": "Looking for reporting analyst to deliver patient flow reporting",
+    "text": "Your point about hand-written analytical queries with window functions is close to something I shipped for a healthcare client.\n\nOn Clinic Waiting Time Report (what the client called a patient flow reporting) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $3150.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-10-31",
+    "project_ids": [
+      "clinic-waiting-time-report"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-020",
+    "job_title": "regression analysis help for our human resources business",
+    "text": "I read your brief twice: driver analysis showing which factors move an outcome. I solved that for a human resources company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2810.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-07-13",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-021",
+    "job_title": "Hiring Reporting analyst - A/B testing",
+    "text": "Controlled experiments with a pre-registered success metric is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2380.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-09-25",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-022",
+    "job_title": "Hiring Machine learning engineer - Python",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2440.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-02-12",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-023",
+    "job_title": "Data scientist for ongoing e-commerce work (Python)",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Checkout A/B Test Readouts (what the client called a experiment result write-ups) tests were stopped early whenever a chart looked good. I built it with A/B testing and statistics, plus hand-written analytical queries with window functions. Result: a pre-registration template and sequential checks; 3 false wins avoided in a quarter.\n\nMy fixed price for this is $3630.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-10-19",
+    "project_ids": [
+      "checkout-ab-test-readouts"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-024",
+    "job_title": "Looking for data analyst to deliver scripted weekly emails from sheets",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2570.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-12-04",
+    "project_ids": [],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-025",
+    "job_title": "Channel ROI breakdown - e-commerce company",
+    "text": "Partitioned cloud tables keeping scan costs low is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3990.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-29",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-026",
+    "job_title": "pandas help for our b2b services business",
+    "text": "Scripted reshaping of large spreadsheets into tidy tables is the part of your post I would worry about first, and I have done it before for a b2b services team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1460.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-02-12",
+    "project_ids": [],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-027",
+    "job_title": "Weekly revenue scorecard - retail company",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1800.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-12-31",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-028",
+    "job_title": "Analytics consultant with SQL experience",
+    "text": "Your point about hand-written analytical queries with window functions is close to something I shipped for a e-commerce client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3200.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-03-22",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-029",
+    "job_title": "Looking for bi developer to deliver area manager performance view",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Regional Sales KPI Dashboard (what the client called a area manager performance view) area managers waited for a weekly emailed spreadsheet. I built it with Tableau and SQL, plus advanced spreadsheet models with lookups and pivot tables. Result: dashboard adopted by 45 managers; reporting prep time cut from 12 hours to 1.\n\nMy fixed price for this is $2740.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2023-08-03",
+    "project_ids": [
+      "regional-sales-kpi-dashboard"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-030",
+    "job_title": "Need help building experiment result write-ups",
+    "text": "Your point about scripts and services in a typed, tested codebase is close to something I shipped for a human resources client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2110.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-09-01",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-031",
+    "job_title": "Duplicate contacts merge - b2b services company",
+    "text": "Your point about deduplicated, standardised records from messy exports is close to something I shipped for a b2b services client.\n\nOn CRM Data Cleanup (what the client called a duplicate contacts merge) the sales team's CRM had 30% duplicate accounts. I built it with data cleaning and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: merged 41k duplicates; bounce rate on campaigns halved.\n\nMy fixed price for this is $1640.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2024-07-05",
+    "project_ids": [
+      "crm-data-cleanup"
+    ],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-032",
+    "job_title": "Weekly revenue scorecard - retail company",
+    "text": "Hand-written analytical queries with window functions is the part of your post I would worry about first, and I have done it before for a retail team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3920.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-01-17",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-033",
+    "job_title": "Need help building seasonal sales outlook",
+    "text": "Your point about next-quarter numbers with seasonality and prediction ranges is close to something I shipped for a saas client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4240.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-12-29",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-034",
+    "job_title": "Build scripted weekly emails from sheets (fixed price)",
+    "text": "I read your brief twice: advanced spreadsheet models with lookups and pivot tables. I solved that for a agency company last year.\n\nOn Google Sheets Reporting Automation (what the client called a scripted weekly emails from sheets) account managers pasted numbers into client reports every Friday. I built it with Google Sheets and Apps Script, plus advanced spreadsheet models with lookups and pivot tables. Result: saved 6 hours a week per manager; zero copy-paste errors afterwards.\n\nA second relevant piece of work: Self-serve Metabase for Ops, where analyst request backlog down 60%.\n\nMy fixed price for this is $1940.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2024-08-05",
+    "project_ids": [
+      "sheets-reporting-automation",
+      "ops-self-serve-metabase"
+    ],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-035",
+    "job_title": "Build month-by-month customer survival (fixed price)",
+    "text": "Reporting queries over millions of rows is the part of your post I would worry about first, and I have done it before for a legal tech team.\n\nOn Subscriber Cohort Retention Analysis (what the client called a month-by-month customer survival) leadership saw a flat churn number that hid very different cohorts. I built it with cohort analysis and SQL, plus significance tests, confidence intervals and effect sizes. Result: found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nA second relevant piece of work: Product Usage Analytics on BigQuery, where 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.\n\nMy fixed price for this is $5600.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2022-12-05",
+    "project_ids": [
+      "subscriber-cohort-retention",
+      "product-usage-bigquery"
+    ],
+    "client_industry": "Legal tech",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-036",
+    "job_title": "Analytics consultant for ongoing e-commerce work (pandas)",
+    "text": "Tabular wrangling in dataframes with merges and group-bys is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nOn Competitor Price Scraper (what the client called a market price monitor) pricing staff checked competitor sites by hand. I built it with web scraping and Python, plus a relational store with proper indexes and migrations. Result: 12k prices tracked daily; price-match response time down from days to hours.\n\nA second relevant piece of work: Analytics Warehouse with dbt, where 42 tested models; metric disputes in leadership meetings went away.\n\nMy fixed price for this is $1880.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-12-09",
+    "project_ids": [
+      "competitor-price-scraper",
+      "analytics-warehouse-dbt"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-037",
+    "job_title": "Hiring BI developer - Tableau",
+    "text": "Your point about interactive drill-down dashboards for area managers is close to something I shipped for a human resources client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2360.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-11-18",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-038",
+    "job_title": "data cleaning expert needed for b2b services project",
+    "text": "Your point about deduplicated, standardised records from messy exports is close to something I shipped for a b2b services client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3150.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-10-30",
+    "project_ids": [],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-039",
+    "job_title": "Month-by-month customer survival for our digital media team",
+    "text": "Careful inference instead of eyeballing charts is the part of your post I would worry about first, and I have done it before for a digital media team.\n\nOn Subscriber Cohort Retention Analysis (what the client called a who sticks around study) leadership saw a flat churn number that hid very different cohorts. I built it with cohort analysis and SQL, plus significance tests, confidence intervals and effect sizes. Result: found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nMy fixed price for this is $3810.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-12-07",
+    "project_ids": [
+      "subscriber-cohort-retention"
+    ],
+    "client_industry": "Digital media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-040",
+    "job_title": "Build event data reporting (fixed price)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2300.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-06-22",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-041",
+    "job_title": "Need help building messy customer list rescue",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2340.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-01-11",
+    "project_ids": [],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-042",
+    "job_title": "reporting analyst wanted: channel ROI breakdown",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Marketing Attribution Model (what the client called a channel ROI breakdown) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $2330.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2024-09-04",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-043",
+    "job_title": "BI developer with ggplot2 experience",
+    "text": "Layered chart grammar for report figures is the part of your post I would worry about first, and I have done it before for a hospitality team.\n\nOn Customer Survey and NPS Analysis (what the client called a feedback themes report) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nMy fixed price for this is $4010.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-11-18",
+    "project_ids": [
+      "customer-survey-nps"
+    ],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-044",
+    "job_title": "Hiring BI developer - Looker Studio",
+    "text": "I read your brief twice: a link-shared report that refreshes itself. I solved that for a e-commerce company last year.\n\nOn Marketing Attribution Model (what the client called a channel ROI breakdown) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $4370.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-06-06",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-045",
+    "job_title": "Queue length insights for our healthcare team",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Clinic Waiting Time Report (what the client called a queue length insights) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $2690.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2023-01-10",
+    "project_ids": [
+      "clinic-waiting-time-report"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-046",
+    "job_title": "Need help building satisfaction study",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2950.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-06-18",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-047",
+    "job_title": "Spender groups for CRM for our retail team",
+    "text": "Your point about tabular wrangling in dataframes with merges and group-bys is close to something I shipped for a retail client.\n\nOn Customer Segmentation (what the client called a spender groups for CRM) the CRM sent one newsletter to everybody. I built it with customer segmentation and Python, plus a governed report pack with scheduled refresh and row-level access. Result: 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $3860.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2024-05-16",
+    "project_ids": [
+      "customer-segmentation-crm"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-048",
+    "job_title": "Google Sheets expert needed for agency project",
+    "text": "Your point about team spreadsheets that update themselves from live sources is close to something I shipped for a agency client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $1420.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-05-30",
+    "project_ids": [],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-049",
+    "job_title": "Scripted weekly emails from sheets - agency company",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nOn Google Sheets Reporting Automation (what the client called a self-updating team spreadsheet) account managers pasted numbers into client reports every Friday. I built it with Google Sheets and Apps Script, plus advanced spreadsheet models with lookups and pivot tables. Result: saved 6 hours a week per manager; zero copy-paste errors afterwards.\n\nMy fixed price for this is $2060.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2022-07-02",
+    "project_ids": [
+      "sheets-reporting-automation"
+    ],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-050",
+    "job_title": "BI developer for ongoing retail work (Power BI)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Customer Segmentation (what the client called a who-are-our-buyers clusters) the CRM sent one newsletter to everybody. I built it with customer segmentation and Python, plus a governed report pack with scheduled refresh and row-level access. Result: 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $2950.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-08-01",
+    "project_ids": [
+      "customer-segmentation-crm"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-051",
+    "job_title": "Hiring BI developer - KPI dashboards",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2200.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-10-26",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-052",
+    "job_title": "Build conversion lift verdicts (fixed price)",
+    "text": "A set of small automation tools is the part of your post I would worry about first, and I have done it before for a logistics team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2090.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-02-01",
+    "project_ids": [],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-053",
+    "job_title": "Patient flow reporting for our healthcare team",
+    "text": "Your point about reporting queries over millions of rows is close to something I shipped for a healthcare client.\n\nOn Clinic Waiting Time Report (what the client called a patient flow reporting) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $3750.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-08-06",
+    "project_ids": [
+      "clinic-waiting-time-report"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-054",
+    "job_title": "Looking for bi developer to deliver budget versus actual views",
+    "text": "Reporting queries over millions of rows is the part of your post I would worry about first, and I have done it before for a manufacturing team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $1870.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-29",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-055",
+    "job_title": "Looking for analytics consultant to deliver seasonal sales outlook",
+    "text": "I read your brief twice: next-quarter numbers with seasonality and prediction ranges. I solved that for a saas company last year.\n\nOn Revenue Forecasting (what the client called a next-quarter projections) budget forecasts were a flat growth rate. I built it with forecasting and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: MAPE of 6% over four quarters versus 15% for the old method.\n\nMy fixed price for this is $1920.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2024-11-13",
+    "project_ids": [
+      "revenue-forecasting"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-056",
+    "job_title": "Need help building queue length insights",
+    "text": "Inconsistent names, dates and codes normalised is the part of your post I would worry about first, and I have done it before for a start-up team.\n\nOn Clinic Waiting Time Report (what the client called a queue length insights) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $2710.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-09-01",
+    "project_ids": [
+      "clinic-waiting-time-report"
+    ],
+    "client_industry": "Start-up",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-057",
+    "job_title": "SQL help for our manufacturing business",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $1980.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-01-16",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-058",
+    "job_title": "Need help building budget versus actual views",
+    "text": "Your point about workbooks that finance could audit is close to something I shipped for a real estate client.\n\nOn Finance Monthly Pack in Power BI (what the client called a board reporting pack) finance rebuilt the board deck by hand every month. I built it with Power BI and Excel, plus hand-written analytical queries with window functions. Result: close-to-pack time from 5 days to 1.\n\nA second relevant piece of work: Customer Segmentation, where 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $2080.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-11-24",
+    "project_ids": [
+      "finance-monthly-pack-powerbi",
+      "customer-segmentation-crm"
+    ],
+    "client_industry": "Real estate",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-059",
+    "job_title": "Experiment result write-ups for our e-commerce team",
+    "text": "Your point about significance tests, confidence intervals and effect sizes is close to something I shipped for a e-commerce client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2070.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-02-18",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-060",
+    "job_title": "Looking for data analyst to deliver feature adoption tracking",
+    "text": "Your point about reporting queries over millions of rows is close to something I shipped for a saas client.\n\nOn Product Usage Analytics on BigQuery (what the client called a event data reporting) the product team had raw events but no adoption numbers. I built it with BigQuery and SQL, plus deduplicated, standardised records from messy exports. Result: 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.\n\nMy fixed price for this is $2310.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-07-28",
+    "project_ids": [
+      "product-usage-bigquery"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-061",
+    "job_title": "Looking for analytics consultant to deliver market price monitor",
+    "text": "Tabular wrangling in dataframes with merges and group-bys is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nOn Competitor Price Scraper (what the client called a market price monitor) pricing staff checked competitor sites by hand. I built it with web scraping and Python, plus a relational store with proper indexes and migrations. Result: 12k prices tracked daily; price-match response time down from days to hours.\n\nMy fixed price for this is $1970.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-01-17",
+    "project_ids": [
+      "competitor-price-scraper"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-062",
+    "job_title": "AI developer with Python experience",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Marketing Attribution Model (what the client called a channel ROI breakdown) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $2590.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-08-26",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-063",
+    "job_title": "Satisfaction study for our hospitality team",
+    "text": "I read your brief twice: careful inference instead of eyeballing charts. I solved that for a hospitality company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2090.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-06-04",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-064",
+    "job_title": "Tableau help for our retail business",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2100.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2024-01-19",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-065",
+    "job_title": "Reporting analyst for ongoing saas work (Looker Studio)",
+    "text": "I read your brief twice: a link-shared report that refreshes itself. I solved that for a fintech company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1970.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-12-30",
+    "project_ids": [],
+    "client_industry": "Fintech",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-066",
+    "job_title": "Looking for data analyst to deliver scripted weekly emails from sheets",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $1740.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-07-26",
+    "project_ids": [],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-067",
+    "job_title": "data analyst wanted: weekly revenue scorecard",
+    "text": "I read your brief twice: hand-written analytical queries with window functions. I solved that for a retail company last year.\n\nOn Regional Sales KPI Dashboard (what the client called a area manager performance view) area managers waited for a weekly emailed spreadsheet. I built it with Tableau and SQL, plus advanced spreadsheet models with lookups and pivot tables. Result: dashboard adopted by 45 managers; reporting prep time cut from 12 hours to 1.\n\nMy fixed price for this is $2310.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-12-16",
+    "project_ids": [
+      "regional-sales-kpi-dashboard"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-068",
+    "job_title": "Tableau expert needed for human resources project",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3090.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-25",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-069",
+    "job_title": "Analytics engineer with PostgreSQL experience",
+    "text": "Your point about a relational store with proper indexes and migrations is close to something I shipped for a e-commerce client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2350.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-05-18",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-070",
+    "job_title": "Hiring Data analyst - A/B testing",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $4380.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-08-21",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-071",
+    "job_title": "reporting analyst wanted: month-by-month customer survival",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2460.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-08-25",
+    "project_ids": [],
+    "client_industry": "Digital media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-072",
+    "job_title": "Build area manager performance view (fixed price)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1890.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2025-01-24",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-073",
+    "job_title": "Machine learning engineer for ongoing e-commerce work (Python)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Marketing Attribution Model (what the client called a channel ROI breakdown) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $2970.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-09-20",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-074",
+    "job_title": "Market price monitor for our e-commerce team",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2900.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-06-22",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-075",
+    "job_title": "Messy customer list rescue - b2b services company",
+    "text": "I read your brief twice: tabular wrangling in dataframes with merges and group-bys. I solved that for a digital agency company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2400.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-04-14",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-076",
+    "job_title": "Messy customer list rescue for our b2b services team",
+    "text": "I read your brief twice: scripted reshaping of large spreadsheets into tidy tables. I solved that for a b2b services company last year.\n\nOn CRM Data Cleanup (what the client called a duplicate contacts merge) the sales team's CRM had 30% duplicate accounts. I built it with data cleaning and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: merged 41k duplicates; bounce rate on campaigns halved.\n\nMy fixed price for this is $2210.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-10-21",
+    "project_ids": [
+      "crm-data-cleanup"
+    ],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-077",
+    "job_title": "Hiring BI developer - Excel",
+    "text": "I read your brief twice: workbooks that finance could audit. I solved that for a retail company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2900.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2025-01-06",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-078",
+    "job_title": "Build board reporting pack (fixed price)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Finance Monthly Pack in Power BI (what the client called a budget versus actual views) finance rebuilt the board deck by hand every month. I built it with Power BI and Excel, plus hand-written analytical queries with window functions. Result: close-to-pack time from 5 days to 1.\n\nA second relevant piece of work: Marketing Attribution Model, where reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $3100.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-09-23",
+    "project_ids": [
+      "finance-monthly-pack-powerbi",
+      "marketing-attribution-model"
+    ],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-079",
+    "job_title": "Looking for data engineer to deliver channel ROI breakdown",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Marketing Attribution Model (what the client called a channel ROI breakdown) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $2750.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-11-02",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-080",
+    "job_title": "Single source of truth models - saas company",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2860.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-08-07",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-081",
+    "job_title": "data analyst wanted: satisfaction study",
+    "text": "Reproducible notebooks in the statistician's language is the part of your post I would worry about first, and I have done it before for a hospitality team.\n\nOn Customer Survey and NPS Analysis (what the client called a satisfaction study) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nMy fixed price for this is $1610.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-05-13",
+    "project_ids": [
+      "customer-survey-nps"
+    ],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-082",
+    "job_title": "Looking for data analyst to deliver HR turnover drivers",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Employee Attrition Study (what the client called a why people leave analysis) turnover was 24% and exit interviews offered no pattern. I built it with regression analysis and R, plus interactive drill-down dashboards for area managers. Result: manager change and pay-band position explained most leavers; retention plan cut turnover to 19%.\n\nMy fixed price for this is $4850.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-06-11",
+    "project_ids": [
+      "employee-attrition-study"
+    ],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-083",
+    "job_title": "Build duplicate contacts merge (fixed price)",
+    "text": "Greetings! I am an experienced freelancer with many years of experience in various technologies.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3700.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-01-25",
+    "project_ids": [],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-084",
+    "job_title": "Need help building seasonal sales outlook",
+    "text": "Significance tests, confidence intervals and effect sizes is the part of your post I would worry about first, and I have done it before for a saas team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2480.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-10-05",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-085",
+    "job_title": "Market price monitor - e-commerce company",
+    "text": "Your point about a relational store with proper indexes and migrations is close to something I shipped for a e-commerce client.\n\nOn Competitor Price Scraper (what the client called a market price monitor) pricing staff checked competitor sites by hand. I built it with web scraping and Python, plus a relational store with proper indexes and migrations. Result: 12k prices tracked daily; price-match response time down from days to hours.\n\nMy fixed price for this is $2010.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2023-03-29",
+    "project_ids": [
+      "competitor-price-scraper"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-086",
+    "job_title": "data analyst wanted: board reporting pack",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nOn Finance Monthly Pack in Power BI (what the client called a budget versus actual views) finance rebuilt the board deck by hand every month. I built it with Power BI and Excel, plus hand-written analytical queries with window functions. Result: close-to-pack time from 5 days to 1.\n\nMy fixed price for this is $1930.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2023-04-26",
+    "project_ids": [
+      "finance-monthly-pack-powerbi"
+    ],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-087",
+    "job_title": "Event data reporting - saas company",
+    "text": "I read your brief twice: a serverless warehouse queried over billions of event rows. I solved that for a saas company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $1740.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-11-13",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-088",
+    "job_title": "Hiring Analytics consultant - A/B testing",
+    "text": "Controlled experiments with a pre-registered success metric is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3370.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-11-28",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-089",
+    "job_title": "analytics consultant wanted: month-by-month customer survival",
+    "text": "Tabular wrangling in dataframes with merges and group-bys is the part of your post I would worry about first, and I have done it before for a digital media team.\n\nOn Subscriber Cohort Retention Analysis (what the client called a month-by-month customer survival) leadership saw a flat churn number that hid very different cohorts. I built it with cohort analysis and SQL, plus significance tests, confidence intervals and effect sizes. Result: found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nMy fixed price for this is $2140.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-11-10",
+    "project_ids": [
+      "subscriber-cohort-retention"
+    ],
+    "client_industry": "Digital media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-090",
+    "job_title": "Looking for data analyst to deliver why people leave analysis",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2730.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-12-05",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-091",
+    "job_title": "Why people leave analysis for our human resources team",
+    "text": "Your point about driver analysis showing which factors move an outcome is close to something I shipped for a manufacturing client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4740.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-01-12",
+    "project_ids": [],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-092",
+    "job_title": "data analyst wanted: feedback themes report",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $1960.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-08-31",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-093",
+    "job_title": "Need help building HR turnover drivers",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2120.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-12-20",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-094",
+    "job_title": "analytics engineer wanted: tidy reporting tables",
+    "text": "Tidy reporting tables built by layered, tested transformations is the part of your post I would worry about first, and I have done it before for a saas team.\n\nOn Analytics Warehouse with dbt (what the client called a tidy reporting tables) every team had its own definition of active customer. I built it with dbt and Snowflake, plus scheduled multi-step workflows with retries and backfills. Result: 42 tested models; metric disputes in leadership meetings went away.\n\nMy fixed price for this is $3650.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-02-08",
+    "project_ids": [
+      "analytics-warehouse-dbt"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-095",
+    "job_title": "Reporting analyst for ongoing human resources work (statistics)",
+    "text": "I read your brief twice: careful inference instead of eyeballing charts. I solved that for a human resources company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $2870.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-10-08",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-096",
+    "job_title": "Looking for etl developer to deliver spreadsheets-to-database sync",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Operations ETL Pipeline (what the client called a spreadsheets-to-database sync) depot managers emailed spreadsheets that were pasted into a database. I built it with ETL and Python, plus hand-written analytical queries with window functions. Result: ten feeds loaded nightly with validation; manual re-keying eliminated.\n\nMy fixed price for this is $4830.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2025-01-17",
+    "project_ids": [
+      "operations-etl-pipeline"
+    ],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-097",
+    "job_title": "Need help building queue length insights",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Clinic Waiting Time Report (what the client called a patient flow reporting) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $5550.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "won",
+    "date": "2025-01-06",
+    "project_ids": [
+      "clinic-waiting-time-report"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-098",
+    "job_title": "Hiring Data engineer - PostgreSQL",
+    "text": "Your point about SQL tables with constraints, not loose files is close to something I shipped for a logistics client.\n\nOn Self-serve Metabase for Ops (what the client called a internal BI portal) ops staff queued analyst requests for simple counts. I built it with Metabase and SQL, plus a one-page scorecard that leadership reads on Monday. Result: analyst request backlog down 60%.\n\nA second relevant piece of work: Streamlit Pricing Explorer, where category managers run their own scenarios; adopted by 8 teams.\n\nMy fixed price for this is $2300.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2024-07-26",
+    "project_ids": [
+      "ops-self-serve-metabase",
+      "pricing-explorer-streamlit"
+    ],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-099",
+    "job_title": "Data analyst for ongoing retail work (Streamlit)",
+    "text": "Your point about a quick interactive web tool in plain Python for scenario what-ifs is close to something I shipped for a logistics client.\n\nOn Streamlit Pricing Explorer (what the client called a interactive what-if pricing page) pricing scenarios lived in one person's laptop spreadsheet. I built it with Streamlit and Python, plus next-quarter numbers with seasonality and prediction ranges. Result: category managers run their own scenarios; adopted by 8 teams.\n\nMy fixed price for this is $2190.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2024-06-20",
+    "project_ids": [
+      "pricing-explorer-streamlit"
+    ],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-100",
+    "job_title": "Need help building seasonal sales outlook",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Revenue Forecasting (what the client called a seasonal sales outlook) budget forecasts were a flat growth rate. I built it with forecasting and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: MAPE of 6% over four quarters versus 15% for the old method.\n\nA second relevant piece of work: Checkout A/B Test Readouts, where a pre-registration template and sequential checks; 3 false wins avoided in a quarter.\n\nMy fixed price for this is $2250.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-12-24",
+    "project_ids": [
+      "revenue-forecasting",
+      "checkout-ab-test-readouts"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-101",
+    "job_title": "Need help building experiment result write-ups",
+    "text": "Hand-written analytical queries with window functions is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2050.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-02-09",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-102",
+    "job_title": "Month-by-month customer survival - digital media company",
+    "text": "Your point about significance tests, confidence intervals and effect sizes is close to something I shipped for a digital media client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3010.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-09-12",
+    "project_ids": [],
+    "client_industry": "Digital media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-103",
+    "job_title": "Question builder for non-technical staff - logistics company",
+    "text": "A one-page scorecard that leadership reads on Monday is the part of your post I would worry about first, and I have done it before for a logistics team.\n\nOn Self-serve Metabase for Ops (what the client called a internal BI portal) ops staff queued analyst requests for simple counts. I built it with Metabase and SQL, plus a one-page scorecard that leadership reads on Monday. Result: analyst request backlog down 60%.\n\nMy fixed price for this is $2620.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-04-16",
+    "project_ids": [
+      "ops-self-serve-metabase"
+    ],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-104",
+    "job_title": "NLP engineer for ongoing retail work (Python)",
+    "text": "I read your brief twice: scripts and services in a typed, tested codebase. I solved that for a travel company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1890.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2025-01-01",
+    "project_ids": [],
+    "client_industry": "Travel",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-105",
+    "job_title": "Data scientist with Python experience",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn CRM Data Cleanup (what the client called a duplicate contacts merge) the sales team's CRM had 30% duplicate accounts. I built it with data cleaning and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: merged 41k duplicates; bounce rate on campaigns halved.\n\nMy fixed price for this is $1670.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-11-27",
+    "project_ids": [
+      "crm-data-cleanup"
+    ],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-106",
+    "job_title": "Build weekly revenue scorecard (fixed price)",
+    "text": "Hand-written analytical queries with window functions is the part of your post I would worry about first, and I have done it before for a retail team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1980.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-08-08",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-107",
+    "job_title": "Hiring Reporting analyst - Google Sheets",
+    "text": "Team spreadsheets that update themselves from live sources is the part of your post I would worry about first, and I have done it before for a agency team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $1760.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-04-16",
+    "project_ids": [],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-108",
+    "job_title": "Analytics consultant for ongoing saas work (data cleaning)",
+    "text": "Inconsistent names, dates and codes normalised is the part of your post I would worry about first, and I have done it before for a saas team.\n\nOn Product Usage Analytics on BigQuery (what the client called a event data reporting) the product team had raw events but no adoption numbers. I built it with BigQuery and SQL, plus deduplicated, standardised records from messy exports. Result: 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.\n\nMy fixed price for this is $2740.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2024-01-13",
+    "project_ids": [
+      "product-usage-bigquery"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-109",
+    "job_title": "Build interactive what-if pricing page (fixed price)",
+    "text": "Hello, I am writing to express my interest in your job posting.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2500.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-04-10",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-110",
+    "job_title": "Hiring Data analyst - cohort analysis",
+    "text": "Your point about month-by-month survival curves for customers by signup month is close to something I shipped for a digital media client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2470.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-04-09",
+    "project_ids": [],
+    "client_industry": "Digital media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-111",
+    "job_title": "Need help building next-quarter projections",
+    "text": "I read your brief twice: advanced spreadsheet models with lookups and pivot tables. I solved that for a saas company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3290.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-12-20",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-112",
+    "job_title": "Hiring Data analyst - forecasting",
+    "text": "Your point about next-quarter numbers with seasonality and prediction ranges is close to something I shipped for a retail client.\n\nOn Streamlit Pricing Explorer (what the client called a interactive what-if pricing page) pricing scenarios lived in one person's laptop spreadsheet. I built it with Streamlit and Python, plus next-quarter numbers with seasonality and prediction ranges. Result: category managers run their own scenarios; adopted by 8 teams.\n\nMy fixed price for this is $1920.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-03-01",
+    "project_ids": [
+      "pricing-explorer-streamlit"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-113",
+    "job_title": "Tableau expert needed for retail project",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3790.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-04-25",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-114",
+    "job_title": "Hiring Analytics engineer - Snowflake",
+    "text": "I read your brief twice: a cloud warehouse with separate compute for reporting and loads. I solved that for a saas company last year.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2770.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "replied",
+    "date": "2023-05-01",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-115",
+    "job_title": "Looking for analytics consultant to deliver patient flow reporting",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4080.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-07-11",
+    "project_ids": [],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-116",
+    "job_title": "Power BI help for our retail business",
+    "text": "Your point about a measure-driven report with budget versus actual views is close to something I shipped for a retail client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2270.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-11-09",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-117",
+    "job_title": "Python expert needed for saas project",
+    "text": "Your point about scripts and services in a typed, tested codebase is close to something I shipped for a digital agency client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $2330.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-05-08",
+    "project_ids": [],
+    "client_industry": "Digital agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-118",
+    "job_title": "Data analyst with A/B testing experience",
+    "text": "Your point about controlled experiments with a pre-registered success metric is close to something I shipped for a e-commerce client.\n\nOn Checkout A/B Test Readouts (what the client called a conversion lift verdicts) tests were stopped early whenever a chart looked good. I built it with A/B testing and statistics, plus hand-written analytical queries with window functions. Result: a pre-registration template and sequential checks; 3 false wins avoided in a quarter.\n\nA second relevant piece of work: Streamlit Pricing Explorer, where category managers run their own scenarios; adopted by 8 teams.\n\nMy fixed price for this is $4360.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-04-03",
+    "project_ids": [
+      "checkout-ab-test-readouts",
+      "pricing-explorer-streamlit"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-119",
+    "job_title": "BI developer for ongoing agency work (Google Sheets)",
+    "text": "Shared sheets with import formulas and protected ranges is the part of your post I would worry about first, and I have done it before for a healthcare team.\n\nOn Google Sheets Reporting Automation (what the client called a scripted weekly emails from sheets) account managers pasted numbers into client reports every Friday. I built it with Google Sheets and Apps Script, plus advanced spreadsheet models with lookups and pivot tables. Result: saved 6 hours a week per manager; zero copy-paste errors afterwards.\n\nMy fixed price for this is $1440.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2023-02-06",
+    "project_ids": [
+      "sheets-reporting-automation"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-120",
+    "job_title": "Build budget versus actual views (fixed price)",
+    "text": "A measure-driven report with budget versus actual views is the part of your post I would worry about first, and I have done it before for a legal tech team.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2180.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-03-13",
+    "project_ids": [],
+    "client_industry": "Legal tech",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-121",
+    "job_title": "Build patient flow reporting (fixed price)",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Clinic Waiting Time Report (what the client called a patient flow reporting) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $2850.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2024-08-24",
+    "project_ids": [
+      "clinic-waiting-time-report"
+    ],
+    "client_industry": "Healthcare",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-122",
+    "job_title": "survey analysis expert needed for hospitality project",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Customer Survey and NPS Analysis (what the client called a feedback themes report) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nA second relevant piece of work: Customer Segmentation, where 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $2460.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2024-11-07",
+    "project_ids": [
+      "customer-survey-nps",
+      "customer-segmentation-crm"
+    ],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-123",
+    "job_title": "Hiring Reporting analyst - R",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3420.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-01-12",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-124",
+    "job_title": "Build tidy reporting tables (fixed price)",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Analytics Warehouse with dbt (what the client called a single source of truth models) every team had its own definition of active customer. I built it with dbt and Snowflake, plus scheduled multi-step workflows with retries and backfills. Result: 42 tested models; metric disputes in leadership meetings went away.\n\nMy fixed price for this is $5430.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "replied",
+    "date": "2024-11-09",
+    "project_ids": [
+      "analytics-warehouse-dbt"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-125",
+    "job_title": "Tidy reporting tables - saas company",
+    "text": "Your point about fact and dimension tables arranged for easy slicing is close to something I shipped for a hospitality client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3320.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-03-11",
+    "project_ids": [],
+    "client_industry": "Hospitality",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-126",
+    "job_title": "ETL help for our logistics business",
+    "text": "I read your brief twice: spreadsheets and exports synced into a database on a schedule. I solved that for a logistics company last year.\n\nOn Operations ETL Pipeline (what the client called a nightly data loads) depot managers emailed spreadsheets that were pasted into a database. I built it with ETL and Python, plus hand-written analytical queries with window functions. Result: ten feeds loaded nightly with validation; manual re-keying eliminated.\n\nMy fixed price for this is $2890.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2023-09-19",
+    "project_ids": [
+      "operations-etl-pipeline"
+    ],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-127",
+    "job_title": "Need help building channel ROI breakdown",
+    "text": "Your point about free shareable web dashboards connected to live sheets and warehouse tables is close to something I shipped for a e-commerce client.\n\nOn Marketing Attribution Model (what the client called a which campaign earned the sale) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $3410.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2022-06-15",
+    "project_ids": [
+      "marketing-attribution-model"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-128",
+    "job_title": "Apps Script expert needed for agency project",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Google Sheets Reporting Automation (what the client called a self-updating team spreadsheet) account managers pasted numbers into client reports every Friday. I built it with Google Sheets and Apps Script, plus advanced spreadsheet models with lookups and pivot tables. Result: saved 6 hours a week per manager; zero copy-paste errors afterwards.\n\nMy fixed price for this is $2050.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-01-16",
+    "project_ids": [
+      "sheets-reporting-automation"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-129",
+    "job_title": "Analytics consultant with R experience",
+    "text": "I read your brief twice: reproducible notebooks in the statistician's language. I solved that for a human resources company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2430.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-03-30",
+    "project_ids": [],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-130",
+    "job_title": "forecasting help for our saas business",
+    "text": "I read your brief twice: next-quarter numbers with seasonality and prediction ranges. I solved that for a digital agency company last year.\n\nOn Revenue Forecasting (what the client called a next-quarter projections) budget forecasts were a flat growth rate. I built it with forecasting and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: MAPE of 6% over four quarters versus 15% for the old method.\n\nMy fixed price for this is $2250.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "won",
+    "date": "2022-07-21",
+    "project_ids": [
+      "revenue-forecasting"
+    ],
+    "client_industry": "Digital agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-131",
+    "job_title": "Who-are-our-buyers clusters - retail company",
+    "text": "I read your brief twice: tabular wrangling in dataframes with merges and group-bys. I solved that for a retail company last year.\n\nOn Customer Segmentation (what the client called a spender groups for CRM) the CRM sent one newsletter to everybody. I built it with customer segmentation and Python, plus a governed report pack with scheduled refresh and row-level access. Result: 5 segments; targeted emails got 31% higher click rate.\n\nA second relevant piece of work: Subscriber Cohort Retention Analysis, where found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nMy fixed price for this is $2730.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "ignored",
+    "date": "2022-09-22",
+    "project_ids": [
+      "customer-segmentation-crm",
+      "subscriber-cohort-retention"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-132",
+    "job_title": "Build duplicate contacts merge (fixed price)",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $1630.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-08-02",
+    "project_ids": [],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-133",
+    "job_title": "Analytics consultant with regression analysis experience",
+    "text": "I read your brief twice: a model explaining why, not only predicting what. I solved that for a human resources company last year.\n\nOn Employee Attrition Study (what the client called a why people leave analysis) turnover was 24% and exit interviews offered no pattern. I built it with regression analysis and R, plus interactive drill-down dashboards for area managers. Result: manager change and pay-band position explained most leavers; retention plan cut turnover to 19%.\n\nMy fixed price for this is $5760.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2023-06-19",
+    "project_ids": [
+      "employee-attrition-study"
+    ],
+    "client_industry": "Human resources",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-134",
+    "job_title": "etl developer wanted: internal BI portal",
+    "text": "SQL tables with constraints, not loose files is the part of your post I would worry about first, and I have done it before for a logistics team.\n\nOn Self-serve Metabase for Ops (what the client called a question builder for non-technical staff) ops staff queued analyst requests for simple counts. I built it with Metabase and SQL, plus a one-page scorecard that leadership reads on Monday. Result: analyst request backlog down 60%.\n\nA second relevant piece of work: Customer Segmentation, where 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $1720.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "replied",
+    "date": "2024-01-06",
+    "project_ids": [
+      "ops-self-serve-metabase",
+      "customer-segmentation-crm"
+    ],
+    "client_industry": "Logistics",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-135",
+    "job_title": "Data analyst with pandas experience",
+    "text": "Scripted reshaping of large spreadsheets into tidy tables is the part of your post I would worry about first, and I have done it before for a retail team.\n\nOn Customer Segmentation (what the client called a who-are-our-buyers clusters) the CRM sent one newsletter to everybody. I built it with customer segmentation and Python, plus a governed report pack with scheduled refresh and row-level access. Result: 5 segments; targeted emails got 31% higher click rate.\n\nA second relevant piece of work: Operations ETL Pipeline, where ten feeds loaded nightly with validation; manual re-keying eliminated.\n\nMy fixed price for this is $2590.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-07-05",
+    "project_ids": [
+      "customer-segmentation-crm",
+      "operations-etl-pipeline"
+    ],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-136",
+    "job_title": "Data engineer with web scraping experience",
+    "text": "Your point about daily price snapshots pulled from competitor catalogues is close to something I shipped for a e-commerce client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $3430.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2023-08-03",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-137",
+    "job_title": "reporting analyst wanted: market price monitor",
+    "text": "Tabular wrangling in dataframes with merges and group-bys is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nOn Competitor Price Scraper (what the client called a market price monitor) pricing staff checked competitor sites by hand. I built it with web scraping and Python, plus a relational store with proper indexes and migrations. Result: 12k prices tracked daily; price-match response time down from days to hours.\n\nMy fixed price for this is $1420.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2023-06-30",
+    "project_ids": [
+      "competitor-price-scraper"
+    ],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-138",
+    "job_title": "Messy customer list rescue for our b2b services team",
+    "text": "Scripted reshaping of large spreadsheets into tidy tables is the part of your post I would worry about first, and I have done it before for a b2b services team.\n\nOn CRM Data Cleanup (what the client called a duplicate contacts merge) the sales team's CRM had 30% duplicate accounts. I built it with data cleaning and Python, plus advanced spreadsheet models with lookups and pivot tables. Result: merged 41k duplicates; bounce rate on campaigns halved.\n\nMy fixed price for this is $3540.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2022-02-02",
+    "project_ids": [
+      "crm-data-cleanup"
+    ],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-139",
+    "job_title": "Hiring Analytics consultant - Streamlit",
+    "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $1660.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-09-15",
+    "project_ids": [],
+    "client_industry": "Retail",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-140",
+    "job_title": "Looking for etl developer to deliver tidy reporting tables",
+    "text": "Your point about tidy reporting tables built by layered, tested transformations is close to something I shipped for a saas client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2580.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "won",
+    "date": "2023-07-28",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-141",
+    "job_title": "Self-updating team spreadsheet - agency company",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2610.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2024-12-05",
+    "project_ids": [],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-142",
+    "job_title": "Month-by-month customer survival for our digital media team",
+    "text": "Your point about retention triangles showing who stays is close to something I shipped for a manufacturing client.\n\nOn Subscriber Cohort Retention Analysis (what the client called a month-by-month customer survival) leadership saw a flat churn number that hid very different cohorts. I built it with cohort analysis and SQL, plus significance tests, confidence intervals and effect sizes. Result: found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nA second relevant piece of work: Revenue Forecasting, where MAPE of 6% over four quarters versus 15% for the old method.\n\nMy fixed price for this is $2940.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "won",
+    "date": "2022-10-22",
+    "project_ids": [
+      "subscriber-cohort-retention",
+      "revenue-forecasting"
+    ],
+    "client_industry": "Manufacturing",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-143",
+    "job_title": "Build month-by-month customer survival (fixed price)",
+    "text": "Retention triangles showing who stays is the part of your post I would worry about first, and I have done it before for a digital media team.\n\nOn Subscriber Cohort Retention Analysis (what the client called a who sticks around study) leadership saw a flat churn number that hid very different cohorts. I built it with cohort analysis and SQL, plus significance tests, confidence intervals and effect sizes. Result: found a 3x gap between acquisition channels, redirecting 15% of ad spend.\n\nMy fixed price for this is $3270.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days.",
+    "outcome": "ignored",
+    "date": "2024-09-15",
+    "project_ids": [
+      "subscriber-cohort-retention"
+    ],
+    "client_industry": "Digital media",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-144",
+    "job_title": "Daily shelf price tracker for our e-commerce team",
+    "text": "Hi, I have read your job description and I think I am a good fit.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2080.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2024-03-27",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-145",
+    "job_title": "Data engineer for ongoing saas work (BigQuery)",
+    "text": "Your point about partitioned cloud tables keeping scan costs low is close to something I shipped for a saas client.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2700.\n\nPlease contact me. Thank you for your time.",
+    "outcome": "ignored",
+    "date": "2022-12-02",
+    "project_ids": [],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-146",
+    "job_title": "Need help building experiment result write-ups",
+    "text": "Hello there, I saw your post and I am the right person for you.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2130.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-07-22",
+    "project_ids": [],
+    "client_industry": "E-commerce",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-147",
+    "job_title": "Analytics engineer with Airflow experience",
+    "text": "Your point about a nightly DAG that reruns safely when a step fails is close to something I shipped for a saas client.\n\nOn Analytics Warehouse with dbt (what the client called a single source of truth models) every team had its own definition of active customer. I built it with dbt and Snowflake, plus scheduled multi-step workflows with retries and backfills. Result: 42 tested models; metric disputes in leadership meetings went away.\n\nMy fixed price for this is $3510.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide.",
+    "outcome": "replied",
+    "date": "2024-07-14",
+    "project_ids": [
+      "analytics-warehouse-dbt"
+    ],
+    "client_industry": "SaaS",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-148",
+    "job_title": "Excel help for our b2b services business",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $2700.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-06-22",
+    "project_ids": [],
+    "client_industry": "B2B services",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-149",
+    "job_title": "Data analyst with statistics experience",
+    "text": "Your point about careful inference instead of eyeballing charts is close to something I shipped for a real estate client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4220.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2023-07-13",
+    "project_ids": [],
+    "client_industry": "Real estate",
+    "category": "Data Analytics"
+  },
+  {
+    "proposal_id": "pp-data_analyst-150",
+    "job_title": "analytics consultant wanted: scripted weekly emails from sheets",
+    "text": "I am excited to apply for this position. I can do this job perfectly.\n\nOn Google Sheets Reporting Automation (what the client called a scripted weekly emails from sheets) account managers pasted numbers into client reports every Friday. I built it with Google Sheets and Apps Script, plus advanced spreadsheet models with lookups and pivot tables. Result: saved 6 hours a week per manager; zero copy-paste errors afterwards.\n\nA second relevant piece of work: Competitor Price Scraper, where 12k prices tracked daily; price-match response time down from days to hours.\n\nMy fixed price for this is $1790.\n\nLooking forward to hearing from you. Thanks.",
+    "outcome": "ignored",
+    "date": "2022-08-05",
+    "project_ids": [
+      "sheets-reporting-automation",
+      "competitor-price-scraper"
+    ],
+    "client_industry": "Agency",
+    "category": "Data Analytics"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "persona_id": "ai_ml",
+  "display_name": "Aiden Rahman (synthetic)",
+  "headline": "AI/ML Engineer - LLM apps, NLP and production ML",
+  "skills": [
+    "FastAPI",
+    "Docker",
+    "OpenAI API",
+    "Python",
+    "Redis",
+    "MLflow",
+    "NLP",
+    "scikit-learn",
+    "A/B testing",
+    "Hugging Face Transformers",
+    "LangChain",
+    "Pinecone",
+    "PyTorch",
+    "embeddings",
+    "model evaluation",
+    "pandas",
+    "Airflow",
+    "Celery",
+    "ONNX Runtime",
+    "PostgreSQL"
+  ],
+  "hourly_rate_usd": 55,
+  "min_project_budget_usd": 300,
+  "availability_hours_per_week": 25,
+  "weekly_connects_budget": 60,
+  "saved_searches": [
+    {
+      "name": "LLM and RAG builds",
+      "query": "LLM RAG chatbot",
+      "category": "AI & Machine Learning"
+    },
+    {
+      "name": "Classic ML",
+      "query": "machine learning prediction model",
+      "category": "AI & Machine Learning"
+    },
+    {
+      "name": "NLP and speech",
+      "query": "NLP text classification transcription"
+    }
+  ]
+}

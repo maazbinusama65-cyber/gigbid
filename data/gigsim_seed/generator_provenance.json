@@ -1,0 +1,14 @@
+{
+  "generator": "gigsim/datagen.py",
+  "seed": 1337,
+  "local_test_seed": 11344,
+  "synthetic_stand_in": true,
+  "history_jobs": {
+    "total": 1500,
+    "real_titles_budgets": 1000,
+    "synthetic": 500
+  },
+  "stream_jobs": 303,
+  "dev_jobs": 600,
+  "note": "Instructor gigsim/ and data/personas were not in the starter kit; everything here is synthetic except titles/budgets/hourly rates of history jobs counted under real_titles_budgets."
+}

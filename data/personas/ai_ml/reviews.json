@@ -1,0 +1,242 @@
+[
+  {
+    "review_id": "rev-ai_ml-001",
+    "project_id": "support-ticket-triage",
+    "client_industry": "SaaS",
+    "rating": 4,
+    "text": "Calm, clear and quick. Our problem was simple to state: support agents spent the first hour of each shift sorting tickets by hand. Afterwards: Overall: first-response time fell 38% and mis-routed tickets dropped from 21% to 6%.",
+    "date": "2023-05-02"
+  },
+  {
+    "review_id": "rev-ai_ml-002",
+    "project_id": "contract-qa-rag",
+    "client_industry": "Legal tech",
+    "rating": 5,
+    "text": "Great to work with. I am not technical, but I could always tell where things stood. Overall: answers cited the right clause 91% of the time on a 300-question audit set.",
+    "date": "2024-04-08"
+  },
+  {
+    "review_id": "rev-ai_ml-003",
+    "project_id": "contract-qa-rag",
+    "client_industry": "Legal tech",
+    "rating": 3,
+    "text": "Solid communication throughout. Our problem was simple to state: lawyers searched contracts with keyword search and missed clauses phrased differently. Afterwards: Overall: answers cited the right clause 91% of the time on a 300-question audit set.",
+    "date": "2024-04-13"
+  },
+  {
+    "review_id": "rev-ai_ml-004",
+    "project_id": "churn-risk-scoring",
+    "client_industry": "Subscription media",
+    "rating": 3,
+    "text": "Delivered what we hoped for. I am not technical, but I could always tell where things stood. Overall: top-decile precision of 44% and 9% lower monthly churn in a holdout test.",
+    "date": "2022-12-04"
+  },
+  {
+    "review_id": "rev-ai_ml-005",
+    "project_id": "churn-risk-scoring",
+    "client_industry": "Subscription media",
+    "rating": 5,
+    "text": "Exactly the help we needed. Our problem was simple to state: the retention team contacted customers at random. Afterwards: Overall: top-decile precision of 44% and 9% lower monthly churn in a holdout test.",
+    "date": "2022-12-03"
+  },
+  {
+    "review_id": "rev-ai_ml-006",
+    "project_id": "retail-demand-forecast",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Great to work with. Our problem was simple to state: buyers over-ordered slow lines and ran out of fast ones. Afterwards: Overall: forecast error (.",
+    "date": "2023-07-17"
+  },
+  {
+    "review_id": "rev-ai_ml-007",
+    "project_id": "invoice-field-extraction",
+    "client_industry": "Finance",
+    "rating": 4,
+    "text": "Solid communication throughout. We came in wanting paper bill digitiser; the end result changed how the team works. Overall: processed 12k invoices per day with 96% field-level accuracy.",
+    "date": "2023-10-23"
+  },
+  {
+    "review_id": "rev-ai_ml-008",
+    "project_id": "product-recommendations",
+    "client_industry": "E-commerce",
+    "rating": 5,
+    "text": "Would hire again. Delivered personalised shelf ranking ahead of the date we agreed. Overall: click-through on the widget rose 27% and revenue per visit 6%.",
+    "date": "2022-09-27"
+  },
+  {
+    "review_id": "rev-ai_ml-009",
+    "project_id": "product-recommendations",
+    "client_industry": "E-commerce",
+    "rating": 5,
+    "text": "Great to work with. We came in wanting personalised shelf ranking; the end result changed how the team works. Overall: click-through on the widget rose 27% and revenue per visit 6%.",
+    "date": "2022-10-10"
+  },
+  {
+    "review_id": "rev-ai_ml-010",
+    "project_id": "call-centre-speech-analytics",
+    "client_industry": "Telecom",
+    "rating": 5,
+    "text": "Calm, clear and quick. Our problem was simple to state: supervisors could review under 1% of recorded calls. Afterwards: Overall: every call transcribed and summarised overnight; QA coverage went from 1% to 100%.",
+    "date": "2024-05-15"
+  },
+  {
+    "review_id": "rev-ai_ml-011",
+    "project_id": "call-centre-speech-analytics",
+    "client_industry": "Telecom",
+    "rating": 5,
+    "text": "Solid communication throughout. Our problem was simple to state: supervisors could review under 1% of recorded calls. Afterwards: Overall: every call transcribed and summarised overnight; QA coverage went from 1% to 100%.",
+    "date": "2024-06-04"
+  },
+  {
+    "review_id": "rev-ai_ml-012",
+    "project_id": "factory-defect-detection",
+    "client_industry": "Manufacturing",
+    "rating": 4,
+    "text": "Calm, clear and quick. Our problem was simple to state: inspectors missed hairline cracks at the end of long shifts. Afterwards: Overall: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.",
+    "date": "2023-03-07"
+  },
+  {
+    "review_id": "rev-ai_ml-013",
+    "project_id": "sales-email-copilot",
+    "client_industry": "B2B sales",
+    "rating": 5,
+    "text": "Would hire again. Delivered sales outreach copilot ahead of the date we agreed. Overall: reply time halved and 71% of drafts were sent with light edits.",
+    "date": "2024-08-07"
+  },
+  {
+    "review_id": "rev-ai_ml-014",
+    "project_id": "clinical-notes-summariser",
+    "client_industry": "Healthcare",
+    "rating": 5,
+    "text": "Would hire again. Our problem was simple to state: discharge summaries took clinicians 15 minutes each. Afterwards: Overall: .",
+    "date": "2024-09-14"
+  },
+  {
+    "review_id": "rev-ai_ml-015",
+    "project_id": "payment-fraud-scoring",
+    "client_industry": "Fintech",
+    "rating": 4,
+    "text": "Would hire again. Delivered transaction risk service ahead of the date we agreed. Overall: caught 34% more fraud at the same false-positive rate;.",
+    "date": "2023-06-26"
+  },
+  {
+    "review_id": "rev-ai_ml-016",
+    "project_id": "payment-fraud-scoring",
+    "client_industry": "Fintech",
+    "rating": 4,
+    "text": "Solid communication throughout. Delivered transaction risk service ahead of the date we agreed. Overall: caught 34% more fraud at the same false-positive rate;.",
+    "date": "2023-05-10"
+  },
+  {
+    "review_id": "rev-ai_ml-017",
+    "project_id": "nightly-training-pipeline",
+    "client_industry": "Online marketplace",
+    "rating": 5,
+    "text": "Exactly the help we needed. Our problem was simple to state: models were retrained by hand every few months and drifted. Afterwards: Overall: weekly automated retrains with a rollback gate; drift incidents fell from monthly to none in a year.",
+    "date": "2023-12-27"
+  },
+  {
+    "review_id": "rev-ai_ml-018",
+    "project_id": "nightly-training-pipeline",
+    "client_industry": "Online marketplace",
+    "rating": 5,
+    "text": "Exactly the help we needed. Delivered scheduled retraining workflow ahead of the date we agreed. Overall: weekly automated retrains with a rollback gate; drift incidents fell from monthly to none in a year.",
+    "date": "2023-12-21"
+  },
+  {
+    "review_id": "rev-ai_ml-019",
+    "project_id": "semantic-job-search",
+    "client_industry": "HR tech",
+    "rating": 5,
+    "text": "Great to work with. We came in wanting resume-to-role finder; the end result changed how the team works. Overall: recruiters shortlisted 2.3x faster and found 18% more qualified matches.",
+    "date": "2022-07-22"
+  },
+  {
+    "review_id": "rev-ai_ml-020",
+    "project_id": "review-sentiment-monitor",
+    "client_industry": "Consumer apps",
+    "rating": 5,
+    "text": "Would hire again. I am not technical, but I could always tell where things stood. Overall: a weekly digest of themes; an issue was caught 9 days earlier than before.",
+    "date": "2022-04-28"
+  },
+  {
+    "review_id": "rev-ai_ml-021",
+    "project_id": "llm-evaluation-harness",
+    "client_industry": "AI start-up",
+    "rating": 5,
+    "text": "Solid communication throughout. I am not technical, but I could always tell where things stood. Overall: 300-case suite in CI; blocked 5 regressions before release.",
+    "date": "2024-10-08"
+  },
+  {
+    "review_id": "rev-ai_ml-022",
+    "project_id": "llm-evaluation-harness",
+    "client_industry": "AI start-up",
+    "rating": 5,
+    "text": "Calm, clear and quick. I am not technical, but I could always tell where things stood. Overall: 300-case suite in CI; blocked 5 regressions before release.",
+    "date": "2024-11-15"
+  },
+  {
+    "review_id": "rev-ai_ml-023",
+    "project_id": "dynamic-pricing-experiments",
+    "client_industry": "Travel",
+    "rating": 3,
+    "text": "Delivered what we hoped for. Delivered discount elasticity study ahead of the date we agreed. Overall: found a 7% price band with +4.1% revenue and no conversion loss.",
+    "date": "2022-11-10"
+  },
+  {
+    "review_id": "rev-ai_ml-024",
+    "project_id": "dynamic-pricing-experiments",
+    "client_industry": "Travel",
+    "rating": 5,
+    "text": "Calm, clear and quick. Delivered discount elasticity study ahead of the date we agreed. Overall: found a 7% price band with +4.1% revenue and no conversion loss.",
+    "date": "2022-11-21"
+  },
+  {
+    "review_id": "rev-ai_ml-025",
+    "project_id": "internal-docs-chatbot",
+    "client_industry": "Consulting",
+    "rating": 4,
+    "text": "Solid communication throughout. We came in wanting knowledge base assistant; the end result changed how the team works. Overall: deflected 58% of internal questions; median answer time under 6 seconds.",
+    "date": "2024-03-14"
+  },
+  {
+    "review_id": "rev-ai_ml-026",
+    "project_id": "internal-docs-chatbot",
+    "client_industry": "Consulting",
+    "rating": 3,
+    "text": "Calm, clear and quick. I am not technical, but I could always tell where things stood. Overall: deflected 58% of internal questions; median answer time under 6 seconds.",
+    "date": "2024-02-26"
+  },
+  {
+    "review_id": "rev-ai_ml-027",
+    "project_id": "low-latency-model-serving",
+    "client_industry": "Ad tech",
+    "rating": 4,
+    "text": "Great to work with. Delivered prediction endpoint hardening ahead of the date we agreed. Overall: .",
+    "date": "2023-09-28"
+  },
+  {
+    "review_id": "rev-ai_ml-028",
+    "project_id": "low-latency-model-serving",
+    "client_industry": "Ad tech",
+    "rating": 4,
+    "text": "Great to work with. I am not technical, but I could always tell where things stood. Overall: .",
+    "date": "2023-08-07"
+  },
+  {
+    "review_id": "rev-ai_ml-029",
+    "project_id": "excel-report-filler",
+    "client_industry": "Accounting",
+    "rating": 5,
+    "text": "Calm, clear and quick. Our problem was simple to state: an accountant copied numbers into a spreadsheet template each month. Afterwards: Overall: a 40-line script replaced two hours of monthly copy-paste.",
+    "date": "2021-12-28"
+  },
+  {
+    "review_id": "rev-ai_ml-030",
+    "project_id": "brochure-site",
+    "client_industry": "Local services",
+    "rating": 4,
+    "text": "Would hire again. We came in wanting plain HTML site; the end result changed how the team works. Overall: five static pages, no back end.",
+    "date": "2021-07-19"
+  }
+]

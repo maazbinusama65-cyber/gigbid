@@ -1,0 +1,17 @@
+{
+  "out": "C:\\Users\\maazb\\Documents\\GitHub\\gigbid\\data\\gigsim_seed\\kaggle_sample.jsonl",
+  "per_category": {
+    "ai_ml": 450,
+    "analytics": 450,
+    "data_eng": 450,
+    "design": 450,
+    "devops": 450,
+    "marketing": 450,
+    "mobile": 450,
+    "web": 450,
+    "writing": 450
+  },
+  "sampled_rows": 4050,
+  "source": "upwork_all_jobs_200k",
+  "usable_rows_scanned": 321528
+}

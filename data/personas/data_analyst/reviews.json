@@ -1,0 +1,226 @@
+[
+  {
+    "review_id": "rev-data_analyst-001",
+    "project_id": "regional-sales-kpi-dashboard",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Exactly the help we needed. Delivered area manager performance view ahead of the date we agreed. Overall: dashboard adopted by 45 managers; reporting prep time cut from 12 hours to 1.",
+    "date": "2023-04-27"
+  },
+  {
+    "review_id": "rev-data_analyst-002",
+    "project_id": "subscriber-cohort-retention",
+    "client_industry": "Digital media",
+    "rating": 5,
+    "text": "Calm, clear and quick. I am not technical, but I could always tell where things stood. Overall: found a 3x gap between acquisition channels, redirecting 15% of ad spend.",
+    "date": "2022-11-23"
+  },
+  {
+    "review_id": "rev-data_analyst-003",
+    "project_id": "marketing-attribution-model",
+    "client_industry": "E-commerce",
+    "rating": 5,
+    "text": "Would hire again. Our problem was simple to state: last-click reporting overcredited branded search. Afterwards: Overall: reallocated 20% of budget; blended CAC down 14%.",
+    "date": "2023-09-23"
+  },
+  {
+    "review_id": "rev-data_analyst-004",
+    "project_id": "analytics-warehouse-dbt",
+    "client_industry": "SaaS",
+    "rating": 5,
+    "text": "Calm, clear and quick. Our problem was simple to state: every team had its own definition of active customer. Afterwards: Overall: 42 tested models; metric disputes in leadership meetings went away.",
+    "date": "2024-03-04"
+  },
+  {
+    "review_id": "rev-data_analyst-005",
+    "project_id": "checkout-ab-test-readouts",
+    "client_industry": "E-commerce",
+    "rating": 3,
+    "text": "Solid communication throughout. Delivered conversion lift verdicts ahead of the date we agreed. Overall: a pre-registration template and sequential checks; 3 false wins avoided in a quarter.",
+    "date": "2023-06-12"
+  },
+  {
+    "review_id": "rev-data_analyst-006",
+    "project_id": "checkout-ab-test-readouts",
+    "client_industry": "E-commerce",
+    "rating": 5,
+    "text": "Delivered what we hoped for. I am not technical, but I could always tell where things stood. Overall: a pre-registration template and sequential checks; 3 false wins avoided in a quarter.",
+    "date": "2023-06-22"
+  },
+  {
+    "review_id": "rev-data_analyst-007",
+    "project_id": "customer-segmentation-crm",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Would hire again. I am not technical, but I could always tell where things stood. Overall: 5 segments; targeted emails got 31% higher click rate.",
+    "date": "2022-08-12"
+  },
+  {
+    "review_id": "rev-data_analyst-008",
+    "project_id": "customer-segmentation-crm",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Calm, clear and quick. We came in wanting spender groups for CRM; the end result changed how the team works. Overall: 5 segments; targeted emails got 31% higher click rate.",
+    "date": "2022-07-14"
+  },
+  {
+    "review_id": "rev-data_analyst-009",
+    "project_id": "finance-monthly-pack-powerbi",
+    "client_industry": "Manufacturing",
+    "rating": 5,
+    "text": "Exactly the help we needed. Delivered budget versus actual views ahead of the date we agreed. Overall: close-to-pack time from 5 days to 1.",
+    "date": "2023-11-15"
+  },
+  {
+    "review_id": "rev-data_analyst-010",
+    "project_id": "sheets-reporting-automation",
+    "client_industry": "Agency",
+    "rating": 5,
+    "text": "Would hire again. Our problem was simple to state: account managers pasted numbers into client reports every Friday. Afterwards: Overall: saved 6 hours a week per manager; zero copy-paste errors afterwards.",
+    "date": "2022-05-01"
+  },
+  {
+    "review_id": "rev-data_analyst-011",
+    "project_id": "sheets-reporting-automation",
+    "client_industry": "Agency",
+    "rating": 4,
+    "text": "Exactly the help we needed. Delivered self-updating team spreadsheet ahead of the date we agreed. Overall: saved 6 hours a week per manager; zero copy-paste errors afterwards.",
+    "date": "2022-05-11"
+  },
+  {
+    "review_id": "rev-data_analyst-012",
+    "project_id": "competitor-price-scraper",
+    "client_industry": "E-commerce",
+    "rating": 5,
+    "text": "Exactly the help we needed. Our problem was simple to state: pricing staff checked competitor sites by hand. Afterwards: Overall: 12k prices tracked daily; price-match response time down from days to hours.",
+    "date": "2023-07-15"
+  },
+  {
+    "review_id": "rev-data_analyst-013",
+    "project_id": "competitor-price-scraper",
+    "client_industry": "E-commerce",
+    "rating": 4,
+    "text": "Great to work with. I am not technical, but I could always tell where things stood. Overall: 12k prices tracked daily; price-match response time down from days to hours.",
+    "date": "2023-06-25"
+  },
+  {
+    "review_id": "rev-data_analyst-014",
+    "project_id": "customer-survey-nps",
+    "client_industry": "Hospitality",
+    "rating": 5,
+    "text": "Delivered what we hoped for. We came in wanting satisfaction study; the end result changed how the team works. Overall: five complaint themes quantified; one fix lifted NPS 8 points.",
+    "date": "2022-12-05"
+  },
+  {
+    "review_id": "rev-data_analyst-015",
+    "project_id": "customer-survey-nps",
+    "client_industry": "Hospitality",
+    "rating": 3,
+    "text": "Great to work with. I am not technical, but I could always tell where things stood. Overall: five complaint themes quantified; one fix lifted NPS 8 points.",
+    "date": "2022-12-25"
+  },
+  {
+    "review_id": "rev-data_analyst-016",
+    "project_id": "revenue-forecasting",
+    "client_industry": "SaaS",
+    "rating": 5,
+    "text": "Solid communication throughout. Delivered next-quarter projections ahead of the date we agreed. Overall: .",
+    "date": "2023-12-25"
+  },
+  {
+    "review_id": "rev-data_analyst-017",
+    "project_id": "operations-etl-pipeline",
+    "client_industry": "Logistics",
+    "rating": 5,
+    "text": "Delivered what we hoped for. We came in wanting spreadsheets-to-database sync; the end result changed how the team works. Overall: ten feeds loaded nightly with validation; manual re-keying eliminated.",
+    "date": "2022-10-04"
+  },
+  {
+    "review_id": "rev-data_analyst-018",
+    "project_id": "operations-etl-pipeline",
+    "client_industry": "Logistics",
+    "rating": 5,
+    "text": "Delivered what we hoped for. Our problem was simple to state: depot managers emailed spreadsheets that were pasted into a database. Afterwards: Overall: ten feeds loaded nightly with validation; manual re-keying eliminated.",
+    "date": "2022-09-05"
+  },
+  {
+    "review_id": "rev-data_analyst-019",
+    "project_id": "employee-attrition-study",
+    "client_industry": "Human resources",
+    "rating": 5,
+    "text": "Delivered what we hoped for. Our problem was simple to state: turnover was 24% and exit interviews offered no pattern. Afterwards: Overall: manager change and pay-band position explained most leavers; retention plan cut turnover to 19%.",
+    "date": "2023-04-02"
+  },
+  {
+    "review_id": "rev-data_analyst-020",
+    "project_id": "product-usage-bigquery",
+    "client_industry": "SaaS",
+    "rating": 3,
+    "text": "Delivered what we hoped for. Delivered feature adoption tracking ahead of the date we agreed. Overall: 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.",
+    "date": "2024-05-19"
+  },
+  {
+    "review_id": "rev-data_analyst-021",
+    "project_id": "crm-data-cleanup",
+    "client_industry": "B2B services",
+    "rating": 5,
+    "text": "Delivered what we hoped for. Our problem was simple to state: the sales team's CRM had 30% duplicate accounts. Afterwards: Overall: merged 41k duplicates; bounce rate on campaigns halved.",
+    "date": "2022-06-26"
+  },
+  {
+    "review_id": "rev-data_analyst-022",
+    "project_id": "ops-self-serve-metabase",
+    "client_industry": "Logistics",
+    "rating": 5,
+    "text": "Calm, clear and quick. We came in wanting question builder for non-technical staff; the end result changed how the team works. Overall: analyst request backlog down 60%.",
+    "date": "2023-08-19"
+  },
+  {
+    "review_id": "rev-data_analyst-023",
+    "project_id": "ops-self-serve-metabase",
+    "client_industry": "Logistics",
+    "rating": 4,
+    "text": "Great to work with. Our problem was simple to state: ops staff queued analyst requests for simple counts. Afterwards: Overall: analyst request backlog down 60%.",
+    "date": "2023-08-07"
+  },
+  {
+    "review_id": "rev-data_analyst-024",
+    "project_id": "pricing-explorer-streamlit",
+    "client_industry": "Retail",
+    "rating": 4,
+    "text": "Solid communication throughout. I am not technical, but I could always tell where things stood. Overall: category managers run their own scenarios; adopted by 8 teams.",
+    "date": "2024-08-06"
+  },
+  {
+    "review_id": "rev-data_analyst-025",
+    "project_id": "pricing-explorer-streamlit",
+    "client_industry": "Retail",
+    "rating": 5,
+    "text": "Would hire again. We came in wanting interactive what-if pricing page; the end result changed how the team works. Overall: category managers run their own scenarios; adopted by 8 teams.",
+    "date": "2024-07-28"
+  },
+  {
+    "review_id": "rev-data_analyst-026",
+    "project_id": "clinic-waiting-time-report",
+    "client_industry": "Healthcare",
+    "rating": 5,
+    "text": "Great to work with. Delivered patient flow reporting ahead of the date we agreed. Overall: identified two peak-hour bottlenecks; average wait fell 22%.",
+    "date": "2024-10-16"
+  },
+  {
+    "review_id": "rev-data_analyst-027",
+    "project_id": "hand-drawn-infographic",
+    "client_industry": "Non-profit",
+    "rating": 4,
+    "text": "Exactly the help we needed. Delivered statistics poster ahead of the date we agreed. Overall: a one-page printed illustration.",
+    "date": "2021-12-11"
+  },
+  {
+    "review_id": "rev-data_analyst-028",
+    "project_id": "survey-word-cloud",
+    "client_industry": "Events",
+    "rating": 5,
+    "text": "Exactly the help we needed. I am not technical, but I could always tell where things stood. Overall: a single PNG for a slide.",
+    "date": "2022-03-06"
+  }
+]

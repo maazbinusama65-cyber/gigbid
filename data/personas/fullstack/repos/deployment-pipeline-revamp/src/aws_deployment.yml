@@ -1,0 +1,6 @@
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: deployment_pipeline_revamp-uploads
+      PublicAccessBlockConfiguration: { BlockPublicAcls: true, RestrictPublicBuckets: true }

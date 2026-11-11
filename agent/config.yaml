@@ -1,0 +1,100 @@
+# All models, budgets, thresholds, rules and prompt versions live here, never in code (R-config).
+marketplace:
+  mode: gigsim            # gigsim | upwork_live
+  max_requests_per_minute: 20
+  live_poll_interval_minutes: 240   # conservative: see docs/RUNBOOK.md
+
+tool_servers:
+  # transport "memory" = in-process FastMCP (tests, evals); "http" = compose/prod
+  transport: memory
+  marketplace: {url: "http://localhost:9102/mcp"}
+  portfolio: {url: "http://localhost:9101/mcp"}
+  workspace: {url: "http://localhost:9103/mcp"}
+  timeout_seconds: 20
+  retries: 3
+  backoff_seconds: 0.5
+
+models:
+  profile: open           # open | paid  (MODEL_PROFILE env overrides)
+  profiles:
+    open:
+      provider: groq      # groq | ollama | stub   (openai-compatible, open-weight models only)
+      base_url: https://api.groq.com/openai/v1
+      api_key_env: GROQ_API_KEY
+      nodes:
+        scout: {model: qwen/qwen3-32b, fallback: llama-3.1-8b-instant}
+        analyst: {model: llama-3.1-8b-instant, fallback: qwen/qwen3-32b}
+        risk_assessor: {model: llama-3.1-8b-instant, fallback: qwen/qwen3-32b}
+        fit_matcher: {model: llama-3.1-8b-instant, fallback: qwen/qwen3-32b}
+        pricing: {model: llama-3.1-8b-instant, fallback: qwen/qwen3-32b}
+        writer: {model: openai/gpt-oss-120b, fallback: qwen/qwen3-32b}
+        verifier: {model: llama-3.1-8b-instant, fallback: qwen/qwen3-32b}
+        critic: {model: openai/gpt-oss-120b, fallback: qwen/qwen3-32b}
+        compliance: {model: llama-3.1-8b-instant, fallback: qwen/qwen3-32b}
+        client_liaison: {model: openai/gpt-oss-120b, fallback: qwen/qwen3-32b}
+        judge: {model: openai/gpt-oss-120b, fallback: qwen/qwen3-32b}
+      # USD per 1M tokens (in, out); used for cost reporting. Fill from provider pricing page.
+      pricing_usd_per_mtok:
+        llama-3.1-8b-instant: [0.05, 0.08]
+        qwen/qwen3-32b: [0.29, 0.59]
+        openai/gpt-oss-120b: [0.15, 0.60]
+    stub:
+      provider: stub      # deterministic offline model: tests, CI, smoke eval
+      nodes: {}
+    paid:
+      provider: openai
+      base_url: https://api.openai.com/v1
+      api_key_env: OPENAI_API_KEY
+      nodes:
+        writer: {model: gpt-4.1, fallback: gpt-4.1-mini}
+        critic: {model: gpt-4.1, fallback: gpt-4.1-mini}
+        default: {model: gpt-4.1-mini, fallback: gpt-4.1-mini}
+      pricing_usd_per_mtok:
+        gpt-4.1: [2.0, 8.0]
+        gpt-4.1-mini: [0.4, 1.6]
+  embeddings: BAAI/bge-small-en-v1.5      # open model, CPU
+  reranker: cross-encoder/ms-marco-MiniLM-L-6-v2   # open model, CPU
+
+rag:
+  variant: v3_rerank     # chosen by measurement, see docs/ADR and evals/results/rag_variants.json
+  k: 5
+
+budgets:
+  max_graph_steps: 30
+  max_revisions: 2        # Critic can send back at most twice
+  max_tokens_per_job: 12000
+  declared_p95_latency_s_per_job: 30
+  declared_cost_usd_per_job: 0.01
+  declared_cost_usd_per_proposal: 0.03
+
+thresholds:
+  minimum_fit_score: 0.60
+  maximum_risk_score: 0.70
+  watch_fit_score: 0.45
+  auto_skip_fit_score: 0.25      # only used when autonomy.auto_skip is on; never auto-send
+  max_proposal_words: 220
+  min_proposal_words: 60
+
+llm_nodes: [analyst, risk_assessor, pricing, writer, critic, client_liaison]   # others are deterministic
+
+nodes:
+  retries: 1
+  timeout_seconds: 90
+
+autonomy:
+  auto_skip_low_fit: false
+  auto_send: false        # hard-coded False in graph as well: never auto-send
+
+# Platform rules are data, so a policy change is a config edit (change request).
+policy:
+  pack_path: data/policy_pack/marketplace_policy.md
+  rules_path: agent/policy_rules.yaml
+  connects_per_proposal_default: 8
+
+memory:
+  style_promotion: {min_edits: 3, min_distinct_jobs: 2}
+  outcome_promotion: {min_samples: 3, min_reply_rate_delta: 0.10}
+
+guardrails:
+  mask_pii_in_logs: true
+  untrusted_delimiters: ["<<<UNTRUSTED_JOB_POST", "UNTRUSTED_JOB_POST>>>"]

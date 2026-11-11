@@ -1,0 +1,76 @@
+# Platform rules as DATA (change request = edit this file or the marketplace /v1/policy rules).
+# Rule types: forbid_regex (outgoing text), max_words, min_words, connects_cost, require_phrase.
+# action: redact (remove matching span) | rewrite (replace with `replacement`) | block (stop the draft)
+version: "1"
+outgoing_rules:
+  - id: no_email
+    type: forbid_regex
+    pattern: '\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b'
+    action: redact
+    description: "No off-platform contact: e-mail addresses"
+  - id: no_phone
+    type: forbid_regex
+    pattern: '(?<!\w)\+?\d[\d\s().-]{8,}\d(?!\w)'
+    action: redact
+    description: "No off-platform contact: phone numbers"
+  - id: no_chat_apps
+    type: forbid_regex
+    pattern: '\b(whats\s?app|telegram|skype|discord|signal|wechat|viber|snapchat)\b[^.!?]*'
+    action: redact
+    description: "No off-platform contact: chat apps"
+  - id: no_external_links_contact
+    type: forbid_regex
+    pattern: '\b(contact|reach|message|email) me (at|on|via|outside)\b[^.!?]*'
+    action: redact
+    description: "No off-platform contact requests"
+  - id: no_offplatform_payment
+    type: forbid_regex
+    pattern: '\b(pay(ment)? (outside|directly|off[- ]platform)|bank transfer|paypal|wire transfer|crypto(currency)? payment|western union)\b[^.!?]*'
+    action: redact
+    description: "No off-platform payment"
+  - id: no_guarantees
+    type: forbid_regex
+    pattern: '\b(100% (guarantee|success|satisfaction)|guarantee[sd]?( (you|that|results|success|delivery))?|risk[- ]free|promise (you )?(results|success))\b'
+    action: rewrite
+    replacement: "aim for"
+    description: "No guarantees of results"
+  - id: no_unpaid_work
+    type: forbid_regex
+    pattern: '\b(free (sample|trial|work|test)|unpaid (trial|test|work)|work for free)\b[^.!?]*'
+    action: redact
+    description: "Do not offer or accept unpaid production work"
+  - id: max_words
+    type: max_words
+    value: 260
+    action: block
+    description: "Proposal too long to be read"
+  - id: min_words
+    type: min_words
+    value: 40
+    action: warn
+    description: "Proposal too short to be specific"
+  - id: connects_cost
+    type: connects_cost
+    value: 8
+    description: "Default Connects cost when the platform does not state one"
+
+scam_signals:   # applied by the Risk Assessor to JOB POSTS and client messages (untrusted data)
+  unpaid_trial:
+    - '\b(free (sample|trial|test|work|project)|unpaid (trial|test|work|sample)|work for free|without pay(ment)?)\b'
+    - '\btest (project|task) (is )?(unpaid|free)\b'
+  off_platform_contact:
+    - '\b(whats\s?app|telegram|skype|discord|signal|wechat)\b'
+    - '\b(contact|reach|message|email|text) (me|us) (at|on|via|outside)\b'
+    - '\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b'
+    - '\b(off[- ]platform|outside (of )?(the )?(platform|upwork|marketplace))\b'
+  payment_upfront:
+    - '\b(send|pay|deposit|transfer) (me |us )?(a |the )?(registration|security|starter|refundable|equipment|software|training)? ?(fee|deposit|money|funds)\b'
+    - '\b(gift ?cards?|western union|money ?gram|crypto(currency)? (wallet|payment)|bitcoin)\b'
+    - '\b(buy|purchase) (your own )?(equipment|laptop|software|license)s? (first|and (we|i) will (reimburse|refund))\b'
+    - '\bcheque|check (overpayment|deposit)\b'
+  guarantee_demand:
+    - '\b(guarantee[sd]?|100% (success|guaranteed|results)|must (guarantee|promise))\b'
+    - '\bonly (apply|bid) if you can guarantee\b'
+  credential_phishing:
+    - '\b(send|share|give) (me |us )?(your )?(password|login|credentials|otp|one[- ]time code|2fa|ssn|passport|bank (details|account))\b'
+    - '\b(verify|confirm) your (identity|account) (by|with) (sending|sharing)\b'

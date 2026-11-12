@@ -56,7 +56,7 @@ models:
   reranker: cross-encoder/ms-marco-MiniLM-L-6-v2   # open model, CPU
 
 rag:
-  variant: v3_rerank     # chosen by measurement, see docs/ADR and evals/results/rag_variants.json
+  variant: v9_skill_graph   # chosen by measurement (R@5 72.6, MRR 0.986, p95 186 ms), see evals/results/rag_variants.md
   k: 5
 
 budgets:

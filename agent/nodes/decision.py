@@ -14,6 +14,7 @@ async def decide(state: dict, ctx: Ctx) -> dict:
     autonomy = {**ctx.cfg.get("autonomy", {}), **(state.get("autonomy") or {})}
     reasons: list[str] = []
     fit_score, risk_score = float(fit.get("score", 0)), float(risk.get("score", 1))
+    min_fit = float(st.get("min_fit_score", th["minimum_fit_score"]))     # user setting overrides the default
     decision = "bid"
     if risk.get("is_scam"):
         decision = "skip"
@@ -24,7 +25,7 @@ async def decide(state: dict, ctx: Ctx) -> dict:
     elif fit_score < th["watch_fit_score"]:
         decision = "skip"
         reasons.append(f"fit {fit_score:.2f} below watch threshold {th['watch_fit_score']}")
-    elif fit_score < th["minimum_fit_score"]:
+    elif fit_score < min_fit:
         decision = "watch"
         reasons.append(f"fit {fit_score:.2f} between {th['watch_fit_score']} and {th['minimum_fit_score']}")
     budget_max = (job.get("budget") or {}).get("max")

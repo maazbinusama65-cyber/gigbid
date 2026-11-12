@@ -51,11 +51,21 @@ async def fit_matcher(state: dict, ctx: Ctx) -> dict:
     job = state["job"]
     reqs = extract_requirements(job) or [job.get("title", "")]
     k = int(ctx.cfg["rag"].get("k", 5))
-    results = await asyncio.gather(*[
-        ctx.call("fit_matcher", "search_evidence",
-                 {"requirement": r, "k": k, **({"portfolio_id": state["persona_id"]} if state.get("persona_id") else {})})
-        for r in reqs
-    ])
+    pids = (state.get("settings") or {}).get("portfolio_ids") or [state.get("persona_id")]
+
+    async def search(r: str) -> dict:
+        """One search per requirement and portfolio (the persona's corpus plus the user's own uploads)."""
+        outs = await asyncio.gather(*[
+            ctx.call("fit_matcher", "search_evidence", {"requirement": r, "k": k, **({"portfolio_id": p} if p else {})})
+            for p in pids])
+        merged: dict[str, dict] = {}
+        for res in outs:
+            for it in (res.get("items", res) if isinstance(res, dict) else res):
+                if it["id"] not in merged or it.get("score", 0) > merged[it["id"]].get("score", 0):
+                    merged[it["id"]] = it
+        return {"items": sorted(merged.values(), key=lambda x: -x.get("score", 0))[:k]}
+
+    results = await asyncio.gather(*[search(r) for r in reqs])
     matrix: list[RequirementMatch] = []
     evidence: dict[str, dict] = {}
     for r, res in zip(reqs, results, strict=True):

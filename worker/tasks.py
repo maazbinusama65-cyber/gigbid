@@ -66,5 +66,6 @@ async def run_bid_job(runtime: GraphRuntime, repo: UserRepo, user: dict, job_id:
     state = last.get("state", {})
     status = "awaiting_approval" if last.get("interrupted") else state.get("status", "unknown")
     repo.record_run(user["user_id"], job_id, runtime.bid_thread_id(user["user_id"], job_id), status,
-                    {"usage": last.get("usage"), "decision": state.get("decision")})
+                    {"usage": last.get("usage"), "decision": state.get("decision"),
+                     "last": {k: v for k, v in last.items() if k != "ctx"}})
     return {"job_id": job_id, "status": status}

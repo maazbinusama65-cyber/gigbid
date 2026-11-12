@@ -137,8 +137,12 @@ class GraphRuntime:
             yield {"type": "error", "data": {"error": str(e)[:300]}}
             return
         snap = await graph.aget_state(config)
+        usage = ctx.tracker.snapshot()
+        ctx._trace("done", None, status=snap.values.get("status"), interrupted=bool(snap.next),
+                   tokens=usage["total_tokens"], cost_usd=usage["total_cost_usd"],
+                   reason=snap.values.get("status_reason"))
         yield {"type": "done", "state": snap.values, "interrupted": bool(snap.next), "pending": interrupted,
-               "usage": ctx.tracker.snapshot(), "ctx": ctx}
+               "usage": usage, "ctx": ctx}
 
     async def state(self, thread_id: str, kind: str = "bid") -> dict | None:
         ctx = self.ctx_for(thread_id)

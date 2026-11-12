@@ -1,0 +1,85 @@
+[
+ {
+  "project_id": "p01",
+  "title": "Demand forecasting API",
+  "skills": [
+   "Python",
+   "FastAPI",
+   "Prophet",
+   "scikit-learn",
+   "Docker"
+  ],
+  "industry": "retail",
+  "date": "2023-04-10",
+  "outcome_summary": "Cut stock-outs by 18% for a grocery chain.",
+  "aliases": [
+   "sales prediction service"
+  ]
+ },
+ {
+  "project_id": "p02",
+  "title": "Support-docs RAG chatbot",
+  "skills": [
+   "Python",
+   "LangChain",
+   "Pinecone",
+   "FastAPI",
+   "OpenAI"
+  ],
+  "industry": "saas",
+  "date": "2024-02-01",
+  "outcome_summary": "Deflected 35% of tier-1 support tickets.",
+  "aliases": [
+   "help-centre assistant"
+  ]
+ },
+ {
+  "project_id": "p03",
+  "title": "Telecom churn prediction pipeline",
+  "skills": [
+   "Python",
+   "XGBoost",
+   "dbt",
+   "Airflow",
+   "Snowflake"
+  ],
+  "industry": "telecom",
+  "date": "2022-09-15",
+  "outcome_summary": "Lifted retention campaign precision by 22%.",
+  "aliases": [
+   "customer attrition model"
+  ]
+ },
+ {
+  "project_id": "p04",
+  "title": "Visual defect detection",
+  "skills": [
+   "Python",
+   "PyTorch",
+   "OpenCV",
+   "ONNX"
+  ],
+  "industry": "manufacturing",
+  "date": "2023-11-20",
+  "outcome_summary": "Reached 96% recall on surface defects.",
+  "aliases": [
+   "quality inspection vision"
+  ]
+ },
+ {
+  "project_id": "p05",
+  "title": "Celery ingestion workers",
+  "skills": [
+   "Python",
+   "Celery",
+   "Redis",
+   "PostgreSQL"
+  ],
+  "industry": "fintech",
+  "date": "2024-06-05",
+  "outcome_summary": "Processed 2M transactions per day reliably.",
+  "aliases": [
+   "async ETL workers"
+  ]
+ }
+]

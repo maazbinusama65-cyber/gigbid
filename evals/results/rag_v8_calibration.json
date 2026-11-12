@@ -1,0 +1,53 @@
+{
+ "n_jobs": 120,
+ "n_gold_empty": 44,
+ "chosen": {
+  "weak": 0.72,
+  "min_coverage": 0.2,
+  "refusal_recall": 0.5,
+  "false_refusal": 0.09210526315789473,
+  "balanced_accuracy": 0.7039473684210527,
+  "strong": 0.8
+ },
+ "top5": [
+  {
+   "weak": 0.72,
+   "min_coverage": 0.2,
+   "refusal_recall": 0.5,
+   "false_refusal": 0.09210526315789473,
+   "balanced_accuracy": 0.7039473684210527
+  },
+  {
+   "weak": 0.72,
+   "min_coverage": 0.34,
+   "refusal_recall": 0.5,
+   "false_refusal": 0.09210526315789473,
+   "balanced_accuracy": 0.7039473684210527
+  },
+  {
+   "weak": 0.72,
+   "min_coverage": 0.5,
+   "refusal_recall": 0.5,
+   "false_refusal": 0.09210526315789473,
+   "balanced_accuracy": 0.7039473684210527
+  },
+  {
+   "weak": 0.72,
+   "min_coverage": 0.67,
+   "refusal_recall": 0.5,
+   "false_refusal": 0.09210526315789473,
+   "balanced_accuracy": 0.7039473684210527
+  },
+  {
+   "weak": 0.72,
+   "min_coverage": 0.8,
+   "refusal_recall": 0.5,
+   "false_refusal": 0.09210526315789473,
+   "balanced_accuracy": 0.7039473684210527
+  }
+ ],
+ "mean_best_support": {
+  "gold_empty": 0.735276692292907,
+  "gold": 0.7734109524049257
+ }
+}

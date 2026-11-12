@@ -1,0 +1,30 @@
+{
+ "persona_id": "ai_ml",
+ "display_name": "Test ML Freelancer",
+ "headline": "Machine learning engineer",
+ "skills": [
+  "Airflow",
+  "Celery",
+  "Docker",
+  "FastAPI",
+  "LangChain",
+  "ONNX",
+  "OpenAI",
+  "OpenCV",
+  "Pinecone",
+  "PostgreSQL",
+  "Prophet",
+  "PyTorch",
+  "Python",
+  "Redis",
+  "Snowflake",
+  "XGBoost",
+  "dbt",
+  "scikit-learn"
+ ],
+ "hourly_rate_usd": 60,
+ "min_project_budget_usd": 300,
+ "availability_hours_per_week": 25,
+ "weekly_connects_budget": 60,
+ "saved_searches": []
+}

@@ -1,0 +1,42 @@
+{
+ "protocol": {
+  "embedder": "BAAI/bge-small-en-v1.5",
+  "retrieval_variant": "v2_hybrid",
+  "seed": 0,
+  "drafts": 63
+ },
+ "fabrication_detection": {
+  "client": {
+   "n": 63,
+   "detected": 63,
+   "recall": 1.0
+  },
+  "years": {
+   "n": 63,
+   "detected": 63,
+   "recall": 1.0
+  },
+  "metric": {
+   "n": 63,
+   "detected": 63,
+   "recall": 1.0
+  },
+  "tool": {
+   "n": 63,
+   "detected": 63,
+   "recall": 1.0
+  }
+ },
+ "true_claims": {
+  "n": 126,
+  "altered_or_removed": 8,
+  "false_flag_rate": 0.06349206349206349
+ },
+ "claim_level": {
+  "n_claims_before": 407,
+  "unsupported_before": 99,
+  "unsupported_after": 0,
+  "ungrounded_before": 263,
+  "ungrounded_after": 0
+ }
+}

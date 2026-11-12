@@ -1,0 +1,26 @@
+[
+ {
+  "review_id": "r1",
+  "project_id": "p01",
+  "client_industry": "retail",
+  "rating": 5,
+  "text": "Great forecasting work, stock-outs dropped and the API was easy to run.",
+  "date": "2023-07-01"
+ },
+ {
+  "review_id": "r2",
+  "project_id": "p02",
+  "client_industry": "saas",
+  "rating": 5,
+  "text": "The chatbot answers from our docs with citations. Very pleased with the retrieval quality.",
+  "date": "2024-04-20"
+ },
+ {
+  "review_id": "r3",
+  "project_id": "p05",
+  "client_industry": "fintech",
+  "rating": 4,
+  "text": "Reliable Celery pipeline, handled our volume.",
+  "date": "2024-08-10"
+ }
+]

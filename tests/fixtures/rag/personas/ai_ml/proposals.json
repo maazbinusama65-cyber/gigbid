@@ -1,0 +1,72 @@
+[
+ {
+  "proposal_id": "pr1",
+  "job_title": "Forecast weekly sales for a bakery chain",
+  "text": "I built a Prophet based forecasting API for a grocery chain that cut stock-outs by 18 percent. I can do the same for your bakery.",
+  "outcome": "won",
+  "date": "2024-01-01",
+  "project_ids": [
+   "p01"
+  ],
+  "client_industry": "retail",
+  "category": "data"
+ },
+ {
+  "proposal_id": "pr2",
+  "job_title": "Chatbot for our help centre",
+  "text": "I shipped a LangChain and Pinecone RAG chatbot that deflected 35 percent of support tickets. Happy to share the architecture.",
+  "outcome": "won",
+  "date": "2024-02-01",
+  "project_ids": [
+   "p02"
+  ],
+  "client_industry": "saas",
+  "category": "nlp"
+ },
+ {
+  "proposal_id": "pr3",
+  "job_title": "Reduce subscriber churn",
+  "text": "I modelled churn with XGBoost on dbt features in Snowflake and improved campaign precision by 22 percent.",
+  "outcome": "replied",
+  "date": "2024-03-01",
+  "project_ids": [
+   "p03"
+  ],
+  "client_industry": "telecom",
+  "category": "data"
+ },
+ {
+  "proposal_id": "pr4",
+  "job_title": "Camera inspection model",
+  "text": "Experienced with PyTorch and OpenCV defect detection exported to ONNX, 96 percent recall.",
+  "outcome": "replied",
+  "date": "2024-04-01",
+  "project_ids": [
+   "p04"
+  ],
+  "client_industry": "manufacturing",
+  "category": "cv"
+ },
+ {
+  "proposal_id": "pr5",
+  "job_title": "Background job system",
+  "text": "I know Celery and Redis well and built an ingestion system for two million transactions a day.",
+  "outcome": "ignored",
+  "date": "2024-05-01",
+  "project_ids": [
+   "p05"
+  ],
+  "client_industry": "fintech",
+  "category": "backend"
+ },
+ {
+  "proposal_id": "pr6",
+  "job_title": "Generic ML help needed",
+  "text": "Hello, I am a hard working expert with many years of experience and I can do anything you need quickly.",
+  "outcome": "ignored",
+  "date": "2024-06-01",
+  "project_ids": [],
+  "client_industry": "general",
+  "category": "other"
+ }
+]

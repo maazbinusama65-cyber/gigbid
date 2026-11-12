@@ -62,6 +62,11 @@ def strip_injection(text: str) -> str:
     return " ".join(kept)
 
 
+def safe_questions(questions: list[str] | None) -> list[str]:
+    """Screening questions are client-controlled text too: drop any that carry injected instructions."""
+    return [q for q in (questions or []) if q and not _INJECTION_RE.search(q)]
+
+
 def mask_pii(text: str) -> str:
     if not isinstance(text, str):
         return text

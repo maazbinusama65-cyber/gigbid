@@ -17,9 +17,11 @@ deterministic composer), so adding a third strategy is a config edit.
 ## Design
 * Fixed job set per persona (the local stand-in test set, seeded), each job is bid on **once under each strategy**
   in separate simulator resets with the same seed, so client decisions differ only because of the proposal.
-* Outcome: GigSim reply (reply, interview or hire). Test: two-proportion z-test (`evals/metrics.two_proportion_z`)
-  with Wilson intervals; effect sizes are reported even when p >= 0.05.
-* Assignment is randomised per job (paired design) to avoid ordering effects; the seed is recorded in the results.
+* Outcome: GigSim reply (reply, interview or hire). Tests: two-proportion z-test (`evals/metrics.two_proportion_z`)
+  and, because the design is paired, the exact McNemar test on discordant jobs; Wilson intervals; effect sizes are
+  reported even when p >= 0.05.
+* Every job gets both strategies, each in its own simulator reset with the same seed, so there is no order effect
+  to randomise away; the simulator seed is recorded in the results.
 
 ## Run
 `python -m evals.runners.x2_experiment` writes `evals/results/x2_experiment.json`. The Analytics screen shows

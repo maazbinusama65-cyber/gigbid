@@ -201,3 +201,19 @@ async def test_style_memory_promotes_only_after_repeated_consistent_edits():
     assert any("passionate" in r for r in mem.style_rules("u1"))
     mid = next(i["id"] for i in mem.list_all("u1") if "passionate" in i["text"])
     assert mem.delete("u1", mid) and not any("passionate" in r for r in mem.style_rules("u1"))
+
+
+def test_near_duplicate_detection_survives_a_restart(tmp_path):
+    """The word sets are persisted: a fresh DedupStore on the same file still maps a near-duplicate to its original,
+    even when the original is seen again first (exact-fingerprint hit) after the restart."""
+    from agent.nodes.scout import DedupStore
+
+    base = {"title": "Build a churn model", "description": "We need a data scientist to build a churn prediction model "
+                                                           "with python, scikit-learn and a short report for our team."}
+    near = {"job_id": "j2", "title": "Build a churn model", "description": base["description"] + " Thanks a lot."}
+    db = tmp_path / "seen.sqlite"
+    first = DedupStore(db)
+    assert first.claim_job("u", {**base, "job_id": "j1"}) == "j1"
+    restarted = DedupStore(db)
+    assert restarted.claim_job("u", {**base, "job_id": "j1"}) == "j1"        # original re-seen: exact hit
+    assert restarted.claim_job("u", near) == "j1"                            # near duplicate still found

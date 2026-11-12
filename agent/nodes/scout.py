@@ -25,7 +25,10 @@ def fingerprint(job: dict) -> str:
 
 
 class DedupStore:
-    """Per-user seen-job fingerprints (sqlite). Idempotent: a re-run never double-queues a job."""
+    """Per-user seen-job fingerprints and token sets (sqlite). Idempotent: a re-run never double-queues a job.
+
+    Both the exact fingerprint and the word set are persisted, so near-duplicate detection survives a restart
+    (the in-memory cache is rebuilt from the table the first time a user is seen)."""
 
     def __init__(self, path: Path | str | None = None):
         mem = str(path) == ":memory:"
@@ -33,19 +36,29 @@ class DedupStore:
         if not mem:
             p.parent.mkdir(parents=True, exist_ok=True)
         self._db = sqlite3.connect(":memory:" if mem else str(p), check_same_thread=False)
-        self._db.execute("create table if not exists seen (user text, fp text, job_id text, primary key(user, fp))")
+        self._db.execute("create table if not exists seen_v2 "
+                         "(user text, fp text, job_id text, toks text default '', primary key(user, fp))")
         self._lock = threading.Lock()
         self._sets: dict[str, dict[str, frozenset]] = {}
 
     def claim(self, user: str, fp: str, job_id: str) -> str:
         """Return the job_id that owns this fingerprint (== job_id if first time)."""
         with self._lock:
-            row = self._db.execute("select job_id from seen where user=? and fp=?", (user, fp)).fetchone()
+            row = self._db.execute("select job_id from seen_v2 where user=? and fp=?", (user, fp)).fetchone()
             if row:
                 return row[0]
-            self._db.execute("insert into seen values (?,?,?)", (user, fp, job_id))
+            self._db.execute("insert into seen_v2 (user, fp, job_id) values (?,?,?)", (user, fp, job_id))
             self._db.commit()
             return job_id
+
+    def _user_sets(self, user: str) -> dict[str, frozenset]:
+        cache = self._sets.get(user)
+        if cache is None:
+            rows = self._db.execute("select job_id, toks from seen_v2 where user=? and toks != '' order by rowid",
+                                    (user,)).fetchall()
+            cache = {jid: frozenset(t.split(" ")) for jid, t in rows}
+            self._sets[user] = cache
+        return cache
 
     def claim_job(self, user: str, job: dict, threshold: float = 0.66) -> str:
         """Near-duplicate aware claim: exact fingerprint first, then word-set Jaccard against this
@@ -54,17 +67,18 @@ class DedupStore:
         fp = fingerprint(job)
         toks = frozenset(_tokens(job))
         with self._lock:
-            row = self._db.execute("select job_id from seen where user=? and fp=?", (user, fp)).fetchone()
+            row = self._db.execute("select job_id from seen_v2 where user=? and fp=?", (user, fp)).fetchone()
             if row:
                 return row[0]
-            cache = self._sets.setdefault(user, {})
+            cache = self._user_sets(user)
             if job_id in cache:
                 return job_id
             for other_id, other in cache.items():
                 if len(toks & other) / max(1, len(toks | other)) >= threshold:
                     return other_id
             cache[job_id] = toks
-            self._db.execute("insert or ignore into seen values (?,?,?)", (user, fp, job_id))
+            self._db.execute("insert or ignore into seen_v2 (user, fp, job_id, toks) values (?,?,?,?)",
+                             (user, fp, job_id, " ".join(sorted(toks))))
             self._db.commit()
             return job_id
 

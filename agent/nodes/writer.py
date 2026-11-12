@@ -5,7 +5,7 @@ import re
 
 from pydantic import BaseModel, Field
 
-from agent.guardrails import strip_injection, wrap_untrusted
+from agent.guardrails import safe_questions, strip_injection, wrap_untrusted
 from agent.handoffs import ProposalDraft
 from agent.nodes.common import Ctx, best_sentence, first_sentences
 from agent.prompts import load_prompt
@@ -72,7 +72,7 @@ def _compose(state: dict, evidence: list[dict], style: dict, feedback: list[str]
     for ph in style["avoid"]:
         letter = re.sub(re.escape(ph), "", letter, flags=re.I)
     answers: list[str] = []
-    for q in job.get("screening_questions", []):
+    for q in safe_questions(job.get("screening_questions")):
         qt = set(re.findall(r"[a-z0-9]+", q.lower()))
         best = max(evidence, key=lambda e: len(qt & set(re.findall(r"[a-z0-9]+", (e.get('text','') + ' ' + e.get('title','')).lower()))), default=None)
         if best and len(qt & set(re.findall(r"[a-z0-9]+", best.get("text", "").lower()))) >= 2:
@@ -103,7 +103,7 @@ async def writer(state: dict, ctx: Ctx) -> dict:
         job = state["job"]
         user = (wrap_untrusted(strip_injection(f"{job.get('title','')}\n{job.get('description','')}")) +
                 f"\n\nREQUIREMENTS: {state.get('job_spec', {}).get('requirements')}\n"
-                f"SCREENING QUESTIONS: {job.get('screening_questions')}\n\nEVIDENCE:\n{ev_txt}\n\n"
+                f"SCREENING QUESTIONS: {safe_questions(job.get('screening_questions'))}\n\nEVIDENCE:\n{ev_txt}\n\n"
                 f"STYLE RULES: {style_rules or 'none'}\nOUTCOME HINTS: {hints or 'none'}\n"
                 f"STRATEGY: {(state.get('settings') or {}).get('style_variant', 'evidence_dense')}\n"
                 f"FIX THESE ISSUES FROM THE CRITIC: {feedback or 'none'}")

@@ -10,8 +10,11 @@ RESULTS = ROOT / "evals" / "results"
 PERSONAS = ("ai_ml", "fullstack", "data_analyst")
 
 
-def dev_jobs(persona: str) -> list[dict]:
-    p = ROOT / "evals" / "datasets" / f"dev_{persona}.jsonl"
+def dev_jobs(persona: str, split: str = "dev") -> list[dict]:
+    """Gold labels for a split. `dev` is committed and was used while tuning; `test` is the held-out local set
+    (data/processed/local_test_*.jsonl, git-ignored) that was never looked at while tuning."""
+    p = (ROOT / "evals" / "datasets" / f"dev_{persona}.jsonl" if split == "dev"
+         else ROOT / "data" / "processed" / f"local_{split}_{persona}.jsonl")
     return [json.loads(line) for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 

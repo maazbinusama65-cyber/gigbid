@@ -1,7 +1,7 @@
 """Risk Assessor: client quality from history + scam / free-work / off-platform / injection flags."""
 from __future__ import annotations
 
-from agent.guardrails import detect_injection, wrap_untrusted
+from agent.guardrails import detect_injection, strip_injection, wrap_untrusted
 from agent.handoffs import RiskReport
 from agent.nodes.common import Ctx
 from agent.nodes.scout import unwrap
@@ -26,8 +26,10 @@ def client_quality(c: dict) -> float:
 async def risk_assessor(state: dict, ctx: Ctx) -> dict:
     job = state["job"]
     text = f"{job.get('title','')}\n{job.get('description','')}\n" + "\n".join(job.get("screening_questions", []))
-    flags = dict(ctx.policy.scam_flags(text))
     injections = detect_injection(text)
+    # scam signals are read from the text with injected sentences removed: an attacker's "guarantee 100%
+    # results" is an injection, not evidence that the client is a scammer (and vice versa for real scams)
+    flags = dict(ctx.policy.scam_flags(strip_injection(text)))
     client: dict = {}
     if job.get("client_id"):
         client = unwrap(await ctx.call("risk_assessor", "get_client_history", {"client_id": job["client_id"]}), "client")

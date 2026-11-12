@@ -72,6 +72,7 @@ async def eval_env(profile: str = "stub", persona_id: str = "ai_ml", tmp: Path |
         os.environ.update({"GIGSIM_BASE_URL": url, "GIGSIM_API_TOKEN": TOKEN, "PORTFOLIO_ID": persona_id,
                            "MARKETPLACE_MODE": "gigsim", "MARKETPLACE_DEFAULT_USER": persona_id,
                            "MARKETPLACE_STATE_DIR": str(tmp / f"mcp_state_{port}")})
+        os.environ.setdefault("HF_HUB_OFFLINE", "1")        # models are cached; no per-load network round trips
         if rag_variant:
             os.environ["RAG_VARIANT"] = rag_variant
         # evals run flat out against the local simulator; production keeps the polite per-user limit
@@ -82,6 +83,9 @@ async def eval_env(profile: str = "stub", persona_id: str = "ai_ml", tmp: Path |
         cfg_path = tmp / f"config_{port}.yaml"            # the MCP servers read the same config file
         cfg_path.write_text(yaml.safe_dump(dict(cfg)), encoding="utf-8")
         os.environ["GIGBID_CONFIG"] = str(cfg_path)
+        from agent.nodes import scout as scout_mod
+
+        scout_mod.set_dedup_store(scout_mod.DedupStore(tmp / f"seen_{port}.sqlite"))   # each eval starts unseen
         gateway = ToolGateway(cfg, user_id=persona_id, transport="memory")
         rt = GraphRuntime(cfg, gateway, llm=LLM(cfg), memory=LongTermMemory(cfg=cfg))
         t0 = time.monotonic()                      # cold start (torch import, index + model load) is paid once

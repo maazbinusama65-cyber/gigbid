@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import re
 
-from agent.guardrails import strip_injection, wrap_untrusted
+from agent.guardrails import safe_questions, strip_injection, wrap_untrusted
 from agent.handoffs import Budget, JobSpec
 from agent.nodes.common import Ctx, first_sentences
 from agent.prompts import load_prompt
@@ -41,7 +41,7 @@ def heuristic_spec(job: dict) -> JobSpec:
         required_skills=list(job.get("required_skills", [])), requirements=extract_requirements(job),
         budget=Budget(type=b.get("type", "fixed"), min=b.get("min"), max=b.get("max"), currency=b.get("currency", "USD")),
         budget_min=b.get("min"), budget_max=b.get("max"), timeline_days=job.get("duration_days"),
-        screening_questions=list(job.get("screening_questions", [])), hidden_needs=hidden,
+        screening_questions=safe_questions(job.get("screening_questions")), hidden_needs=hidden,
         category=job.get("category", "general"),
     )
 

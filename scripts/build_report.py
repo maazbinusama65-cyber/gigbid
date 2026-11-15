@@ -495,7 +495,7 @@ Before the fixes, planted payloads in screening questions reached the job spec (
 <p>{sec_judge()}</p>
 <h2>Appendix B: reproduce</h2>
 <p><code>make seed</code>, <code>make test</code>, <code>python -m evals.runners.decision_eval --split test</code>, <code>python -m evals.runners.rag_eval</code>, <code>python -m evals.runners.gigsim_outcomes</code>, <code>python -m evals.runners.x2_experiment</code>,
-<code>python scripts/render_readme.py</code>, <code>python scripts/build_report.py</code>. Known gaps: no public deployment or demo video yet, Postgres checkpointer and crash-and-resume not demonstrated, third-party MCP servers not integrated, no real-LLM runs, questions C and the change request not measured.</p>
+<code>python scripts/render_readme.py</code>, <code>python scripts/build_report.py</code>. Technical write-up: <a href="https://medium.com/@i221378/my-evaluation-was-lying-to-me-what-a-multi-agent-proposal-copilot-taught-me-about-measurement-d57acfdf58b7">https://medium.com/@i221378/my-evaluation-was-lying-to-me-what-a-multi-agent-proposal-copilot-taught-me-about-measurement-d57acfdf58b7</a>. Known gaps: no public deployment or demo video yet, Postgres checkpointer and crash-and-resume not demonstrated, third-party MCP servers not integrated, no real-LLM runs, questions C and the change request not measured.</p>
 <div class="foot">Generated from <code>evals/results/</code> by <code>scripts/build_report.py</code>.</div>
 </body></html>"""
 

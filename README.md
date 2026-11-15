@@ -5,6 +5,8 @@ is backed by the freelancer's own portfolio, and **stops for human approval befo
 AI-4016 R&D assignment built end to end: LangGraph agents, three MCP servers, an advanced RAG stack with claim
 verification, a FastAPI + React app, a Redis worker, and an evaluation harness that gates CI.
 
+Technical write-up: [My evaluation was lying to me](https://medium.com/@i221378/my-evaluation-was-lying-to-me-what-a-multi-agent-proposal-copilot-taught-me-about-measurement-d57acfdf58b7). R&D report: [`docs/report/GigBid_RD_Report.pdf`](docs/report/GigBid_RD_Report.pdf).
+
 > **Read this first: what is and is not proven here.**
 > * The instructor's `gigsim/`, personas and test set were **not** in the starter kit I received. `gigsim/` is my own
 >   stand-in simulator and every job, client and gold label is synthetic (some history titles and budgets come from a

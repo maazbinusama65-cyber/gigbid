@@ -50,6 +50,7 @@ def classify(f: dict, gold: dict, min_fit: float = 0.60, watch: float = 0.45) ->
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--results", default=str(ROOT / "evals" / "results" / "decision_stub.json"))
+    ap.add_argument("--out", default="failure_taxonomy.json")
     a = ap.parse_args()
     res = json.loads(open(a.results, encoding="utf-8").read())["per_persona"]
     buckets: dict[str, list[dict]] = defaultdict(list)
@@ -63,7 +64,7 @@ def main() -> None:
                               "share": round(len(buckets.get(c, [])) / total, 3) if total else 0.0,
                               "examples": buckets.get(c, [])[:6]} for c, d in CATEGORIES.items()}}
     print(json.dumps({c: v["count"] for c, v in out["categories"].items()}, indent=1), "\ntotal", total)
-    print("wrote", write_result("failure_taxonomy.json", out))
+    print("wrote", write_result(a.out, out))
 
 
 if __name__ == "__main__":

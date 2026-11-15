@@ -63,9 +63,15 @@ async def run_persona(persona: str, n: int, profile: str, style_variant: str | N
                 submitted.append((jid, st["submission"]["proposal_id"], st["submission"].get("connects_spent") or 0))
         async with httpx.AsyncClient(base_url=env.gigsim_url, headers=env.headers(persona), timeout=60) as c:
             await c.post("/v1/sim/tick", json={"steps": TICK_HOURS})
-            props = (await c.get("/v1/proposals")).json().get("proposals", [])
-        by_id = {p["proposal_id"]: p for p in props}
-        statuses = [by_id.get(pid, {}).get("status", "unknown") for _, pid, _ in submitted]
+            events = (await c.get("/v1/events", params={"since": 0})).json()
+        # The final status hides replies (an unanswered reply is marked "lost" after 72 simulated hours), so
+        # outcomes are read from the event log: a proposal "replied" if any of its events says so.
+        seen: dict[str, set[str]] = {}
+        for e in events:
+            seen.setdefault(e.get("proposal_id") or "", set()).add(e["type"])
+        statuses = [("hired" if "hired" in seen.get(pid, ()) else "interview" if "interview" in seen.get(pid, ())
+                     else "replied" if "replied" in seen.get(pid, ()) else "viewed" if "viewed" in seen.get(pid, ())
+                     else "no_response") for _, pid, _ in submitted]
     n_sub = len(submitted)
     replied = sum(s in ("replied", "interview", "hired") for s in statuses)
     interview = sum(s in ("interview", "hired") for s in statuses)
@@ -77,7 +83,11 @@ async def run_persona(persona: str, n: int, profile: str, style_variant: str | N
             "reply_rate_ci95": M.wilson(replied, n_sub), "hire_rate": round(hired / n_sub, 4) if n_sub else None,
             "connects_spent": spent, "connects_per_reply": round(spent / replied, 2) if replied else None,
             "status_counts": {s: statuses.count(s) for s in sorted(set(statuses))},
-            "per_proposal": [{"job_id": j, "status": s} for (j, _, _), s in zip(submitted, statuses, strict=True)]}
+            "viewed": sum(s != "no_response" for s in statuses),
+            "note": "interview/hire need the freelancer to answer within 72 simulated hours; this batch run never "
+                    "answers, so only reply rate is a meaningful outcome here",
+            "per_proposal": [{"job_id": j, "status": s, "replied": s in ("replied", "interview", "hired")}
+                             for (j, _, _), s in zip(submitted, statuses, strict=True)]}
 
 
 async def main() -> None:

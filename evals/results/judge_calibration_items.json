@@ -1,0 +1,191 @@
+{
+ "rubric": "Score the proposal 1-5. 5: specific, concrete evidence, no filler, answers the client's need. 3: relevant but generic or partly unsupported. 1: boilerplate, off-topic or fabricated. Reply with JSON {\"score\": <1-5>, \"reason\": \"...\"}.",
+ "n": 30,
+ "strata_outcomes": {
+  "replied": 10,
+  "won": 10,
+  "ignored": 10
+ },
+ "items": [
+  {
+   "item_id": "pp-ai_ml-129",
+   "persona": "ai_ml",
+   "job_title": "Data scientist with model evaluation experience",
+   "text": "Your point about held-out metrics, error slices and calibration checks is close to something I shipped for a healthcare client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $2730.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-data_analyst-018",
+   "persona": "data_analyst",
+   "job_title": "data analyst wanted: which campaign earned the sale",
+   "text": "Your point about free shareable web dashboards connected to live sheets and warehouse tables is close to something I shipped for a e-commerce client.\n\nOn Marketing Attribution Model (what the client called a which campaign earned the sale) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $4100.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-fullstack-119",
+   "persona": "fullstack",
+   "job_title": "Customer invoicing dashboard for our saas team",
+   "text": "Your point about a type-safe database layer generated from a schema file is close to something I shipped for a healthcare client.\n\nOn SaaS Subscription Billing Portal (what the client called a self-serve plan upgrades) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nA second relevant piece of work: Marketplace Payouts, where automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $7120.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-data_analyst-129",
+   "persona": "data_analyst",
+   "job_title": "Analytics consultant with R experience",
+   "text": "I read your brief twice: reproducible notebooks in the statistician's language. I solved that for a human resources company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $2430.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-data_analyst-097",
+   "persona": "data_analyst",
+   "job_title": "Need help building queue length insights",
+   "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nOn Clinic Waiting Time Report (what the client called a patient flow reporting) managers sensed long waits but had no numbers. I built it with SQL and Tableau, plus deduplicated, standardised records from messy exports. Result: identified two peak-hour bottlenecks; average wait fell 22%.\n\nMy fixed price for this is $5550.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-ai_ml-052",
+   "persona": "ai_ml",
+   "job_title": "AI developer for ongoing legal tech work (Pinecone)",
+   "text": "Your point about a hosted similarity-search store with metadata filters is close to something I shipped for a media client.\n\nOn Contract Q&A over 40k PDFs (what the client called a legal document assistant) lawyers searched contracts with keyword search and missed clauses phrased differently. I built it with RAG and embeddings, plus a typed async HTTP service with auto-generated docs. Result: answers cited the right clause 91% of the time on a 300-question audit set.\n\nA second relevant piece of work: LLM Evaluation Harness, where 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $6490.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-ai_ml-072",
+   "persona": "ai_ml",
+   "job_title": "machine learning engineer wanted: who-will-cancel model",
+   "text": "Hi, I have read your job description and I think I am a good fit.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3820.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-ai_ml-142",
+   "persona": "ai_ml",
+   "job_title": "Customer voice tracker for our consumer apps team",
+   "text": "I am excited to apply for this position. I can do this job perfectly.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3890.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-fullstack-100",
+   "persona": "fullstack",
+   "job_title": "Hiring Web developer - Stripe",
+   "text": "Card payments, subscriptions and webhooks handled safely is the part of your post I would worry about first, and I have done it before for a saas team.\n\nOn SaaS Subscription Billing Portal (what the client called a self-serve plan upgrades) customers emailed support to change plans and get invoices. I built it with Next.js and TypeScript, plus utility-first styling with a shared design-token config. Result: support tickets about billing dropped 64% and upgrades rose 12%.\n\nMy fixed price for this is $2920.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-fullstack-035",
+   "persona": "fullstack",
+   "job_title": "Release process rescue - start-up company",
+   "text": "I read your brief twice: a reproducible image with a one-command local start. I solved that for a start-up company last year.\n\nOn Deployment Pipeline Revamp (what the client called a release process rescue) releases were manual, took half a day, and failed often. I built it with GitHub Actions and Docker, plus scripted real-browser checks of the main user journeys. Result: deploys in 7 minutes, ten a week instead of one, rollbacks in one click.\n\nMy fixed price for this is $4660.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-ai_ml-010",
+   "persona": "ai_ml",
+   "job_title": "Build visual QA for machined parts (fixed price)",
+   "text": "Your point about a neural network trained end to end with custom data loaders is close to something I shipped for a manufacturing client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $3940.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-fullstack-084",
+   "persona": "fullstack",
+   "job_title": "Playwright help for our fintech business",
+   "text": "Your point about scripted real-browser checks of the main user journeys is close to something I shipped for a fintech client.\n\nOn Test Automation Suite (what the client called a browser regression checks) regressions reached production after every release. I built it with Playwright and Jest, plus strictly typed JavaScript across client and server. Result: 180 unit and 35 browser tests; escaped bugs down 70%.\n\nMy fixed price for this is $3090.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days."
+  },
+  {
+   "item_id": "pp-ai_ml-022",
+   "persona": "ai_ml",
+   "job_title": "nlp engineer wanted: regression tests for prompts",
+   "text": "Your point about held-out metrics, error slices and calibration checks is close to something I shipped for a ai start-up client.\n\nOn LLM Evaluation Harness (what the client called a regression tests for prompts) prompt changes shipped without anyone knowing if answers got worse. I built it with model evaluation and prompt engineering, plus experiment tracking with comparable runs and a model registry. Result: 300-case suite in CI; blocked 5 regressions before release.\n\nMy fixed price for this is $5360.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-fullstack-038",
+   "persona": "fullstack",
+   "job_title": "Tailwind CSS help for our media business",
+   "text": "Your point about a consistent look without hand-written stylesheets is close to something I shipped for a media client.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $4420.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-ai_ml-032",
+   "persona": "ai_ml",
+   "job_title": "Model refresh automation - online marketplace company",
+   "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Nightly Training Pipeline (what the client called a scheduled retraining workflow) models were retrained by hand every few months and drifted. I built it with Airflow and MLflow, plus scripts and services in a typed, tested codebase. Result: weekly automated retrains with a rollback gate; drift incidents fell from monthly to none in a year.\n\nMy fixed price for this is $6380.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-ai_ml-145",
+   "persona": "ai_ml",
+   "job_title": "Hiring Site reliability engineer - Docker",
+   "text": "Hi, I have read your job description and I think I am a good fit.\n\nOn Factory Defect Detection (what the client called a assembly-line camera inspector) inspectors missed hairline cracks at the end of long shifts. I built it with computer vision and PyTorch, plus containerised builds that run the same on every machine. Result: recall of 97% on cracks at 40 ms per part on a CPU-only edge box.\n\nMy fixed price for this is $3520.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-data_analyst-081",
+   "persona": "data_analyst",
+   "job_title": "data analyst wanted: satisfaction study",
+   "text": "Reproducible notebooks in the statistician's language is the part of your post I would worry about first, and I have done it before for a hospitality team.\n\nOn Customer Survey and NPS Analysis (what the client called a satisfaction study) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nMy fixed price for this is $1610.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-fullstack-105",
+   "persona": "fullstack",
+   "job_title": "Clickstream collector for our ad tech team",
+   "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Event Ingestion API (what the client called a usage tracking backend) partners needed to send millions of events a day. I built it with MongoDB and Express, plus cloud hosting with managed queues, storage and load balancing. Result: sustained 4k events/s on two small containers.\n\nA second relevant piece of work: Marketplace Payouts, where automatic payouts with reconciliation; finance saved a day a week.\n\nMy fixed price for this is $3720.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-data_analyst-042",
+   "persona": "data_analyst",
+   "job_title": "reporting analyst wanted: channel ROI breakdown",
+   "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Marketing Attribution Model (what the client called a channel ROI breakdown) last-click reporting overcredited branded search. I built it with SQL and BigQuery, plus scripts and services in a typed, tested codebase. Result: reallocated 20% of budget; blended CAC down 14%.\n\nMy fixed price for this is $2330.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-ai_ml-123",
+   "persona": "ai_ml",
+   "job_title": "Machine learning engineer for ongoing e-commerce work (scikit-learn)",
+   "text": "Your point about classical models with cross-validated pipelines is close to something I shipped for a e-commerce client.\n\nOn Product Recommendation Engine (what the client called a personalised shelf ranking) the homepage showed the same bestsellers to everyone. I built it with recommender systems and embeddings, plus a typed async HTTP service with auto-generated docs. Result: click-through on the widget rose 27% and revenue per visit 6%.\n\nMy fixed price for this is $4680.\n\nWould you rather I start with a one-page plan or with a working prototype? I can share either within two days."
+  },
+  {
+   "item_id": "pp-ai_ml-079",
+   "persona": "ai_ml",
+   "job_title": "Retention risk scoring - subscription media company",
+   "text": "Dear Sir/Madam, I am a hardworking professional and I am very interested in this job.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nMy fixed price for this is $6990.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-fullstack-098",
+   "persona": "fullstack",
+   "job_title": "Looking for frontend developer to deliver clickstream collector",
+   "text": "Backend services written in server-side JavaScript is the part of your post I would worry about first, and I have done it before for a ad tech team.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $4100.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-fullstack-129",
+   "persona": "fullstack",
+   "job_title": "Data engineer with PostgreSQL experience",
+   "text": "I read your brief twice: a relational store with proper indexes and migrations. I solved that for a saas company last year.\n\nI can handle everything you listed and more. Please check my profile for my experience.\n\nI guarantee guaranteed delivery with zero bugs.\n\nMy fixed price for this is $7550.\n\nPlease contact me. Thank you for your time."
+  },
+  {
+   "item_id": "pp-ai_ml-101",
+   "persona": "ai_ml",
+   "job_title": "Build 'customers also liked' widget (fixed price)",
+   "text": "I read your brief twice: 'people who liked this also liked' suggestions. I solved that for a e-commerce company last year.\n\nOn Product Recommendation Engine (what the client called a 'customers also liked' widget) the homepage showed the same bestsellers to everyone. I built it with recommender systems and embeddings, plus a typed async HTTP service with auto-generated docs. Result: click-through on the widget rose 27% and revenue per visit 6%.\n\nA second relevant piece of work: Domain Fine-tuned Clinical Notes Summariser, where ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $3880.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-data_analyst-006",
+   "persona": "data_analyst",
+   "job_title": "Question builder for non-technical staff for our logistics team",
+   "text": "I read your brief twice: reporting queries over millions of rows. I solved that for a logistics company last year.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nMy fixed price for this is $3690.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-data_analyst-003",
+   "persona": "data_analyst",
+   "job_title": "Analytics engineer with BigQuery experience",
+   "text": "I read your brief twice: partitioned cloud tables keeping scan costs low. I solved that for a saas company last year.\n\nOn Product Usage Analytics on BigQuery (what the client called a feature adoption tracking) the product team had raw events but no adoption numbers. I built it with BigQuery and SQL, plus deduplicated, standardised records from messy exports. Result: 20 event tables modelled; feature adoption dashboards guided two roadmap cuts.\n\nMy fixed price for this is $3190.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-fullstack-053",
+   "persona": "fullstack",
+   "job_title": "TypeScript expert needed for start-up project",
+   "text": "Your point about shared type definitions between front end and back end is close to something I shipped for a education client.\n\nI have worked with a wide range of technologies for many years and can start immediately. Quality is my top priority.\n\nI guarantee 100% satisfaction and perfect results.\n\nMy fixed price for this is $3320.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-ai_ml-013",
+   "persona": "ai_ml",
+   "job_title": "Looking for data scientist to deliver fine-tuned small model for discharge notes",
+   "text": "A scorecard that shows where the model fails, not just one number is the part of your post I would worry about first, and I have done it before for a healthcare team.\n\nOn Domain Fine-tuned Clinical Notes Summariser (what the client called a fine-tuned small model for discharge notes) discharge summaries took clinicians 15 minutes each. I built it with LoRA fine-tuning and PyTorch, plus held-out metrics, error slices and calibration checks. Result: ROUGE-L up 12 points over the base model and clinician edit time down to 4 minutes.\n\nMy fixed price for this is $5360.\n\nIf useful, I can send a short outline of how I would sequence the first week before you decide."
+  },
+  {
+   "item_id": "pp-data_analyst-025",
+   "persona": "data_analyst",
+   "job_title": "Channel ROI breakdown - e-commerce company",
+   "text": "Partitioned cloud tables keeping scan costs low is the part of your post I would worry about first, and I have done it before for a e-commerce team.\n\nI am a fast learner and a team player with strong communication skills. I have completed many projects for happy clients.\n\nMy fixed price for this is $3990.\n\nLooking forward to hearing from you. Thanks."
+  },
+  {
+   "item_id": "pp-data_analyst-122",
+   "persona": "data_analyst",
+   "job_title": "survey analysis expert needed for hospitality project",
+   "text": "Hello there, I saw your post and I am the right person for you.\n\nOn Customer Survey and NPS Analysis (what the client called a feedback themes report) 2,300 survey responses sat unread in a spreadsheet. I built it with survey analysis and R, plus publication-quality statistical charts from code. Result: five complaint themes quantified; one fix lifted NPS 8 points.\n\nA second relevant piece of work: Customer Segmentation, where 5 segments; targeted emails got 31% higher click rate.\n\nMy fixed price for this is $2460.\n\nLooking forward to hearing from you. Thanks."
+  }
+ ]
+}

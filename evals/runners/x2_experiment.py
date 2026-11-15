@@ -18,8 +18,6 @@ from evals import metrics as M
 from evals.runners.common import PERSONAS, write_result
 from evals.runners.gigsim_outcomes import run_persona
 
-REPLIED = {"replied", "interview", "hired"}
-
 
 def mcnemar_exact(b: int, c: int) -> float:
     """Two-sided exact p for discordant pairs b (A only replied) and c (B only replied)."""
@@ -31,8 +29,8 @@ def mcnemar_exact(b: int, c: int) -> float:
 
 
 def compare(a: dict, b: dict, name_a: str, name_b: str) -> dict:
-    sa = {p["job_id"]: p["status"] in REPLIED for p in a["per_proposal"]}
-    sb = {p["job_id"]: p["status"] in REPLIED for p in b["per_proposal"]}
+    sa = {p["job_id"]: p["replied"] for p in a["per_proposal"]}
+    sb = {p["job_id"]: p["replied"] for p in b["per_proposal"]}
     paired = sorted(set(sa) & set(sb))
     only_a = sum(sa[j] and not sb[j] for j in paired)
     only_b = sum(sb[j] and not sa[j] for j in paired)

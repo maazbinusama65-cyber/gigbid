@@ -1,0 +1,5 @@
+removed,pipeline,recall5,recall5_delta_pts,mrr,mrr_delta_pts,ndcg10,ndcg10_delta_pts
+skill graph fusion,struct+decompose+hybrid,0.6812,-7.68,0.9086,-7.06,0.8077,-6.87
+BM25 hybrid (hybrid -> dense only),struct+decompose+dense+graph,0.7388,-1.92,0.9696,-0.95,0.8585,-1.79
+structure-aware chunking (-> fixed chunks),fixed+decompose+hybrid+graph,0.7622,0.43,0.9748,-0.44,0.8740,-0.24
+query decomposition (decompose -> whole post),struct+whole+hybrid+graph,0.7639,0.60,0.9894,1.03,0.8714,-0.50

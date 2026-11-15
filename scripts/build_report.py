@@ -29,6 +29,11 @@ def load(name: str):
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
 
+def clean_latency(variant: str) -> dict | None:
+    d = load("rag_latency.json")
+    return (d or {}).get("variants", {}).get(variant)
+
+
 def src(name: str) -> str:
     return f"<span class='src'>[{name}]</span>"
 
@@ -58,7 +63,7 @@ def retrieval_figure() -> str:
                    "v1_decompose": "V1", "v8_corrective": "V8", "v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph": "V1+V2+V3+V9",
                    "v1_decompose+v2_hybrid+v3_rerank+v8_corrective": "stack+V8"}
     for name, v in d["variants"].items():
-        x = v.get("latency_cold", {}).get("p50_ms")
+        x = (clean_latency(name) or {}).get("p50_ms")
         y = 100 * v["overall"]["recall5"]
         if not x:
             continue
@@ -113,10 +118,10 @@ def sec_retrieval() -> str:
         v = d["variants"].get(n)
         if not v:
             continue
-        o, lat = v["overall"], v.get("latency_cold", {})
+        o, lat = v["overall"], clean_latency(n) or {}
         name = f"<b>{n}</b> (shipped)" if n == "v9_skill_graph" else n.replace("v1_decompose+v2_hybrid", "v1+v2").replace("+v3_rerank", "+v3").replace("+v9_skill_graph", "+v9")
         rows.append([name, f"{100 * o['recall5']:.1f}", f"{o['mrr']:.3f}", f"{o['ndcg10']:.3f}",
-                     f"{100 * v['n_requirements_ge4']['recall5']:.1f}", f"{lat.get('p50_ms', float('nan')):.0f}", f"{lat.get('p95_ms', float('nan')):.0f}"])
+                     f"{100 * v['n_requirements_ge4']['recall5']:.1f}", f"{lat['p50_ms']:.0f}" if lat else "-", f"{lat['p95_ms']:.0f}" if lat else "-"])
     return table(["Variant", "Recall@5", "MRR", "nDCG@10", "Recall@5 (4+ reqs)", "p50 ms", "p95 ms"], rows, "tight")
 
 
@@ -161,18 +166,43 @@ def sec_reply_vs_retrieval() -> str:
         lo, hi = o["reply_rate_ci95"]
         rows.append([label, o["proposals_submitted"], pct(o["reply_rate"]), f"{pct(lo)} to {pct(hi)}"]
                     + [pct(d["per_persona"][p]["reply_rate"]) for p in PERSONAS])
-    return table(["Retrieval", "Proposals", "Reply rate", "95% CI", "ai_ml", "fullstack", "data_analyst"], rows, "tight")
+    v = load("rag_variants.json")
+    note = ""
+    if v:
+        r0, r9 = 100 * v["variants"]["v0_naive"]["overall"]["recall5"], 100 * v["variants"]["v9_skill_graph"]["overall"]["recall5"]
+        o0, o9 = base["overall"]["reply_rate"], best["overall"]["reply_rate"]
+        note = (f"<p><b>Better retrieval did not raise the reply rate.</b> Recall@5 rose from {r0:.1f} to {r9:.1f}, but the reply rate went from {pct(o0)} to {pct(o9)} "
+                f"with overlapping intervals. My reading, which I did not test: the simulator's clients react to whether the letter names their must-have skills and cites evidence, and the "
+                f"stub writer already does both from the top-ranked items, so project-level recall gains do not change what the letter says.</p>")
+    return table(["Retrieval", "Proposals", "Reply rate", "95% CI", "ai_ml", "fullstack", "data_analyst"], rows, "tight") + note
 
 
 def sec_ablation() -> str:
-    files = sorted(RES.glob("ablation*.json"))
-    if not files:
+    d = load("rag_ablation.json")
+    if not d:
         return f"Leave-one-out ablation: {NM}."
-    d = json.loads(files[0].read_text(encoding="utf-8"))
+    bp = d["best_pipeline"]
     rows = []
-    for k, v in (d.get("ablations") or d.get("variants") or {}).items():
-        rows.append([k, json.dumps(v)[:120]])
-    return table(["Pipeline", "Result"], rows, "tight") + f" {src(files[0].name)}"
+    for x in d["ablations"]:
+        lo, hi = x["recall5_delta_ci95"]
+        rows.append([x["removed"], f"{100 * x['recall5']:.1f}", f"{x['recall5_delta_points']:+.1f} [{lo:+.1f}, {hi:+.1f}]",
+                     f"{x['mrr_delta_points']:+.1f}", f"{x['ndcg10_delta_points']:+.1f}"])
+    biggest = min(d["ablations"], key=lambda x: x["recall5_delta_points"])
+    decomp = next((x for x in d["ablations"] if "decomposition" in x["removed"]), None)
+    verdict = ""
+    if decomp:
+        lo, hi = decomp["recall5_delta_ci95"]
+        falsified = biggest is not decomp
+        verdict = (f"<p><b>Pre-registered ablation hypothesis:</b> {d['hypothesis']['statement']} <b>{'FALSIFIED' if falsified else 'supported'}</b>: "
+                   f"the largest drop comes from removing <i>{biggest['removed']}</i> ({biggest['recall5_delta_points']:+.1f} points), "
+                   f"while removing decomposition changes Recall@5 by {decomp['recall5_delta_points']:+.1f} (CI {lo:+.1f} to {hi:+.1f}).</p>")
+    if "rerank" in d["hypothesis"]["statement"] and not any("rerank" in x["removed"] for x in d["ablations"]):
+        verdict += ("<p><b>The reranker clause of that hypothesis was not tested:</b> the ablated pipeline has no cross-encoder reranker "
+                    "(left out for cost), and I did not ablate the reranker stack.</p>")
+    return (f"<p>Best lightweight pipeline <code>{bp['name']}</code>: Recall@5 {100 * bp['recall5']:.1f}, MRR {bp['mrr']:.3f}, nDCG@10 {bp['ndcg10']:.3f} "
+            f"(selected and ablated on the same dev jobs, so its absolute numbers are optimistic; the deltas are the point; paired bootstrap 95% CIs). "
+            f"{src('rag_ablation.json')}</p>"
+            + table(["Component removed", "Recall@5", "&Delta; Recall@5 [95% CI]", "&Delta; MRR", "&Delta; nDCG@10"], rows, "tight") + verdict)
 
 
 def decision_rows(fname: str) -> tuple[list[list], dict | None]:
@@ -194,6 +224,26 @@ DECISION_HEAD = ["Persona", "Jobs", "Bid-or-skip F1", "Scam P / R", "Price in ba
 def sec_decisions(fname: str) -> str:
     rows, d = decision_rows(fname)
     return table(DECISION_HEAD, rows, "tight") + f" {src(fname)}" if d else NM
+
+
+def sec_shipped() -> str:
+    v, ab = load("rag_variants.json"), load("rag_ablation.json")
+    if not v:
+        return NM
+    r9 = 100 * v["variants"]["v9_skill_graph"]["overall"]["recall5"]
+    l9 = clean_latency("v9_skill_graph")
+    lat = lambda x: f"p50 {x['p50_ms']:.0f} ms, p95 {x['p95_ms']:.0f} ms" if x else "latency not re-measured"      # noqa: E731
+    out = f"<b>Shipped choice:</b> <code>v9_skill_graph</code> (Recall@5 {r9:.1f}; {lat(l9)} per job, cold query caches, idle machine {src('rag_latency.json')})."
+    if ab:
+        bp = ab["best_pipeline"]
+        stack = "v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph"
+        rs = 100 * v["variants"][stack]["overall"]["recall5"]
+        out += (f" The ablation found a better lightweight pipeline, <code>{bp['name']}</code> (Recall@5 {100 * bp['recall5']:.1f}; "
+                f"{lat(clean_latency(bp['name']))}). <b>I did not ship it, and latency was not the reason</b> (it is cheap): the decision, outcome and X2 results "
+                f"were all measured on V9, so switching would invalidate them and I did not repeat them in the time left. The cost of that choice is about "
+                f"{100 * bp['recall5'] - r9:.1f} points of Recall@5. Adding the cross-encoder reranker on top reaches {rs:.1f} "
+                f"({rs - 100 * bp['recall5']:+.1f} points) at {lat(clean_latency(stack))}, which is affordable per job but a poor trade.")
+    return out
 
 
 def sec_b5() -> str:
@@ -266,15 +316,23 @@ def sec_taxonomy() -> str:
 
 
 FIXES = {
-    "scam_missed": ("Widened credential-phishing patterns (\"bank login\")", "Round 0 to 1: see table; residual wording gaps remain"),
-    "injection_influenced": ("Screening questions sanitised; scam signals read after injected sentences are stripped", "Attack success on planted payloads 0 after the fix"),
-    "false_duplicate": ("None; Jaccard threshold 0.66 sits where duplicate and non-duplicate overlaps meet (0.60 to 0.74)", "Not fixed: a precision/recall trade-off"),
-    "duplicate_missed": ("Persisted the near-duplicate index (it was memory-only and skipped on exact re-sight)", "Fixed for the restart case; a few remain"),
-    "borderline_fit": ("None: these sit between the watch (0.45) and bid (0.60) thresholds", "Not fixed: a policy threshold, not a bug"),
-    "retrieval_miss": ("Short requirements such as \"R\" crashed the search tool; query widened", "See Round 2"),
-    "tool_error": ("Dead-letter is now preserved: Decision no longer overwrites a failed branch with a skip", "See Round 2"),
-    "overconfident_fit": ("Added a hourly-rate floor (skip when the client's top rate is under 80% of yours)", "See Round 2"),
+    "scam_missed": "Widened credential-phishing patterns (\"bank login\")",
+    "injection_influenced": "Screening questions sanitised; scam signals read after injected sentences are stripped",
+    "false_duplicate": "None: the Jaccard threshold (0.66) sits where duplicate and non-duplicate overlaps meet (0.60 to 0.74)",
+    "duplicate_missed": "Persisted the near-duplicate index (it was memory-only and skipped on an exact re-sight)",
+    "borderline_fit": "None: these sit between the watch (0.45) and bid (0.60) thresholds, a policy choice",
+    "retrieval_miss": "One-character requirements such as \"R\" crashed the search tool; query widened; dedup false matches split out",
+    "tool_error": "Decision no longer overwrites a failed branch with a skip; CI fails on any dead-letter",
+    "overconfident_fit": "Hourly-rate floor: skip when the client's top rate is under 80% of the freelancer's rate",
 }
+
+
+def trajectory(cat: str) -> str:
+    counts = []
+    for f in ("failure_taxonomy_before_fixes.json", "failure_taxonomy_round1.json", "failure_taxonomy.json"):
+        d = load(f)
+        counts.append(str(d["categories"].get(cat, {}).get("count", 0)) if d else "?")
+    return " &rarr; ".join(counts)
 
 
 def sec_failures() -> str:
@@ -284,12 +342,12 @@ def sec_failures() -> str:
     rows = []
     n = 0
     for cat, v in d["categories"].items():
-        for e in v["examples"][:2]:
+        for e in v["examples"][:3]:
             n += 1
-            fx = FIXES.get(cat, ("", ""))
             rows.append([e["job_id"], f"{e['gold']} / {e['pred']}", f"{e['fit'] if e['fit'] is not None else 'none'} / {e['risk'] if e['risk'] is not None else 'none'}",
-                         f"<code>{cat}</code>", fx[0], fx[1]])
-    return table(["Job", "Gold / agent", "Fit / risk", "Category", "Fix tried", "Outcome"], rows, "tight small") + f" {src('failure_taxonomy.json')} ({n} jobs shown)"
+                         f"<code>{cat}</code>", FIXES.get(cat, ""), trajectory(cat)])
+    return (table(["Job", "Gold / agent", "Fit / risk", "Category", "Fix tried", "Count r0 &rarr; r1 &rarr; r2"], rows, "tight small")
+            + f" {src('failure_taxonomy.json')} ({n} dev jobs shown, final round)")
 
 
 def sec_budgets() -> str:
@@ -379,7 +437,7 @@ Shortening the descriptions costs 12.5 points of selection, so in this setup des
 
 <h2>4. R&amp;D question B: RAG variants, verification, ablation</h2>
 <p>{h1_}</p>
-<p>Variants V0 to V9 over 120 dev jobs per persona (gold evidence is exact by construction). Recall@5 is project-level; "cold" latency includes the first query after a model load.</p>
+<p>Variants V0 to V9 over 120 dev jobs per persona (gold evidence is exact by construction). Recall@5 is project-level. Latency is per job (all requirements searched, query caches cleared) on an idle machine; "-" means not re-measured.</p>
 {sec_retrieval()}
 {retrieval_figure()}
 <div class="cap">Recall@5 against cold-query latency. Squares are stacked pipelines; the red dot is the shipped variant.</div>
@@ -394,7 +452,7 @@ These are my readings of the table, not tested explanations.</p>
 {sec_reply_vs_retrieval()}
 <h3>Ablation</h3>
 <p>{sec_ablation()}</p>
-<p><b>Shipped choice:</b> <code>v9_skill_graph</code>: best single-variant recall at about 200 ms p95 cold. The stack with rerank scores a few points higher but is not shippable within the 30 s job budget on CPU.</p>
+<p>{sec_shipped()}</p>
 {sec_b5()}
 
 <h2>5. R&amp;D question C: single agent vs supervisor vs graph</h2>

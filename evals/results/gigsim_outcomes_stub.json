@@ -436,26 +436,31 @@
     "data_analyst": {
       "persona": "data_analyst",
       "jobs_in_set": 40,
-      "proposals_submitted": 34,
+      "proposals_submitted": 37,
       "replied": 26,
       "interview": 0,
       "hired": 0,
-      "reply_rate": 0.7647,
+      "reply_rate": 0.7027,
       "reply_rate_ci95": [
-        0.6,
-        0.8756
+        0.5422,
+        0.8251
       ],
       "hire_rate": 0.0,
-      "connects_spent": 299,
-      "connects_per_reply": 11.5,
+      "connects_spent": 323,
+      "connects_per_reply": 12.42,
       "status_counts": {
         "no_response": 5,
         "replied": 26,
-        "viewed": 3
+        "viewed": 6
       },
-      "viewed": 29,
+      "viewed": 32,
       "note": "interview/hire need the freelancer to answer within 72 simulated hours; this batch run never answers, so only reply rate is a meaningful outcome here",
       "per_proposal": [
+        {
+          "job_id": "dev-data_analyst-0059",
+          "status": "viewed",
+          "replied": false
+        },
         {
           "job_id": "dev-data_analyst-0144",
           "status": "replied",
@@ -477,9 +482,19 @@
           "replied": true
         },
         {
+          "job_id": "dev-data_analyst-0061",
+          "status": "viewed",
+          "replied": false
+        },
+        {
           "job_id": "dev-data_analyst-0018",
           "status": "replied",
           "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0188",
+          "status": "viewed",
+          "replied": false
         },
         {
           "job_id": "dev-data_analyst-0085",
@@ -630,12 +645,12 @@
     }
   },
   "overall": {
-    "proposals_submitted": 110,
-    "reply_rate": 0.7,
+    "proposals_submitted": 113,
+    "reply_rate": 0.6814,
     "hire_rate": 0.0,
     "reply_rate_ci95": [
-      0.6088,
-      0.7777
+      0.5908,
+      0.7601
     ]
   }
 }

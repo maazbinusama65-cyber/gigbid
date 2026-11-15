@@ -28,17 +28,25 @@ def pct(x: float | None, nd: int = 1) -> str:
     return "n/a" if x is None else f"{100 * x:.{nd}f}%"
 
 
+def clean_latency(variant: str) -> dict | None:
+    d = load("rag_latency.json")
+    return (d or {}).get("variants", {}).get(variant)
+
+
 def retrieval_table() -> str:
     d = load("rag_variants.json")
     if not d:
         return "_not run_"
-    rows = ["| Variant | Recall@5 | MRR | nDCG@10 | p50 ms (cold query) | p95 ms |", "|---|---|---|---|---|---|"]
+    rows = ["| Variant | Recall@5 | MRR | nDCG@10 | p50 ms per job | p95 ms per job |", "|---|---|---|---|---|---|"]
     for name, v in d["variants"].items():
         o = v["overall"]
-        lat = v.get("latency_cold", {})
-        rows.append(f"| `{name}` | {cite('rag_variants.json', 'recall5', f'{100 * o['recall5']:.1f}')} | {o['mrr']:.3f} | "
-                    f"{o['ndcg10']:.3f} | {lat.get('p50_ms', float('nan')):.0f} | {lat.get('p95_ms', float('nan')):.0f} |")
-    return "\n".join(rows)
+        lat = clean_latency(name)
+        p50 = f"{lat['p50_ms']:.0f}" if lat else "-"
+        p95 = f"{lat['p95_ms']:.0f}" if lat else "-"
+        recall = cite("rag_variants.json", "recall5", f"{100 * o['recall5']:.1f}")
+        rows.append(f"| `{name}` | {recall} | {o['mrr']:.3f} | {o['ndcg10']:.3f} | {p50} | {p95} |")
+    return "\n".join(rows) + ("\n\nLatency is per job (all requirements), cold query caches, measured on an idle machine for the variants "
+                              "shown (`-` = not re-measured; see `rag_latency.json`)." if load("rag_latency.json") else "")
 
 
 def decision_table(fname: str) -> str:
@@ -119,6 +127,41 @@ def x2_block() -> str:
             f"({pooled[a]['replied']}/{pooled[a]['n']}). Strategy B `{b}`: {pct(pooled[b]['rate'])} "
             f"({pooled[b]['replied']}/{pooled[b]['n']}). Unpaired z-test p = {z['p']}; paired exact McNemar p = "
             f"{cite('x2_experiment.json', 'mcnemar_exact_p', str(pooled['mcnemar_exact_p']))}.")
+
+
+def ablation_block() -> str:
+    d = load("rag_ablation.json")
+    if not d:
+        return "_not run_"
+    bp = d["best_pipeline"]
+    rows = ["| Component removed | Recall@5 | Delta Recall@5 (95% CI) |", "|---|---|---|"]
+    for x in d["ablations"]:
+        lo, hi = x["recall5_delta_ci95"]
+        d_pts = cite("rag_ablation.json", "recall5_delta_points", f"{x['recall5_delta_points']:+.1f}")
+        rows.append(f"| {x['removed']} | {100 * x['recall5']:.1f} | {d_pts} ({lo:+.1f} to {hi:+.1f}) |")
+    biggest = min(d["ablations"], key=lambda x: x["recall5_delta_points"])
+    decomp = next((x for x in d["ablations"] if "decomposition" in x["removed"]), None)
+    note = ""
+    if decomp:
+        falsified = biggest is not decomp
+        note = ("\n\n" + f"Pre-registered ablation hypothesis (removing decomposition costs the most): **{'FALSIFIED' if falsified else 'supported'}**. "
+                f"The biggest drop is removing {biggest['removed']} ({biggest['recall5_delta_points']:+.1f} points); removing decomposition "
+                f"changes Recall@5 by {decomp['recall5_delta_points']:+.1f}.")
+    head = (f"Best lightweight pipeline `{bp['name']}`: Recall@5 {100 * bp['recall5']:.1f} "
+            "(selected on the same dev jobs, so optimistic; the deltas are the point).\n\n")
+    return head + "\n".join(rows) + note
+
+
+def reply_vs_retrieval_block() -> str:
+    base, best = load("gigsim_outcomes_stub_v0_naive.json"), load("gigsim_outcomes_stub.json")
+    if not (base and best):
+        return "_not run_"
+    rows = ["| Retrieval | Proposals | Reply rate (95% CI) |", "|---|---|---|"]
+    for label, f, d in (("v0_naive", "gigsim_outcomes_stub_v0_naive.json", base), ("v9_skill_graph (shipped)", "gigsim_outcomes_stub.json", best)):
+        o = d["overall"]
+        lo, hi = o["reply_rate_ci95"]
+        rows.append(f"| {label} | {o['proposals_submitted']} | {cite(f, 'reply_rate', pct(o['reply_rate']))} ({pct(lo)} to {pct(hi)}) |")
+    return "\n".join(rows)
 
 
 def judge_block() -> str:
@@ -215,7 +258,15 @@ the one to trust. Its weakest cell is scam recall on `data_analyst`, which I did
 
 {retrieval}
 
-Shipped variant: `v9_skill_graph` (best single-variant Recall@5, p95 about 200 ms; stacking rerank adds a few points at far higher latency (see the table)). **Pre-registered hypothesis H1:** {h1}
+Shipped variant: `v9_skill_graph`, the best single variant. The ablation found a better lightweight pipeline (see below) that I did not ship because the decision, outcome and X2 results were all measured on V9. **Pre-registered hypothesis H1:** {h1}
+
+### Where better retrieval did or did not change the reply rate
+
+{reply_vs_retrieval}
+
+### Ablation
+
+{ablation}
 
 ### Claim verification
 
@@ -283,7 +334,7 @@ def main() -> None:
         bid_graph=graph("bid_graph.mmd"), conv_graph=graph("conversation_graph.mmd"),
         test_table=decision_table("decision_stub_test.json"), dev_table=decision_table("decision_stub.json"),
         retrieval=retrieval_table(), h1=h1_block(), verify=verify_block(), tools=tool_table(),
-        judge=judge_block(), outcomes=outcomes_block(), x2=x2_block(), taxonomy=taxonomy_table())
+        judge=judge_block(), ablation=ablation_block(), reply_vs_retrieval=reply_vs_retrieval_block(), outcomes=outcomes_block(), x2=x2_block(), taxonomy=taxonomy_table())
     (ROOT / "README.md").write_text(out, encoding="utf-8")
     print("README.md written", len(out), "chars")
 

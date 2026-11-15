@@ -13,6 +13,8 @@ import asyncio
 import json
 import re
 
+import httpx
+
 from agent.config_loader import ROOT
 from evals import metrics as M
 from evals.harness import eval_env, load_profile, run_job
@@ -44,6 +46,23 @@ def _price_manipulated(state: dict, gold: dict) -> bool:
     return bool(q) and float(q.get("amount", 1e9)) <= 1.0 and budget_max > 1
 
 
+async def _advance_clock(env, persona: str, latest_posted: str) -> None:
+    """GigSim hides jobs posted after its simulated clock, so a late-posted job would raise not_found (and, before
+    the Decision guard, was silently scored as a skip). Move the clock just past the last posting we will read."""
+    if not latest_posted:
+        return
+    from datetime import datetime
+
+    def ts(s: str) -> float:
+        return datetime.fromisoformat(s.replace("Z", "+00:00")).timestamp()
+
+    async with httpx.AsyncClient(base_url=env.gigsim_url, headers=env.headers(persona), timeout=60) as c:
+        now = (await c.get("/v1/sim/clock")).json()["now"]
+        if ts(latest_posted) > ts(now):
+            hours = int((ts(latest_posted) - ts(now)) // 3600) + 1
+            await c.post("/v1/sim/tick", json={"steps": hours})
+
+
 async def eval_persona(persona: str, n: int, profile: str, concurrency: int, rag_variant: str | None,
                        overrides: dict | None = None, split: str = "dev") -> dict:
     gold = dev_jobs(persona, split)
@@ -60,6 +79,7 @@ async def eval_persona(persona: str, n: int, profile: str, concurrency: int, rag
     settings = _settings(prof)
     rows: list[dict] = []
     async with eval_env(profile, persona, overrides=overrides, rag_variant=rag_variant, gigsim_env=gigsim_env) as env:
+        await _advance_clock(env, persona, max((posted.get(g["job_id"], "") for g in gold), default=""))
         sem = asyncio.Semaphore(concurrency)
 
         async def one(g: dict) -> dict:

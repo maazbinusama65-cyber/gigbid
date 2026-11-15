@@ -131,43 +131,65 @@ Copy `.env.example` to `.env` for local values; nothing secret is committed. The
 
 | Persona | Jobs | Bid-or-skip F1 | Scam precision / recall | Price in fair band | Injection attack success | Unsupported claims / proposal (after verification) | p50 / p95 latency (s) |
 |---|---|---|---|---|---|---|---|
-| ai_ml | 100 | 0.942<!--r:decision_stub_test.json:f1--> | 1.00 / 0.90 | 89.5% (n=57) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 8.3 / 16.1 |
-| fullstack | 100 | 0.992<!--r:decision_stub_test.json:f1--> | 1.00 / 1.00 | 88.1% (n=59) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 8.1 / 19.0 |
-| data_analyst | 100 | 0.911<!--r:decision_stub_test.json:f1--> | 1.00 / 0.75 | 94.1% (n=51) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 15.5 / 29.1 |
+| ai_ml | 100 | 0.966<!--r:decision_stub_test.json:f1--> | 1.00 / 0.90 | 89.5% (n=57) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 7.3 / 16.2 |
+| fullstack | 100 | 0.992<!--r:decision_stub_test.json:f1--> | 1.00 / 1.00 | 88.1% (n=59) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 7.5 / 17.0 |
+| data_analyst | 100 | 0.983<!--r:decision_stub_test.json:f1--> | 1.00 / 0.75 | 93.1% (n=58) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 8.7 / 18.8 |
 
 ### Same, dev split (200 jobs per persona, used while tuning)
 
 | Persona | Jobs | Bid-or-skip F1 | Scam precision / recall | Price in fair band | Injection attack success | Unsupported claims / proposal (after verification) | p50 / p95 latency (s) |
 |---|---|---|---|---|---|---|---|
-| ai_ml | 200 | 0.945<!--r:decision_stub.json:f1--> | 1.00 / 0.90 | 85.6% (n=111) | 0<!--r:decision_stub.json:attack_success--> / 17 | 0.0 | 20.5 / 47.0 |
-| fullstack | 200 | 0.951<!--r:decision_stub.json:f1--> | 1.00 / 0.85 | 90.5% (n=116) | 0<!--r:decision_stub.json:attack_success--> / 16 | 0.0 | 7.2 / 18.3 |
-| data_analyst | 200 | 0.917<!--r:decision_stub.json:f1--> | 1.00 / 0.86 | 91.4% (n=105) | 0<!--r:decision_stub.json:attack_success--> / 16 | 0.0 | 6.6 / 14.1 |
+| ai_ml | 200 | 0.957<!--r:decision_stub.json:f1--> | 1.00 / 0.90 | 85.6% (n=111) | 0<!--r:decision_stub.json:attack_success--> / 17 | 0.0 | 5.9 / 12.6 |
+| fullstack | 200 | 0.975<!--r:decision_stub.json:f1--> | 1.00 / 0.85 | 90.5% (n=116) | 0<!--r:decision_stub.json:attack_success--> / 16 | 0.0 | 6.3 / 17.9 |
+| data_analyst | 200 | 0.970<!--r:decision_stub.json:f1--> | 1.00 / 0.86 | 91.2% (n=114) | 0<!--r:decision_stub.json:attack_success--> / 16 | 0.0 | 6.2 / 14.7 |
 
 The scam and injection patterns were tuned on the dev jobs, so the dev rows flatter the agent. The held-out table is
 the one to trust. Its weakest cell is scam recall on `data_analyst`, which I did **not** tune.
 
 ### Retrieval variants (evidence Recall@5 over portfolio items)
 
-| Variant | Recall@5 | MRR | nDCG@10 | p50 ms (cold query) | p95 ms |
+| Variant | Recall@5 | MRR | nDCG@10 | p50 ms per job | p95 ms per job |
 |---|---|---|---|---|---|
-| `v0_naive` | 64.2<!--r:rag_variants.json:recall5--> | 0.968 | 0.779 | 1300 | 2347 |
-| `v0b_naive_struct` | 62.0<!--r:rag_variants.json:recall5--> | 0.966 | 0.765 | 1804 | 5471 |
-| `v1_decompose` | 57.7<!--r:rag_variants.json:recall5--> | 0.791 | 0.694 | 1699 | 4793 |
-| `v2_hybrid` | 67.6<!--r:rag_variants.json:recall5--> | 0.975 | 0.810 | 1234 | 2237 |
-| `v3_rerank` | 61.4<!--r:rag_variants.json:recall5--> | 0.979 | 0.717 | 5176 | 7029 |
-| `v4_outcome` | 61.7<!--r:rag_variants.json:recall5--> | 0.938 | 0.750 | 1395 | 2412 |
-| `v5_multivector` | 63.8<!--r:rag_variants.json:recall5--> | 0.959 | 0.792 | 844 | 1422 |
-| `v6_contextual` | 65.0<!--r:rag_variants.json:recall5--> | 0.979 | 0.773 | 834 | 1372 |
-| `v7_hyde` | 65.1<!--r:rag_variants.json:recall5--> | 0.977 | 0.800 | 788 | 1691 |
-| `v8_corrective` | 57.5<!--r:rag_variants.json:recall5--> | 0.899 | 0.715 | 2536 | 3776 |
-| `v9_skill_graph` | 72.6<!--r:rag_variants.json:recall5--> | 0.986 | 0.843 | 137 | 215 |
-| `v1_decompose+v2_hybrid` | 68.1<!--r:rag_variants.json:recall5--> | 0.909 | 0.808 | 183 | 424 |
-| `v1_decompose+v2_hybrid+v3_rerank` | 72.5<!--r:rag_variants.json:recall5--> | 0.945 | 0.840 | 4862 | 18635 |
-| `v1_decompose+v2_hybrid+v3_rerank+v4_outcome` | 70.9<!--r:rag_variants.json:recall5--> | 0.926 | 0.825 | 4439 | 9028 |
-| `v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph` | 76.7<!--r:rag_variants.json:recall5--> | 0.980 | 0.886 | 4412 | 9210 |
-| `v1_decompose+v2_hybrid+v3_rerank+v8_corrective` | 41.0<!--r:rag_variants.json:recall5--> | 0.540 | 0.468 | 8113 | 21593 |
+| `v0_naive` | 64.2<!--r:rag_variants.json:recall5--> | 0.968 | 0.779 | 39 | 45 |
+| `v0b_naive_struct` | 62.0<!--r:rag_variants.json:recall5--> | 0.966 | 0.765 | - | - |
+| `v1_decompose` | 57.7<!--r:rag_variants.json:recall5--> | 0.791 | 0.694 | - | - |
+| `v2_hybrid` | 67.6<!--r:rag_variants.json:recall5--> | 0.975 | 0.810 | 42 | 53 |
+| `v3_rerank` | 61.4<!--r:rag_variants.json:recall5--> | 0.979 | 0.717 | 530 | 606 |
+| `v4_outcome` | 61.7<!--r:rag_variants.json:recall5--> | 0.938 | 0.750 | - | - |
+| `v5_multivector` | 63.8<!--r:rag_variants.json:recall5--> | 0.959 | 0.792 | - | - |
+| `v6_contextual` | 65.0<!--r:rag_variants.json:recall5--> | 0.979 | 0.773 | - | - |
+| `v7_hyde` | 65.1<!--r:rag_variants.json:recall5--> | 0.977 | 0.800 | - | - |
+| `v8_corrective` | 57.5<!--r:rag_variants.json:recall5--> | 0.899 | 0.715 | - | - |
+| `v9_skill_graph` | 72.6<!--r:rag_variants.json:recall5--> | 0.986 | 0.843 | 40 | 53 |
+| `v1_decompose+v2_hybrid` | 68.1<!--r:rag_variants.json:recall5--> | 0.909 | 0.808 | 56 | 169 |
+| `v1_decompose+v2_hybrid+v3_rerank` | 72.5<!--r:rag_variants.json:recall5--> | 0.945 | 0.840 | - | - |
+| `v1_decompose+v2_hybrid+v3_rerank+v4_outcome` | 70.9<!--r:rag_variants.json:recall5--> | 0.926 | 0.825 | - | - |
+| `v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph` | 76.7<!--r:rag_variants.json:recall5--> | 0.980 | 0.886 | 1239 | 2673 |
+| `v1_decompose+v2_hybrid+v3_rerank+v8_corrective` | 41.0<!--r:rag_variants.json:recall5--> | 0.540 | 0.468 | - | - |
 
-Shipped variant: `v9_skill_graph` (best single-variant Recall@5, p95 about 200 ms; stacking rerank adds a few points at far higher latency (see the table)). **Pre-registered hypothesis H1:** Requirement decomposition plus hybrid retrieval (v1_decompose+v2_hybrid) raises project-level evidence Recall@5 by >= 15 points over V0 (v0_naive) on jobs with >= 4 requirements. Measured gain: 0.02<!--r:rag_variants.json:gain_points--> points (95% CI -3.6 to 3.7, n=168 jobs). Verdict: **NOT SUPPORTED**.
+Latency is per job (all requirements), cold query caches, measured on an idle machine for the variants shown (`-` = not re-measured; see `rag_latency.json`).
+
+Shipped variant: `v9_skill_graph`, the best single variant. The ablation found a better lightweight pipeline (see below) that I did not ship because the decision, outcome and X2 results were all measured on V9. **Pre-registered hypothesis H1:** Requirement decomposition plus hybrid retrieval (v1_decompose+v2_hybrid) raises project-level evidence Recall@5 by >= 15 points over V0 (v0_naive) on jobs with >= 4 requirements. Measured gain: 0.02<!--r:rag_variants.json:gain_points--> points (95% CI -3.6 to 3.7, n=168 jobs). Verdict: **NOT SUPPORTED**.
+
+### Where better retrieval did or did not change the reply rate
+
+| Retrieval | Proposals | Reply rate (95% CI) |
+|---|---|---|
+| v0_naive | 111 | 70.3%<!--r:gigsim_outcomes_stub_v0_naive.json:reply_rate--> (61.2% to 78.0%) |
+| v9_skill_graph (shipped) | 113 | 68.1%<!--r:gigsim_outcomes_stub.json:reply_rate--> (59.1% to 76.0%) |
+
+### Ablation
+
+Best lightweight pipeline `v1_decompose+v2_hybrid+v9_skill_graph`: Recall@5 75.8 (selected on the same dev jobs, so optimistic; the deltas are the point).
+
+| Component removed | Recall@5 | Delta Recall@5 (95% CI) |
+|---|---|---|
+| skill graph fusion | 68.1 | -7.7<!--r:rag_ablation.json:recall5_delta_points--> (-10.1 to -5.3) |
+| BM25 hybrid (hybrid -> dense only) | 73.9 | -1.9<!--r:rag_ablation.json:recall5_delta_points--> (-3.2 to -0.7) |
+| structure-aware chunking (-> fixed chunks) | 76.2 | +0.4<!--r:rag_ablation.json:recall5_delta_points--> (-0.6 to +1.5) |
+| query decomposition (decompose -> whole post) | 76.4 | +0.6<!--r:rag_ablation.json:recall5_delta_points--> (-1.5 to +2.5) |
+
+Pre-registered ablation hypothesis (removing decomposition costs the most): **FALSIFIED**. The biggest drop is removing skill graph fusion (-7.7 points); removing decomposition changes Recall@5 by +0.6.
 
 ### Claim verification
 
@@ -195,7 +217,7 @@ separable the tool sets are lexically and must not be read as model behaviour. T
 |---|---|---|---|---|
 | ai_ml | 38 | 30 | 79.0%<!--r:gigsim_outcomes_stub.json:reply_rate--> (63.6% to 88.9%) | 12.4 |
 | fullstack | 38 | 21 | 55.3%<!--r:gigsim_outcomes_stub.json:reply_rate--> (39.7% to 69.8%) | 16.57 |
-| data_analyst | 34 | 26 | 76.5%<!--r:gigsim_outcomes_stub.json:reply_rate--> (60.0% to 87.6%) | 11.5 |
+| data_analyst | 37 | 26 | 70.3%<!--r:gigsim_outcomes_stub.json:reply_rate--> (54.2% to 82.5%) | 12.42 |
 
 Interview and hire need the freelancer to answer within 72 simulated hours; the batch run never answers, so only reply
 rate is reported. GigSim clients are rule-based, so this shows the pipeline can measure an effect, not that the effect
@@ -203,7 +225,7 @@ exists on a real marketplace.
 
 ### Signature extension X2: proposal A/B experiment
 
-Strategy A `evidence_dense`: 70.0%<!--r:x2_experiment.json:rate--> replies (77/110). Strategy B `concise_question`: 53.6% (59/110). Unpaired z-test p = 0.012493; paired exact McNemar p = 0.019834<!--r:x2_experiment.json:mcnemar_exact_p-->.
+Strategy A `evidence_dense`: 68.1%<!--r:x2_experiment.json:rate--> replies (77/113). Strategy B `concise_question`: 54.0% (61/113). Unpaired z-test p = 0.029058; paired exact McNemar p = 0.044047<!--r:x2_experiment.json:mcnemar_exact_p-->.
 
 See `docs/EXTENSION.md` for the design and its limits.
 
@@ -213,14 +235,16 @@ See `docs/EXTENSION.md` for the design and its limits.
 |---|---|---|
 | `scam_missed` | 1<!--r:failure_taxonomy.json:count--> | gold skip (scam) but the agent bid: no scam rule matched the wording |
 | `false_scam_block` | 0<!--r:failure_taxonomy.json:count--> | gold bid but the Risk Assessor marked it a scam / high risk |
-| `injection_influenced` | 5<!--r:failure_taxonomy.json:count--> | job carries an injected instruction and the decision is wrong |
+| `injection_influenced` | 1<!--r:failure_taxonomy.json:count--> | job carries an injected instruction and the decision is wrong |
+| `tool_error` | 0<!--r:failure_taxonomy.json:count--> | a node dead-lettered (for example a tool rejected its arguments); the job never reached a decision |
+| `false_duplicate` | 2<!--r:failure_taxonomy.json:count--> | gold bid but the near-duplicate check matched it to an earlier, similar posting |
 | `duplicate_missed` | 2<!--r:failure_taxonomy.json:count--> | gold skip because it repeats an earlier posting but the agent bid |
 | `borderline_fit` | 16<!--r:failure_taxonomy.json:count--> | gold bid, fit score inside the watch band (0.45 to min_fit): threshold boundary |
-| `retrieval_miss` | 10<!--r:failure_taxonomy.json:count--> | gold bid but fit below the watch band: portfolio evidence not retrieved for the requirements |
-| `overconfident_fit` | 10<!--r:failure_taxonomy.json:count--> | gold skip, not a scam or duplicate, and the agent bid on a high fit score |
+| `retrieval_miss` | 0<!--r:failure_taxonomy.json:count--> | gold bid but fit below the watch band: portfolio evidence not retrieved for the requirements |
+| `overconfident_fit` | 1<!--r:failure_taxonomy.json:count--> | gold skip, not a scam or duplicate, and the agent bid on a high fit score |
 | `other` | 0<!--r:failure_taxonomy.json:count--> | none of the above |
 
-Total wrong bid-or-skip decisions on the dev set: 44.
+Total wrong bid-or-skip decisions on the dev set: 23.
 
 ## Safety
 

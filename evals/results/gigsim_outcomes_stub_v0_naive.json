@@ -1,0 +1,646 @@
+{
+  "profile": "stub",
+  "style_variant": "default",
+  "rag_variant": "v0_naive",
+  "per_persona": {
+    "ai_ml": {
+      "persona": "ai_ml",
+      "jobs_in_set": 40,
+      "proposals_submitted": 38,
+      "replied": 27,
+      "interview": 0,
+      "hired": 0,
+      "reply_rate": 0.7105,
+      "reply_rate_ci95": [
+        0.5524,
+        0.83
+      ],
+      "hire_rate": 0.0,
+      "connects_spent": 372,
+      "connects_per_reply": 13.78,
+      "status_counts": {
+        "no_response": 7,
+        "replied": 27,
+        "viewed": 4
+      },
+      "viewed": 31,
+      "note": "interview/hire need the freelancer to answer within 72 simulated hours; this batch run never answers, so only reply rate is a meaningful outcome here",
+      "per_proposal": [
+        {
+          "job_id": "dev-ai_ml-0070",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0189",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0091",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0160",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0007",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0058",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0136",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0173",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0121",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0103",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0026",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0148",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0184",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0146",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0158",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0019",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0031",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0110",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0188",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0129",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0089",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0024",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0009",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0088",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0063",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0096",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0073",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0062",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0112",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0170",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0175",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0117",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0043",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0145",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0048",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0003",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-ai_ml-0078",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-ai_ml-0122",
+          "status": "replied",
+          "replied": true
+        }
+      ]
+    },
+    "fullstack": {
+      "persona": "fullstack",
+      "jobs_in_set": 40,
+      "proposals_submitted": 36,
+      "replied": 24,
+      "interview": 0,
+      "hired": 0,
+      "reply_rate": 0.6667,
+      "reply_rate_ci95": [
+        0.5033,
+        0.7979
+      ],
+      "hire_rate": 0.0,
+      "connects_spent": 332,
+      "connects_per_reply": 13.83,
+      "status_counts": {
+        "no_response": 4,
+        "replied": 24,
+        "viewed": 8
+      },
+      "viewed": 32,
+      "note": "interview/hire need the freelancer to answer within 72 simulated hours; this batch run never answers, so only reply rate is a meaningful outcome here",
+      "per_proposal": [
+        {
+          "job_id": "dev-fullstack-0135",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0170",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0070",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0001",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0105",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0080",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0057",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0092",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0083",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0174",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0160",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0076",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0009",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0021",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0116",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0023",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0060",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0090",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0040",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0098",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0010",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0142",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0047",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0014",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0082",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0167",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0087",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0051",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0088",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0006",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0036",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0055",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0133",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0183",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-fullstack-0079",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-fullstack-0078",
+          "status": "replied",
+          "replied": true
+        }
+      ]
+    },
+    "data_analyst": {
+      "persona": "data_analyst",
+      "jobs_in_set": 40,
+      "proposals_submitted": 37,
+      "replied": 27,
+      "interview": 0,
+      "hired": 0,
+      "reply_rate": 0.7297,
+      "reply_rate_ci95": [
+        0.5702,
+        0.846
+      ],
+      "hire_rate": 0.0,
+      "connects_spent": 323,
+      "connects_per_reply": 11.96,
+      "status_counts": {
+        "no_response": 2,
+        "replied": 27,
+        "viewed": 8
+      },
+      "viewed": 35,
+      "note": "interview/hire need the freelancer to answer within 72 simulated hours; this batch run never answers, so only reply rate is a meaningful outcome here",
+      "per_proposal": [
+        {
+          "job_id": "dev-data_analyst-0059",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0144",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0048",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0012",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0062",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0061",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0018",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0188",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0085",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0103",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0105",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0174",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0133",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0051",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0132",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0100",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0056",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0178",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0129",
+          "status": "no_response",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0017",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0082",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0009",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0111",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0168",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0170",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0161",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0064",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0071",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0154",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0128",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0119",
+          "status": "viewed",
+          "replied": false
+        },
+        {
+          "job_id": "dev-data_analyst-0140",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0047",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0091",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0097",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0138",
+          "status": "replied",
+          "replied": true
+        },
+        {
+          "job_id": "dev-data_analyst-0014",
+          "status": "viewed",
+          "replied": false
+        }
+      ]
+    }
+  },
+  "overall": {
+    "proposals_submitted": 111,
+    "reply_rate": 0.7027,
+    "hire_rate": 0.0,
+    "reply_rate_ci95": [
+      0.6121,
+      0.7798
+    ]
+  }
+}

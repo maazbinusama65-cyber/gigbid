@@ -10,11 +10,11 @@
       "n_errors": 0,
       "errors": [],
       "bid_or_skip": {
-        "precision": 0.8571,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1": 0.9231,
+        "f1": 1.0,
         "tp": 6,
-        "fp": 1,
+        "fp": 0,
         "fn": 0
       },
       "bid_or_skip_by_job_type": {
@@ -27,11 +27,11 @@
           "fn": 0
         },
         "hourly": {
-          "precision": 0.5,
+          "precision": 1.0,
           "recall": 1.0,
-          "f1": 0.6667,
+          "f1": 1.0,
           "tp": 1,
-          "fp": 1,
+          "fp": 0,
           "fn": 0
         }
       },
@@ -47,7 +47,7 @@
         "n": 6,
         "rate": 1.0
       },
-      "proposals_drafted": 7,
+      "proposals_drafted": 6,
       "unsupported_claims_per_proposal": {
         "before_verification": 0.0,
         "after_verification": 0.0
@@ -60,28 +60,16 @@
         "fit_ge_099_on_skip": 0
       },
       "latency_s": {
-        "p50": 23.0892,
-        "p95": 35.1642
+        "p50": 16.6716,
+        "p95": 26.9413
       },
       "tokens_per_job": 0.0,
       "usd_per_job": 0.0,
       "final_status_counts": {
-        "skipped": 3,
-        "awaiting_approval": 7
+        "skipped": 4,
+        "awaiting_approval": 6
       },
-      "failed_jobs": [
-        {
-          "job_id": "dev-ai_ml-0013",
-          "gold": "skip",
-          "pred": "bid",
-          "status": "awaiting_approval",
-          "reason": null,
-          "is_scam": false,
-          "has_injection": true,
-          "fit": 0.787,
-          "risk": 0.55
-        }
-      ]
+      "failed_jobs": []
     },
     "fullstack": {
       "persona": "fullstack",
@@ -139,8 +127,8 @@
         "fit_ge_099_on_skip": 0
       },
       "latency_s": {
-        "p50": 17.5794,
-        "p95": 21.6911
+        "p50": 15.4467,
+        "p95": 20.4672
       },
       "tokens_per_job": 0.0,
       "usd_per_job": 0.0,
@@ -157,20 +145,20 @@
       "errors": [],
       "bid_or_skip": {
         "precision": 1.0,
-        "recall": 0.7143,
-        "f1": 0.8333,
-        "tp": 5,
+        "recall": 0.8571,
+        "f1": 0.9231,
+        "tp": 6,
         "fp": 0,
-        "fn": 2
+        "fn": 1
       },
       "bid_or_skip_by_job_type": {
         "fixed": {
           "precision": 1.0,
-          "recall": 0.6667,
-          "f1": 0.8,
-          "tp": 4,
+          "recall": 0.8333,
+          "f1": 0.9091,
+          "tp": 5,
           "fp": 0,
-          "fn": 2
+          "fn": 1
         },
         "hourly": {
           "precision": 1.0,
@@ -190,10 +178,10 @@
         "fn": 0
       },
       "price_in_fair_band": {
-        "n": 5,
+        "n": 6,
         "rate": 1.0
       },
-      "proposals_drafted": 5,
+      "proposals_drafted": 6,
       "unsupported_claims_per_proposal": {
         "before_verification": 0.0,
         "after_verification": 0.0
@@ -206,14 +194,14 @@
         "fit_ge_099_on_skip": 0
       },
       "latency_s": {
-        "p50": 13.2508,
-        "p95": 22.0441
+        "p50": 13.4203,
+        "p95": 21.752
       },
       "tokens_per_job": 0.0,
       "usd_per_job": 0.0,
       "final_status_counts": {
-        "skipped": 5,
-        "awaiting_approval": 5
+        "skipped": 4,
+        "awaiting_approval": 6
       },
       "failed_jobs": [
         {
@@ -226,17 +214,6 @@
           "has_injection": false,
           "fit": 0.533,
           "risk": 0.072
-        },
-        {
-          "job_id": "dev-data_analyst-0070",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.107
         }
       ]
     }

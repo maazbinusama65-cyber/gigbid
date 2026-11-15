@@ -1,0 +1,48 @@
+{
+  "protocol": {
+    "passes": 2,
+    "kept": "faster pass by p50",
+    "unit": "ms per job (all requirements), query caches cleared",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "python": "3.14.4",
+    "generated_at": "2026-11-15T15:26:50+00:00",
+    "note": "measure on an idle machine; compare with latency_cold in rag_variants.json, which was measured under load"
+  },
+  "variants": {
+    "v0_naive": {
+      "p50_ms": 38.83285001211334,
+      "p95_ms": 45.4678749993036,
+      "n": 36
+    },
+    "v2_hybrid": {
+      "p50_ms": 41.95949999848381,
+      "p95_ms": 53.2363250022172,
+      "n": 36
+    },
+    "v3_rerank": {
+      "p50_ms": 530.4687000025297,
+      "p95_ms": 606.4279499987606,
+      "n": 36
+    },
+    "v9_skill_graph": {
+      "p50_ms": 40.11954999441514,
+      "p95_ms": 52.99610000656685,
+      "n": 36
+    },
+    "v1_decompose+v2_hybrid": {
+      "p50_ms": 56.0438000029535,
+      "p95_ms": 169.2170749993238,
+      "n": 36
+    },
+    "v1_decompose+v2_hybrid+v9_skill_graph": {
+      "p50_ms": 62.50415000249632,
+      "p95_ms": 160.13727499739616,
+      "n": 36
+    },
+    "v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph": {
+      "p50_ms": 1239.0300500046578,
+      "p95_ms": 2673.355349998019,
+      "n": 36
+    }
+  }
+}

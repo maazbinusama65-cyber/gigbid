@@ -10,11 +10,11 @@
       "n_errors": 0,
       "errors": [],
       "bid_or_skip": {
-        "precision": 0.9344,
+        "precision": 0.9828,
         "recall": 0.95,
-        "f1": 0.9421,
+        "f1": 0.9661,
         "tp": 57,
-        "fp": 4,
+        "fp": 1,
         "fn": 3
       },
       "bid_or_skip_by_job_type": {
@@ -27,11 +27,11 @@
           "fn": 2
         },
         "hourly": {
-          "precision": 0.8929,
+          "precision": 1.0,
           "recall": 0.9615,
-          "f1": 0.9259,
+          "f1": 0.9804,
           "tp": 25,
-          "fp": 3,
+          "fp": 0,
           "fn": 1
         }
       },
@@ -47,7 +47,7 @@
         "n": 57,
         "rate": 0.8947
       },
-      "proposals_drafted": 61,
+      "proposals_drafted": 58,
       "unsupported_claims_per_proposal": {
         "before_verification": 0.0,
         "after_verification": 0.0
@@ -60,14 +60,14 @@
         "fit_ge_099_on_skip": 0
       },
       "latency_s": {
-        "p50": 8.2876,
-        "p95": 16.1025
+        "p50": 7.3118,
+        "p95": 16.1887
       },
       "tokens_per_job": 0.0,
       "usd_per_job": 0.0,
       "final_status_counts": {
-        "awaiting_approval": 61,
-        "skipped": 39
+        "awaiting_approval": 58,
+        "skipped": 42
       },
       "failed_jobs": [
         {
@@ -93,17 +93,6 @@
           "risk": 0.088
         },
         {
-          "job_id": "test-ai_ml-0004",
-          "gold": "skip",
-          "pred": "bid",
-          "status": "awaiting_approval",
-          "reason": null,
-          "is_scam": false,
-          "has_injection": false,
-          "fit": 1.0,
-          "risk": 0.094
-        },
-        {
           "job_id": "test-ai_ml-0029",
           "gold": "bid",
           "pred": "watch",
@@ -113,28 +102,6 @@
           "has_injection": false,
           "fit": 0.533,
           "risk": 0.084
-        },
-        {
-          "job_id": "test-ai_ml-0012",
-          "gold": "skip",
-          "pred": "bid",
-          "status": "awaiting_approval",
-          "reason": null,
-          "is_scam": false,
-          "has_injection": false,
-          "fit": 0.825,
-          "risk": 0.138
-        },
-        {
-          "job_id": "test-ai_ml-0033",
-          "gold": "skip",
-          "pred": "bid",
-          "status": "awaiting_approval",
-          "reason": null,
-          "is_scam": false,
-          "has_injection": false,
-          "fit": 0.65,
-          "risk": 0.157
         },
         {
           "job_id": "test-ai_ml-0052",
@@ -205,8 +172,8 @@
         "fit_ge_099_on_skip": 0
       },
       "latency_s": {
-        "p50": 8.1196,
-        "p95": 18.9695
+        "p50": 7.464,
+        "p95": 16.9721
       },
       "tokens_per_job": 0.0,
       "usd_per_job": 0.0,
@@ -234,29 +201,29 @@
       "n_errors": 0,
       "errors": [],
       "bid_or_skip": {
-        "precision": 0.9808,
-        "recall": 0.85,
-        "f1": 0.9107,
-        "tp": 51,
-        "fp": 1,
-        "fn": 9
+        "precision": 1.0,
+        "recall": 0.9667,
+        "f1": 0.9831,
+        "tp": 58,
+        "fp": 0,
+        "fn": 2
       },
       "bid_or_skip_by_job_type": {
         "fixed": {
           "precision": 1.0,
-          "recall": 0.8571,
-          "f1": 0.9231,
-          "tp": 36,
+          "recall": 0.9762,
+          "f1": 0.988,
+          "tp": 41,
           "fp": 0,
-          "fn": 6
+          "fn": 1
         },
         "hourly": {
-          "precision": 0.9375,
-          "recall": 0.8333,
-          "f1": 0.8824,
-          "tp": 15,
-          "fp": 1,
-          "fn": 3
+          "precision": 1.0,
+          "recall": 0.9444,
+          "f1": 0.9714,
+          "tp": 17,
+          "fp": 0,
+          "fn": 1
         }
       },
       "scam_detection": {
@@ -268,10 +235,10 @@
         "fn": 3
       },
       "price_in_fair_band": {
-        "n": 51,
-        "rate": 0.9412
+        "n": 58,
+        "rate": 0.931
       },
-      "proposals_drafted": 52,
+      "proposals_drafted": 58,
       "unsupported_claims_per_proposal": {
         "before_verification": 0.0,
         "after_verification": 0.0
@@ -284,81 +251,26 @@
         "fit_ge_099_on_skip": 0
       },
       "latency_s": {
-        "p50": 15.5468,
-        "p95": 29.0597
+        "p50": 8.7442,
+        "p95": 18.7525
       },
       "tokens_per_job": 0.0,
       "usd_per_job": 0.0,
       "final_status_counts": {
-        "awaiting_approval": 52,
-        "skipped": 48
+        "skipped": 42,
+        "awaiting_approval": 58
       },
       "failed_jobs": [
         {
-          "job_id": "test-data_analyst-0075",
-          "gold": "skip",
-          "pred": "bid",
-          "status": "awaiting_approval",
-          "reason": null,
-          "is_scam": false,
-          "has_injection": false,
-          "fit": 0.948,
-          "risk": 0.15
-        },
-        {
-          "job_id": "test-data_analyst-0003",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": true,
-          "fit": null,
-          "risk": 0.55
-        },
-        {
-          "job_id": "test-data_analyst-0064",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.25
-        },
-        {
           "job_id": "test-data_analyst-0055",
           "gold": "bid",
-          "pred": "skip",
+          "pred": "watch",
           "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
+          "reason": "fit 0.53 between 0.45 and 0.6",
           "is_scam": false,
           "has_injection": false,
-          "fit": null,
+          "fit": 0.533,
           "risk": 0.022
-        },
-        {
-          "job_id": "test-data_analyst-0065",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.044
-        },
-        {
-          "job_id": "test-data_analyst-0010",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.117
         },
         {
           "job_id": "test-data_analyst-0037",
@@ -370,39 +282,6 @@
           "has_injection": false,
           "fit": 0.595,
           "risk": 0.08
-        },
-        {
-          "job_id": "test-data_analyst-0091",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.085
-        },
-        {
-          "job_id": "test-data_analyst-0039",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.329
-        },
-        {
-          "job_id": "test-data_analyst-0018",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "fit 0.00 below watch threshold 0.45",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": 0.191
         }
       ]
     }

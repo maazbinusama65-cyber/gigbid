@@ -23,6 +23,7 @@ from rag.embedder import get_embedder
 from rag.retriever import build_index
 
 VARIANTS = ["v0_naive", "v2_hybrid", "v3_rerank", "v9_skill_graph", "v1_decompose+v2_hybrid",
+            "v1_decompose+v2_hybrid+v9_skill_graph",
             "v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph"]
 PASSES = 2
 

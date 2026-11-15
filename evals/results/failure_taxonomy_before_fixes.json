@@ -154,6 +154,31 @@
         }
       ]
     },
+    "tool_error": {
+      "description": "a node dead-lettered (for example a tool rejected its arguments); the job never reached a decision",
+      "count": 0,
+      "share": 0.0,
+      "examples": []
+    },
+    "false_duplicate": {
+      "description": "gold bid but the near-duplicate check matched it to an earlier, similar posting",
+      "count": 1,
+      "share": 0.017,
+      "examples": [
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0141",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "duplicate of dev-ai_ml-0199",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": null
+        }
+      ]
+    },
     "duplicate_missed": {
       "description": "gold skip because it repeats an earlier posting but the agent bid",
       "count": 8,
@@ -314,21 +339,9 @@
     },
     "retrieval_miss": {
       "description": "gold bid but fit below the watch band: portfolio evidence not retrieved for the requirements",
-      "count": 9,
-      "share": 0.153,
+      "count": 8,
+      "share": 0.136,
       "examples": [
-        {
-          "persona": "ai_ml",
-          "job_id": "dev-ai_ml-0141",
-          "gold": "bid",
-          "pred": "skip",
-          "status": "skipped",
-          "reason": "duplicate of dev-ai_ml-0199",
-          "is_scam": false,
-          "has_injection": false,
-          "fit": null,
-          "risk": null
-        },
         {
           "persona": "data_analyst",
           "job_id": "dev-data_analyst-0059",
@@ -388,6 +401,18 @@
           "has_injection": false,
           "fit": null,
           "risk": 0.063
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0070",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.107
         }
       ]
     },

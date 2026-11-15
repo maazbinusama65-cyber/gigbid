@@ -12,6 +12,13 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "agent" / "config.yaml"
 
+try:                                    # local secrets live in a git-ignored .env; real environment variables win
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env", override=False)
+except ImportError:  # pragma: no cover - python-dotenv is optional
+    pass
+
 
 def _deep_get(d: dict, path: str, default=None):
     cur: Any = d

@@ -173,6 +173,10 @@ Shipped variant: `v9_skill_graph` (best single-variant Recall@5, p95 about 200 m
 
 On 63 drafts with deliberately fabricated claims, the verifier detected 100%<!--r:rag_verify.json:recall--> of fabricated clients, years, metrics and tools. It flagged 6.3% of true claims by mistake. Over 407 claims, unsupported claims went from 99 before repair to 0<!--r:rag_verify.json:unsupported_after--> after.
 
+### LLM-judge calibration
+
+Judge `openai/gpt-oss-120b` against my own 30 labels (rubric 1 to 5; good means 4 or above): binary Cohen's kappa 0.60<!--r:judge_calibration_report.json:kappa_binary_good_ge4-->, quadratic-weighted ordinal kappa 0.73, unweighted ordinal kappa 0.24, exact agreement 40% (n=30). The judge is more lenient than I am (mean score 3.43 against 3.13), so it is usable for ranking proposals but should not be read as an absolute quality score.
+
 ### Tool granularity (R&D question A)
 
 | Tool surface | Tools | Schema tokens | Tool-selection accuracy | Argument accuracy |
@@ -229,8 +233,6 @@ a Compliance Guard, and nothing is sent without an approval that names the exact
 
 * No public deployment or reviewer login yet; the app runs locally and under `docker compose`.
 * No demo video; screenshots are in `docs/screenshots/`.
-* The LLM judge is built but uncalibrated: Cohen's kappa needs 30 human-labelled items (`evals/runners/judge_calibration.py`
-  reports "awaiting human labels" rather than a number).
 * Real-LLM runs (writer quality, model comparison, R&D question C single agent vs supervisor vs graph) are not done.
 * Live Upwork OAuth is not connected; the marketplace port has a GigSim adapter and a live-Upwork adapter whose tool
   names are placeholders until a real server is attached.

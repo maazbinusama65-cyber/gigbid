@@ -121,6 +121,19 @@ def x2_block() -> str:
             f"{cite('x2_experiment.json', 'mcnemar_exact_p', str(pooled['mcnemar_exact_p']))}.")
 
 
+def judge_block() -> str:
+    d = load("judge_calibration_report.json")
+    if not d or d.get("status") != "ok":
+        return "_awaiting human labels or judge scores_"
+    kb = cite("judge_calibration_report.json", "kappa_binary_good_ge4", f"{d['kappa_binary_good_ge4']:.2f}")
+    return (f"Judge `openai/gpt-oss-120b` against my own 30 labels (rubric 1 to 5; good means 4 or above): binary "
+            f"Cohen's kappa {kb}, quadratic-weighted ordinal kappa {d['kappa_ordinal_quadratic']:.2f}, unweighted "
+            f"ordinal kappa {d['kappa_ordinal_unweighted']:.2f}, exact agreement {pct(d['exact_agreement'], 0)} "
+            f"(n={d['n']}). The judge is more lenient than I am (mean score {d['mean_judge']:.2f} against "
+            f"{d['mean_human']:.2f}), so it is usable for ranking proposals but should not be read as an absolute "
+            f"quality score.")
+
+
 def h1_block() -> str:
     d = load("rag_variants.json")
     if not d:
@@ -208,6 +221,10 @@ Shipped variant: `v9_skill_graph` (best single-variant Recall@5, p95 about 200 m
 
 {verify}
 
+### LLM-judge calibration
+
+{judge}
+
 ### Tool granularity (R&D question A)
 
 {tools}
@@ -244,8 +261,6 @@ a Compliance Guard, and nothing is sent without an approval that names the exact
 
 * No public deployment or reviewer login yet; the app runs locally and under `docker compose`.
 * No demo video; screenshots are in `docs/screenshots/`.
-* The LLM judge is built but uncalibrated: Cohen's kappa needs 30 human-labelled items (`evals/runners/judge_calibration.py`
-  reports "awaiting human labels" rather than a number).
 * Real-LLM runs (writer quality, model comparison, R&D question C single agent vs supervisor vs graph) are not done.
 * Live Upwork OAuth is not connected; the marketplace port has a GigSim adapter and a live-Upwork adapter whose tool
   names are placeholders until a real server is attached.
@@ -268,7 +283,7 @@ def main() -> None:
         bid_graph=graph("bid_graph.mmd"), conv_graph=graph("conversation_graph.mmd"),
         test_table=decision_table("decision_stub_test.json"), dev_table=decision_table("decision_stub.json"),
         retrieval=retrieval_table(), h1=h1_block(), verify=verify_block(), tools=tool_table(),
-        outcomes=outcomes_block(), x2=x2_block(), taxonomy=taxonomy_table())
+        judge=judge_block(), outcomes=outcomes_block(), x2=x2_block(), taxonomy=taxonomy_table())
     (ROOT / "README.md").write_text(out, encoding="utf-8")
     print("README.md written", len(out), "chars")
 

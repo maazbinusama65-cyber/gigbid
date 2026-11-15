@@ -28,6 +28,7 @@ import json
 import os
 import random
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -145,15 +146,21 @@ def groq_judge(text: str, job_title: str) -> int:  # pragma: no cover - needs ne
     """Judge via an OpenAI-compatible endpoint; model/base_url come from agent/config.yaml."""
     import httpx
 
+    import agent.config_loader  # noqa: F401  - side effect: loads the git-ignored .env (GROQ_API_KEY)
+
     prof = config.load_config()["models"]["profiles"]["open"]
     model = prof["nodes"]["judge"]["model"]
     key = os.environ[prof["api_key_env"]]
-    resp = httpx.post(f"{prof['base_url']}/chat/completions", timeout=60,
-                      headers={"Authorization": f"Bearer {key}"},
-                      json={"model": model, "temperature": 0,
-                            "messages": [{"role": "system", "content": RUBRIC},
-                                         {"role": "user", "content":
-                                          f"Job: {job_title}\n\nProposal:\n{text}"}]})
+    for attempt in range(8):            # free-tier rate limits: honour Retry-After, back off, then fail loudly
+        resp = httpx.post(f"{prof['base_url']}/chat/completions", timeout=60,
+                          headers={"Authorization": f"Bearer {key}"},
+                          json={"model": model, "temperature": 0,
+                                "messages": [{"role": "system", "content": RUBRIC},
+                                             {"role": "user", "content":
+                                              f"Job: {job_title}\n\nProposal:\n{text}"}]})
+        if resp.status_code != 429:
+            break
+        time.sleep(min(90.0, float(resp.headers.get("retry-after", 2 ** attempt * 3))))
     resp.raise_for_status()
     content = resp.json()["choices"][0]["message"]["content"]
     return int(json.loads(content[content.index("{"): content.rindex("}") + 1])["score"])

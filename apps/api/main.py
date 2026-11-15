@@ -6,14 +6,16 @@ Env:  APP_SECRET_KEY, DATABASE_URL, GIGBID_SERVICES=mock|real, REVIEWER_EMAIL, R
 from __future__ import annotations
 
 import logging
+import os
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import APIRouter, FastAPI, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 from sqlalchemy import select
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
@@ -206,7 +208,28 @@ def create_app(config: AppConfig | None = None, services: Services | None = None
     async def root_health() -> dict:
         return {"status": "ok", "service": "gigbid-api"}
 
+    mount_web_app(app)
     return app
+
+
+def mount_web_app(app: FastAPI) -> None:
+    """Serve the built React app from the same origin when GIGBID_STATIC_DIR points at it (single-container deploys).
+
+    Registered last so every API route wins; unknown paths fall back to index.html for client-side routing, and
+    anything under /api that did not match stays a JSON 404."""
+    raw = os.environ.get("GIGBID_STATIC_DIR")
+    if not raw or not (Path(raw) / "index.html").is_file():
+        return
+    root = Path(raw).resolve()
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def web_app(full_path: str) -> FileResponse:
+        if full_path == "api" or full_path.startswith("api/"):
+            raise StarletteHTTPException(status_code=404, detail="not found")
+        candidate = (root / full_path).resolve()
+        if full_path and candidate.is_file() and root in candidate.parents:   # never serve outside the web root
+            return FileResponse(candidate)
+        return FileResponse(root / "index.html")
 
 
 app = create_app()

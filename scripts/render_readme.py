@@ -15,6 +15,18 @@ RES = ROOT / "evals" / "results"
 PERSONAS = ("ai_ml", "fullstack", "data_analyst")
 
 
+
+def runs_on_v3() -> bool:
+    """True while the system-level results are the ones measured with the Portfolio server's then-default variant."""
+    a, b = RES / "decision_stub.json", RES / "decision_stub_round2_v3rerank.json"
+    return a.exists() and b.exists() and a.read_bytes() == b.read_bytes()
+
+
+V3_NOTE = ("The decision, outcome and A/B results were measured with retrieval variant `v3_rerank`, the Portfolio "
+           "server's hard-coded default at the time, **not** the `v9_skill_graph` declared as shipped: the server ignored "
+           "the config value. The wiring is fixed and tested, but the re-runs on V9 were not completed before submission.")
+
+
 def load(name: str) -> dict | None:
     p = RES / name
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
@@ -157,7 +169,7 @@ def reply_vs_retrieval_block() -> str:
     if not (base and best):
         return "_not run_"
     rows = ["| Retrieval | Proposals | Reply rate (95% CI) |", "|---|---|---|"]
-    for label, f, d in (("v0_naive", "gigsim_outcomes_stub_v0_naive.json", base), ("v9_skill_graph (shipped)", "gigsim_outcomes_stub.json", best)):
+    for label, f, d in (("v0_naive", "gigsim_outcomes_stub_v0_naive.json", base), ("v3_rerank (the variant actually served)" if runs_on_v3() else "v9_skill_graph (shipped)", "gigsim_outcomes_stub.json", best)):
         o = d["overall"]
         lo, hi = o["reply_rate_ci95"]
         rows.append(f"| {label} | {o['proposals_submitted']} | {cite(f, 'reply_rate', pct(o['reply_rate']))} ({pct(lo)} to {pct(hi)}) |")
@@ -209,6 +221,7 @@ Technical write-up: [My evaluation was lying to me](https://medium.com/@i221378/
 > * All agent numbers use the deterministic **`stub` model profile** (no LLM calls). They test routing, retrieval,
 >   policy, safety and plumbing. They say little about the *writing quality* an LLM would produce.
 > * Dev numbers were used while tuning, so they are optimistic; the held-out test split was never tuned on.
+> * {v3_note}
 > * Not done: public deployment, the demo video, judge-calibration kappa (needs 30 human labels), live Upwork.
 >   Details are under **Known gaps**.
 
@@ -336,7 +349,7 @@ def main() -> None:
         bid_graph=graph("bid_graph.mmd"), conv_graph=graph("conversation_graph.mmd"),
         test_table=decision_table("decision_stub_test.json"), dev_table=decision_table("decision_stub.json"),
         retrieval=retrieval_table(), h1=h1_block(), verify=verify_block(), tools=tool_table(),
-        judge=judge_block(), ablation=ablation_block(), reply_vs_retrieval=reply_vs_retrieval_block(), outcomes=outcomes_block(), x2=x2_block(), taxonomy=taxonomy_table())
+        v3_note=("**Retrieval caveat:** " + V3_NOTE) if runs_on_v3() else "(all system results were measured on the declared retrieval variant)", judge=judge_block(), ablation=ablation_block(), reply_vs_retrieval=reply_vs_retrieval_block(), outcomes=outcomes_block(), x2=x2_block(), taxonomy=taxonomy_table())
     (ROOT / "README.md").write_text(out, encoding="utf-8")
     print("README.md written", len(out), "chars")
 

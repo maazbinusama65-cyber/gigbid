@@ -14,6 +14,7 @@ Technical write-up: [My evaluation was lying to me](https://medium.com/@i221378/
 > * All agent numbers use the deterministic **`stub` model profile** (no LLM calls). They test routing, retrieval,
 >   policy, safety and plumbing. They say little about the *writing quality* an LLM would produce.
 > * Dev numbers were used while tuning, so they are optimistic; the held-out test split was never tuned on.
+> * **Retrieval caveat:** The decision, outcome and A/B results were measured with retrieval variant `v3_rerank`, the Portfolio server's hard-coded default at the time, **not** the `v9_skill_graph` declared as shipped: the server ignored the config value. The wiring is fixed and tested, but the re-runs on V9 were not completed before submission.
 > * Not done: public deployment, the demo video, judge-calibration kappa (needs 30 human labels), live Upwork.
 >   Details are under **Known gaps**.
 
@@ -178,7 +179,7 @@ Shipped variant: `v9_skill_graph`, the best single variant. The ablation found a
 | Retrieval | Proposals | Reply rate (95% CI) |
 |---|---|---|
 | v0_naive | 111 | 70.3%<!--r:gigsim_outcomes_stub_v0_naive.json:reply_rate--> (61.2% to 78.0%) |
-| v9_skill_graph (shipped) | 113 | 68.1%<!--r:gigsim_outcomes_stub.json:reply_rate--> (59.1% to 76.0%) |
+| v3_rerank (the variant actually served) | 113 | 68.1%<!--r:gigsim_outcomes_stub.json:reply_rate--> (59.1% to 76.0%) |
 
 ### Ablation
 

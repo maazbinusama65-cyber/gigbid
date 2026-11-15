@@ -1,0 +1,289 @@
+{
+  "split": "test",
+  "profile": "stub",
+  "smoke": false,
+  "rag_variant": "config",
+  "per_persona": {
+    "ai_ml": {
+      "persona": "ai_ml",
+      "n_jobs": 100,
+      "n_errors": 0,
+      "errors": [],
+      "bid_or_skip": {
+        "precision": 0.9828,
+        "recall": 0.95,
+        "f1": 0.9661,
+        "tp": 57,
+        "fp": 1,
+        "fn": 3
+      },
+      "bid_or_skip_by_job_type": {
+        "fixed": {
+          "precision": 0.9697,
+          "recall": 0.9412,
+          "f1": 0.9552,
+          "tp": 32,
+          "fp": 1,
+          "fn": 2
+        },
+        "hourly": {
+          "precision": 1.0,
+          "recall": 0.9615,
+          "f1": 0.9804,
+          "tp": 25,
+          "fp": 0,
+          "fn": 1
+        }
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9474,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1
+      },
+      "price_in_fair_band": {
+        "n": 57,
+        "rate": 0.8947
+      },
+      "proposals_drafted": 58,
+      "unsupported_claims_per_proposal": {
+        "before_verification": 0.0,
+        "after_verification": 0.0
+      },
+      "injection": {
+        "n": 8,
+        "attack_success": 0,
+        "rate": 0.0,
+        "detected": 7,
+        "fit_ge_099_on_skip": 0
+      },
+      "latency_s": {
+        "p50": 7.3118,
+        "p95": 16.1887
+      },
+      "tokens_per_job": 0.0,
+      "usd_per_job": 0.0,
+      "final_status_counts": {
+        "awaiting_approval": 58,
+        "skipped": 42
+      },
+      "failed_jobs": [
+        {
+          "job_id": "test-ai_ml-0010",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.47 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.475,
+          "risk": 0.083
+        },
+        {
+          "job_id": "test-ai_ml-0100",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.67,
+          "risk": 0.088
+        },
+        {
+          "job_id": "test-ai_ml-0029",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.53 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.533,
+          "risk": 0.084
+        },
+        {
+          "job_id": "test-ai_ml-0052",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.55 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.553,
+          "risk": 0.059
+        }
+      ]
+    },
+    "fullstack": {
+      "persona": "fullstack",
+      "n_jobs": 100,
+      "n_errors": 0,
+      "errors": [],
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.9833,
+        "f1": 0.9916,
+        "tp": 59,
+        "fp": 0,
+        "fn": 1
+      },
+      "bid_or_skip_by_job_type": {
+        "fixed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 36,
+          "fp": 0,
+          "fn": 0
+        },
+        "hourly": {
+          "precision": 1.0,
+          "recall": 0.9583,
+          "f1": 0.9787,
+          "tp": 23,
+          "fp": 0,
+          "fn": 1
+        }
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0
+      },
+      "price_in_fair_band": {
+        "n": 59,
+        "rate": 0.8814
+      },
+      "proposals_drafted": 59,
+      "unsupported_claims_per_proposal": {
+        "before_verification": 0.0,
+        "after_verification": 0.0
+      },
+      "injection": {
+        "n": 8,
+        "attack_success": 0,
+        "rate": 0.0,
+        "detected": 7,
+        "fit_ge_099_on_skip": 0
+      },
+      "latency_s": {
+        "p50": 7.464,
+        "p95": 16.9721
+      },
+      "tokens_per_job": 0.0,
+      "usd_per_job": 0.0,
+      "final_status_counts": {
+        "awaiting_approval": 59,
+        "skipped": 41
+      },
+      "failed_jobs": [
+        {
+          "job_id": "test-fullstack-0007",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.53 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.533,
+          "risk": 0.052
+        }
+      ]
+    },
+    "data_analyst": {
+      "persona": "data_analyst",
+      "n_jobs": 100,
+      "n_errors": 0,
+      "errors": [],
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.9667,
+        "f1": 0.9831,
+        "tp": 58,
+        "fp": 0,
+        "fn": 2
+      },
+      "bid_or_skip_by_job_type": {
+        "fixed": {
+          "precision": 1.0,
+          "recall": 0.9762,
+          "f1": 0.988,
+          "tp": 41,
+          "fp": 0,
+          "fn": 1
+        },
+        "hourly": {
+          "precision": 1.0,
+          "recall": 0.9444,
+          "f1": 0.9714,
+          "tp": 17,
+          "fp": 0,
+          "fn": 1
+        }
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571,
+        "tp": 9,
+        "fp": 0,
+        "fn": 3
+      },
+      "price_in_fair_band": {
+        "n": 58,
+        "rate": 0.931
+      },
+      "proposals_drafted": 58,
+      "unsupported_claims_per_proposal": {
+        "before_verification": 0.0,
+        "after_verification": 0.0
+      },
+      "injection": {
+        "n": 8,
+        "attack_success": 0,
+        "rate": 0.0,
+        "detected": 7,
+        "fit_ge_099_on_skip": 0
+      },
+      "latency_s": {
+        "p50": 8.7442,
+        "p95": 18.7525
+      },
+      "tokens_per_job": 0.0,
+      "usd_per_job": 0.0,
+      "final_status_counts": {
+        "skipped": 42,
+        "awaiting_approval": 58
+      },
+      "failed_jobs": [
+        {
+          "job_id": "test-data_analyst-0055",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.53 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.533,
+          "risk": 0.022
+        },
+        {
+          "job_id": "test-data_analyst-0037",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.59 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.595,
+          "risk": 0.08
+        }
+      ]
+    }
+  }
+}

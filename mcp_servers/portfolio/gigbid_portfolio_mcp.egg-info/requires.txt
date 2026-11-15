@@ -1,0 +1,5 @@
+mcp>=1.9
+pydantic>=2
+uvicorn>=0.30
+
+[rag]

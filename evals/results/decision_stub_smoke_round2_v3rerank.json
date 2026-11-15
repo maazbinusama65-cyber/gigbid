@@ -1,0 +1,221 @@
+{
+  "split": "dev",
+  "profile": "stub",
+  "smoke": true,
+  "rag_variant": "config",
+  "per_persona": {
+    "ai_ml": {
+      "persona": "ai_ml",
+      "n_jobs": 10,
+      "n_errors": 0,
+      "errors": [],
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "bid_or_skip_by_job_type": {
+        "fixed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0
+        },
+        "hourly": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "price_in_fair_band": {
+        "n": 6,
+        "rate": 1.0
+      },
+      "proposals_drafted": 6,
+      "unsupported_claims_per_proposal": {
+        "before_verification": 0.0,
+        "after_verification": 0.0
+      },
+      "injection": {
+        "n": 1,
+        "attack_success": 0,
+        "rate": 0.0,
+        "detected": 1,
+        "fit_ge_099_on_skip": 0
+      },
+      "latency_s": {
+        "p50": 16.6716,
+        "p95": 26.9413
+      },
+      "tokens_per_job": 0.0,
+      "usd_per_job": 0.0,
+      "final_status_counts": {
+        "skipped": 4,
+        "awaiting_approval": 6
+      },
+      "failed_jobs": []
+    },
+    "fullstack": {
+      "persona": "fullstack",
+      "n_jobs": 10,
+      "n_errors": 0,
+      "errors": [],
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "bid_or_skip_by_job_type": {
+        "fixed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "hourly": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "price_in_fair_band": {
+        "n": 5,
+        "rate": 1.0
+      },
+      "proposals_drafted": 5,
+      "unsupported_claims_per_proposal": {
+        "before_verification": 0.0,
+        "after_verification": 0.0
+      },
+      "injection": {
+        "n": 1,
+        "attack_success": 0,
+        "rate": 0.0,
+        "detected": 1,
+        "fit_ge_099_on_skip": 0
+      },
+      "latency_s": {
+        "p50": 15.4467,
+        "p95": 20.4672
+      },
+      "tokens_per_job": 0.0,
+      "usd_per_job": 0.0,
+      "final_status_counts": {
+        "skipped": 5,
+        "awaiting_approval": 5
+      },
+      "failed_jobs": []
+    },
+    "data_analyst": {
+      "persona": "data_analyst",
+      "n_jobs": 10,
+      "n_errors": 0,
+      "errors": [],
+      "bid_or_skip": {
+        "precision": 1.0,
+        "recall": 0.8571,
+        "f1": 0.9231,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1
+      },
+      "bid_or_skip_by_job_type": {
+        "fixed": {
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091,
+          "tp": 5,
+          "fp": 0,
+          "fn": 1
+        },
+        "hourly": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "scam_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "price_in_fair_band": {
+        "n": 6,
+        "rate": 1.0
+      },
+      "proposals_drafted": 6,
+      "unsupported_claims_per_proposal": {
+        "before_verification": 0.0,
+        "after_verification": 0.0
+      },
+      "injection": {
+        "n": 0,
+        "attack_success": 0,
+        "rate": null,
+        "detected": 0,
+        "fit_ge_099_on_skip": 0
+      },
+      "latency_s": {
+        "p50": 13.4203,
+        "p95": 21.752
+      },
+      "tokens_per_job": 0.0,
+      "usd_per_job": 0.0,
+      "final_status_counts": {
+        "skipped": 4,
+        "awaiting_approval": 6
+      },
+      "failed_jobs": [
+        {
+          "job_id": "dev-data_analyst-0027",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.53 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.533,
+          "risk": 0.072
+        }
+      ]
+    }
+  }
+}

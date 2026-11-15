@@ -1,0 +1,143 @@
+{
+  "profile": "stub",
+  "strategies": [
+    "evidence_dense",
+    "concise_question"
+  ],
+  "seed": 2026,
+  "n_per_persona": 40,
+  "per_persona": {
+    "ai_ml": {
+      "evidence_dense": {
+        "n": 38,
+        "replied": 30,
+        "rate": 0.7895,
+        "ci95": [
+          0.6365,
+          0.8893
+        ],
+        "connects_per_reply": 12.4
+      },
+      "concise_question": {
+        "n": 38,
+        "replied": 18,
+        "rate": 0.4737,
+        "ci95": [
+          0.3248,
+          0.6274
+        ],
+        "connects_per_reply": 20.67
+      },
+      "unpaired_z_test": {
+        "z": 2.8536,
+        "p": 0.004323,
+        "p1": 0.7895,
+        "p2": 0.4737
+      },
+      "paired": {
+        "n_pairs": 38,
+        "both_replied": 15,
+        "only_evidence_dense": 15,
+        "only_concise_question": 3,
+        "mcnemar_exact_p": 0.007538
+      }
+    },
+    "fullstack": {
+      "evidence_dense": {
+        "n": 38,
+        "replied": 21,
+        "rate": 0.5526,
+        "ci95": [
+          0.3971,
+          0.6985
+        ],
+        "connects_per_reply": 16.57
+      },
+      "concise_question": {
+        "n": 38,
+        "replied": 21,
+        "rate": 0.5526,
+        "ci95": [
+          0.3971,
+          0.6985
+        ],
+        "connects_per_reply": 16.57
+      },
+      "unpaired_z_test": {
+        "z": 0.0,
+        "p": 1.0,
+        "p1": 0.5526,
+        "p2": 0.5526
+      },
+      "paired": {
+        "n_pairs": 38,
+        "both_replied": 12,
+        "only_evidence_dense": 9,
+        "only_concise_question": 9,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "data_analyst": {
+      "evidence_dense": {
+        "n": 37,
+        "replied": 26,
+        "rate": 0.7027,
+        "ci95": [
+          0.5422,
+          0.8251
+        ],
+        "connects_per_reply": 12.42
+      },
+      "concise_question": {
+        "n": 37,
+        "replied": 22,
+        "rate": 0.5946,
+        "ci95": [
+          0.4349,
+          0.7365
+        ],
+        "connects_per_reply": 14.68
+      },
+      "unpaired_z_test": {
+        "z": 0.974,
+        "p": 0.330046,
+        "p1": 0.7027,
+        "p2": 0.5946
+      },
+      "paired": {
+        "n_pairs": 37,
+        "both_replied": 14,
+        "only_evidence_dense": 12,
+        "only_concise_question": 8,
+        "mcnemar_exact_p": 0.503445
+      }
+    }
+  },
+  "pooled": {
+    "evidence_dense": {
+      "replied": 77,
+      "n": 113,
+      "rate": 0.6814,
+      "ci95": [
+        0.5908,
+        0.7601
+      ]
+    },
+    "concise_question": {
+      "replied": 61,
+      "n": 113,
+      "rate": 0.5398,
+      "ci95": [
+        0.4481,
+        0.6289
+      ]
+    },
+    "unpaired_z_test": {
+      "z": 2.1827,
+      "p": 0.029058,
+      "p1": 0.6814,
+      "p2": 0.5398
+    },
+    "mcnemar_exact_p": 0.044047
+  }
+}

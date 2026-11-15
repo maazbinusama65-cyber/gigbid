@@ -1,0 +1,15 @@
+# Render Blueprint: New > Blueprint > pick this repository. One free web service, built from deploy/render/Dockerfile.
+services:
+  - type: web
+    name: gigbid
+    runtime: docker
+    plan: free
+    dockerfilePath: ./deploy/render/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: MODEL_PROFILE
+        value: stub
+      - key: RAG_EMBEDDER
+        value: hash

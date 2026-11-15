@@ -1,0 +1,318 @@
+Metadata-Version: 2.4
+Name: gigbid
+Version: 0.1.0
+Summary: GigBid: a multi-agent freelancer copilot (LangGraph + MCP + advanced RAG)
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: pydantic>=2.8
+Requires-Dist: pydantic-settings>=2.4
+Requires-Dist: pyyaml>=6
+Requires-Dist: python-dotenv>=1
+Requires-Dist: httpx>=0.27
+Requires-Dist: langgraph>=1.0
+Requires-Dist: langgraph-checkpoint-sqlite>=3
+Requires-Dist: langgraph-checkpoint-postgres>=3
+Requires-Dist: langgraph-supervisor>=0.0.31
+Requires-Dist: langchain-core>=1.0
+Requires-Dist: langchain-mcp-adapters>=0.2
+Requires-Dist: mcp<2,>=1.20
+Requires-Dist: sqlalchemy>=2
+Requires-Dist: psycopg[binary]>=3.2
+Requires-Dist: aiosqlite>=0.20
+Requires-Dist: cryptography>=43
+Requires-Dist: sse-starlette>=2
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: email-validator>=2
+Requires-Dist: arq>=0.26
+Requires-Dist: redis>=5
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.2
+Requires-Dist: scikit-learn>=1.5
+Requires-Dist: sentence-transformers>=3
+Requires-Dist: pypdf>=5
+Requires-Dist: reportlab>=4
+Requires-Dist: networkx>=3
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.24; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: mypy>=1.11; extra == "dev"
+Requires-Dist: fakeredis>=2.23; extra == "dev"
+
+# GigBid: a multi-agent freelancer copilot
+
+GigBid watches a freelancer marketplace, decides which jobs are worth a bid, drafts a proposal in which every claim
+is backed by the freelancer's own portfolio, and **stops for human approval before anything is sent**. It is the
+AI-4016 R&D assignment built end to end: LangGraph agents, three MCP servers, an advanced RAG stack with claim
+verification, a FastAPI + React app, a Redis worker, and an evaluation harness that gates CI.
+
+Technical write-up: [My evaluation was lying to me](https://medium.com/@i221378/my-evaluation-was-lying-to-me-what-a-multi-agent-proposal-copilot-taught-me-about-measurement-d57acfdf58b7). R&D report: [`docs/report/GigBid_RD_Report.pdf`](docs/report/GigBid_RD_Report.pdf).
+
+> **Read this first: what is and is not proven here.**
+> * The instructor's `gigsim/`, personas and test set were **not** in the starter kit I received. `gigsim/` is my own
+>   stand-in simulator and every job, client and gold label is synthetic (some history titles and budgets come from a
+>   real Kaggle Upwork dump; see `docs/DATA_CARD.md`). Numbers below are on that stand-in data.
+> * All agent numbers use the deterministic **`stub` model profile** (no LLM calls). They test routing, retrieval,
+>   policy, safety and plumbing. They say little about the *writing quality* an LLM would produce.
+> * Dev numbers were used while tuning, so they are optimistic; the held-out test split was never tuned on.
+> * Not done: public deployment, the demo video, judge-calibration kappa (needs 30 human labels), live Upwork.
+>   Details are under **Known gaps**.
+
+## Architecture
+
+Bid graph (Scout, then Analyst / Risk / Fit Matcher in parallel through `Send`, Decision, Pricing, Writer, Verifier,
+Critic loop with at most two send-backs, Compliance Guard, human approval through `interrupt()`, submit):
+
+```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	scout(scout)
+	analyst(analyst)
+	risk_assessor(risk_assessor)
+	fit_matcher(fit_matcher)
+	decision(decision)
+	pricing(pricing)
+	writer(writer)
+	verifier(verifier)
+	critic(critic)
+	compliance(compliance)
+	dry_run(dry_run)
+	approval(approval)
+	submit(submit)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> scout;
+	analyst --> decision;
+	approval -.-> __end__;
+	approval -.-> compliance;
+	approval -.-> submit;
+	compliance -.-> __end__;
+	compliance -.-> approval;
+	compliance -.-> dry_run;
+	compliance -.-> submit;
+	critic -.-> __end__;
+	critic -.-> compliance;
+	critic -.-> writer;
+	decision -.-> __end__;
+	decision -.-> pricing;
+	dry_run --> approval;
+	fit_matcher --> decision;
+	pricing -.-> __end__;
+	pricing -.-> writer;
+	risk_assessor --> decision;
+	scout -.-> __end__;
+	scout -.-> analyst;
+	scout -.-> fit_matcher;
+	scout -.-> risk_assessor;
+	verifier -.-> __end__;
+	verifier -.-> critic;
+	writer -.-> __end__;
+	writer -.-> verifier;
+	submit --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
+
+Conversation graph:
+
+```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_messages(load_messages)
+	classify(classify)
+	draft_reply(draft_reply)
+	approve_reply(approve_reply)
+	send_reply(send_reply)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_messages;
+	approve_reply -.-> __end__;
+	approve_reply -.-> send_reply;
+	classify --> draft_reply;
+	draft_reply -.-> __end__;
+	draft_reply -.-> approve_reply;
+	load_messages -.-> __end__;
+	load_messages -.-> classify;
+	send_reply --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
+
+Design notes live in `docs/ARCHITECTURE.md` and `docs/adr/`. Short version: state, trace and long-term memory are
+separate; policy is data (`agent/policy_rules.yaml` plus the marketplace's own policy endpoint); a submit is
+exactly-once through a deterministic thread id plus the marketplace idempotency key; job text is untrusted and is
+delimited and stripped before any model sees it.
+
+## Run it
+
+```bash
+python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
+make install
+make seed          # deterministic personas, jobs and gold labels
+make gigsim        # marketplace simulator on :8081 (terminal 1)
+make api           # FastAPI on :8000, real services (terminal 2)
+make web           # React app on :5173 (terminal 3)
+make test          # unit + contract + integration, offline
+```
+
+Or `docker compose -f infra/docker-compose.yml up` (compose file validated, images not built in my environment).
+Copy `.env.example` to `.env` for local values; nothing secret is committed. The LLM key is only read at runtime.
+
+## Results (stub model profile)
+
+### Bid-or-skip decisions, held-out test split (100 jobs per persona, never tuned on)
+
+| Persona | Jobs | Bid-or-skip F1 | Scam precision / recall | Price in fair band | Injection attack success | Unsupported claims / proposal (after verification) | p50 / p95 latency (s) |
+|---|---|---|---|---|---|---|---|
+| ai_ml | 100 | 0.966<!--r:decision_stub_test.json:f1--> | 1.00 / 0.90 | 89.5% (n=57) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 7.3 / 16.2 |
+| fullstack | 100 | 0.992<!--r:decision_stub_test.json:f1--> | 1.00 / 1.00 | 88.1% (n=59) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 7.5 / 17.0 |
+| data_analyst | 100 | 0.983<!--r:decision_stub_test.json:f1--> | 1.00 / 0.75 | 93.1% (n=58) | 0<!--r:decision_stub_test.json:attack_success--> / 8 | 0.0 | 8.7 / 18.8 |
+
+### Same, dev split (200 jobs per persona, used while tuning)
+
+| Persona | Jobs | Bid-or-skip F1 | Scam precision / recall | Price in fair band | Injection attack success | Unsupported claims / proposal (after verification) | p50 / p95 latency (s) |
+|---|---|---|---|---|---|---|---|
+| ai_ml | 200 | 0.957<!--r:decision_stub.json:f1--> | 1.00 / 0.90 | 85.6% (n=111) | 0<!--r:decision_stub.json:attack_success--> / 17 | 0.0 | 5.9 / 12.6 |
+| fullstack | 200 | 0.975<!--r:decision_stub.json:f1--> | 1.00 / 0.85 | 90.5% (n=116) | 0<!--r:decision_stub.json:attack_success--> / 16 | 0.0 | 6.3 / 17.9 |
+| data_analyst | 200 | 0.970<!--r:decision_stub.json:f1--> | 1.00 / 0.86 | 91.2% (n=114) | 0<!--r:decision_stub.json:attack_success--> / 16 | 0.0 | 6.2 / 14.7 |
+
+The scam and injection patterns were tuned on the dev jobs, so the dev rows flatter the agent. The held-out table is
+the one to trust. Its weakest cell is scam recall on `data_analyst`, which I did **not** tune.
+
+### Retrieval variants (evidence Recall@5 over portfolio items)
+
+| Variant | Recall@5 | MRR | nDCG@10 | p50 ms per job | p95 ms per job |
+|---|---|---|---|---|---|
+| `v0_naive` | 64.2<!--r:rag_variants.json:recall5--> | 0.968 | 0.779 | 39 | 45 |
+| `v0b_naive_struct` | 62.0<!--r:rag_variants.json:recall5--> | 0.966 | 0.765 | - | - |
+| `v1_decompose` | 57.7<!--r:rag_variants.json:recall5--> | 0.791 | 0.694 | - | - |
+| `v2_hybrid` | 67.6<!--r:rag_variants.json:recall5--> | 0.975 | 0.810 | 42 | 53 |
+| `v3_rerank` | 61.4<!--r:rag_variants.json:recall5--> | 0.979 | 0.717 | 530 | 606 |
+| `v4_outcome` | 61.7<!--r:rag_variants.json:recall5--> | 0.938 | 0.750 | - | - |
+| `v5_multivector` | 63.8<!--r:rag_variants.json:recall5--> | 0.959 | 0.792 | - | - |
+| `v6_contextual` | 65.0<!--r:rag_variants.json:recall5--> | 0.979 | 0.773 | - | - |
+| `v7_hyde` | 65.1<!--r:rag_variants.json:recall5--> | 0.977 | 0.800 | - | - |
+| `v8_corrective` | 57.5<!--r:rag_variants.json:recall5--> | 0.899 | 0.715 | - | - |
+| `v9_skill_graph` | 72.6<!--r:rag_variants.json:recall5--> | 0.986 | 0.843 | 40 | 53 |
+| `v1_decompose+v2_hybrid` | 68.1<!--r:rag_variants.json:recall5--> | 0.909 | 0.808 | 56 | 169 |
+| `v1_decompose+v2_hybrid+v3_rerank` | 72.5<!--r:rag_variants.json:recall5--> | 0.945 | 0.840 | - | - |
+| `v1_decompose+v2_hybrid+v3_rerank+v4_outcome` | 70.9<!--r:rag_variants.json:recall5--> | 0.926 | 0.825 | - | - |
+| `v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph` | 76.7<!--r:rag_variants.json:recall5--> | 0.980 | 0.886 | 1239 | 2673 |
+| `v1_decompose+v2_hybrid+v3_rerank+v8_corrective` | 41.0<!--r:rag_variants.json:recall5--> | 0.540 | 0.468 | - | - |
+
+Latency is per job (all requirements), cold query caches, measured on an idle machine for the variants shown (`-` = not re-measured; see `rag_latency.json`).
+
+Shipped variant: `v9_skill_graph`, the best single variant. The ablation found a better lightweight pipeline (see below) that I did not ship because the decision, outcome and X2 results were all measured on V9. **Pre-registered hypothesis H1:** Requirement decomposition plus hybrid retrieval (v1_decompose+v2_hybrid) raises project-level evidence Recall@5 by >= 15 points over V0 (v0_naive) on jobs with >= 4 requirements. Measured gain: 0.02<!--r:rag_variants.json:gain_points--> points (95% CI -3.6 to 3.7, n=168 jobs). Verdict: **NOT SUPPORTED**.
+
+### Where better retrieval did or did not change the reply rate
+
+| Retrieval | Proposals | Reply rate (95% CI) |
+|---|---|---|
+| v0_naive | 111 | 70.3%<!--r:gigsim_outcomes_stub_v0_naive.json:reply_rate--> (61.2% to 78.0%) |
+| v9_skill_graph (shipped) | 113 | 68.1%<!--r:gigsim_outcomes_stub.json:reply_rate--> (59.1% to 76.0%) |
+
+### Ablation
+
+Best lightweight pipeline `v1_decompose+v2_hybrid+v9_skill_graph`: Recall@5 75.8 (selected on the same dev jobs, so optimistic; the deltas are the point).
+
+| Component removed | Recall@5 | Delta Recall@5 (95% CI) |
+|---|---|---|
+| skill graph fusion | 68.1 | -7.7<!--r:rag_ablation.json:recall5_delta_points--> (-10.1 to -5.3) |
+| BM25 hybrid (hybrid -> dense only) | 73.9 | -1.9<!--r:rag_ablation.json:recall5_delta_points--> (-3.2 to -0.7) |
+| structure-aware chunking (-> fixed chunks) | 76.2 | +0.4<!--r:rag_ablation.json:recall5_delta_points--> (-0.6 to +1.5) |
+| query decomposition (decompose -> whole post) | 76.4 | +0.6<!--r:rag_ablation.json:recall5_delta_points--> (-1.5 to +2.5) |
+
+Pre-registered ablation hypothesis (removing decomposition costs the most): **FALSIFIED**. The biggest drop is removing skill graph fusion (-7.7 points); removing decomposition changes Recall@5 by +0.6.
+
+### Claim verification
+
+On 63 drafts with deliberately fabricated claims, the verifier detected 100%<!--r:rag_verify.json:recall--> of fabricated clients, years, metrics and tools. It flagged 6.3% of true claims by mistake. Over 407 claims, unsupported claims went from 99 before repair to 0<!--r:rag_verify.json:unsupported_after--> after.
+
+### LLM-judge calibration
+
+Judge `openai/gpt-oss-120b` against my own 30 labels (rubric 1 to 5; good means 4 or above): binary Cohen's kappa 0.60<!--r:judge_calibration_report.json:kappa_binary_good_ge4-->, quadratic-weighted ordinal kappa 0.73, unweighted ordinal kappa 0.24, exact agreement 40% (n=30). The judge is more lenient than I am (mean score 3.43 against 3.13), so it is usable for ranking proposals but should not be read as an absolute quality score.
+
+### Tool granularity (R&D question A)
+
+| Tool surface | Tools | Schema tokens | Tool-selection accuracy | Argument accuracy |
+|---|---|---|---|---|
+| fine: 35 one-endpoint tools, terse descriptions | 35 | 1427 | 72.5%<!--r:tool_design.json:tool_selection_accuracy--> | 72.5% |
+| coarse: 4 action/resource-dispatch tools, generic descriptions | 4 | 443 | 82.5%<!--r:tool_design.json:tool_selection_accuracy--> | 50.0% |
+| best: deployed MCP surface, rewritten descriptions | 17 | 4181 | 85.0%<!--r:tool_design.json:tool_selection_accuracy--> | 77.5% |
+| best_terse_descriptions: ablation: deployed surface with one-line descriptions | 17 | 3474 | 72.5%<!--r:tool_design.json:tool_selection_accuracy--> | 70.0% |
+
+**Caveat:** these accuracies come from an offline keyword-and-regex selector, **not an LLM**. They measure how
+separable the tool sets are lexically and must not be read as model behaviour. The LLM version is not run yet.
+
+### Outcomes in the simulator (reply rate of approved proposals)
+
+| Persona | Proposals submitted | Replied | Reply rate (95% CI) | Connects per reply |
+|---|---|---|---|---|
+| ai_ml | 38 | 30 | 79.0%<!--r:gigsim_outcomes_stub.json:reply_rate--> (63.6% to 88.9%) | 12.4 |
+| fullstack | 38 | 21 | 55.3%<!--r:gigsim_outcomes_stub.json:reply_rate--> (39.7% to 69.8%) | 16.57 |
+| data_analyst | 37 | 26 | 70.3%<!--r:gigsim_outcomes_stub.json:reply_rate--> (54.2% to 82.5%) | 12.42 |
+
+Interview and hire need the freelancer to answer within 72 simulated hours; the batch run never answers, so only reply
+rate is reported. GigSim clients are rule-based, so this shows the pipeline can measure an effect, not that the effect
+exists on a real marketplace.
+
+### Signature extension X2: proposal A/B experiment
+
+Strategy A `evidence_dense`: 68.1%<!--r:x2_experiment.json:rate--> replies (77/113). Strategy B `concise_question`: 54.0% (61/113). Unpaired z-test p = 0.029058; paired exact McNemar p = 0.044047<!--r:x2_experiment.json:mcnemar_exact_p-->.
+
+See `docs/EXTENSION.md` for the design and its limits.
+
+### Failure taxonomy (dev set)
+
+| Category | Count | What it means |
+|---|---|---|
+| `scam_missed` | 1<!--r:failure_taxonomy.json:count--> | gold skip (scam) but the agent bid: no scam rule matched the wording |
+| `false_scam_block` | 0<!--r:failure_taxonomy.json:count--> | gold bid but the Risk Assessor marked it a scam / high risk |
+| `injection_influenced` | 1<!--r:failure_taxonomy.json:count--> | job carries an injected instruction and the decision is wrong |
+| `tool_error` | 0<!--r:failure_taxonomy.json:count--> | a node dead-lettered (for example a tool rejected its arguments); the job never reached a decision |
+| `false_duplicate` | 2<!--r:failure_taxonomy.json:count--> | gold bid but the near-duplicate check matched it to an earlier, similar posting |
+| `duplicate_missed` | 2<!--r:failure_taxonomy.json:count--> | gold skip because it repeats an earlier posting but the agent bid |
+| `borderline_fit` | 16<!--r:failure_taxonomy.json:count--> | gold bid, fit score inside the watch band (0.45 to min_fit): threshold boundary |
+| `retrieval_miss` | 0<!--r:failure_taxonomy.json:count--> | gold bid but fit below the watch band: portfolio evidence not retrieved for the requirements |
+| `overconfident_fit` | 1<!--r:failure_taxonomy.json:count--> | gold skip, not a scam or duplicate, and the agent bid on a high fit score |
+| `other` | 0<!--r:failure_taxonomy.json:count--> | none of the above |
+
+Total wrong bid-or-skip decisions on the dev set: 23.
+
+## Safety
+
+Job posts, screening questions and client messages are untrusted. They are delimited, injected sentences are
+stripped, scam signals are read from the stripped text, injected screening questions are dropped, outgoing text passes
+a Compliance Guard, and nothing is sent without an approval that names the exact draft. A real bug found on the way
+(near-duplicate postings slipping through after a restart) and the other mistakes made are in `docs/AI_USAGE.md`.
+
+## Known gaps
+
+* No public deployment or reviewer login yet; the app runs locally and under `docker compose`.
+* No demo video; screenshots are in `docs/screenshots/`.
+* Real-LLM runs (writer quality, model comparison, R&D question C single agent vs supervisor vs graph) are not done.
+* Live Upwork OAuth is not connected; the marketplace port has a GigSim adapter and a live-Upwork adapter whose tool
+  names are placeholders until a real server is attached.
+* The 30 s per-job latency budget is exceeded at p95 on one persona (see the tables).
+
+## Repository map
+
+`agent/` graphs, nodes, prompts, policy, memory, runtime. `mcp_servers/` Portfolio, Marketplace and Workspace servers.
+`rag/` retrieval variants and claim verification. `apps/api` FastAPI, `apps/web` React. `worker/` Redis worker.
+`gigsim/` simulator (stand-in, hash-checked in CI). `evals/` harness, runners and results. `docs/` architecture,
+ADRs, tool design, runbook, data card, AI usage. `infra/` compose and Dockerfiles. `scripts/ci_rules.py` enforces:
+no secrets, `gigsim/` unchanged, prompts only in `agent/prompts/`, every README number traceable to `evals/results/`.
+
+Regenerate this file with `python scripts/render_readme.py`.

@@ -16,6 +16,25 @@ log = logging.getLogger("gigbid.portfolio")
 RetrieverSource = Retriever | Callable[[str], Retriever] | None
 
 
+def configured_rag_variant() -> str:
+    """The served retrieval variant: RAG_VARIANT wins, otherwise `rag.variant` from the GigBid config.
+
+    Inside the GigBid repo the shared config is the source of truth (it used to default to a hard-coded value that
+    ignored the config, so evaluations silently ran a different variant from the declared one). The standalone
+    package has no GigBid config and no `rag` package, so it falls back to its local BM25 retriever."""
+    env = os.getenv("RAG_VARIANT")
+    if env:
+        return env
+    try:
+        from mcp_servers.common.config import load_yaml_config   # importable only inside the GigBid repo
+    except ImportError:
+        return "local"
+    variant = (load_yaml_config().get("rag") or {}).get("variant")
+    if not variant:
+        raise RuntimeError("no retrieval variant configured: set RAG_VARIANT or rag.variant in agent/config.yaml")
+    return str(variant)
+
+
 @dataclass
 class PortfolioConfig:
     """``backend``: auto (try GigBid RAG, fall back to local) | rag | local."""
@@ -23,7 +42,7 @@ class PortfolioConfig:
     data_dir: str = field(default_factory=lambda: os.getenv("PORTFOLIO_DATA_DIR", "data/personas"))
     default_portfolio_id: str = field(default_factory=lambda: os.getenv("PORTFOLIO_ID", "default"))
     backend: str = field(default_factory=lambda: os.getenv("PORTFOLIO_BACKEND", "auto"))
-    rag_variant: str = field(default_factory=lambda: os.getenv("RAG_VARIANT", "v3_rerank"))
+    rag_variant: str = field(default_factory=lambda: configured_rag_variant())
 
 
 class PortfolioService:

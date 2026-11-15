@@ -24,6 +24,18 @@ REPO = "https://github.com/maazbinusama65-cyber/gigbid"
 NM = "<span class='nm'>not measured</span>"
 
 
+
+def runs_on_v3() -> bool:
+    """True while the system-level results are the ones measured with the Portfolio server's then-default variant."""
+    a, b = RES / "decision_stub.json", RES / "decision_stub_round2_v3rerank.json"
+    return a.exists() and b.exists() and a.read_bytes() == b.read_bytes()
+
+
+V3_NOTE = ("The decision, outcome and A/B results were measured with retrieval variant <code>v3_rerank</code>, the Portfolio "
+           "server's hard-coded default at the time, <b>not</b> the <code>v9_skill_graph</code> declared as shipped: the server ignored "
+           "the config value. The wiring is fixed and tested, but the re-runs on V9 were not completed before submission.")
+
+
 def load(name: str):
     p = RES / name
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
@@ -161,7 +173,7 @@ def sec_reply_vs_retrieval() -> str:
     if not (base and best):
         return f"Reply rate by retrieval variant: {NM} (run did not complete)."
     rows = []
-    for label, d in (("v0_naive", base), ("v9_skill_graph (shipped)", best)):
+    for label, d in (("v0_naive", base), ("v3_rerank (the variant actually served)" if runs_on_v3() else "v9_skill_graph (shipped)", best)):
         o = d["overall"]
         lo, hi = o["reply_rate_ci95"]
         rows.append([label, o["proposals_submitted"], pct(o["reply_rate"]), f"{pct(lo)} to {pct(hi)}"]
@@ -171,9 +183,15 @@ def sec_reply_vs_retrieval() -> str:
     if v:
         r0, r9 = 100 * v["variants"]["v0_naive"]["overall"]["recall5"], 100 * v["variants"]["v9_skill_graph"]["overall"]["recall5"]
         o0, o9 = base["overall"]["reply_rate"], best["overall"]["reply_rate"]
-        note = (f"<p><b>Better retrieval did not raise the reply rate.</b> Recall@5 rose from {r0:.1f} to {r9:.1f}, but the reply rate went from {pct(o0)} to {pct(o9)} "
-                f"with overlapping intervals. My reading, which I did not test: the simulator's clients react to whether the letter names their must-have skills and cites evidence, and the "
-                f"stub writer already does both from the top-ranked items, so project-level recall gains do not change what the letter says.</p>")
+        if runs_on_v3():
+            r3 = 100 * v["variants"]["v3_rerank"]["overall"]["recall5"]
+            note = (f"<p><b>This comparison does not test whether better retrieval raises replies.</b> The variant actually served was V3 "
+                    f"(Recall@5 {r3:.1f}), which scores <i>below</i> V0 ({r0:.1f}); reply rates were {pct(o0)} for V0 and {pct(o9)} for V3, "
+                    f"with overlapping intervals. A run on V9 (Recall@5 {r9:.1f}) is what the question needs and was not completed.</p>")
+        else:
+            note = (f"<p><b>Better retrieval did not raise the reply rate.</b> Recall@5 rose from {r0:.1f} to {r9:.1f}, but the reply rate went from {pct(o0)} to {pct(o9)} "
+                    f"with overlapping intervals. My reading, which I did not test: the simulator's clients react to whether the letter names their must-have skills and cites evidence, and the "
+                    f"stub writer already does both from the top-ranked items, so project-level recall gains do not change what the letter says.</p>")
     return table(["Retrieval", "Proposals", "Reply rate", "95% CI", "ai_ml", "fullstack", "data_analyst"], rows, "tight") + note
 
 
@@ -233,7 +251,7 @@ def sec_shipped() -> str:
     r9 = 100 * v["variants"]["v9_skill_graph"]["overall"]["recall5"]
     l9 = clean_latency("v9_skill_graph")
     lat = lambda x: f"p50 {x['p50_ms']:.0f} ms, p95 {x['p95_ms']:.0f} ms" if x else "latency not re-measured"      # noqa: E731
-    out = f"<b>Shipped choice:</b> <code>v9_skill_graph</code> (Recall@5 {r9:.1f}; {lat(l9)} per job, cold query caches, idle machine {src('rag_latency.json')})."
+    out = (f"<b>Note:</b> {V3_NOTE} " if runs_on_v3() else "") + f"<b>Declared shipped choice:</b> <code>v9_skill_graph</code> (Recall@5 {r9:.1f}; {lat(l9)} per job, cold query caches, idle machine {src('rag_latency.json')})."
     if ab:
         bp = ab["best_pipeline"]
         stack = "v1_decompose+v2_hybrid+v3_rerank+v9_skill_graph"
@@ -254,7 +272,7 @@ def sec_b5() -> str:
     base = load("gigsim_outcomes_stub_v0_naive.json")
     test = load("decision_stub_test.json")
     p95 = max(test["per_persona"][p]["latency_s"]["p95"] for p in PERSONAS) if test else None
-    for label, name, oc in (("V0 naive", "v0_naive", base), ("Shipped V9", "v9_skill_graph", out)):
+    for label, name, oc in (("V0 naive", "v0_naive", base), ("Served in system runs" if runs_on_v3() else "Shipped V9", "v3_rerank" if runs_on_v3() else "v9_skill_graph", out)):
         o = d["variants"][name]["overall"]
         rows.append([label, f"{100 * o['recall5']:.1f}", f"{o['ndcg10']:.3f}", "0.0 (stub)", NM,
                      pct(oc["overall"]["reply_rate"]) if oc else NM,
@@ -405,6 +423,7 @@ code { font-family: Consolas, monospace; font-size: 0.92em; background: #eef1f5;
 
 
 def html() -> str:
+    V3_NOTE_BOX = ("(4) " + V3_NOTE) if runs_on_v3() else ""
     h1_ = sec_h1() if load("rag_variants.json") else NM
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>GigBid R&amp;D report</title><style>{CSS}</style></head><body>
 <h1>GigBid: a multi-agent freelancer copilot</h1>
@@ -412,7 +431,7 @@ def html() -> str:
 <div class="box"><b>Read this first.</b> (1) The instructor's <code>gigsim/</code>, personas and hidden test set were not in the starter kit I received: <code>gigsim/</code> is my own stand-in
 and all jobs, clients and gold labels are synthetic (some history titles and budgets come from a real Kaggle Upwork dump). (2) Every agent number uses the deterministic <b>stub</b> model profile
 (no LLM calls), so it tests routing, retrieval, policy, safety and plumbing, not the quality of LLM writing. (3) Dev numbers were used while tuning and are optimistic; the held-out split
-(never tuned on) is reported separately. Sections 5 and 6 are <b>not measured</b>, for the reasons stated there.</div>
+(never tuned on) is reported separately. Sections 5 and 6 are <b>not measured</b>, for the reasons stated there. {V3_NOTE_BOX}</div>
 
 <h2>1. Problem and constraints</h2>
 <p>A freelancer on a marketplace spends hours scanning jobs, judging fit, pricing, and writing proposals that cost paid "Connects". GigBid scans, scores and drafts, then <b>stops for a human decision</b>.

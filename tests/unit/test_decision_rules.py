@@ -50,3 +50,15 @@ def test_short_requirements_get_a_searchable_query() -> None:
     assert search_query("R") != "R" and len(search_query("R")) >= 3
     assert search_query("Go").startswith("Go ")
     assert search_query("PostgreSQL") == "PostgreSQL"
+
+
+def test_portfolio_server_serves_the_configured_retrieval_variant(monkeypatch) -> None:
+    """Regression: the server used to default to a hard-coded variant and ignore rag.variant in the config."""
+    from agent.config_loader import load_config
+    from mcp_servers.portfolio.service import PortfolioConfig, configured_rag_variant
+
+    monkeypatch.delenv("RAG_VARIANT", raising=False)
+    monkeypatch.delenv("GIGBID_CONFIG", raising=False)
+    assert configured_rag_variant() == load_config()["rag"]["variant"] == PortfolioConfig().rag_variant
+    monkeypatch.setenv("RAG_VARIANT", "v0_naive")
+    assert PortfolioConfig().rag_variant == "v0_naive"            # the environment still overrides

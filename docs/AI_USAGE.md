@@ -50,5 +50,12 @@ decisions, ran the tests and accept responsibility for every line.
 11. **A better pipeline found but not shipped.** The ablation showed that decomposition plus hybrid plus skill graph
     beats the skill graph alone. By then the decision, outcome and X2 results had all been measured on the shipped
     variant, so it was left as is and the gap is stated in the report.
+12. **The configured retrieval variant was never used.** The Portfolio server read only the `RAG_VARIANT` environment
+    variable and fell back to a hard-coded `v3_rerank`, ignoring `rag.variant` in the config, so every system-level run
+    (decisions, outcomes, A/B) used V3 while the documents said V9. Found while preparing deployment. The server now reads
+    the config (with a regression test); the affected results are labelled as V3 until they are re-run.
+13. **A fresh install would have broken.** An unpinned `mcp` dependency resolves to the 2.x line, which renamed the
+    API this code uses; pinned to `mcp<2`. Old Dockerfiles also copied a file that does not exist and lacked the data
+    directories; the new deployment files do not.
 
 (Add your own findings here before submitting: the viva expects you to know where the assistant was wrong.)

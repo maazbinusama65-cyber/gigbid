@@ -20,6 +20,11 @@ from pathlib import Path
 import httpx
 import yaml
 
+# In the container this file sits next to the `agent` package (/app); run from a checkout it lives in deploy/space/.
+_HERE = Path(__file__).resolve().parent
+_ROOT = next((p for p in (_HERE, _HERE.parent.parent) if (p / "agent").is_dir()), _HERE)
+sys.path.insert(0, str(_ROOT))
+
 SIM_PORT = 8081
 PORT = int(os.environ.get("PORT", "7860"))
 RUNTIME = Path(os.environ.get("GIGBID_RUNTIME_DIR", "/tmp/gigbid"))
@@ -117,7 +122,7 @@ def main() -> None:
     import uvicorn
 
     log(f"serving on 0.0.0.0:{PORT}")
-    uvicorn.run("apps.api.main:app", host="0.0.0.0", port=PORT, log_level="info")
+    uvicorn.run("apps.api.main:app", host="0.0.0.0", port=PORT, log_level="info", access_log=False)
 
 
 if __name__ == "__main__":

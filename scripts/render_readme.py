@@ -256,6 +256,19 @@ make test          # unit + contract + integration, offline
 Or `docker compose -f infra/docker-compose.yml up` (compose file validated, images not built in my environment).
 Copy `.env.example` to `.env` for local values; nothing secret is committed. The LLM key is only read at runtime.
 
+## Portfolio MCP server (installable on its own)
+
+The Portfolio server is published as a standalone package with its own README ([`mcp_servers/portfolio/README.md`](mcp_servers/portfolio/README.md)).
+Anyone can run it against their own portfolio folder, no clone needed:
+
+```bash
+PORTFOLIO_DATA_DIR=/path/to/my_portfolio PORTFOLIO_ID=me \
+  uvx --from "git+https://github.com/maazbinusama65-cyber/gigbid#subdirectory=mcp_servers/portfolio" gigbid-portfolio-mcp
+```
+
+It exposes three read-only tools (`search_evidence`, `get_case_study`, `list_skills`) over stdio or authenticated HTTP. It was installed into a clean
+virtual environment from this repository and exercised over stdio before being documented. Requires Python 3.11+ and `mcp<2`.
+
 ## Results (stub model profile)
 
 ### Bid-or-skip decisions, held-out test split (100 jobs per persona, never tuned on)

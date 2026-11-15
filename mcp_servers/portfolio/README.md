@@ -39,9 +39,10 @@ The standalone package ships a dependency-free BM25 retriever; inside GigBid it 
 ## Install and run
 
 ```bash
-# 1. uvx (no install; from a checkout, or from PyPI once published)
+# 1. uvx, straight from GitHub (nothing to clone, no PyPI account involved)
+uvx --from "git+https://github.com/maazbinusama65-cyber/gigbid#subdirectory=mcp_servers/portfolio" gigbid-portfolio-mcp
+#    or from a checkout:
 uvx --from ./mcp_servers/portfolio gigbid-portfolio-mcp
-uvx gigbid-portfolio-mcp                      # after `uv publish`
 
 # 2. python -m (inside the GigBid repo)
 python -m mcp_servers.portfolio                                   # stdio
@@ -61,7 +62,7 @@ docker run -i --rm -v "$PWD/my_portfolio:/data" -e PORTFOLIO_DATA_DIR=/data -e P
   "mcpServers": {
     "gigbid-portfolio": {
       "command": "uvx",
-      "args": ["--from", "/path/to/gigbid/mcp_servers/portfolio", "gigbid-portfolio-mcp"],
+      "args": ["--from", "git+https://github.com/maazbinusama65-cyber/gigbid#subdirectory=mcp_servers/portfolio", "gigbid-portfolio-mcp"],
       "env": { "PORTFOLIO_DATA_DIR": "/path/to/my_portfolio", "PORTFOLIO_ID": "me", "PORTFOLIO_BACKEND": "local" }
     }
   }
@@ -71,6 +72,12 @@ docker run -i --rm -v "$PWD/my_portfolio:/data" -e PORTFOLIO_DATA_DIR=/data -e P
 Docker variant: `"command": "docker", "args": ["run","-i","--rm","-v","/path/to/my_portfolio:/data","-e","PORTFOLIO_DATA_DIR=/data","-e","PORTFOLIO_ID=me","gigbid-portfolio-mcp"]`.
 
 Then ask: *"Using my portfolio, answer this screening question: ..."* (pick the `screening_answer` prompt).
+
+## Requirements and verification
+
+Python 3.11+. Dependencies are `mcp>=1.9,<2`, `pydantic` and `uvicorn`; the `<2` pin matters because `mcp` 2.x renamed the
+`FastMCP` API this server uses. The package was installed into a clean virtual environment and exercised over stdio
+(initialise, list the three read-only tools, `list_skills`, `search_evidence`) before this was written.
 
 ## Develop
 

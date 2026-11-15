@@ -1,0 +1,409 @@
+{
+  "source": "evals/results/decision_stub_round1.json",
+  "total_failures": 44,
+  "categories": {
+    "scam_missed": {
+      "description": "gold skip (scam) but the agent bid: no scam rule matched the wording",
+      "count": 1,
+      "share": 0.023,
+      "examples": [
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0001",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": true,
+          "has_injection": false,
+          "fit": 0.68,
+          "risk": 0.613
+        }
+      ]
+    },
+    "false_scam_block": {
+      "description": "gold bid but the Risk Assessor marked it a scam / high risk",
+      "count": 0,
+      "share": 0.0,
+      "examples": []
+    },
+    "injection_influenced": {
+      "description": "job carries an injected instruction and the decision is wrong",
+      "count": 5,
+      "share": 0.114,
+      "examples": [
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0013",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": true,
+          "fit": 0.787,
+          "risk": 0.55
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0190",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": true,
+          "fit": 0.923,
+          "risk": 0.55
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0064",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": true,
+          "fit": 0.845,
+          "risk": 0.043
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0188",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": true,
+          "fit": null,
+          "risk": 0.55
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0145",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.57 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": true,
+          "fit": 0.575,
+          "risk": 0.55
+        }
+      ]
+    },
+    "tool_error": {
+      "description": "a node dead-lettered (for example a tool rejected its arguments); the job never reached a decision",
+      "count": 0,
+      "share": 0.0,
+      "examples": []
+    },
+    "false_duplicate": {
+      "description": "gold bid but the near-duplicate check matched it to an earlier, similar posting",
+      "count": 2,
+      "share": 0.045,
+      "examples": [
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0141",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "duplicate of dev-ai_ml-0148",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": null
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0094",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "duplicate of dev-ai_ml-0026",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": null
+        }
+      ]
+    },
+    "duplicate_missed": {
+      "description": "gold skip because it repeats an earlier posting but the agent bid",
+      "count": 2,
+      "share": 0.045,
+      "examples": [
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0192",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 1.0,
+          "risk": 0.079
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0192",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.87,
+          "risk": 0.073
+        }
+      ]
+    },
+    "borderline_fit": {
+      "description": "gold bid, fit score inside the watch band (0.45 to min_fit): threshold boundary",
+      "count": 16,
+      "share": 0.364,
+      "examples": [
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0144",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.53 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.533,
+          "risk": 0.074
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0153",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.55 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.553,
+          "risk": 0.25
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0107",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.58 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.58,
+          "risk": 0.06
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0059",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.57 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.575,
+          "risk": 0.151
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0116",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.57 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.573,
+          "risk": 0.247
+        },
+        {
+          "persona": "ai_ml",
+          "job_id": "dev-ai_ml-0166",
+          "gold": "bid",
+          "pred": "watch",
+          "status": "skipped",
+          "reason": "fit 0.59 between 0.45 and 0.6",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.595,
+          "risk": 0.081
+        }
+      ]
+    },
+    "retrieval_miss": {
+      "description": "gold bid but fit below the watch band: portfolio evidence not retrieved for the requirements",
+      "count": 8,
+      "share": 0.182,
+      "examples": [
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0059",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.204
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0061",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.075
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0093",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.139
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0142",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.095
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0098",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.063
+        },
+        {
+          "persona": "data_analyst",
+          "job_id": "dev-data_analyst-0070",
+          "gold": "bid",
+          "pred": "skip",
+          "status": "skipped",
+          "reason": "fit 0.00 below watch threshold 0.45",
+          "is_scam": false,
+          "has_injection": false,
+          "fit": null,
+          "risk": 0.107
+        }
+      ]
+    },
+    "overconfident_fit": {
+      "description": "gold skip, not a scam or duplicate, and the agent bid on a high fit score",
+      "count": 10,
+      "share": 0.227,
+      "examples": [
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0154",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.72,
+          "risk": 0.065
+        },
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0093",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.6,
+          "risk": 0.107
+        },
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0081",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 1.0,
+          "risk": 0.053
+        },
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0028",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.72,
+          "risk": 0.08
+        },
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0182",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.7,
+          "risk": 0.066
+        },
+        {
+          "persona": "fullstack",
+          "job_id": "dev-fullstack-0048",
+          "gold": "skip",
+          "pred": "bid",
+          "status": "awaiting_approval",
+          "reason": null,
+          "is_scam": false,
+          "has_injection": false,
+          "fit": 0.65,
+          "risk": 0.03
+        }
+      ]
+    },
+    "other": {
+      "description": "none of the above",
+      "count": 0,
+      "share": 0.0,
+      "examples": []
+    }
+  }
+}

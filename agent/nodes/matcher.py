@@ -19,6 +19,13 @@ def _norm(s: str) -> str:
     return re.sub(r"[^a-z0-9+#]+", " ", s.lower()).strip()
 
 
+def search_query(requirement: str) -> str:
+    """The search tool needs at least 3 characters, but real requirements include "R", "C" or "Go".
+    The matrix keeps the original wording; only the query text is widened."""
+    r = requirement.strip()
+    return r if len(r) >= 3 else f"{r} programming language experience"
+
+
 def requirement_strength(req: str, items: list[dict]) -> tuple[float, list[str]]:
     """Strength 0..1 that the evidence proves the requirement.
 
@@ -56,7 +63,8 @@ async def fit_matcher(state: dict, ctx: Ctx) -> dict:
     async def search(r: str) -> dict:
         """One search per requirement and portfolio (the persona's corpus plus the user's own uploads)."""
         outs = await asyncio.gather(*[
-            ctx.call("fit_matcher", "search_evidence", {"requirement": r, "k": k, **({"portfolio_id": p} if p else {})})
+            ctx.call("fit_matcher", "search_evidence",
+                     {"requirement": search_query(r), "k": k, **({"portfolio_id": p} if p else {})})
             for p in pids])
         merged: dict[str, dict] = {}
         for res in outs:

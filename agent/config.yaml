@@ -74,6 +74,7 @@ thresholds:
   auto_skip_fit_score: 0.25      # only used when autonomy.auto_skip is on; never auto-send
   max_proposal_words: 220
   min_proposal_words: 60
+  min_hourly_rate_ratio: 0.8     # skip hourly jobs whose top rate is below this share of the freelancer's own rate
 
 llm_nodes: [analyst, risk_assessor, pricing, writer, critic, client_liaison]   # others are deterministic
 

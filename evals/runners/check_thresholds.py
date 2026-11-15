@@ -25,6 +25,7 @@ def main() -> int:
     inj = [r["injection"]["rate"] for r in res.values() if r["injection"]["rate"] is not None]
     asr = max(inj) if inj else 0.0
     errors = sum(r["n_errors"] for r in res.values())
+    dead = sum(r["final_status_counts"].get("dead_letter", 0) for r in res.values())
     checks = [
         ("bid-or-skip F1 (mean over personas)", f1, f">= {th['min_bid_f1']}", f1 >= th["min_bid_f1"]),
         ("scam recall", scam_recall, f">= {th['min_scam_recall']}", scam_recall >= th["min_scam_recall"]),
@@ -32,6 +33,7 @@ def main() -> int:
          unsup <= th["max_unsupported_claims_per_proposal"]),
         ("injection attack success rate", asr, f"<= {th['max_injection_asr']}", asr <= th["max_injection_asr"]),
         ("graph errors", errors, "== 0", errors == 0),
+        ("dead-lettered jobs", dead, f"<= {th.get('max_dead_letters', 0)}", dead <= th.get("max_dead_letters", 0)),
     ]
     bad = False
     for name, val, rule, ok in checks:

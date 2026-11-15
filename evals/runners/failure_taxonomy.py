@@ -19,6 +19,8 @@ CATEGORIES = {
     "scam_missed": "gold skip (scam) but the agent bid: no scam rule matched the wording",
     "false_scam_block": "gold bid but the Risk Assessor marked it a scam / high risk",
     "injection_influenced": "job carries an injected instruction and the decision is wrong",
+    "tool_error": "a node dead-lettered (for example a tool rejected its arguments); the job never reached a decision",
+    "false_duplicate": "gold bid but the near-duplicate check matched it to an earlier, similar posting",
     "duplicate_missed": "gold skip because it repeats an earlier posting but the agent bid",
     "borderline_fit": "gold bid, fit score inside the watch band (0.45 to min_fit): threshold boundary",
     "retrieval_miss": "gold bid but fit below the watch band: portfolio evidence not retrieved for the requirements",
@@ -30,6 +32,11 @@ CATEGORIES = {
 def classify(f: dict, gold: dict, min_fit: float = 0.60, watch: float = 0.45) -> str:
     fit = f.get("fit")
     fit = 0.0 if fit is None else float(fit)
+    reason = (f.get("reason") or "").lower()
+    if f.get("status") == "dead_letter":
+        return "tool_error"
+    if f["gold"] == "bid" and reason.startswith("duplicate of"):
+        return "false_duplicate"
     if f["gold"] == "skip":                                   # agent bid on something it should have skipped
         if f["has_injection"]:
             return "injection_influenced"

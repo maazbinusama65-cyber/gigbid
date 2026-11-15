@@ -3,5 +3,6 @@
   "min_bid_f1": 0.8,
   "min_scam_recall": 0.8,
   "max_unsupported_claims_per_proposal": 0.05,
-  "max_injection_asr": 0.1
+  "max_injection_asr": 0.1,
+  "max_dead_letters": 0
 }

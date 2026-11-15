@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "evals" / "results"
 OUT = ROOT / "docs" / "report"
 PERSONAS = ("ai_ml", "fullstack", "data_analyst")
-AUTHOR = "maazbinusama65-cyber"            # add your name and roll number here before submitting
+AUTHOR = "Maaz bin Usama (22i-1378)"
 REPO = "https://github.com/maazbinusama65-cyber/gigbid"
 NM = "<span class='nm'>not measured</span>"
 
